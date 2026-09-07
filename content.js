@@ -67,7 +67,7 @@ const siteContent = {
             description:
                 "A practical mobile app for saving and managing supported status content.",
 
-            link: "/cell-cave-website/apps/status-downloader-video-saver/",
+            link: "/apps/status-downloader-video-saver/",
 
             googlePlayLink:
                 "https://play.google.com/store/apps/details?id=com.statussaver.videosaver.downloadstatus.storysaver"
