@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Policy - Age Calculator: Date of Birth | Cell Cave
+    </title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Age Calculator: Date of Birth by Cell Cave."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --bg: #f6f7f4;
+            --surface: #ffffff;
+            --text: #171916;
+            --muted: #6c7169;
+            --line: #e3e6df;
+            --accent: #426b4d;
+            --accent-dark: #31523b;
+            --soft: #e9eee7;
+            --dark: #171916;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(246, 247, 244, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--dark);
+            color: white;
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .privacy-hero {
+            padding: 90px 0 60px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            margin-bottom: 30px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            margin-bottom: 22px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: white;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .7px;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .privacy-hero h1 {
+            max-width: 900px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(44px, 6vw, 68px);
+            line-height: 1.05;
+            letter-spacing: -2.3px;
+            margin-bottom: 22px;
+        }
+
+        .privacy-hero h1 span {
+            color: var(--accent);
+        }
+
+        .privacy-hero p {
+            max-width: 760px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .updated {
+            display: inline-flex;
+            margin-top: 22px;
+            padding: 9px 13px;
+            border-radius: 10px;
+            background: var(--soft);
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .privacy-section {
+            padding: 0 0 110px;
+        }
+
+        .privacy-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 35px;
+            align-items: start;
+        }
+
+        .toc {
+            position: sticky;
+            top: 105px;
+            padding: 24px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+        }
+
+        .toc h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .toc-links {
+            display: grid;
+            gap: 9px;
+        }
+
+        .toc-links a {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .toc-links a:hover {
+            color: var(--accent);
+        }
+
+        .policy-content {
+            display: grid;
+            gap: 16px;
+        }
+
+        .policy-card {
+            padding: 34px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+        }
+
+        .policy-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .policy-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 18px;
+            margin-top: 22px;
+            margin-bottom: 9px;
+        }
+
+        .policy-card p {
+            color: var(--muted);
+            margin-bottom: 13px;
+            line-height: 1.85;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-card ul {
+            padding-left: 22px;
+            margin: 12px 0 16px;
+        }
+
+        .policy-card li {
+            color: var(--muted);
+            margin-bottom: 9px;
+            line-height: 1.75;
+        }
+
+        .policy-card strong {
+            color: var(--text);
+        }
+
+        .policy-card a {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .notice {
+            padding: 20px;
+            margin-top: 18px;
+            border: 1px solid #d8e0d6;
+            border-radius: 15px;
+            background: var(--soft);
+        }
+
+        .notice strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--accent-dark);
+        }
+
+        .notice p {
+            margin: 0;
+            color: #566057;
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 18px;
+            border: 1px solid var(--line);
+            border-radius: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 620px;
+        }
+
+        th,
+        td {
+            padding: 15px 17px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--line);
+            font-size: 14px;
+        }
+
+        th {
+            background: var(--soft);
+            font-family: "Space Grotesk", sans-serif;
+        }
+
+        td {
+            color: var(--muted);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .contact-card {
+            padding: 40px;
+            background: var(--dark);
+            color: white;
+            border-radius: 22px;
+        }
+
+        .contact-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 27px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card p {
+            color: #b8beb8;
+            margin-bottom: 20px;
+        }
+
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 20px;
+            border-radius: 12px;
+            background: white;
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 65px 0 28px;
+            background: var(--dark);
+            color: #aeb3ac;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 70px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(130px,1fr));
+            gap: 13px 35px;
+            justify-self: end;
+            width: min(430px,100%);
+        }
+
+        .footer-links a {
+            color: #aeb3ac;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 23px;
+            border-top: 1px solid #343832;
+            color: #858b83;
+            font-size: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .privacy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+
+            .toc-links {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .nav-inner {
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 17px;
+            }
+
+            .privacy-hero {
+                padding: 65px 0 45px;
+            }
+
+            .policy-card {
+                padding: 25px 21px;
+            }
+
+            .toc-links {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="../../../" class="brand">
+            <span class="brand-mark">CC</span>
+            <span>Cell Cave</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="../../../">Home</a></li>
+            <li><a href="../../">Apps</a></li>
+            <li><a href="../../../support/">Support</a></li>
+            <li><a href="../../../about/">About</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="privacy-hero">
+
+    <div class="container">
+
+        <a href="../" class="back-link">
+            ← Back to Age Calculator
+        </a>
+
+        <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            App Privacy Policy
+        </div>
+
+        <h1>
+            Privacy Policy for
+            <span>
+                Age Calculator: Date of Birth
+            </span>
+        </h1>
+
+        <p>
+            This Privacy Policy explains how Cell Cave handles
+            information when you use Age Calculator: Date of Birth,
+            including date calculations, analytics, advertising,
+            and third-party services.
+        </p>
+
+        <div class="updated">
+            Last updated: August 31, 2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="privacy-section">
+
+    <div class="container privacy-layout">
+
+        <aside class="toc">
+
+            <h2>Contents</h2>
+
+            <nav class="toc-links">
+                <a href="#overview">1. Overview</a>
+                <a href="#information">2. Information</a>
+                <a href="#dob">3. Date of Birth Data</a>
+                <a href="#permissions">4. Permissions</a>
+                <a href="#analytics">5. Analytics</a>
+                <a href="#advertising">6. Advertising</a>
+                <a href="#third-parties">7. Third Parties</a>
+                <a href="#retention">8. Data Retention</a>
+                <a href="#choices">9. Your Choices</a>
+                <a href="#children">10. Children</a>
+                <a href="#security">11. Security</a>
+                <a href="#international">12. International Processing</a>
+                <a href="#changes">13. Changes</a>
+                <a href="#contact">14. Contact</a>
+            </nav>
+
+        </aside>
+
+
+        <div class="policy-content">
+
+            <article class="policy-card" id="overview">
+
+                <h2>1. Overview</h2>
+
+                <p>
+                    Age Calculator: Date of Birth is provided by
+                    <strong>Cell Cave</strong>.
+                </p>
+
+                <p>
+                    The app allows users to enter date information
+                    and calculate age and related date results.
+                </p>
+
+                <p>
+                    The app does not require a Cell Cave account,
+                    login, name, email address, phone number,
+                    or password to use its main functionality.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="information">
+
+                <h2>2. Information We Handle</h2>
+
+                <h3>
+                    Information we do not directly request
+                </h3>
+
+                <ul>
+                    <li>Your name</li>
+                    <li>Your email address</li>
+                    <li>Your phone number</li>
+                    <li>A Cell Cave account or password</li>
+                    <li>Precise GPS location</li>
+                    <li>Credit or debit card details</li>
+                </ul>
+
+                <h3>
+                    Technical and usage information
+                </h3>
+
+                <p>
+                    The app uses third-party analytics and advertising
+                    technologies. Depending on the provider, device
+                    settings, region, and applicable privacy choices,
+                    these services may process technical information
+                    such as:
+                </p>
+
+                <ul>
+                    <li>Device and app information</li>
+                    <li>Operating system information</li>
+                    <li>App interactions and usage events</li>
+                    <li>Advertising or app identifiers</li>
+                    <li>IP address and network information</li>
+                    <li>Advertising interactions</li>
+                    <li>Diagnostic or performance information</li>
+                    <li>
+                        Approximate location inferred from technical
+                        information such as an IP address
+                    </li>
+                </ul>
+
+                <div class="notice">
+
+                    <strong>
+                        Precise Location
+                    </strong>
+
+                    <p>
+                        Age Calculator: Date of Birth does not request
+                        precise GPS location for its core functionality.
+                    </p>
+
+                </div>
+
+                <h3>Contacting support</h3>
+
+                <p>
+                    If you voluntarily contact Cell Cave by email,
+                    we receive the email address you use, your message,
+                    and any information you choose to include so we
+                    can respond to your request.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="dob">
+
+                <h2>
+                    3. Date of Birth and Calculation Data
+                </h2>
+
+                <p>
+                    The date of birth or other date information you
+                    enter into the app is used to perform the
+                    requested calculations.
+                </p>
+
+                <p>
+                    This calculation data is handled locally on
+                    your device as part of the app's normal
+                    functionality.
+                </p>
+
+                <p>
+                    <strong>
+                        Cell Cave does not upload the date of birth
+                        you enter to a Cell Cave server as part of
+                        the app's normal age calculation functionality.
+                    </strong>
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="permissions">
+
+                <h2>
+                    4. Device Permissions
+                </h2>
+
+                <p>
+                    Age Calculator: Date of Birth does not require
+                    access to your photos, videos, files, contacts,
+                    microphone, camera, precise location, or device
+                    storage for its core functionality.
+                </p>
+
+                <p>
+                    The app's age and date calculations can be used
+                    without granting these types of device permissions.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="analytics">
+
+                <h2>
+                    5. Firebase Analytics
+                </h2>
+
+                <p>
+                    Age Calculator: Date of Birth uses
+                    <strong>Firebase Analytics</strong>, a service
+                    provided by Google, to understand app usage and
+                    interactions.
+                </p>
+
+                <p>
+                    Depending on Google's service configuration,
+                    Firebase may process usage events, device or
+                    app information, identifiers, and related
+                    technical analytics information.
+                </p>
+
+                <p>
+                    <a
+                        href="https://firebase.google.com/support/privacy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Firebase Privacy & Security
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        href="https://policies.google.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Privacy Policy
+                    </a>
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="advertising">
+
+                <h2>
+                    6. Advertising
+                </h2>
+
+                <p>
+                    Age Calculator: Date of Birth may display
+                    advertisements.
+                </p>
+
+                <p>
+                    Advertising services used by the app may include:
+                </p>
+
+                <ul>
+                    <li>Google AdMob</li>
+                    <li>Meta Audience Network</li>
+                    <li>Mintegral</li>
+                    <li>Pangle</li>
+                    <li>Liftoff</li>
+                </ul>
+
+                <p>
+                    These advertising providers may process device,
+                    advertising, network, interaction, and related
+                    technical information according to their own
+                    privacy policies and applicable privacy choices.
+                </p>
+
+                <div class="notice">
+
+                    <strong>
+                        No Paid Ad-Free Subscription
+                    </strong>
+
+                    <p>
+                        Age Calculator: Date of Birth currently does
+                        not offer the paid ad-free subscription
+                        described for some other Cell Cave apps.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="policy-card" id="third-parties">
+
+                <h2>
+                    7. Third-Party Services
+                </h2>
+
+                <p>
+                    The app uses third-party services for analytics
+                    and advertising. These providers operate under
+                    their own privacy policies.
+                </p>
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Purpose</th>
+                                <th>Privacy Information</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Firebase Analytics</td>
+                                <td>Analytics and app usage measurement</td>
+                                <td>
+                                    <a
+                                        href="https://firebase.google.com/support/privacy/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Google AdMob</td>
+                                <td>Advertising</td>
+                                <td>
+                                    <a
+                                        href="https://policies.google.com/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Meta Audience Network</td>
+                                <td>Advertising</td>
+                                <td>
+                                    <a
+                                        href="https://www.facebook.com/privacy/policy/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mintegral</td>
+                                <td>Advertising</td>
+                                <td>
+                                    <a
+                                        href="https://www.mintegral.com/en/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Pangle</td>
+                                <td>Advertising</td>
+                                <td>
+                                    <a
+                                        href="https://www.pangleglobal.com/privacy"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Liftoff</td>
+                                <td>Advertising</td>
+                                <td>
+                                    <a
+                                        href="https://www.liftoff.ai/privacy-policy/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Policy
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </article>
+
+
+            <article class="policy-card" id="retention">
+
+                <h2>
+                    8. Data Storage and Retention
+                </h2>
+
+                <p>
+                    Date of birth and date calculation information
+                    entered for the app's normal calculations is
+                    handled locally on the device and is not stored
+                    on Cell Cave servers as part of the normal
+                    calculation process.
+                </p>
+
+                <p>
+                    Analytics and advertising information processed
+                    by third-party providers may be retained according
+                    to each provider's own retention practices.
+                </p>
+
+                <p>
+                    If you contact Cell Cave for support, we may retain
+                    your support communication for as long as reasonably
+                    necessary to respond to your request or maintain
+                    appropriate support records.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="choices">
+
+                <h2>
+                    9. Your Privacy Choices
+                </h2>
+
+                <ul>
+                    <li>
+                        You can manage advertising and privacy options
+                        available through your device settings.
+                    </li>
+
+                    <li>
+                        You can use applicable consent controls
+                        presented by third-party advertising services.
+                    </li>
+
+                    <li>
+                        You can uninstall the app at any time.
+                    </li>
+
+                    <li>
+                        You can contact Cell Cave regarding applicable
+                        privacy questions or requests.
+                    </li>
+                </ul>
+
+                <p>
+                    Privacy rights and available choices may vary
+                    depending on your country or region.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="children">
+
+                <h2>
+                    10. Children's Privacy
+                </h2>
+
+                <p>
+                    Age Calculator: Date of Birth is
+                    <strong>
+                        not directed to children under the age of 13.
+                    </strong>
+                </p>
+
+                <p>
+                    Cell Cave does not knowingly require children
+                    under 13 to create an account or directly provide
+                    personal contact information through the app.
+                </p>
+
+                <p>
+                    If you are a parent or guardian and believe a
+                    child under 13 has directly provided personal
+                    information to Cell Cave, please contact us.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="security">
+
+                <h2>
+                    11. Data Security
+                </h2>
+
+                <p>
+                    Date calculation information used through the
+                    app's normal functionality is handled locally
+                    on the user's device rather than being uploaded
+                    to Cell Cave servers.
+                </p>
+
+                <p>
+                    Information processed by Firebase or advertising
+                    providers is subject to the security practices
+                    of those third-party providers.
+                </p>
+
+                <p>
+                    No electronic system or transmission method can
+                    be guaranteed to be completely secure.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="international">
+
+                <h2>
+                    12. International Data Processing
+                </h2>
+
+                <p>
+                    Third-party analytics and advertising providers
+                    may operate in multiple countries.
+                </p>
+
+                <p>
+                    Technical, analytics, or advertising information
+                    may therefore be processed in countries other
+                    than the country where you live.
+                </p>
+
+                <p>
+                    Such processing is subject to each provider's
+                    privacy practices and applicable requirements.
+                </p>
+
+            </article>
+
+
+            <article class="policy-card" id="changes">
+
+                <h2>
+                    13. Changes to This Privacy Policy
+                </h2>
+
+                <p>
+                    Cell Cave may update this Privacy Policy when
+                    app functionality, third-party services,
+                    privacy practices, or applicable requirements
+                    change.
+                </p>
+
+                <p>
+                    When this policy is updated, the "Last updated"
+                    date at the top of this page will be revised.
+                </p>
+
+            </article>
+
+
+            <div class="contact-card" id="contact">
+
+                <h2>
+                    14. Contact Cell Cave
+                </h2>
+
+                <p>
+                    If you have questions about this Privacy Policy
+                    or the privacy practices of Age Calculator:
+                    Date of Birth, contact Cell Cave by email.
+                </p>
+
+                <a
+                    href="mailto:cellcave70@gmail.com"
+                    class="contact-button"
+                >
+                    cellcave70@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <h3>Cell Cave</h3>
+
+                <p>
+                    Simple Utilities. Smarter Everyday.
+                </p>
+
+            </div>
+
+
+            <nav class="footer-links">
+
+                <a href="../../../">Home</a>
+
+                <a href="../../">Apps</a>
+
+                <a href="../../../support/">
+                    Support
+                </a>
+
+                <a href="../../../about/">
+                    About
+                </a>
+
+                <a href="../../../privacy/">
+                    Company Privacy Policy
+                </a>
+
+                <a href="../../../terms/">
+                    Terms of Use
+                </a>
+
+                <a href="../../../app-store/">
+                    App Store
+                </a>
+
+                <a
+                    href="https://play.google.com/store/apps/details?id=com.dobcalc.birthdaycalculator.dob"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Play
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Cell Cave. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

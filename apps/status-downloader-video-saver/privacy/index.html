@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Policy - Status Downloader: Video Saver | Cell Cave
+    </title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Status Downloader: Video Saver by Cell Cave."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --bg: #f6f7f4;
+            --surface: #ffffff;
+            --text: #171916;
+            --muted: #6c7169;
+            --line: #e3e6df;
+            --accent: #426b4d;
+            --accent-dark: #31523b;
+            --soft: #e9eee7;
+            --dark: #171916;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1420px, 90%);
+            margin: auto;
+        }
+
+
+        /* HEADER */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(246, 247, 244, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--dark);
+            color: white;
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+
+        /* HERO */
+
+        .privacy-hero {
+            padding: 72px 0 72px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .back-link {
+            display: inline-flex;
+            margin-bottom: 28px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .privacy-hero h1 {
+            max-width: 1000px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(44px, 6vw, 70px);
+            line-height: 1.04;
+            letter-spacing: -2.5px;
+            margin-bottom: 22px;
+        }
+
+        .privacy-hero p {
+            max-width: 980px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .updated {
+            display: inline-block;
+            margin-top: 27px;
+            padding: 13px 16px;
+            background: var(--soft);
+            border-radius: 12px;
+            color: var(--accent-dark);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* POLICY LAYOUT */
+
+        .policy-section {
+            padding: 74px 0 110px;
+        }
+
+        .policy-layout {
+            display: grid;
+            grid-template-columns: 290px minmax(0, 1fr);
+            gap: 42px;
+            align-items: start;
+        }
+
+
+        /* CONTENTS SIDEBAR */
+
+        .contents-card {
+            position: sticky;
+            top: 105px;
+            padding: 32px 30px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+        }
+
+        .contents-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contents-list {
+            list-style: none;
+        }
+
+        .contents-list li {
+            margin-bottom: 13px;
+        }
+
+        .contents-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .contents-list a {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.45;
+            transition: 0.2s ease;
+        }
+
+        .contents-list a:hover {
+            color: var(--accent);
+        }
+
+
+        /* POLICY CARDS */
+
+        .policy-content {
+            display: grid;
+            gap: 20px;
+        }
+
+        .policy-card {
+            padding: 42px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+            scroll-margin-top: 105px;
+        }
+
+        .policy-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 28px;
+            line-height: 1.25;
+            margin-bottom: 25px;
+        }
+
+        .policy-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 18px;
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        .policy-card p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-card ul {
+            padding-left: 22px;
+            margin: 14px 0 18px;
+            color: var(--muted);
+        }
+
+        .policy-card li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .policy-card a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .policy-card a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-box {
+            margin-top: 18px;
+            padding: 20px;
+            background: var(--soft);
+            border-radius: 15px;
+        }
+
+        .contact-box strong {
+            color: var(--text);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 65px 0 28px;
+            background: var(--dark);
+            color: #aeb3ac;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: start;
+            gap: 70px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            max-width: 360px;
+            color: #aeb3ac;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(130px, 1fr));
+            gap: 13px 35px;
+            justify-self: end;
+            width: min(430px, 100%);
+        }
+
+        .footer-links a {
+            color: #aeb3ac;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 23px;
+            border-top: 1px solid #343832;
+            color: #858b83;
+            font-size: 12px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+
+            .policy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contents-card {
+                position: static;
+            }
+
+            .contents-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px 20px;
+            }
+
+            .contents-list li {
+                margin-bottom: 0;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-links {
+                justify-self: start;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-inner {
+                min-height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .privacy-hero {
+                padding: 58px 0;
+            }
+
+            .policy-section {
+                padding-top: 45px;
+            }
+
+            .policy-card {
+                padding: 27px;
+            }
+
+            .policy-card h2 {
+                font-size: 23px;
+            }
+
+            .contents-card {
+                padding: 26px;
+            }
+
+            .contents-list {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a
+            href="/cell-cave-website/"
+            class="brand"
+        >
+            <span class="brand-mark">CC</span>
+            <span>Cell Cave</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="privacy-hero">
+
+        <div class="container">
+
+            <a
+                href="/cell-cave-website/apps/status-downloader-video-saver/"
+                class="back-link"
+            >
+                ← Back to Status Downloader
+            </a>
+
+            <div class="eyebrow">
+                Status Downloader: Video Saver
+            </div>
+
+            <h1>
+                Privacy Policy
+            </h1>
+
+            <p>
+                This Privacy Policy explains how Cell Cave handles
+                information when you use Status Downloader: Video Saver,
+                including media and storage access, analytics,
+                advertising, subscriptions, payments, and third-party
+                services.
+            </p>
+
+            <span class="updated">
+                Last updated: August 31, 2026
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- POLICY -->
+
+    <section class="policy-section">
+
+        <div class="container policy-layout">
+
+
+            <!-- CONTENTS -->
+
+            <aside class="contents-card">
+
+                <h2>
+                    Contents
+                </h2>
+
+                <ul class="contents-list">
+
+                    <li>
+                        <a href="#overview">
+                            1. Overview
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#information">
+                            2. Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#media">
+                            3. Media & Storage
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#technical">
+                            4. Technical Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#analytics">
+                            5. Analytics
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#advertising">
+                            6. Advertising
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#subscription">
+                            7. Subscription
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#third-parties">
+                            8. Third Parties
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sharing">
+                            9. Data Sharing
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#retention">
+                            10. Data Retention
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#choices">
+                            11. Your Choices
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#children">
+                            12. Children
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#security">
+                            13. Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#changes">
+                            14. Changes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">
+                            15. Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </aside>
+
+
+            <!-- RIGHT SIDE CARDS -->
+
+            <div class="policy-content">
+
+
+                <article
+                    class="policy-card"
+                    id="overview"
+                >
+
+                    <h2>
+                        1. Overview
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver is provided by
+                        Cell Cave. This Privacy Policy explains how
+                        information may be handled when you use the app.
+                    </p>
+
+                    <p>
+                        The app does not require users to create an
+                        account or sign in to use its main features.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="information"
+                >
+
+                    <h2>
+                        2. Information We Do Not Directly Collect
+                    </h2>
+
+                    <p>
+                        Cell Cave does not directly ask users to provide
+                        their name, email address, phone number, or
+                        precise location to use the main functionality
+                        of Status Downloader: Video Saver.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="media"
+                >
+
+                    <h2>
+                        3. Photos, Videos, Media and Storage
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver may request access
+                        to photos, videos, media, or device storage when
+                        this access is necessary to provide the app's
+                        core functionality.
+                    </p>
+
+                    <p>
+                        Supported status content and media handled
+                        through the app are processed locally on the
+                        user's device.
+                    </p>
+
+                    <p>
+                        Cell Cave does not upload this locally handled
+                        status content or media to Cell Cave servers as
+                        part of the app's normal status-saving
+                        functionality.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="technical"
+                >
+
+                    <h2>
+                        4. Device and Technical Information
+                    </h2>
+
+                    <p>
+                        Third-party services used by the app may
+                        automatically process certain technical
+                        information depending on the service being used.
+                        This may include:
+                    </p>
+
+                    <ul>
+                        <li>Device and app information</li>
+                        <li>Operating system information</li>
+                        <li>App usage information</li>
+                        <li>Advertising or app identifiers</li>
+                        <li>IP address and network information</li>
+                        <li>Advertising interactions</li>
+                        <li>Diagnostics and performance information</li>
+                        <li>
+                            Approximate location inferred from an
+                            IP address
+                        </li>
+                    </ul>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="analytics"
+                >
+
+                    <h2>
+                        5. Firebase Analytics
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver uses Firebase
+                        Analytics to help understand how the app is used
+                        and to help improve the app experience.
+                    </p>
+
+                    <p>
+                        Firebase Analytics may be used for both free
+                        users and paid subscribers.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="advertising"
+                >
+
+                    <h2>
+                        6. Advertising
+                    </h2>
+
+                    <p>
+                        The free version of Status Downloader: Video Saver
+                        may display advertising.
+                    </p>
+
+                    <p>
+                        Advertising services used or potentially used by
+                        the app include:
+                    </p>
+
+                    <ul>
+                        <li>Google AdMob</li>
+                        <li>Meta Audience Network</li>
+                        <li>Mintegral</li>
+                        <li>Pangle</li>
+                        <li>Liftoff</li>
+                    </ul>
+
+                    <p>
+                        These advertising providers may process device,
+                        technical, advertising, network, usage, or
+                        interaction information for purposes such as
+                        delivering, measuring, limiting, personalizing,
+                        or protecting advertising, depending on user
+                        consent, device settings, region, and applicable
+                        law.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="subscription"
+                >
+
+                    <h2>
+                        7. Paid Subscription and Payments
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver offers or may offer
+                        paid subscription options through Google Play.
+                    </p>
+
+                    <p>
+                        Free users may receive advertising. Paid
+                        subscribers do not receive advertising in the
+                        app.
+                    </p>
+
+                    <p>
+                        Payments and subscriptions are processed by
+                        Google Play. Cell Cave does not directly collect
+                        or process the user's full payment card details.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="third-parties"
+                >
+
+                    <h2>
+                        8. Third-Party Services
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver uses third-party
+                        services that operate according to their own
+                        terms and privacy policies.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Google / Firebase / AdMob:
+                            <a
+                                href="https://policies.google.com/privacy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Google Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            Meta:
+                            <a
+                                href="https://www.facebook.com/privacy/policy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Meta Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            Mintegral:
+                            <a
+                                href="https://www.mintegral.com/en/privacy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Mintegral Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            Pangle:
+                            <a
+                                href="https://www.pangleglobal.com/privacy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Pangle Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            Liftoff:
+                            <a
+                                href="https://liftoff.io/privacy-policy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Liftoff Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="sharing"
+                >
+
+                    <h2>
+                        9. Data Sharing
+                    </h2>
+
+                    <p>
+                        Cell Cave does not sell users' locally handled
+                        status content or media.
+                    </p>
+
+                    <p>
+                        Third-party analytics, advertising, billing, and
+                        platform providers may process information as
+                        described in this Privacy Policy and under their
+                        own privacy policies.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="retention"
+                >
+
+                    <h2>
+                        10. Data Retention
+                    </h2>
+
+                    <p>
+                        Status content and media processed locally by the
+                        app remain under the user's control on their
+                        device.
+                    </p>
+
+                    <p>
+                        Information processed by third-party services may
+                        be retained according to those providers'
+                        respective retention practices and privacy
+                        policies.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="choices"
+                >
+
+                    <h2>
+                        11. Your Choices
+                    </h2>
+
+                    <p>
+                        Users can manage app permissions through their
+                        device settings. Disabling a permission may
+                        prevent certain app features from working
+                        correctly.
+                    </p>
+
+                    <p>
+                        Users may also have advertising, consent, and
+                        privacy controls available through their device,
+                        Google services, or applicable third-party
+                        services.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="children"
+                >
+
+                    <h2>
+                        12. Children's Privacy
+                    </h2>
+
+                    <p>
+                        Status Downloader: Video Saver is not specifically
+                        directed to children under the age of 13.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="security"
+                >
+
+                    <h2>
+                        13. Security
+                    </h2>
+
+                    <p>
+                        Cell Cave takes reasonable measures to protect
+                        information associated with the app. However, no
+                        electronic transmission, device, system, or
+                        storage method can be guaranteed to be completely
+                        secure.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="changes"
+                >
+
+                    <h2>
+                        14. Changes to This Privacy Policy
+                    </h2>
+
+                    <p>
+                        Cell Cave may update this Privacy Policy when app
+                        functionality, services, third-party providers,
+                        or legal requirements change.
+                    </p>
+
+                    <p>
+                        Changes will be reflected on this page and the
+                        last-updated date may be revised when appropriate.
+                    </p>
+
+                </article>
+
+
+                <article
+                    class="policy-card"
+                    id="contact"
+                >
+
+                    <h2>
+                        15. Contact Us
+                    </h2>
+
+                    <p>
+                        If you have questions about this Privacy Policy,
+                        contact Cell Cave at:
+                    </p>
+
+                    <div class="contact-box">
+
+                        <strong>
+                            Email:
+                        </strong>
+
+                        <a href="mailto:cellcave70@gmail.com">
+                            cellcave70@gmail.com
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Cell Cave
+                </h3>
+
+                <p>
+                    Simple Utilities. Smarter Everyday.
+                </p>
+
+            </div>
+
+
+            <nav class="footer-links">
+
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+
+                <a href="/cell-cave-website/privacy/">
+                    Company Privacy Policy
+                </a>
+
+                <a href="/cell-cave-website/terms/">
+                    Terms of Use
+                </a>
+
+                <a href="/cell-cave-website/app-store/">
+                    App Store
+                </a>
+
+                <a
+                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Play
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2026 Cell Cave. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

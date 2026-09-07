@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Account & Data Deletion - Cloud Backup: Photo Storage | Cell Cave
+    </title>
+
+    <meta
+        name="description"
+        content="Account and data deletion instructions for Cloud Backup: Photo Storage by Cell Cave."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --bg: #f6f7f4;
+            --surface: #ffffff;
+            --text: #171916;
+            --muted: #6c7169;
+            --line: #e3e6df;
+            --accent: #426b4d;
+            --accent-dark: #31523b;
+            --soft: #e9eee7;
+            --dark: #171916;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1420px, 90%);
+            margin: auto;
+        }
+
+
+        /* HEADER */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(246, 247, 244, 0.92);
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+
+            gap: 11px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            background: var(--dark);
+            color: white;
+
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 30px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+
+        /* HERO */
+
+        .hero {
+            padding: 72px 0;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .back-link {
+            display: inline-flex;
+
+            margin-bottom: 28px;
+
+            color: var(--accent);
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            max-width: 950px;
+
+            margin-bottom: 22px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(44px, 6vw, 68px);
+
+            line-height: 1.04;
+
+            letter-spacing: -2.5px;
+        }
+
+        .hero p {
+            max-width: 900px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+        .updated {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 13px 16px;
+
+            background: var(--soft);
+
+            border-radius: 12px;
+
+            color: var(--accent-dark);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* MAIN LAYOUT */
+
+        .deletion-section {
+            padding: 74px 0 110px;
+        }
+
+        .deletion-layout {
+            display: grid;
+
+            grid-template-columns: 290px minmax(0, 1fr);
+
+            gap: 42px;
+
+            align-items: start;
+        }
+
+
+        /* TABLE OF CONTENTS */
+
+        .contents-card {
+            position: sticky;
+
+            top: 105px;
+
+            padding: 30px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 22px;
+        }
+
+        .contents-card h2 {
+            margin-bottom: 20px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+        }
+
+        .contents-list {
+            list-style: none;
+        }
+
+        .contents-list li {
+            margin-bottom: 13px;
+        }
+
+        .contents-list a {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        .contents-list a:hover {
+            color: var(--accent);
+        }
+
+
+        /* CONTENT */
+
+        .deletion-content {
+            display: grid;
+
+            gap: 20px;
+        }
+
+        .deletion-card {
+            padding: 42px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 24px;
+
+            scroll-margin-top: 105px;
+        }
+
+        .deletion-card h2 {
+            margin-bottom: 20px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 28px;
+
+            line-height: 1.25;
+        }
+
+        .deletion-card p {
+            margin-bottom: 16px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+        .deletion-card ul,
+        .deletion-card ol {
+            padding-left: 24px;
+
+            margin: 15px 0 20px;
+
+            color: var(--muted);
+        }
+
+        .deletion-card li {
+            margin-bottom: 10px;
+
+            line-height: 1.8;
+        }
+
+        .deletion-card a {
+            color: var(--accent);
+
+            font-weight: 700;
+        }
+
+
+        /* EMAIL BOX */
+
+        .email-box {
+            margin: 20px 0;
+
+            padding: 24px;
+
+            background: var(--soft);
+
+            border-radius: 16px;
+        }
+
+        .email-label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .email-box a {
+            color: var(--accent-dark);
+
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        /* IMPORTANT */
+
+        .important-box {
+            margin-top: 20px;
+
+            padding: 24px;
+
+            background: var(--dark);
+            color: white;
+
+            border-radius: 18px;
+        }
+
+        .important-box strong {
+            display: block;
+
+            margin-bottom: 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 18px;
+        }
+
+        .important-box p {
+            color: #b8bdb6;
+        }
+
+
+        /* BUTTONS */
+
+        .page-buttons {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .button {
+            min-height: 52px;
+
+            padding: 0 22px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 13px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .button-primary {
+            background: var(--accent);
+            color: white !important;
+        }
+
+        .button-secondary {
+            background: var(--soft);
+            color: var(--text) !important;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 65px 0 28px;
+
+            background: var(--dark);
+
+            color: #aeb3ac;
+        }
+
+        .footer-main {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 70px;
+
+            padding-bottom: 45px;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 8px;
+
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 23px;
+        }
+
+        .footer-brand p {
+            max-width: 360px;
+
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(130px, 1fr));
+
+            gap: 13px 35px;
+
+            justify-self: end;
+
+            width: min(430px, 100%);
+        }
+
+        .footer-links a {
+            color: #aeb3ac;
+
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 23px;
+
+            border-top: 1px solid #343832;
+
+            color: #858b83;
+
+            font-size: 12px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+
+            .deletion-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contents-card {
+                position: static;
+            }
+
+            .contents-list {
+                display: grid;
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 10px 20px;
+            }
+
+            .contents-list li {
+                margin: 0;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .footer-links {
+                justify-self: start;
+
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-inner {
+                min-height: auto;
+
+                padding: 15px 0;
+
+                flex-direction: column;
+
+                gap: 14px;
+            }
+
+            .nav-links {
+                gap: 17px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 56px 0;
+            }
+
+            .deletion-section {
+                padding: 50px 0 75px;
+            }
+
+            .contents-card,
+            .deletion-card {
+                padding: 27px;
+            }
+
+            .contents-list {
+                grid-template-columns: 1fr;
+            }
+
+            .page-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.footer-social {
+    margin-top: 25px;
+}
+
+.social-label {
+    display: block;
+    margin-bottom: 11px;
+    color: #8f958d;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.social-icon {
+    width: 39px;
+    height: 39px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #343832;
+    border-radius: 11px;
+
+    background: #1d201c;
+    color: #b9beb7;
+}
+
+.social-icon svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}
+
+.social-icon.instagram svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+}
+
+.social-x {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+        
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a
+            href="/cell-cave-website/"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                CC
+            </span>
+
+            <span>
+                Cell Cave
+            </span>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <a
+            href="/cell-cave-website/apps/cloud-backup-photo-storage/"
+            class="back-link"
+        >
+            ← Back to Cloud Backup
+        </a>
+
+        <div class="eyebrow">
+            Cloud Backup: Photo Storage
+        </div>
+
+        <h1>
+            Account & Data Deletion
+        </h1>
+
+        <p>
+            This page explains how you can delete your
+            Cloud Backup: Photo Storage account and the data
+            associated with your account.
+        </p>
+
+        <span class="updated">
+            Last Updated: September 4, 2026
+        </span>
+
+    </div>
+
+</section>
+
+
+<section class="deletion-section">
+
+    <div class="container deletion-layout">
+
+
+        <!-- TABLE OF CONTENTS -->
+
+        <aside class="contents-card">
+
+            <h2>
+                Contents
+            </h2>
+
+            <ul class="contents-list">
+
+                <li>
+                    <a href="#delete-in-app">
+                        1. Delete from the App
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#email-deletion">
+                        2. Request by Email
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#what-deleted">
+                        3. What Gets Deleted
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#what-kept">
+                        4. What We May Keep
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#privacy-info">
+                        5. Privacy Information
+                    </a>
+                </li>
+
+            </ul>
+
+        </aside>
+
+
+        <!-- RIGHT CONTENT -->
+
+        <div class="deletion-content">
+
+
+            <!-- 1 -->
+
+            <article
+                class="deletion-card"
+                id="delete-in-app"
+            >
+
+                <h2>
+                    1. Delete Your Account from the App
+                </h2>
+
+                <p>
+                    You can delete your Cloud Backup account and the
+                    data linked to it directly from inside the App.
+                </p>
+
+                <ol>
+
+                    <li>
+                        Open <strong>Cloud Backup</strong> and make
+                        sure you are signed in.
+                    </li>
+
+                    <li>
+                        Go to the <strong>Settings</strong> tab.
+                    </li>
+
+                    <li>
+                        Tap <strong>Delete account</strong>
+                        ("Erase your data").
+                    </li>
+
+                    <li>
+                        Read the confirmation message and then tap
+                        <strong>Delete account</strong> to confirm.
+                    </li>
+
+                </ol>
+
+                <p>
+                    The App completes the deletion process. It removes
+                    your files from cloud storage, deletes your account,
+                    and clears your encryption keys from the device.
+                </p>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article
+                class="deletion-card"
+                id="email-deletion"
+            >
+
+                <h2>
+                    2. Request Deletion by Email
+                </h2>
+
+                <p>
+                    If you cannot access the App, for example because
+                    you changed phones or uninstalled the App, you can
+                    request account deletion by email.
+                </p>
+
+                <div class="email-box">
+
+                    <span class="email-label">
+                        Send your deletion request to
+                    </span>
+
+                    <a href="mailto:cellcave70@gmail.com">
+                        cellcave70@gmail.com
+                    </a>
+
+                </div>
+
+                <p>
+                    Send the request from the email address associated
+                    with your Cloud Backup account.
+                </p>
+
+                <p>
+                    Use the email subject:
+                    <strong>Delete my account</strong>
+                </p>
+
+                <p>
+                    We will verify that the request comes from the
+                    account owner and then process the deletion request.
+                </p>
+
+                <p>
+                    We aim to complete verified deletion requests within
+                    <strong>30 days</strong>.
+                </p>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article
+                class="deletion-card"
+                id="what-deleted"
+            >
+
+                <h2>
+                    3. What Gets Deleted
+                </h2>
+
+                <p>
+                    When your account is deleted, the following
+                    information is removed:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Your account and login information.
+                    </li>
+
+                    <li>
+                        All backed-up photos.
+                    </li>
+
+                    <li>
+                        All backed-up videos.
+                    </li>
+
+                    <li>
+                        Documents and files stored in the cloud.
+                    </li>
+
+                    <li>
+                        Audio files stored in the cloud.
+                    </li>
+
+                    <li>
+                        Your contacts backup, if you used this feature.
+                    </li>
+
+                    <li>
+                        Encryption keys stored on the device.
+                    </li>
+
+                    <li>
+                        Stored account settings and entitlements.
+                    </li>
+
+                </ul>
+
+
+                <div class="important-box">
+
+                    <strong>
+                        Account deletion cannot be undone.
+                    </strong>
+
+                    <p>
+                        Once your account is deleted, your backups are
+                        permanently removed from active cloud storage
+                        and cannot be restored through the App.
+                    </p>
+
+                    <p>
+                        Restore or export anything you want to keep
+                        before deleting your account.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article
+                class="deletion-card"
+                id="what-kept"
+            >
+
+                <h2>
+                    4. What We May Keep
+                </h2>
+
+                <p>
+                    We do not keep your files as active user-accessible
+                    backup data after account deletion.
+                </p>
+
+                <p>
+                    We may retain a minimal amount of information where
+                    required by law, such as records of a purchase for
+                    tax or legal purposes.
+                </p>
+
+                <p>
+                    Short-lived copies of information may remain in
+                    infrastructure-provider backups for a limited
+                    period before they are fully purged where technically
+                    necessary for backup, security, disaster recovery,
+                    fraud prevention, or other legitimate operational
+                    purposes.
+                </p>
+
+                <p>
+                    Information retained under these limited exceptions
+                    will be restricted to what is reasonably necessary
+                    for the applicable purpose.
+                </p>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article
+                class="deletion-card"
+                id="privacy-info"
+            >
+
+                <h2>
+                    5. Privacy Information
+                </h2>
+
+                <p>
+                    For more information about how Cloud Backup:
+                    Photo Storage handles account information,
+                    encrypted backups, device information, analytics,
+                    advertising, third-party service providers, and
+                    other information, review the App's Privacy Policy.
+                </p>
+
+                <div class="page-buttons">
+
+                    <a
+                        href="/cell-cave-website/apps/cloud-backup-photo-storage/privacy/"
+                        class="button button-primary"
+                    >
+                        View Privacy Policy
+                    </a>
+
+                    <a
+                        href="/cell-cave-website/apps/cloud-backup-photo-storage/"
+                        class="button button-secondary"
+                    >
+                        Back to Cloud Backup
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Cell Cave
+                </h3>
+
+                <p>
+                    Simple Utilities. Smarter Everyday.
+                </p>
+
+                <div class="footer-social">
+
+                    <span class="social-label">
+                        Follow Cell Cave
+                    </span>
+
+                    <div class="social-icons">
+
+                        <span class="social-icon" title="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24">
+
+                                <rect
+                                    x="3.5"
+                                    y="3.5"
+                                    width="17"
+                                    height="17"
+                                    rx="5"
+                                ></rect>
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="4"
+                                ></circle>
+
+                                <circle
+                                    cx="17.5"
+                                    cy="6.5"
+                                    r="0.8"
+                                    fill="currentColor"
+                                    stroke="none"
+                                ></circle>
+
+                            </svg>
+                        </span>
+
+                        <span class="social-icon" title="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5.2 8.2H2.4V21h2.8V8.2zM3.8 2.5A1.7 1.7 0 1 0 3.8 5.9a1.7 1.7 0 0 0 0-3.4zM21.6 13.7c0-3.9-2.1-5.7-4.9-5.7-2.3 0-3.3 1.2-3.8 2.1V8.2h-2.8V21h2.8v-6.4c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.8l.1-7.3z"/>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon" title="YouTube">
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M21.4 7.1c-.2-1.3-1.1-2.2-2.4-2.4C17.3 4.4 14.7 4.3 12 4.3s-5.3.1-7 .4c-1.3.2-2.2 1.1-2.4 2.4-.2 1.4-.3 3.1-.3 4.9s.1 3.5.3 4.9c.2 1.3 1.1 2.2 2.4 2.4 1.7.3 4.3.4 7 .4s5.3-.1 7-.4c1.3-.2 2.2-1.1 2.4-2.4.2-1.4.3-3.1.3-4.9s-.1-3.5-.3-4.9z"/>
+
+                                <path
+                                    d="M10 8.7l6 3.3-6 3.3V8.7z"
+                                    fill="#171916"
+                                />
+
+                            </svg>
+                        </span>
+
+                        <span class="social-icon social-x" title="X">
+                            X
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <nav class="footer-links">
+
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+
+                <a href="/cell-cave-website/privacy/">
+                    Privacy Policy
+                </a>
+
+                <a href="/cell-cave-website/terms/">
+                    Terms of Use
+                </a>
+
+                <a href="/cell-cave-website/app-store/">
+                    App Store
+                </a>
+
+                <a
+                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Play
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Cell Cave. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Privacy Policy - Cloud Backup: Photo Storage | Cell Cave
+    </title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for Cloud Backup: Photo Storage by Cell Cave."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        :root {
+            --bg: #f6f7f4;
+            --surface: #ffffff;
+            --text: #171916;
+            --muted: #6c7169;
+            --line: #e3e6df;
+            --accent: #426b4d;
+            --accent-dark: #31523b;
+            --soft: #e9eee7;
+            --dark: #171916;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1420px, 90%);
+            margin: auto;
+        }
+
+
+        /* HEADER */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(246, 247, 244, 0.92);
+
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            min-height: 78px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            background: var(--dark);
+            color: white;
+
+            border-radius: 12px;
+
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+
+        /* HERO */
+
+        .privacy-hero {
+            padding: 72px 0;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .back-link {
+            display: inline-flex;
+
+            margin-bottom: 28px;
+
+            color: var(--accent);
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .privacy-hero h1 {
+            max-width: 1000px;
+
+            margin-bottom: 22px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(44px, 6vw, 70px);
+
+            line-height: 1.04;
+
+            letter-spacing: -2.5px;
+        }
+
+        .privacy-hero p {
+            max-width: 980px;
+
+            margin-bottom: 14px;
+
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+        .updated {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 13px 16px;
+
+            background: var(--soft);
+
+            border-radius: 12px;
+
+            color: var(--accent-dark);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+
+        /* POLICY */
+
+        .policy-section {
+            padding: 74px 0 110px;
+        }
+
+        .policy-layout {
+            display: grid;
+
+            grid-template-columns: 290px minmax(0, 1fr);
+
+            gap: 42px;
+
+            align-items: start;
+        }
+
+
+        /* CONTENTS */
+
+        .contents-card {
+            position: sticky;
+            top: 105px;
+
+            padding: 30px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 22px;
+
+            max-height: calc(100vh - 130px);
+
+            overflow-y: auto;
+        }
+
+        .contents-card h2 {
+            margin-bottom: 20px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+        }
+
+        .contents-list {
+            list-style: none;
+        }
+
+        .contents-list li {
+            margin-bottom: 12px;
+        }
+
+        .contents-list a {
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.45;
+        }
+
+        .contents-list a:hover {
+            color: var(--accent);
+        }
+
+
+        /* POLICY CARDS */
+
+        .policy-content {
+            display: grid;
+
+            gap: 20px;
+        }
+
+        .policy-card {
+            padding: 42px;
+
+            background: var(--surface);
+
+            border: 1px solid var(--line);
+
+            border-radius: 24px;
+
+            scroll-margin-top: 105px;
+        }
+
+        .policy-card h2 {
+            margin-bottom: 25px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 28px;
+
+            line-height: 1.25;
+        }
+
+        .policy-card h3 {
+            margin: 25px 0 10px;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 18px;
+        }
+
+        .policy-card p {
+            margin-bottom: 16px;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+        .policy-card ul {
+            padding-left: 23px;
+
+            margin: 14px 0 18px;
+
+            color: var(--muted);
+        }
+
+        .policy-card li {
+            margin-bottom: 8px;
+
+            line-height: 1.75;
+        }
+
+        .policy-card a {
+            color: var(--accent);
+
+            font-weight: 600;
+        }
+
+        .policy-card a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* SERVICE PROVIDERS TABLE */
+
+        .table-wrap {
+            width: 100%;
+
+            margin: 20px 0 25px;
+
+            overflow-x: auto;
+        }
+
+        .provider-table {
+            width: 100%;
+
+            min-width: 700px;
+
+            border-collapse: collapse;
+        }
+
+        .provider-table th,
+        .provider-table td {
+            padding: 15px 17px;
+
+            text-align: left;
+            vertical-align: top;
+
+            border: 1px solid var(--line);
+        }
+
+        .provider-table th {
+            background: var(--soft);
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 14px;
+        }
+
+        .provider-table td {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.65;
+        }
+
+        .provider-table td:first-child {
+            color: var(--text);
+
+            font-weight: 700;
+        }
+
+
+        /* SPECIAL BOX */
+
+        .info-box {
+            margin: 20px 0;
+
+            padding: 24px;
+
+            background: var(--soft);
+
+            border-radius: 16px;
+        }
+
+        .info-box p {
+            margin-bottom: 12px;
+        }
+
+        .info-box p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* DELETION BUTTON */
+
+        .deletion-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+
+            margin-top: 8px;
+
+            padding: 0 22px;
+
+            background: var(--accent);
+            color: white !important;
+
+            border-radius: 13px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            text-decoration: none !important;
+
+            transition: 0.2s ease;
+        }
+
+        .deletion-button:hover {
+            background: var(--accent-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            padding: 65px 0 28px;
+
+            background: var(--dark);
+
+            color: #aeb3ac;
+        }
+
+        .footer-main {
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 70px;
+
+            padding-bottom: 45px;
+        }
+
+        .footer-brand h3 {
+            margin-bottom: 8px;
+
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 23px;
+        }
+
+        .footer-brand p {
+            max-width: 360px;
+
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: grid;
+
+            grid-template-columns: repeat(2, minmax(130px, 1fr));
+
+            gap: 13px 35px;
+
+            justify-self: end;
+
+            width: min(430px, 100%);
+        }
+
+        .footer-links a {
+            color: #aeb3ac;
+
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 23px;
+
+            border-top: 1px solid #343832;
+
+            color: #858b83;
+
+            font-size: 12px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+
+            .policy-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contents-card {
+                position: static;
+
+                max-height: none;
+            }
+
+            .contents-list {
+                display: grid;
+
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 8px 20px;
+            }
+
+            .contents-list li {
+                margin: 0;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .footer-links {
+                justify-self: start;
+
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .nav-inner {
+                min-height: auto;
+
+                padding: 15px 0;
+
+                flex-direction: column;
+
+                gap: 14px;
+            }
+
+            .nav-links {
+                gap: 17px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .privacy-hero {
+                padding: 58px 0;
+            }
+
+            .policy-section {
+                padding-top: 45px;
+            }
+
+            .policy-card {
+                padding: 27px;
+            }
+
+            .policy-card h2 {
+                font-size: 23px;
+            }
+
+            .contents-card {
+                padding: 26px;
+            }
+
+            .contents-list {
+                grid-template-columns: 1fr;
+            }
+
+            .deletion-button {
+                width: 100%;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+.footer-social {
+    margin-top: 25px;
+}
+
+.social-label {
+    display: block;
+    margin-bottom: 11px;
+    color: #8f958d;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.social-icon {
+    width: 39px;
+    height: 39px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #343832;
+    border-radius: 11px;
+
+    background: #1d201c;
+    color: #b9beb7;
+}
+
+.social-icon svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}
+
+.social-icon.instagram svg {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+}
+
+.social-x {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+        
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a
+            href="/cell-cave-website/"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+                CC
+            </span>
+
+            <span>
+                Cell Cave
+            </span>
+
+        </a>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+            </li>
+
+            <li>
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="privacy-hero">
+
+    <div class="container">
+
+        <a
+            href="/cell-cave-website/apps/cloud-backup-photo-storage/"
+            class="back-link"
+        >
+            ← Back to Cloud Backup
+        </a>
+
+        <div class="eyebrow">
+            Cloud Backup: Photo Storage
+        </div>
+
+        <h1>
+            Privacy Policy
+        </h1>
+
+        <p>
+            Cell Cave ("we", "us", or "our") operates
+            Cloud Backup: Photo Storage (the "App"). This Privacy
+            Policy explains what information the App may access,
+            collect, use, store, and share, why it is used, how long
+            it may be retained, and the choices available to users.
+        </p>
+
+        <p>
+            By using Cloud Backup: Photo Storage, you acknowledge
+            the practices described in this Privacy Policy.
+        </p>
+
+        <span class="updated">
+            Last Updated: September 4, 2026
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- POLICY -->
+
+<section class="policy-section">
+
+    <div class="container policy-layout">
+
+
+        <!-- CONTENTS -->
+
+        <aside class="contents-card">
+
+            <h2>
+                Contents
+            </h2>
+
+            <ul class="contents-list">
+
+                <li><a href="#information">1. Information We Handle</a></li>
+
+                <li><a href="#backup">2. Backup Content</a></li>
+
+                <li><a href="#permissions">3. Device Permissions</a></li>
+
+                <li><a href="#assistant">4. In-App Assistant</a></li>
+
+                <li><a href="#analytics">5. Analytics & Diagnostics</a></li>
+
+                <li><a href="#advertising">6. Advertising</a></li>
+
+                <li><a href="#billing">7. Paid Plans & Billing</a></li>
+
+                <li><a href="#providers">8. Service Providers</a></li>
+
+                <li><a href="#use">9. How We Use Information</a></li>
+
+                <li><a href="#sharing">10. Sharing & Disclosure</a></li>
+
+                <li><a href="#retention">11. Storage & Retention</a></li>
+
+                <li><a href="#deletion">12. Account & Data Deletion</a></li>
+
+                <li><a href="#choices">13. Your Privacy Choices</a></li>
+
+                <li><a href="#security">14. Security</a></li>
+
+                <li><a href="#international">15. International Processing</a></li>
+
+                <li><a href="#children">16. Children's Privacy</a></li>
+
+                <li><a href="#changes">17. Changes</a></li>
+
+                <li><a href="#contact">18. Contact Us</a></li>
+
+            </ul>
+
+        </aside>
+
+
+        <div class="policy-content">
+
+
+            <!-- 1 -->
+
+            <article class="policy-card" id="information">
+
+                <h2>
+                    1. Information We Handle
+                </h2>
+
+                <p>
+                    Depending on the features you use, Cloud Backup:
+                    Photo Storage may handle the following categories
+                    of information.
+                </p>
+
+
+                <h3>
+                    Account and Authentication Information
+                </h3>
+
+                <p>
+                    To create and use an account, the App may handle:
+                </p>
+
+                <ul>
+                    <li>Email address</li>
+                    <li>Account identifier</li>
+                    <li>Authentication and verification information</li>
+                    <li>One-time password (OTP) information</li>
+                    <li>Sign-in events and related technical information</li>
+                </ul>
+
+                <p>
+                    Your email address may be used for account
+                    registration, sign-in, account verification,
+                    security, and account-related communications.
+                </p>
+
+                <p>
+                    OTP codes may be sent to your email address to
+                    verify account access and protect your account.
+                </p>
+
+                <p>
+                    Where password-based authentication is supported,
+                    authentication credentials may be processed by the
+                    applicable authentication service and are not
+                    intended to be stored by Cell Cave as plain-text
+                    passwords.
+                </p>
+
+                <p>
+                    Account and authentication services may use
+                    Amazon Web Services (AWS) infrastructure.
+                </p>
+
+
+                <h3>
+                    Technical and Device Information
+                </h3>
+
+                <p>
+                    Depending on the features and third-party services
+                    used, the App and its service providers may process
+                    technical information such as:
+                </p>
+
+                <ul>
+                    <li>Device model</li>
+                    <li>Operating system and version</li>
+                    <li>App version</li>
+                    <li>Device and app identifiers</li>
+                    <li>Advertising identifiers</li>
+                    <li>Language and general device settings</li>
+                    <li>IP address</li>
+                    <li>Network information</li>
+                    <li>Crash and diagnostic information</li>
+                    <li>Performance information</li>
+                    <li>App usage and interaction information</li>
+                </ul>
+
+                <p>
+                    This information may be used to operate, secure,
+                    troubleshoot, analyze, monetize, and improve the
+                    App and its services.
+                </p>
+
+            </article>
+
+
+            <!-- 2 -->
+
+            <article class="policy-card" id="backup">
+
+                <h2>
+                    2. Backup Content
+                </h2>
+
+                <p>
+                    The App allows users to back up supported content
+                    to cloud storage.
+                </p>
+
+                <p>
+                    Depending on the features enabled and permissions
+                    granted, supported backup content may include:
+                </p>
+
+                <ul>
+                    <li>Photos</li>
+                    <li>Videos</li>
+                    <li>Documents and files</li>
+                    <li>Audio files</li>
+                    <li>Contacts</li>
+                </ul>
+
+                <p>
+                    Backup files are encrypted on the user's device
+                    before they are transferred to cloud storage.
+                </p>
+
+                <p>
+                    Encrypted backup data is stored using Amazon Web
+                    Services (AWS) cloud infrastructure.
+                </p>
+
+
+                <h3>
+                    Access to Backup Contents
+                </h3>
+
+                <p>
+                    Backup files are encrypted before leaving the
+                    user's device.
+                </p>
+
+                <p>
+                    Cell Cave does not have access to the contents
+                    of the user's encrypted backup files through the
+                    normal cloud-storage process.
+                </p>
+
+                <p>
+                    The App may retrieve encrypted backup data to an
+                    authenticated user's device when the user chooses
+                    to restore their backed-up content.
+                </p>
+
+                <p>
+                    Backup and restore functionality may require an
+                    internet connection.
+                </p>
+
+            </article>
+
+
+            <!-- 3 -->
+
+            <article class="policy-card" id="permissions">
+
+                <h2>
+                    3. Device Permissions
+                </h2>
+
+                <p>
+                    The App may request Android permissions when they
+                    are necessary for a feature that the user chooses
+                    to use.
+                </p>
+
+
+                <h3>
+                    Photos, Videos and Media
+                </h3>
+
+                <p>
+                    The App may request access to photos, videos, and
+                    other supported media so users can select content
+                    for backup or restore.
+                </p>
+
+                <p>
+                    Where supported by Android, users may be able to
+                    choose:
+                </p>
+
+                <ul>
+                    <li>Full access</li>
+                    <li>Limited access</li>
+                    <li>No access</li>
+                </ul>
+
+                <p>
+                    The App uses the level of access granted by the
+                    user through Android's permission controls.
+                </p>
+
+
+                <h3>
+                    Contacts
+                </h3>
+
+                <p>
+                    The App may request Contacts permission when the
+                    user chooses to back up or restore contacts.
+                </p>
+
+                <p>
+                    Contacts access is used to provide the supported
+                    contact backup and restore functionality.
+                </p>
+
+
+                <h3>
+                    Other Permissions
+                </h3>
+
+                <p>
+                    If additional permissions such as camera,
+                    nearby-device, file, or other device access are
+                    introduced or required for a specific feature, the
+                    App will request those permissions through the
+                    applicable Android permission mechanism and use
+                    them for the related functionality.
+                </p>
+
+                <p>
+                    Users can manage or revoke applicable permissions
+                    through Android device settings.
+                </p>
+
+                <p>
+                    If a required permission is denied, the related
+                    feature may not be available.
+                </p>
+
+            </article>
+
+
+            <!-- 4 -->
+
+            <article class="policy-card" id="assistant">
+
+                <h2>
+                    4. In-App Assistant
+                </h2>
+
+                <p>
+                    The App may provide an optional assistant that
+                    allows users to enter questions and receive
+                    generated responses.
+                </p>
+
+                <p>
+                    When a user chooses to use the assistant, the text
+                    entered by the user must be transmitted to and
+                    processed by the services supporting the assistant
+                    in order to generate a response.
+                </p>
+
+                <p>
+                    Assistant functionality may use Amazon Web Services
+                    (AWS) and AWS-supported services.
+                </p>
+
+                <p>
+                    The assistant is optional and is not required for
+                    ordinary backup and restore functionality.
+                </p>
+
+
+                <h3>
+                    Please Do Not Enter Sensitive Information
+                </h3>
+
+                <ul>
+                    <li>Passwords</li>
+                    <li>Payment card numbers</li>
+                    <li>OTP codes</li>
+                    <li>Authentication credentials</li>
+                    <li>Private security information</li>
+                    <li>Other highly sensitive personal information</li>
+                </ul>
+
+                <p>
+                    Assistant requests may be processed by applicable
+                    third-party infrastructure providers as necessary
+                    to provide the requested response.
+                </p>
+
+            </article>
+
+
+            <!-- 5 -->
+
+            <article class="policy-card" id="analytics">
+
+                <h2>
+                    5. Analytics, Diagnostics and Crash Reporting
+                </h2>
+
+                <p>
+                    The App may use Google Play services and Firebase
+                    technologies for analytics, crash reporting,
+                    performance monitoring, diagnostics, and related
+                    app functionality.
+                </p>
+
+                <p>
+                    Depending on the services and configurations used,
+                    information processed may include:
+                </p>
+
+                <ul>
+                    <li>Device and app information</li>
+                    <li>Device model and operating system information</li>
+                    <li>App version and language</li>
+                    <li>App usage and interaction events</li>
+                    <li>App or device identifiers</li>
+                    <li>Crash logs</li>
+                    <li>Diagnostic information</li>
+                    <li>Performance information</li>
+                    <li>IP address and network information</li>
+                </ul>
+
+                <p>
+                    This information may be used to:
+                </p>
+
+                <ul>
+                    <li>Identify and fix crashes</li>
+                    <li>Improve app reliability and performance</li>
+                    <li>Understand feature usage</li>
+                    <li>Diagnose technical problems</li>
+                    <li>Maintain and improve the App</li>
+                </ul>
+
+                <p>
+                    Google services process information according to
+                    their applicable privacy practices.
+                </p>
+
+            </article>
+
+
+            <!-- 6 -->
+
+            <article class="policy-card" id="advertising">
+
+                <h2>
+                    6. Advertising
+                </h2>
+
+                <p>
+                    The App may display advertisements through
+                    <strong>Google AdMob</strong> and third-party
+                    advertising networks available through
+                    <strong>AdMob Mediation</strong>.
+                </p>
+
+                <p>
+                    Depending on the mediation configuration and the
+                    user's location, consent choices, device settings,
+                    and applicable laws, advertising services may
+                    include:
+                </p>
+
+                <ul>
+                    <li>Google AdMob</li>
+                    <li>Meta Audience Network</li>
+                    <li>Mintegral</li>
+                    <li>Pangle</li>
+                    <li>Liftoff Monetize</li>
+                </ul>
+
+                <p>
+                    These advertising providers may process information
+                    such as:
+                </p>
+
+                <ul>
+                    <li>Advertising identifiers</li>
+                    <li>Device information</li>
+                    <li>Device model and operating system information</li>
+                    <li>IP address</li>
+                    <li>Network information</li>
+                    <li>App and advertising interaction information</li>
+                    <li>Approximate location or other coarse location information where permitted</li>
+                    <li>Diagnostic or technical information</li>
+                    <li>Information necessary to prevent fraud and invalid advertising activity</li>
+                    <li>Other information permitted or required by applicable advertising and privacy rules</li>
+                </ul>
+
+                <p>
+                    Advertising providers may use this information to
+                    serve, measure, personalize, optimize, and otherwise
+                    support advertisements, subject to applicable consent
+                    requirements, privacy settings, and their respective
+                    policies.
+                </p>
+
+
+                <h3>
+                    AdMob Mediation
+                </h3>
+
+                <p>
+                    Google AdMob may act as the mediation platform
+                    through which third-party advertising networks
+                    participate in serving advertisements in the App.
+                </p>
+
+                <p>
+                    When third-party advertising networks are enabled
+                    through AdMob Mediation, those providers may
+                    independently process certain information through
+                    their SDKs, bidding systems, or other advertising
+                    technologies.
+                </p>
+
+                <p>
+                    Cell Cave does not control the independent privacy
+                    practices of these third-party advertising providers.
+                    Their processing may be governed by their respective
+                    privacy policies and applicable terms.
+                </p>
+
+                <p>
+                    Where legally required, users may be presented with
+                    advertising consent and privacy controls before
+                    applicable personalized advertising or other data
+                    processing takes place.
+                </p>
+
+                <p>
+                    Advertising availability and personalization may
+                    depend on the user's location, consent choices,
+                    device settings, applicable laws, and current App
+                    configuration.
+                </p>
+
+            </article>
+
+
+            <!-- 7 -->
+
+            <article class="policy-card" id="billing">
+
+                <h2>
+                    7. Paid Plans and Google Play Billing
+                </h2>
+
+                <p>
+                    The App may offer paid plans, subscriptions, or
+                    in-app purchases.
+                </p>
+
+                <p>
+                    Purchases and subscriptions made through Google Play
+                    are processed using Google Play Billing.
+                </p>
+
+                <p>
+                    For purchases processed through Google Play,
+                    Cell Cave does not directly receive or process the
+                    user's full credit or debit card number.
+                </p>
+
+                <p>
+                    Google may process payment, billing, transaction,
+                    subscription, account, and related information
+                    according to Google's applicable policies.
+                </p>
+
+                <p>
+                    Subscription management, renewal, cancellation, and
+                    available payment methods are handled through the
+                    user's Google Play account.
+                </p>
+
+            </article>
+
+
+            <!-- 8 -->
+
+            <article class="policy-card" id="providers">
+
+                <h2>
+                    8. Third-Party Service Providers
+                </h2>
+
+                <p>
+                    We use third-party service providers and technology
+                    partners to operate, maintain, analyze, monetize,
+                    secure, and improve the App.
+                </p>
+
+                <p>
+                    These providers may process information on our
+                    behalf or may provide services directly to users.
+                </p>
+
+
+                <div class="table-wrap">
+
+                    <table class="provider-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Provider</th>
+                                <th>Purpose</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Amazon Web Services (AWS)</td>
+                                <td>
+                                    Cloud storage, account/sign-in
+                                    infrastructure, and assistant-related
+                                    processing
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Google Play services / Firebase</td>
+                                <td>
+                                    Analytics, crash reporting,
+                                    diagnostics, performance monitoring,
+                                    and related app services
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Google AdMob</td>
+                                <td>
+                                    Advertising, ad serving, mediation,
+                                    measurement, and related advertising
+                                    services
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Meta Audience Network</td>
+                                <td>
+                                    Third-party advertising demand through
+                                    AdMob Mediation
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Mintegral</td>
+                                <td>
+                                    Third-party advertising demand through
+                                    AdMob Mediation
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Pangle</td>
+                                <td>
+                                    Third-party advertising demand through
+                                    AdMob Mediation
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Liftoff Monetize</td>
+                                <td>
+                                    Third-party advertising demand through
+                                    AdMob Mediation
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Google Play Billing</td>
+                                <td>
+                                    Subscriptions and in-app purchase
+                                    processing
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <h3>
+                    Third-Party Privacy Information
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="https://aws.amazon.com/privacy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            AWS Privacy Notice
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://firebase.google.com/support/privacy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Firebase Privacy and Security
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://policies.google.com/privacy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Google Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://support.google.com/admob/answer/6128543"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Google AdMob Privacy Information
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.facebook.com/privacy/policy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Meta Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.mintegral.com/en/privacy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Mintegral Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.pangleglobal.com/privacy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Pangle Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://liftoff.io/privacy-policy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Liftoff Privacy Policy
+                        </a>
+                    </li>
+
+                </ul>
+
+                <p>
+                    Third-party providers may process data according to
+                    their own privacy policies, terms, contractual
+                    requirements, technical requirements, and applicable
+                    laws.
+                </p>
+
+                <p>
+                    The specific third-party advertising providers used
+                    by the App may change over time depending on the
+                    active AdMob mediation configuration. If the
+                    advertising providers used by the App materially
+                    change, this Privacy Policy may be updated accordingly.
+                </p>
+
+            </article>
+
+
+            <!-- 9 -->
+
+            <article class="policy-card" id="use">
+
+                <h2>
+                    9. How We Use Information
+                </h2>
+
+                <p>
+                    Information handled by the App may be used to:
+                </p>
+
+                <ul>
+                    <li>Create and maintain user accounts</li>
+                    <li>Authenticate and verify users</li>
+                    <li>Provide backup and restore functionality</li>
+                    <li>Store encrypted backup data</li>
+                    <li>Provide the optional assistant</li>
+                    <li>Provide customer support</li>
+                    <li>Detect, diagnose, and fix crashes and technical problems</li>
+                    <li>Monitor and improve app performance</li>
+                    <li>Provide and measure advertising</li>
+                    <li>Support advertising mediation</li>
+                    <li>Prevent advertising fraud and invalid traffic</li>
+                    <li>Process subscriptions and purchases through Google Play</li>
+                    <li>Prevent abuse, fraud, unauthorized access, and misuse</li>
+                    <li>Maintain the security and reliability of the App</li>
+                    <li>Comply with applicable legal obligations</li>
+                </ul>
+
+                <p>
+                    We do not use personal or sensitive user data for
+                    purposes incompatible with the disclosures in this
+                    Privacy Policy.
+                </p>
+
+            </article>
+
+
+            <!-- 10 -->
+
+            <article class="policy-card" id="sharing">
+
+                <h2>
+                    10. Sharing and Disclosure of Information
+                </h2>
+
+                <p>
+                    We may share or make information available to
+                    service providers when necessary to provide the
+                    App's functionality, including:
+                </p>
+
+                <ul>
+                    <li>Cloud storage</li>
+                    <li>Authentication</li>
+                    <li>Analytics</li>
+                    <li>Crash reporting</li>
+                    <li>Diagnostics</li>
+                    <li>Advertising</li>
+                    <li>Advertising mediation</li>
+                    <li>Advertising measurement</li>
+                    <li>Billing</li>
+                    <li>Assistant services</li>
+                    <li>Security and fraud prevention</li>
+                </ul>
+
+                <p>
+                    Third-party advertising providers may receive or
+                    collect certain information directly through their
+                    advertising technologies when their services are
+                    used through the App.
+                </p>
+
+                <p>
+                    We may also disclose information when reasonably
+                    necessary to:
+                </p>
+
+                <ul>
+                    <li>Comply with applicable law, regulation, legal process, or lawful government request</li>
+                    <li>Protect the rights, safety, security, or property of users, Cell Cave, or others</li>
+                    <li>Detect or prevent fraud, abuse, security incidents, or other unlawful activity</li>
+                    <li>Enforce applicable terms or protect the operation of the App</li>
+                </ul>
+
+                <p>
+                    Cell Cave does not sell personal data for monetary
+                    consideration. Advertising partners may nevertheless
+                    process or receive certain information as described
+                    in the Advertising section of this Privacy Policy,
+                    subject to applicable laws, consent requirements,
+                    privacy settings, and their respective policies.
+                </p>
+
+            </article>
+
+
+            <!-- 11 -->
+
+            <article class="policy-card" id="retention">
+
+                <h2>
+                    11. Data Storage and Retention
+                </h2>
+
+
+                <h3>
+                    Encrypted Backup Data
+                </h3>
+
+                <p>
+                    Encrypted backup files may remain stored in AWS
+                    cloud infrastructure while they are associated
+                    with an active account and backup service.
+                </p>
+
+                <p>
+                    Backup files are encrypted on the user's device
+                    before transfer to cloud storage.
+                </p>
+
+                <p>
+                    Cell Cave does not have access to the contents of
+                    the user's encrypted backup files through the normal
+                    cloud-storage process.
+                </p>
+
+
+                <h3>
+                    Account Information
+                </h3>
+
+                <p>
+                    Email addresses, account identifiers, authentication
+                    information, verification information, and related
+                    account records may be retained for as long as
+                    reasonably necessary to provide account, security,
+                    backup, and related services.
+                </p>
+
+
+                <h3>
+                    Analytics, Advertising, Billing and Diagnostics
+                </h3>
+
+                <p>
+                    Information processed by Google, AWS, advertising
+                    partners, or other third-party providers may be
+                    retained according to the applicable provider's
+                    retention practices and policies.
+                </p>
+
+                <p>
+                    Retention periods may vary depending on the type of
+                    information, purpose of processing, legal requirements,
+                    and the provider's applicable policies.
+                </p>
+
+
+                <h3>
+                    Account Deletion and Backup Data
+                </h3>
+
+                <p>
+                    We keep your backed-up content and account data for
+                    as long as your account is active.
+                </p>
+
+                <p>
+                    When your account is deleted, your account and
+                    associated backup data are handled according to the
+                    deletion process described on our dedicated
+                    Account & Data Deletion page.
+                </p>
+
+                <p>
+                    We do not keep your files as active user-accessible
+                    backup data after account deletion.
+                </p>
+
+                <p>
+                    Short-lived copies may remain in infrastructure
+                    provider backups for a limited period where
+                    technically necessary for backup, security, disaster
+                    recovery, fraud prevention, or other legitimate
+                    operational purposes.
+                </p>
+
+
+                <h3>
+                    Support Communications
+                </h3>
+
+                <p>
+                    If you contact Cell Cave for support, we may retain
+                    the communication for as long as reasonably necessary
+                    to respond to your request, maintain appropriate
+                    support records, resolve disputes, prevent abuse,
+                    or comply with applicable legal obligations.
+                </p>
+
+            </article>
+
+
+            <!-- 12 -->
+
+            <article class="policy-card" id="deletion">
+
+                <h2>
+                    12. Account and Data Deletion
+                </h2>
+
+                <p>
+                    Users can delete their Cloud Backup: Photo Storage
+                    account and associated data.
+                </p>
+
+                <p>
+                    Account deletion can be initiated from inside the
+                    App. If you cannot access the App, you may also
+                    request deletion using the alternative method
+                    described on our dedicated deletion page.
+                </p>
+
+                <p>
+                    The dedicated Account & Data Deletion page explains:
+                </p>
+
+                <ul>
+                    <li>How to delete your account from inside the App</li>
+                    <li>How to request deletion if you cannot access the App</li>
+                    <li>What account and backup data is deleted</li>
+                    <li>What limited information may be retained where required</li>
+                    <li>Important information about permanent account deletion</li>
+                </ul>
+
+                <a
+                    href="/cell-cave-website/apps/cloud-backup-photo-storage/account-deletion/"
+                    class="deletion-button"
+                >
+                    View Account & Data Deletion Instructions →
+                </a>
+
+            </article>
+
+
+            <!-- 13 -->
+
+            <article class="policy-card" id="choices">
+
+                <h2>
+                    13. Your Privacy Choices
+                </h2>
+
+                <p>
+                    Depending on the features available on your device
+                    and in your region, you may:
+                </p>
+
+                <ul>
+                    <li>Grant, deny, or revoke applicable Android permissions</li>
+                    <li>Choose which supported content to back up</li>
+                    <li>Choose Full, Limited, or No media access where Android provides those choices</li>
+                    <li>Choose whether to back up contacts</li>
+                    <li>Choose whether to use the optional assistant</li>
+                    <li>Manage applicable advertising consent and privacy settings</li>
+                    <li>Make choices regarding personalized or non-personalized advertising where such controls are available</li>
+                    <li>Manage subscriptions and purchases through Google Play</li>
+                    <li>Request access, correction, deletion, or other applicable privacy rights</li>
+                    <li>Contact Cell Cave regarding privacy or account-related questions</li>
+                </ul>
+
+                <p>
+                    Privacy rights may vary depending on your country
+                    or region.
+                </p>
+
+            </article>
+
+
+            <!-- 14 -->
+
+            <article class="policy-card" id="security">
+
+                <h2>
+                    14. Security
+                </h2>
+
+                <p>
+                    We use technical and organizational measures
+                    designed to protect information handled by the App.
+                </p>
+
+                <p>
+                    For supported cloud backups, files are encrypted on
+                    the user's device before they leave the device for
+                    cloud storage.
+                </p>
+
+                <p>
+                    Cloud storage and related infrastructure may be
+                    provided through AWS.
+                </p>
+
+                <p>
+                    Users are responsible for protecting their email
+                    account, device, OTP codes, and account credentials.
+                </p>
+
+                <p>
+                    No method of transmission, electronic storage,
+                    network, device, or security system can be guaranteed
+                    to be completely secure in every circumstance.
+                </p>
+
+            </article>
+
+
+            <!-- 15 -->
+
+            <article class="policy-card" id="international">
+
+                <h2>
+                    15. International Data Processing
+                </h2>
+
+                <p>
+                    The App relies on infrastructure and service
+                    providers that may operate in multiple countries.
+                </p>
+
+                <p>
+                    As a result, information such as:
+                </p>
+
+                <ul>
+                    <li>Account information</li>
+                    <li>Encrypted backup data</li>
+                    <li>Analytics and diagnostic information</li>
+                    <li>Crash information</li>
+                    <li>Advertising-related information</li>
+                    <li>Payment and subscription information</li>
+                    <li>Assistant requests</li>
+                </ul>
+
+                <p>
+                    may be processed in countries other than the country
+                    where the user resides.
+                </p>
+
+                <p>
+                    Third-party advertising providers may process
+                    advertising-related information in countries where
+                    they or their service providers operate.
+                </p>
+
+                <p>
+                    Such processing is subject to applicable legal
+                    requirements and the privacy practices of the
+                    relevant service providers.
+                </p>
+
+            </article>
+
+
+            <!-- 16 -->
+
+            <article class="policy-card" id="children">
+
+                <h2>
+                    16. Children's Privacy
+                </h2>
+
+                <p>
+                    Cloud Backup: Photo Storage is not directed to
+                    children under 13.
+                </p>
+
+                <p>
+                    Cell Cave does not knowingly design or operate the
+                    App specifically for children under 13.
+                </p>
+
+                <p>
+                    The App does not knowingly target personalized
+                    advertising to children where prohibited by
+                    applicable laws or Google policies.
+                </p>
+
+                <p>
+                    If a parent or legal guardian believes that a child
+                    under 13 has provided personal information through
+                    the App, they may contact Cell Cave at:
+                </p>
+
+                <div class="info-box">
+
+                    <strong>Email:</strong>
+
+                    <a href="mailto:cellcave70@gmail.com">
+                        cellcave70@gmail.com
+                    </a>
+
+                </div>
+
+                <p>
+                    We will review the request and take appropriate
+                    action where required by applicable law.
+                </p>
+
+            </article>
+
+
+            <!-- 17 -->
+
+            <article class="policy-card" id="changes">
+
+                <h2>
+                    17. Changes to This Privacy Policy
+                </h2>
+
+                <p>
+                    Cell Cave may update this Privacy Policy when:
+                </p>
+
+                <ul>
+                    <li>App functionality changes</li>
+                    <li>Cloud services change</li>
+                    <li>Third-party service providers change</li>
+                    <li>Advertising partners or mediation partners change</li>
+                    <li>Data practices change</li>
+                    <li>Applicable legal or platform requirements change</li>
+                </ul>
+
+                <p>
+                    When this Privacy Policy is updated, the
+                    <strong>Last Updated</strong> date at the top of
+                    this page will be revised.
+                </p>
+
+                <p>
+                    Users are encouraged to review this Privacy Policy
+                    periodically.
+                </p>
+
+            </article>
+
+
+            <!-- 18 -->
+
+            <article class="policy-card" id="contact">
+
+                <h2>
+                    18. Contact Us
+                </h2>
+
+                <p>
+                    If you have questions about this Privacy Policy,
+                    your account, data deletion, or the privacy practices
+                    of Cloud Backup: Photo Storage, please contact:
+                </p>
+
+                <div class="info-box">
+
+                    <strong>
+                        Cell Cave
+                    </strong>
+
+                    <br>
+
+                    <strong>Email:</strong>
+
+                    <a href="mailto:cellcave70@gmail.com">
+                        cellcave70@gmail.com
+                    </a>
+
+                </div>
+
+                <p>
+                    <strong>App:</strong>
+                    Cloud Backup: Photo Storage
+                </p>
+
+                <p>
+                    <strong>Developer:</strong>
+                    Cell Cave
+                </p>
+
+                <p>
+                    <strong>Last Updated:</strong>
+                    September 4, 2026
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <h3>
+                    Cell Cave
+                </h3>
+
+                <p>
+                    Simple Utilities. Smarter Everyday.
+                </p>
+
+
+                <div class="footer-social">
+
+                    <span class="social-label">
+                        Follow Cell Cave
+                    </span>
+
+                    <div class="social-icons">
+
+
+                        <span
+                            class="social-icon"
+                            title="Facebook"
+                        >
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
+                            </svg>
+                        </span>
+
+
+                        <span
+                            class="social-icon instagram"
+                            title="Instagram"
+                        >
+                            <svg viewBox="0 0 24 24">
+
+                                <rect
+                                    x="3.5"
+                                    y="3.5"
+                                    width="17"
+                                    height="17"
+                                    rx="5"
+                                ></rect>
+
+                                <circle
+                                    cx="12"
+                                    cy="12"
+                                    r="4"
+                                ></circle>
+
+                                <circle
+                                    cx="17.5"
+                                    cy="6.5"
+                                    r="0.8"
+                                    fill="currentColor"
+                                    stroke="none"
+                                ></circle>
+
+                            </svg>
+                        </span>
+
+
+                        <span
+                            class="social-icon"
+                            title="LinkedIn"
+                        >
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5.2 8.2H2.4V21h2.8V8.2zM3.8 2.5A1.7 1.7 0 1 0 3.8 5.9a1.7 1.7 0 0 0 0-3.4zM21.6 13.7c0-3.9-2.1-5.7-4.9-5.7-2.3 0-3.3 1.2-3.8 2.1V8.2h-2.8V21h2.8v-6.4c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.8l.1-7.3z"/>
+                            </svg>
+                        </span>
+
+
+                        <span
+                            class="social-icon"
+                            title="YouTube"
+                        >
+                            <svg viewBox="0 0 24 24">
+
+                                <path d="M21.4 7.1c-.2-1.3-1.1-2.2-2.4-2.4C17.3 4.4 14.7 4.3 12 4.3s-5.3.1-7 .4c-1.3.2-2.2 1.1-2.4 2.4-.2 1.4-.3 3.1-.3 4.9s.1 3.5.3 4.9c.2 1.3 1.1 2.2 2.4 2.4 1.7.3 4.3.4 7 .4s5.3-.1 7-.4c1.3-.2 2.2-1.1 2.4-2.4.2-1.4.3-3.1.3-4.9s-.1-3.5-.3-4.9z"/>
+
+                                <path
+                                    d="M10 8.7l6 3.3-6 3.3V8.7z"
+                                    fill="#171916"
+                                />
+
+                            </svg>
+                        </span>
+
+
+                        <span
+                            class="social-icon social-x"
+                            title="X"
+                        >
+                            X
+                        </span>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <nav class="footer-links">
+
+                <a href="/cell-cave-website/">
+                    Home
+                </a>
+
+                <a href="/cell-cave-website/apps/">
+                    Apps
+                </a>
+
+                <a href="/cell-cave-website/support/">
+                    Support
+                </a>
+
+                <a href="/cell-cave-website/about/">
+                    About
+                </a>
+
+                <a href="/cell-cave-website/privacy/">
+                    Privacy Policy
+                </a>
+
+                <a href="/cell-cave-website/terms/">
+                    Terms of Use
+                </a>
+
+                <a href="/cell-cave-website/app-store/">
+                    App Store
+                </a>
+
+                <a
+                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Play
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            © 2026 Cell Cave. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

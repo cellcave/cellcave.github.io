@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Backup: Photo Storage | Cell Cave</title>
+
+    <meta
+        name="description"
+        content="Cloud Backup: Photo Storage by Cell Cave. A practical mobile app focused on cloud backup and photo storage."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        :root {
+            --bg: #f6f7f4;
+            --surface: #ffffff;
+            --text: #171916;
+            --muted: #6c7169;
+            --line: #e3e6df;
+            --accent: #426b4d;
+            --accent-dark: #31523b;
+            --soft: #e9eee7;
+            --dark: #171916;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(246, 247, 244, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(227, 230, 223, 0.8);
+        }
+
+        .nav-inner {
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: var(--dark);
+            color: white;
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* HERO */
+
+        .app-hero {
+            padding: 95px 0 90px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            margin-bottom: 38px;
+            color: var(--accent);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .app-icon {
+            width: 210px;
+            height: 210px;
+            display: grid;
+            place-items: center;
+            border-radius: 48px;
+            background: var(--soft);
+            color: var(--accent);
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            box-shadow: 0 20px 50px rgba(30,40,30,0.08);
+            overflow: hidden;
+        }
+
+        .app-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+
+        .hero-content h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(46px, 6vw, 70px);
+            line-height: 1.04;
+            letter-spacing: -2.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            max-width: 680px;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-ios {
+            background: var(--accent);
+            color: white;
+        }
+
+        .button-ios:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background: white;
+            border: 1px solid var(--line);
+        }
+
+        .button-secondary:hover {
+            transform: translateY(-2px);
+            border-color: #c7cdc3;
+        }
+
+        /* DETAILS */
+
+        .details-section {
+            padding: 0 0 105px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .detail-card {
+            padding: 35px;
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+        }
+
+        .detail-card.large {
+            grid-column: 1 / -1;
+        }
+
+        .detail-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+            margin-bottom: 13px;
+        }
+
+        .detail-card p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 65px 0 28px;
+            background: var(--dark);
+            color: #aeb3ac;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: start;
+            gap: 70px;
+            padding-bottom: 45px;
+        }
+
+        .footer-brand h3 {
+            color: white;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand > p {
+            max-width: 360px;
+            color: #aeb3ac;
+            font-size: 14px;
+        }
+
+        .footer-social {
+            margin-top: 25px;
+        }
+
+        .social-label {
+            display: block;
+            margin-bottom: 11px;
+            color: #8f958d;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .social-icon {
+            width: 39px;
+            height: 39px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #343832;
+            border-radius: 11px;
+            background: #1d201c;
+            color: #b9beb7;
+        }
+
+        .social-icon svg {
+            width: 17px;
+            height: 17px;
+            fill: currentColor;
+        }
+
+        .social-icon.instagram svg {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.9;
+        }
+
+        .social-x {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(130px, 1fr));
+            gap: 13px 35px;
+            justify-self: end;
+            width: min(430px, 100%);
+        }
+
+        .footer-links a {
+            color: #aeb3ac;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            padding-top: 23px;
+            border-top: 1px solid #343832;
+            color: #858b83;
+            font-size: 12px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-links {
+                justify-self: start;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .nav-inner {
+                height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .app-hero {
+                padding: 70px 0;
+            }
+
+            .app-icon {
+                width: 155px;
+                height: 155px;
+                border-radius: 38px;
+                font-size: 38px;
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-card.large {
+                grid-column: auto;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="../../" class="brand">
+            <span class="brand-mark">CC</span>
+            <span>Cell Cave</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="../../">Home</a></li>
+            <li><a href="../">Apps</a></li>
+            <li><a href="../../support/">Support</a></li>
+            <li><a href="../../about/">About</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="app-hero">
+
+        <div class="container">
+
+            <a href="../" class="back-link">
+                ← Back to Apps
+            </a>
+
+            <div class="hero-grid">
+
+                <div class="app-icon">
+    <img
+        src="../../assets/icons/cloud-backup-photo-storage.png"
+        alt="Cloud Backup: Photo Storage"
+    >
+</div>
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        Cell Cave Mobile App
+                    </div>
+
+                    <h1>
+                        Cloud Backup: Photo Storage
+                    </h1>
+
+                    <p>
+                        Cloud Backup: Photo Storage is a practical
+                        mobile app focused on cloud backup and photo
+                        storage needs.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="https://play.google.com/store/apps/details?id=com.softwarealliance.cloudvault"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="button button-primary"
+                        >
+                            Get on Google Play
+                        </a>
+
+                        <a
+                            href="../../app-store/"
+                            class="button button-ios"
+                        >
+                            Get on iOS
+                        </a>
+
+                        <a
+                            href="privacy/"
+                            class="button button-secondary"
+                        >
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="details-section">
+
+        <div class="container details-grid">
+
+            <article class="detail-card large">
+
+                <h2>
+                    About Cloud Backup: Photo Storage
+                </h2>
+
+                <p>
+                    Cloud Backup: Photo Storage is part of the
+                    Cell Cave collection of practical mobile apps.
+                    Additional app information can be added as the
+                    website content is finalized.
+                </p>
+
+            </article>
+
+
+            <article class="detail-card">
+
+                <h2>
+                    Google Play
+                </h2>
+
+                <p>
+                    Cloud Backup: Photo Storage is available
+                    through Google Play.
+                </p>
+
+            </article>
+
+
+            <article class="detail-card">
+
+                <h2>
+                    iOS
+                </h2>
+
+                <p>
+                    iOS availability is coming soon. The iOS button
+                    currently opens the Cell Cave App Store page.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <h3>Cell Cave</h3>
+
+                <p>
+                    Simple Utilities. Smarter Everyday.
+                </p>
+
+                <div class="footer-social">
+
+                    <span class="social-label">
+                        Follow Cell Cave
+                    </span>
+
+                    <div class="social-icons">
+
+                        <span class="social-icon" title="Facebook">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon instagram" title="Instagram">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"></circle>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon" title="LinkedIn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M5.2 8.2H2.4V21h2.8V8.2zM3.8 2.5A1.7 1.7 0 1 0 3.8 5.9a1.7 1.7 0 0 0 0-3.4zM21.6 13.7c0-3.9-2.1-5.7-4.9-5.7-2.3 0-3.3 1.2-3.8 2.1V8.2h-2.8V21h2.8v-6.4c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.8l.1-7.3z"/>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon" title="YouTube">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21.4 7.1c-.2-1.3-1.1-2.2-2.4-2.4C17.3 4.4 14.7 4.3 12 4.3s-5.3.1-7 .4c-1.3.2-2.2 1.1-2.4 2.4-.2 1.4-.3 3.1-.3 4.9s.1 3.5.3 4.9c.2 1.3 1.1 2.2 2.4 2.4 1.7.3 4.3.4 7 .4s5.3-.1 7-.4c1.3-.2 2.2-1.1 2.4-2.4.2-1.4.3-3.1.3-4.9s-.1-3.5-.3-4.9z"/>
+                                <path d="M10 8.7l6 3.3-6 3.3V8.7z" fill="#171916"/>
+                            </svg>
+                        </span>
+
+                        <span class="social-icon social-x" title="X">
+                            X
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <nav class="footer-links">
+
+                <a href="../../">Home</a>
+                <a href="../">Apps</a>
+                <a href="../../support/">Support</a>
+                <a href="../../about/">About</a>
+                <a href="../../privacy/">Privacy Policy</a>
+                <a href="../../terms/">Terms of Use</a>
+                <a href="../../app-store/">App Store</a>
+
+                <a
+                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Play
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Cell Cave. All rights reserved.
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
