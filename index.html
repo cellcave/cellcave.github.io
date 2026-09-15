@@ -88,7 +88,6 @@
            NAVBAR
         ========================= */
 
-
         .navbar {
             position: sticky;
             top: 0;
@@ -137,6 +136,7 @@
             color: white;
 
             font-size: 11px;
+            letter-spacing: 0.5px;
         }
 
 
@@ -170,7 +170,6 @@
            HERO
         ========================= */
 
-
         .hero {
             padding: 110px 0 100px;
 
@@ -199,7 +198,7 @@
             border: 1px solid var(--line);
             border-radius: 999px;
 
-            background: rgba(255,255,255,0.65);
+            background: rgba(255, 255, 255, 0.65);
 
             color: var(--accent);
 
@@ -313,11 +312,10 @@
            HERO VISUAL
         ========================= */
 
-
         .hero-visual {
             position: relative;
 
-            min-height: 460px;
+            min-height: 480px;
 
             display: flex;
             align-items: center;
@@ -328,8 +326,8 @@
         .visual-orbit {
             position: absolute;
 
-            width: 410px;
-            height: 410px;
+            width: 420px;
+            height: 420px;
 
             border: 1px solid #dfe4dc;
             border-radius: 50%;
@@ -353,18 +351,18 @@
 
             z-index: 2;
 
-            width: 350px;
+            width: 410px;
 
             padding: 30px;
 
-            border: 1px solid rgba(255,255,255,0.95);
+            border: 1px solid rgba(255, 255, 255, 0.95);
             border-radius: 30px;
 
             background:
                 linear-gradient(
                     145deg,
-                    rgba(255,255,255,0.96),
-                    rgba(250,252,249,0.88)
+                    rgba(255,255,255,0.97),
+                    rgba(250,252,249,0.90)
                 );
 
             box-shadow:
@@ -415,7 +413,6 @@
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 30px;
-
             line-height: 1.1;
 
             margin-bottom: 12px;
@@ -431,9 +428,8 @@
 
 
         /* =========================
-           PREMIUM APP SLIDER
+           PREMIUM HERO APP SLIDER
         ========================= */
-
 
         .hero-slider-box {
             margin-top: 28px;
@@ -447,7 +443,7 @@
                 linear-gradient(
                     135deg,
                     rgba(233,238,231,0.82),
-                    rgba(255,255,255,0.95)
+                    rgba(255,255,255,0.97)
                 );
 
             box-shadow:
@@ -458,7 +454,7 @@
 
         .hero-app-slider {
             display: grid;
-            grid-template-columns: 36px minmax(0,1fr) 36px;
+            grid-template-columns: 36px minmax(0, 1fr) 36px;
 
             align-items: center;
 
@@ -471,28 +467,37 @@
 
             overflow: hidden;
 
-            padding: 8px 2px;
+            padding: 10px 0;
         }
 
 
         .hero-app-track {
             display: flex;
             align-items: center;
-            justify-content: center;
 
-            gap: 7px;
+            gap: 8px;
 
-            min-height: 66px;
+            width: max-content;
+
+            min-height: 58px;
+
+            transform: translateX(0);
+
+            transition:
+                transform 0.42s
+                cubic-bezier(0.22, 1, 0.36, 1);
+
+            will-change: transform;
         }
 
 
         .mini-app {
             position: relative;
 
-            width: 42px;
-            height: 42px;
+            width: 38px;
+            height: 38px;
 
-            flex: 0 0 42px;
+            flex: 0 0 38px;
 
             display: grid;
             place-items: center;
@@ -500,20 +505,19 @@
             overflow: hidden;
 
             border: 2px solid rgba(255,255,255,0.95);
-
-            border-radius: 14px;
+            border-radius: 13px;
 
             background: var(--dark);
             color: white;
 
             box-shadow:
-                0 5px 15px rgba(24,32,24,0.13);
+                0 5px 14px rgba(24,32,24,0.13);
 
             font-family: "Space Grotesk", sans-serif;
-            font-size: 10px;
+            font-size: 9px;
             font-weight: 700;
 
-            opacity: 0.78;
+            opacity: 0.72;
 
             transform: scale(0.90);
 
@@ -521,18 +525,6 @@
                 transform 0.28s ease,
                 opacity 0.28s ease,
                 box-shadow 0.28s ease;
-        }
-
-
-        .mini-app:hover {
-            opacity: 1;
-
-            transform:
-                translateY(-3px)
-                scale(0.96);
-
-            box-shadow:
-                0 10px 24px rgba(49,82,59,0.20);
         }
 
 
@@ -544,34 +536,41 @@
 
             object-fit: cover;
 
-            border-radius: 12px;
+            border-radius: 11px;
+        }
+
+
+        .mini-app:hover {
+            opacity: 1;
+
+            transform:
+                translateY(-2px)
+                scale(0.98);
+
+            box-shadow:
+                0 9px 22px rgba(49,82,59,0.20);
         }
 
 
         .mini-app.center-app {
-            width: 54px;
-            height: 54px;
-
-            flex-basis: 54px;
-
             opacity: 1;
 
-            transform: scale(1);
+            transform: scale(1.18);
 
-            border: 3px solid white;
+            border: 2px solid white;
 
             box-shadow:
-                0 10px 28px rgba(49,82,59,0.26),
+                0 10px 28px rgba(49,82,59,0.28),
                 0 0 0 5px rgba(66,107,77,0.11);
 
-            z-index: 4;
+            z-index: 5;
         }
 
 
         .mini-app.center-app:hover {
             transform:
-                translateY(-3px)
-                scale(1.03);
+                translateY(-2px)
+                scale(1.20);
         }
 
 
@@ -596,6 +595,7 @@
             cursor: pointer;
 
             font-size: 23px;
+            line-height: 1;
 
             transition:
                 transform 0.2s ease,
@@ -639,7 +639,7 @@
 
             min-height: 24px;
 
-            margin-top: 7px;
+            margin-top: 8px;
 
             color: var(--accent-dark);
 
@@ -669,7 +669,6 @@
         /* =========================
            INTRO
         ========================= */
-
 
         .intro {
             padding: 40px 0 105px;
@@ -725,7 +724,6 @@
            APPS
         ========================= */
 
-
         .apps-section {
             padding: 105px 0;
         }
@@ -742,7 +740,6 @@
             font-family: "Space Grotesk", sans-serif;
 
             font-size: clamp(36px,5vw,52px);
-
             line-height: 1.1;
 
             letter-spacing: -1.5px;
@@ -937,7 +934,6 @@
            WHY
         ========================= */
 
-
         .why-section {
             padding: 105px 0;
 
@@ -1021,7 +1017,6 @@
            FEATURED
         ========================= */
 
-
         .featured-section {
             padding: 105px 0;
         }
@@ -1092,7 +1087,6 @@
            PLATFORM
         ========================= */
 
-
         .platform-section {
             padding: 105px 0;
         }
@@ -1147,6 +1141,7 @@
             color: white;
 
             font-size: 24px;
+            font-weight: 700;
         }
 
 
@@ -1166,6 +1161,7 @@
             font-weight: 700;
 
             text-transform: uppercase;
+            letter-spacing: 0.7px;
         }
 
 
@@ -1173,6 +1169,8 @@
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 20px;
+
+            margin-bottom: 4px;
         }
 
 
@@ -1194,7 +1192,6 @@
         /* =========================
            SUPPORT
         ========================= */
-
 
         .support-section {
             padding: 40px 0 105px;
@@ -1233,9 +1230,8 @@
 
 
         /* =========================
-           FINAL
+           FINAL CTA
         ========================= */
-
 
         .final-section {
             padding: 0 0 105px;
@@ -1258,7 +1254,6 @@
             font-family: "Space Grotesk", sans-serif;
 
             font-size: clamp(35px,5vw,52px);
-
             line-height: 1.1;
 
             margin-bottom: 15px;
@@ -1286,7 +1281,6 @@
            FOOTER
         ========================= */
 
-
         footer {
             padding: 65px 0 28px;
 
@@ -1298,6 +1292,8 @@
         .footer-main {
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
+
+            align-items: start;
 
             gap: 70px;
 
@@ -1316,8 +1312,58 @@
         }
 
 
-        .footer-brand p {
+        .footer-brand > p {
+            max-width: 360px;
+
+            color: #aeb3ac;
+
             font-size: 14px;
+        }
+
+
+        .footer-social {
+            margin-top: 25px;
+        }
+
+
+        .social-label {
+            display: block;
+
+            color: #8f958d;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+
+            margin-bottom: 11px;
+        }
+
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 9px;
+        }
+
+
+        .social-icon {
+            width: 39px;
+            height: 39px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #343832;
+            border-radius: 11px;
+
+            background: #1d201c;
+            color: #b9beb7;
+
+            cursor: default;
         }
 
 
@@ -1360,11 +1406,10 @@
 
 
         /* =========================
-           RESPONSIVE
+           TABLET
         ========================= */
 
-
-        @media(max-width:900px) {
+        @media (max-width: 900px) {
 
             .hero-grid,
             .why-grid,
@@ -1381,7 +1426,7 @@
 
 
             .hero-visual {
-                min-height: 420px;
+                min-height: 450px;
             }
 
 
@@ -1394,12 +1439,19 @@
 
             .footer-links {
                 justify-self: start;
+
+                width: 100%;
             }
 
         }
 
 
-        @media(max-width:650px) {
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 650px) {
 
             .container {
                 width: min(92%,1160px);
@@ -1407,6 +1459,8 @@
 
 
             .nav-inner {
+                height: auto;
+
                 padding: 15px 0;
 
                 flex-direction: column;
@@ -1428,13 +1482,18 @@
             }
 
 
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+
             .hero-description {
                 font-size: 16px;
             }
 
 
             .hero-visual {
-                min-height: 380px;
+                min-height: 400px;
             }
 
 
@@ -1445,7 +1504,7 @@
 
 
             .visual-card {
-                width: 300px;
+                width: min(340px, 94vw);
 
                 padding: 25px 20px;
             }
@@ -1456,24 +1515,49 @@
             }
 
 
+            .hero-slider-box {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+
+            .hero-app-slider {
+                grid-template-columns: 32px minmax(0,1fr) 32px;
+
+                gap: 6px;
+            }
+
+
+            .hero-slider-button {
+                width: 32px;
+                height: 38px;
+
+                border-radius: 11px;
+            }
+
+
             .hero-app-track {
-                gap: 4px;
+                gap: 5px;
             }
 
 
             .mini-app {
-                width: 35px;
-                height: 35px;
+                width: 30px;
+                height: 30px;
 
-                flex-basis: 35px;
+                flex-basis: 30px;
+
+                border-radius: 10px;
+            }
+
+
+            .mini-app img {
+                border-radius: 8px;
             }
 
 
             .mini-app.center-app {
-                width: 47px;
-                height: 47px;
-
-                flex-basis: 47px;
+                transform: scale(1.20);
             }
 
 
@@ -1481,6 +1565,14 @@
             .featured-card,
             .support-card {
                 padding: 38px 26px;
+            }
+
+
+            .intro-box h2,
+            .why-intro h2,
+            .featured-card h2,
+            .support-card h2 {
+                font-size: 34px;
             }
 
 
@@ -1501,12 +1593,14 @@
 
             .footer-links {
                 grid-template-columns: repeat(2,1fr);
+
+                gap: 14px 20px;
             }
 
         }
 
 
-        @media(max-width:420px) {
+        @media (max-width: 420px) {
 
             .footer-links {
                 grid-template-columns: 1fr;
@@ -1514,82 +1608,6 @@
 
         }
 
-        /* SMOOTH ONE-BY-ONE HERO SLIDER */
-
-.hero-app-window {
-    overflow: hidden;
-}
-
-.hero-app-track {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    gap: 8px;
-
-    width: max-content;
-
-    min-height: 66px;
-
-    transition:
-        transform 0.38s
-        cubic-bezier(0.22, 1, 0.36, 1);
-
-    will-change: transform;
-}
-
-.mini-app {
-    width: 44px;
-    height: 44px;
-
-    flex: 0 0 44px;
-
-    transform: scale(0.90);
-
-    opacity: 0.72;
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.mini-app.center-app {
-    width: 44px;
-    height: 44px;
-
-    flex: 0 0 44px;
-
-    transform: scale(1.18);
-
-    opacity: 1;
-
-    z-index: 5;
-
-    box-shadow:
-        0 10px 28px rgba(49, 82, 59, 0.26),
-        0 0 0 5px rgba(66, 107, 77, 0.11);
-}
-
-.mini-app:hover {
-    opacity: 1;
-}
-
-@media (max-width: 650px) {
-
-    .mini-app,
-    .mini-app.center-app {
-        width: 38px;
-        height: 38px;
-
-        flex: 0 0 38px;
-    }
-
-    .mini-app.center-app {
-        transform: scale(1.18);
-    }
-
-}
 
     </style>
 
@@ -1599,1279 +1617,1709 @@
 <body>
 
 
-<header class="navbar">
+    <!-- =========================
+         NAVBAR
+    ========================= -->
 
-    <div class="container nav-inner">
+    <header class="navbar">
 
-        <a href="./" class="brand">
+        <div class="container nav-inner">
 
-            <span class="brand-mark">
-                CC
-            </span>
+            <a
+                href="./"
+                class="brand"
+            >
 
-            <span>
-                Cell Cave
-            </span>
+                <span class="brand-mark">
+                    CC
+                </span>
 
-        </a>
+                <span>
+                    Cell Cave
+                </span>
 
-
-        <ul class="nav-links">
-
-            <li><a href="./">Home</a></li>
-
-            <li><a href="apps/">Apps</a></li>
-
-            <li><a href="support/">Support</a></li>
-
-            <li><a href="about/">About</a></li>
-
-        </ul>
-
-    </div>
-
-</header>
+            </a>
 
 
+            <ul class="nav-links">
 
-<main>
-
-
-    <!-- HERO -->
-
-    <section class="hero">
-
-        <div class="container hero-grid">
-
-
-            <div>
-
-                <div class="eyebrow">
-
-                    <span class="eyebrow-dot"></span>
-
-                    Utility Apps by Cell Cave
-
-                </div>
-
-
-                <h1>
-
-                    Useful Apps for
-
-                    <span>
-                        Everyday Digital Needs
-                    </span>
-
-                </h1>
-
-
-                <p class="hero-description">
-
-                    From managing files and saving status content
-                    to transferring data and backing up important files,
-                    Cell Cave builds practical utility apps focused on
-                    everyday digital needs.
-
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="apps/"
-                        class="button button-primary"
-                    >
-                        Explore Our Apps
+                <li>
+                    <a href="./">
+                        Home
                     </a>
+                </li>
 
-
-                    <a
-                        href="#about"
-                        class="button button-secondary"
-                    >
-                        Learn More
+                <li>
+                    <a href="apps/">
+                        Apps
                     </a>
+                </li>
 
-                </div>
+                <li>
+                    <a href="support/">
+                        Support
+                    </a>
+                </li>
 
-            </div>
+                <li>
+                    <a href="about/">
+                        About
+                    </a>
+                </li>
 
+            </ul>
 
+        </div>
 
-            <!-- HERO CARD -->
-
-            <div class="hero-visual">
-
-                <div class="visual-orbit"></div>
-
-
-                <div class="visual-card">
-
-
-                    <div class="visual-top">
-
-                        <span class="visual-label">
-                            Cell Cave
-                        </span>
+    </header>
 
 
-                        <span
-                            class="visual-number"
-                            id="heroAppCount"
-                        >
-                            06
-                        </span>
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section class="hero">
+
+            <div class="container hero-grid">
+
+
+                <div>
+
+                    <div class="eyebrow">
+
+                        <span class="eyebrow-dot"></span>
+
+                        Utility Apps by Cell Cave
 
                     </div>
 
 
-                    <h3>
-                        Everyday tools,
-                        thoughtfully made.
-                    </h3>
+                    <h1>
+
+                        Useful Apps for
+
+                        <span>
+                            Everyday Digital Needs
+                        </span>
+
+                    </h1>
 
 
-                    <p class="visual-description">
+                    <p class="hero-description">
 
-                        A growing collection of practical
-                        mobile utilities.
+                        From managing files and saving status content
+                        to transferring data and backing up important files,
+                        Cell Cave builds practical utility apps focused on
+                        everyday digital needs.
 
                     </p>
 
 
+                    <div class="hero-buttons">
 
-                    <div class="hero-slider-box">
+                        <a
+                            href="apps/"
+                            class="button button-primary"
+                        >
+                            Explore Our Apps
+                        </a>
 
 
-                        <div class="hero-app-slider">
+                        <a
+                            href="#about"
+                            class="button button-secondary"
+                        >
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
 
 
-                            <button
-                                class="hero-slider-button"
-                                id="heroPrev"
-                                type="button"
-                                aria-label="Previous apps"
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="visual-orbit"></div>
+
+
+                    <div class="visual-card">
+
+
+                        <div class="visual-top">
+
+                            <span class="visual-label">
+                                Cell Cave
+                            </span>
+
+
+                            <span
+                                class="visual-number"
+                                id="heroAppCount"
                             >
-                                ‹
-                            </button>
-
-
-
-                            <div class="hero-app-window">
-
-                                <div
-                                    class="hero-app-track"
-                                    id="heroAppsTrack"
-                                ></div>
-
-                            </div>
-
-
-
-                            <button
-                                class="hero-slider-button"
-                                id="heroNext"
-                                type="button"
-                                aria-label="Next apps"
-                            >
-                                ›
-                            </button>
-
-
-                        </div>
-
-
-
-                        <div class="selected-app-info">
-
-                            <span class="selected-app-dot"></span>
-
-                            <span id="selectedAppName">
-                                Status Downloader: Video Saver
+                                06
                             </span>
 
                         </div>
 
 
-                    </div>
+                        <h3>
+                            Everyday tools,
+                            thoughtfully made.
+                        </h3>
 
 
-                </div>
+                        <p class="visual-description">
 
-            </div>
+                            A growing collection of practical
+                            mobile utilities.
 
+                        </p>
 
-        </div>
 
-    </section>
 
+                        <div class="hero-slider-box">
 
 
-    <!-- INTRO -->
+                            <div class="hero-app-slider">
 
-    <section
-        class="intro"
-        id="about"
-    >
 
-        <div class="container">
+                                <button
+                                    class="hero-slider-button"
+                                    id="heroPrev"
+                                    type="button"
+                                    aria-label="Previous apps"
+                                >
+                                    ‹
+                                </button>
 
-            <div class="intro-box">
 
-                <div>
 
-                    <div class="section-kicker">
-                        What We Do
-                    </div>
+                                <div class="hero-app-window">
 
-                    <h2>
-                        Built around everyday utility.
-                    </h2>
+                                    <div
+                                        class="hero-app-track"
+                                        id="heroAppsTrack"
+                                    ></div>
 
-                </div>
+                                </div>
 
 
-                <p>
 
-                    Cell Cave focuses on practical utility applications
-                    designed to make everyday digital tasks simpler,
-                    more convenient, and easier to manage.
+                                <button
+                                    class="hero-slider-button"
+                                    id="heroNext"
+                                    type="button"
+                                    aria-label="Next apps"
+                                >
+                                    ›
+                                </button>
 
-                </p>
 
-            </div>
+                            </div>
 
-        </div>
 
-    </section>
 
+                            <div class="selected-app-info">
 
+                                <span class="selected-app-dot"></span>
 
-    <!-- APPS -->
+                                <span id="selectedAppName">
+                                    Status Downloader: Video Saver
+                                </span>
 
-    <section class="apps-section">
+                            </div>
 
-        <div class="container">
 
+                        </div>
 
-            <div class="section-heading">
-
-                <div
-                    class="section-kicker"
-                    style="color:#426b4d;"
-                >
-                    Our Collection
-                </div>
-
-
-                <h2>
-                    Explore Our Apps
-                </h2>
-
-
-                <p>
-
-                    Discover our growing collection of utility
-                    applications built to help with everyday
-                    digital tasks.
-
-                </p>
-
-            </div>
-
-
-
-            <div
-                class="apps-track"
-                id="appsTrack"
-            >
-
-
-                <!-- 1 CLOUD BACKUP -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="assets/icons/cloud-backup-photo-storage.png"
-                            alt="Cloud Backup: Photo Storage"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Cloud Backup: Photo Storage
-                    </h3>
-
-
-                    <p>
-
-                        A practical mobile app focused on cloud
-                        backup and photo storage needs.
-
-                    </p>
-
-
-                    <a
-                        href="apps/cloud-backup-photo-storage/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-
-                <!-- 2 DOCUMENT READER -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="assets/icons/document-reader-read-all-pdf.png"
-                            alt="Document Reader: Read All PDF"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Document Reader: Read All PDF
-                    </h3>
-
-
-                    <p>
-
-                        A practical document reader designed
-                        to help users open and read supported
-                        document formats.
-
-                    </p>
-
-
-                    <a
-                        href="apps/document-reader-read-all-pdf/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-
-                <!-- 3 STATUS DOWNLOADER -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="assets/icons/status-downloader-video-saver.png"
-                            alt="Status Downloader: Video Saver"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Status Downloader: Video Saver
-                    </h3>
-
-
-                    <p>
-
-                        A practical mobile app for saving and
-                        managing supported status content.
-
-                    </p>
-
-
-                    <a
-                        href="apps/status-downloader-video-saver/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-
-                <!-- 4 VIDEO DOWNLOADER -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="assets/icons/all-video-downloader-saver.png"
-                            alt="All Video Downloader & Saver"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        All Video Downloader & Saver
-                    </h3>
-
-
-                    <p>
-
-                        A mobile utility designed to help
-                        manage and download videos from
-                        supported sources.
-
-                    </p>
-
-
-                    <a
-                        href="apps/all-video-downloader-saver/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-
-                <!-- 5 AGE CALCULATOR -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="assets/icons/age-calculator-date-of-birth.webp"
-                            alt="Age Calculator: Date of Birth"
-                        >
-
-                    </div>
-
-
-                    <h3>
-                        Age Calculator: Date of Birth
-                    </h3>
-
-
-                    <p>
-
-                        Calculate age and useful date information
-                        through a simple and convenient mobile
-                        experience.
-
-                    </p>
-
-
-                    <a
-                        href="apps/age-calculator-date-of-birth/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-
-                <!-- 6 SWITCH SMART -->
-
-                <article class="app-card">
-
-                    <div class="app-icon">
-                        SS
-                    </div>
-
-
-                    <div class="app-status">
-                        Coming Soon
-                    </div>
-
-
-                    <h3>
-                        Switch Smart
-                    </h3>
-
-
-                    <p>
-
-                        Transfer supported contacts, photos,
-                        videos, music, documents, files,
-                        and apps directly between Android devices.
-
-                    </p>
-
-
-                    <a
-                        href="apps/switch-smart/"
-                        class="app-link"
-                    >
-                        View Details →
-                    </a>
-
-                </article>
-
-
-            </div>
-
-
-
-            <div class="slider-controls">
-
-                <button
-                    class="slider-button"
-                    type="button"
-                    onclick="slideApps(-1)"
-                    aria-label="Previous apps"
-                >
-                    ←
-                </button>
-
-
-                <button
-                    class="slider-button"
-                    type="button"
-                    onclick="slideApps(1)"
-                    aria-label="Next apps"
-                >
-                    →
-                </button>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- WHY -->
-
-    <section class="why-section">
-
-        <div class="container why-grid">
-
-
-            <div class="why-intro">
-
-                <div
-                    class="section-kicker"
-                    style="color:#426b4d;"
-                >
-                    Our Approach
-                </div>
-
-
-                <h2>
-                    Why Cell Cave?
-                </h2>
-
-
-                <p>
-
-                    We aim to keep our apps useful without
-                    making them unnecessarily complicated.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="why-items">
-
-
-                <article class="why-item">
-
-                    <div class="why-item-number">
-                        01
-                    </div>
-
-                    <h3>
-                        Simple
-                    </h3>
-
-                    <p>
-                        Straightforward experiences that are
-                        easy to understand.
-                    </p>
-
-                </article>
-
-
-
-                <article class="why-item">
-
-                    <div class="why-item-number">
-                        02
-                    </div>
-
-                    <h3>
-                        Practical
-                    </h3>
-
-                    <p>
-                        Apps focused on real everyday utility
-                        and common digital needs.
-                    </p>
-
-                </article>
-
-
-
-                <article class="why-item">
-
-                    <div class="why-item-number">
-                        03
-                    </div>
-
-                    <h3>
-                        User Focused
-                    </h3>
-
-                    <p>
-                        Clean interfaces designed around
-                        a smooth user experience.
-                    </p>
-
-                </article>
-
-
-
-                <article class="why-item">
-
-                    <div class="why-item-number">
-                        04
-                    </div>
-
-                    <h3>
-                        Always Improving
-                    </h3>
-
-                    <p>
-                        We continue refining our apps based
-                        on usability and product needs.
-                    </p>
-
-                </article>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- FEATURED -->
-
-    <section class="featured-section">
-
-        <div class="container">
-
-            <div class="featured-card">
-
-
-                <div>
-
-                    <div class="featured-icon">
-
-                        <img
-                            src="assets/icons/cloud-backup-photo-storage.png"
-                            alt="Cloud Backup: Photo Storage"
-                        >
 
                     </div>
 
                 </div>
 
 
+            </div>
 
-                <div>
+        </section>
+
+
+
+        <!-- =========================
+             INTRO
+        ========================= -->
+
+        <section
+            class="intro"
+            id="about"
+        >
+
+            <div class="container">
+
+                <div class="intro-box">
+
+
+                    <div>
+
+                        <div class="section-kicker">
+                            What We Do
+                        </div>
+
+                        <h2>
+                            Built around everyday utility.
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        Cell Cave focuses on practical utility
+                        applications designed to make everyday
+                        digital tasks simpler, more convenient,
+                        and easier to manage.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             APPS
+        ========================= -->
+
+        <section class="apps-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
 
                     <div
                         class="section-kicker"
                         style="color:#426b4d;"
                     >
-                        Featured App
+                        Our Collection
                     </div>
 
 
                     <h2>
-                        Cloud Backup: Photo Storage
+                        Explore Our Apps
                     </h2>
 
 
                     <p>
 
-                        Cloud Backup: Photo Storage provides
-                        a practical way to back up and manage
-                        your important photos and files.
+                        Discover our growing collection of utility
+                        applications built to help with everyday
+                        digital tasks.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="apps-track"
+                    id="appsTrack"
+                >
+
+
+                    <!-- 1 CLOUD BACKUP -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+
+                            <img
+                                src="assets/icons/cloud-backup-photo-storage.png"
+                                alt="Cloud Backup: Photo Storage"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Cloud Backup: Photo Storage
+                        </h3>
+
+
+                        <p>
+
+                            A practical mobile app focused on cloud
+                            backup and photo storage needs.
+
+                        </p>
+
+
+                        <a
+                            href="apps/cloud-backup-photo-storage/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 2 DOCUMENT READER -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+
+                            <img
+                                src="assets/icons/document-reader-read-all-pdf.png"
+                                alt="Document Reader: Read All PDF"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Document Reader: Read All PDF
+                        </h3>
+
+
+                        <p>
+
+                            A practical document reader designed
+                            to help users open and read supported
+                            document formats.
+
+                        </p>
+
+
+                        <a
+                            href="apps/document-reader-read-all-pdf/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 3 STATUS DOWNLOADER -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+
+                            <img
+                                src="assets/icons/status-downloader-video-saver.png"
+                                alt="Status Downloader: Video Saver"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Status Downloader: Video Saver
+                        </h3>
+
+
+                        <p>
+
+                            A practical mobile app for saving and
+                            managing supported status content.
+
+                        </p>
+
+
+                        <a
+                            href="apps/status-downloader-video-saver/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 4 ALL VIDEO DOWNLOADER -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+
+                            <img
+                                src="assets/icons/all-video-downloader-saver.png"
+                                alt="All Video Downloader & Saver"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            All Video Downloader & Saver
+                        </h3>
+
+
+                        <p>
+
+                            A mobile utility designed to help
+                            manage and download videos from
+                            supported sources.
+
+                        </p>
+
+
+                        <a
+                            href="apps/all-video-downloader-saver/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 5 AGE CALCULATOR -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+
+                            <img
+                                src="assets/icons/age-calculator-date-of-birth.webp"
+                                alt="Age Calculator: Date of Birth"
+                            >
+
+                        </div>
+
+
+                        <h3>
+                            Age Calculator: Date of Birth
+                        </h3>
+
+
+                        <p>
+
+                            Calculate age and useful date information
+                            through a simple and convenient mobile
+                            experience.
+
+                        </p>
+
+
+                        <a
+                            href="apps/age-calculator-date-of-birth/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- 6 SWITCH SMART -->
+
+                    <article class="app-card">
+
+                        <div class="app-icon">
+                            SS
+                        </div>
+
+
+                        <div class="app-status">
+                            Coming Soon
+                        </div>
+
+
+                        <h3>
+                            Switch Smart
+                        </h3>
+
+
+                        <p>
+
+                            Transfer supported contacts, photos,
+                            videos, music, documents, files,
+                            and apps directly between Android devices.
+
+                        </p>
+
+
+                        <a
+                            href="apps/switch-smart/"
+                            class="app-link"
+                        >
+                            View Details →
+                        </a>
+
+                    </article>
+
+
+                </div>
+
+
+
+                <div class="slider-controls">
+
+                    <button
+                        class="slider-button"
+                        type="button"
+                        onclick="slideApps(-1)"
+                        aria-label="Previous apps"
+                    >
+                        ←
+                    </button>
+
+
+                    <button
+                        class="slider-button"
+                        type="button"
+                        onclick="slideApps(1)"
+                        aria-label="Next apps"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             WHY
+        ========================= -->
+
+        <section class="why-section">
+
+            <div class="container why-grid">
+
+
+                <div class="why-intro">
+
+                    <div
+                        class="section-kicker"
+                        style="color:#426b4d;"
+                    >
+                        Our Approach
+                    </div>
+
+
+                    <h2>
+                        Why Cell Cave?
+                    </h2>
+
+
+                    <p>
+
+                        We aim to keep our apps useful without
+                        making them unnecessarily complicated.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="why-items">
+
+
+                    <article class="why-item">
+
+                        <div class="why-item-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Simple
+                        </h3>
+
+                        <p>
+                            Straightforward experiences that are
+                            easy to understand.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="why-item">
+
+                        <div class="why-item-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Practical
+                        </h3>
+
+                        <p>
+                            Apps focused on real everyday utility
+                            and common digital needs.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="why-item">
+
+                        <div class="why-item-number">
+                            03
+                        </div>
+
+                        <h3>
+                            User Focused
+                        </h3>
+
+                        <p>
+                            Clean interfaces designed around
+                            a smooth user experience.
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="why-item">
+
+                        <div class="why-item-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Always Improving
+                        </h3>
+
+                        <p>
+                            We continue refining our apps based
+                            on usability and product needs.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FEATURED
+        ========================= -->
+
+        <section class="featured-section">
+
+            <div class="container">
+
+                <div class="featured-card">
+
+
+                    <div>
+
+                        <div class="featured-icon">
+
+                            <img
+                                src="assets/icons/cloud-backup-photo-storage.png"
+                                alt="Cloud Backup: Photo Storage"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <div
+                            class="section-kicker"
+                            style="color:#426b4d;"
+                        >
+                            Featured App
+                        </div>
+
+
+                        <h2>
+                            Cloud Backup: Photo Storage
+                        </h2>
+
+
+                        <p>
+
+                            Cloud Backup: Photo Storage provides
+                            a practical way to back up and manage
+                            your important photos and files.
+
+                        </p>
+
+
+                        <a
+                            href="apps/cloud-backup-photo-storage/"
+                            class="button button-primary"
+                        >
+                            View App
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PLATFORM
+        ========================= -->
+
+        <section class="platform-section">
+
+            <div class="container">
+
+
+                <div class="section-heading">
+
+                    <div
+                        class="section-kicker"
+                        style="color:#426b4d;"
+                    >
+                        Our Platforms
+                    </div>
+
+
+                    <h2>
+                        Find Cell Cave on your platform
+                    </h2>
+
+
+                    <p>
+
+                        Our apps are currently available on Google Play,
+                        with App Store availability coming soon.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="platform-grid">
+
+
+                    <a
+                        href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                        class="platform-card"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+
+                        <div class="platform-icon">
+                            ▶
+                        </div>
+
+
+                        <div class="platform-content">
+
+                            <span>
+                                Available now
+                            </span>
+
+                            <h3>
+                                Google Play
+                            </h3>
+
+                            <p>
+                                Get Cell Cave apps on Android.
+                            </p>
+
+                        </div>
+
+
+                        <div class="platform-arrow">
+                            ↗
+                        </div>
+
+
+                    </a>
+
+
+
+                    <a
+                        href="app-store/"
+                        class="platform-card"
+                    >
+
+
+                        <div class="platform-icon">
+                            
+                        </div>
+
+
+                        <div class="platform-content">
+
+                            <span>
+                                Coming soon
+                            </span>
+
+                            <h3>
+                                App Store
+                            </h3>
+
+                            <p>
+                                Cell Cave apps are coming soon
+                                to iPhone and iPad.
+                            </p>
+
+                        </div>
+
+
+                        <div class="platform-arrow">
+                            →
+                        </div>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SUPPORT
+        ========================= -->
+
+        <section class="support-section">
+
+            <div class="container">
+
+                <div class="support-card">
+
+
+                    <div
+                        class="section-kicker"
+                        style="color:#426b4d;"
+                    >
+                        Support
+                    </div>
+
+
+                    <h2>
+                        Need Help?
+                    </h2>
+
+
+                    <p>
+
+                        Have a question about one of our apps?
+                        Visit our support page to find help and
+                        contact information.
 
                     </p>
 
 
                     <a
-                        href="apps/cloud-backup-photo-storage/"
-                        class="button button-primary"
+                        href="support/"
+                        class="button button-secondary"
                     >
-                        View App
+                        Get Support
                     </a>
 
-                </div>
 
+                </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
 
-    <!-- PLATFORM -->
+        <!-- =========================
+             FINAL CTA
+        ========================= -->
 
-    <section class="platform-section">
+        <section class="final-section">
+
+            <div class="container">
+
+                <div class="final-card">
+
+
+                    <h2>
+                        Explore the Cell Cave App Collection
+                    </h2>
+
+
+                    <p>
+
+                        Discover simple utility apps designed
+                        to make everyday digital tasks easier.
+
+                    </p>
+
+
+                    <a
+                        href="apps/"
+                        class="button"
+                    >
+                        Explore All Apps
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
 
         <div class="container">
 
 
-            <div class="section-heading">
-
-                <div
-                    class="section-kicker"
-                    style="color:#426b4d;"
-                >
-                    Our Platforms
-                </div>
+            <div class="footer-main">
 
 
-                <h2>
-                    Find Cell Cave on your platform
-                </h2>
+                <div class="footer-brand">
+
+                    <h3>
+                        Cell Cave
+                    </h3>
 
 
-                <p>
-
-                    Our apps are currently available on Google Play,
-                    with App Store availability coming soon.
-
-                </p>
-
-            </div>
+                    <p>
+                        Simple Utilities. Smarter Everyday.
+                    </p>
 
 
+                    <div class="footer-social">
 
-            <div class="platform-grid">
-
-
-                <a
-                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
-                    class="platform-card"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <div class="platform-icon">
-                        ▶
-                    </div>
-
-
-                    <div class="platform-content">
-
-                        <span>
-                            Available now
+                        <span class="social-label">
+                            Follow Cell Cave
                         </span>
 
-                        <h3>
-                            Google Play
-                        </h3>
 
-                        <p>
-                            Get Cell Cave apps on Android.
-                        </p>
+                        <div class="social-icons">
 
-                    </div>
+                            <span
+                                class="social-icon"
+                                title="Facebook"
+                            >
+                                f
+                            </span>
 
+                            <span
+                                class="social-icon"
+                                title="Instagram"
+                            >
+                                ◎
+                            </span>
 
-                    <div class="platform-arrow">
-                        ↗
-                    </div>
+                            <span
+                                class="social-icon"
+                                title="LinkedIn"
+                            >
+                                in
+                            </span>
 
-                </a>
+                            <span
+                                class="social-icon"
+                                title="YouTube"
+                            >
+                                ▶
+                            </span>
 
+                            <span
+                                class="social-icon"
+                                title="X"
+                            >
+                                X
+                            </span>
 
-
-                <a
-                    href="app-store/"
-                    class="platform-card"
-                >
-
-                    <div class="platform-icon">
-                        
-                    </div>
-
-
-                    <div class="platform-content">
-
-                        <span>
-                            Coming soon
-                        </span>
-
-                        <h3>
-                            App Store
-                        </h3>
-
-                        <p>
-                            Cell Cave apps are coming soon
-                            to iPhone and iPad.
-                        </p>
+                        </div>
 
                     </div>
 
-
-                    <div class="platform-arrow">
-                        →
-                    </div>
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- SUPPORT -->
-
-    <section class="support-section">
-
-        <div class="container">
-
-            <div class="support-card">
-
-
-                <div
-                    class="section-kicker"
-                    style="color:#426b4d;"
-                >
-                    Support
                 </div>
 
 
-                <h2>
-                    Need Help?
-                </h2>
 
-
-                <p>
-
-                    Have a question about one of our apps?
-                    Visit our support page to find help and
-                    contact information.
-
-                </p>
-
-
-                <a
-                    href="support/"
-                    class="button button-secondary"
+                <nav
+                    class="footer-links"
+                    aria-label="Footer navigation"
                 >
-                    Get Support
-                </a>
 
+                    <a href="./">
+                        Home
+                    </a>
 
-            </div>
+                    <a href="apps/">
+                        Apps
+                    </a>
 
-        </div>
+                    <a href="support/">
+                        Support
+                    </a>
 
-    </section>
+                    <a href="about/">
+                        About
+                    </a>
 
+                    <a href="privacy/">
+                        Privacy Policy
+                    </a>
 
+                    <a href="terms/">
+                        Terms of Use
+                    </a>
 
-    <!-- FINAL CTA -->
+                    <a href="app-store/">
+                        App Store
+                    </a>
 
-    <section class="final-section">
+                    <a
+                        href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Play
+                    </a>
 
-        <div class="container">
+                </nav>
 
-            <div class="final-card">
-
-
-                <h2>
-                    Explore the Cell Cave App Collection
-                </h2>
-
-
-                <p>
-
-                    Discover simple utility apps designed
-                    to make everyday digital tasks easier.
-
-                </p>
-
-
-                <a
-                    href="apps/"
-                    class="button"
-                >
-                    Explore All Apps
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="container">
-
-
-        <div class="footer-main">
-
-
-            <div class="footer-brand">
-
-                <h3>
-                    Cell Cave
-                </h3>
-
-                <p>
-                    Simple Utilities. Smarter Everyday.
-                </p>
 
             </div>
 
 
 
-            <nav
-                class="footer-links"
-                aria-label="Footer navigation"
-            >
+            <div class="footer-bottom">
 
-                <a href="./">
-                    Home
-                </a>
+                © 2026 Cell Cave. All rights reserved.
 
-                <a href="apps/">
-                    Apps
-                </a>
-
-                <a href="support/">
-                    Support
-                </a>
-
-                <a href="about/">
-                    About
-                </a>
-
-                <a href="privacy/">
-                    Privacy Policy
-                </a>
-
-                <a href="terms/">
-                    Terms of Use
-                </a>
-
-                <a href="app-store/">
-                    App Store
-                </a>
-
-                <a
-                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Google Play
-                </a>
-
-            </nav>
+            </div>
 
 
         </div>
 
-
-
-        <div class="footer-bottom">
-
-            © 2026 Cell Cave. All rights reserved.
-
-        </div>
-
-
-    </div>
-
-</footer>
+    </footer>
 
 
 
-<!-- =========================
-     SCRIPT
-========================= -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
-const HERO_VISIBLE = 5;
-
-let heroStartIndex = 0;
+    <script>
 
 
-/* =========================
-   CREATE ALL ICONS
-========================= */
+        /*
+        =====================================
+        APP ORDER
 
-function buildHeroSlider() {
-
-    heroAppsTrack.innerHTML = "";
-
-
-    appsData.forEach(
-        function(app) {
-
-            const mini =
-                document.createElement("a");
+        1 Cloud Backup
+        2 Document Reader
+        3 Status Downloader
+        4 All Video Downloader
+        5 Age Calculator
+        6 Switch Smart
+        =====================================
+        */
 
 
-            mini.className =
-                "mini-app";
+        const appsData = [
 
 
-            mini.href =
-                app.link;
+            {
+                name: "Cloud Backup: Photo Storage",
+
+                shortName: "CB",
+
+                icon:
+                    "assets/icons/cloud-backup-photo-storage.png",
+
+                link:
+                    "apps/cloud-backup-photo-storage/"
+            },
 
 
-            mini.title =
-                app.name;
+            {
+                name: "Document Reader: Read All PDF",
+
+                shortName: "DR",
+
+                icon:
+                    "assets/icons/document-reader-read-all-pdf.png",
+
+                link:
+                    "apps/document-reader-read-all-pdf/"
+            },
 
 
-            mini.setAttribute(
-                "aria-label",
-                "View " + app.name
-            );
+            {
+                name: "Status Downloader: Video Saver",
+
+                shortName: "SD",
+
+                icon:
+                    "assets/icons/status-downloader-video-saver.png",
+
+                link:
+                    "apps/status-downloader-video-saver/"
+            },
 
 
-            if (app.icon) {
+            {
+                name: "All Video Downloader & Saver",
 
-                const img =
-                    document.createElement("img");
+                shortName: "VD",
+
+                icon:
+                    "assets/icons/all-video-downloader-saver.png",
+
+                link:
+                    "apps/all-video-downloader-saver/"
+            },
 
 
-                img.src =
-                    app.icon;
+            {
+                name: "Age Calculator: Date of Birth",
+
+                shortName: "AC",
+
+                icon:
+                    "assets/icons/age-calculator-date-of-birth.webp",
+
+                link:
+                    "apps/age-calculator-date-of-birth/"
+            },
 
 
-                img.alt =
-                    app.name;
+            /* 6TH / LAST APP */
 
+            {
+                name: "Switch Smart",
 
-                mini.appendChild(img);
+                shortName: "SS",
 
-            }
-
-            else {
-
-                mini.textContent =
-                    app.shortName || "APP";
-
+                link:
+                    "apps/switch-smart/"
             }
 
 
-            heroAppsTrack.appendChild(mini);
-
-        }
-    );
-
-
-    updateHeroSlider();
-
-}
+        ];
 
 
 
-/* =========================
-   MOVE ONLY ONE ICON
-========================= */
-
-function updateHeroSlider() {
-
-    const items =
-        heroAppsTrack.querySelectorAll(
-            ".mini-app"
-        );
+        /* =========================
+           APP COUNT
+        ========================= */
 
 
-    if (!items.length) {
-        return;
-    }
-
-
-    const trackStyle =
-        window.getComputedStyle(
-            heroAppsTrack
-        );
-
-
-    const gap =
-        parseFloat(
-            trackStyle.gap
-        ) || 0;
-
-
-    const iconWidth =
-        items[0]
-            .getBoundingClientRect()
-            .width;
-
-
-    const moveDistance =
-        iconWidth + gap;
-
-
-    heroAppsTrack.style.transform =
-        "translateX(-" +
-        (
-            heroStartIndex *
-            moveDistance
-        ) +
-        "px)";
-
-
-    /*
-    Remove previous highlight
-    */
-
-    items.forEach(
-        function(item) {
-
-            item.classList.remove(
-                "center-app"
+        document
+            .getElementById(
+                "heroAppCount"
+            )
+            .textContent =
+            String(
+                appsData.length
+            ).padStart(
+                2,
+                "0"
             );
 
-        }
-    );
 
 
-    /*
-    Highlight center visible app
-    */
-
-    const centerIndex =
-        Math.min(
-
-            heroStartIndex + 2,
-
-            appsData.length - 1
-
-        );
+        /* =========================
+           HERO SLIDER
+        ========================= */
 
 
-    if (items[centerIndex]) {
-
-        items[centerIndex]
-            .classList.add(
-                "center-app"
+        const heroAppsTrack =
+            document.getElementById(
+                "heroAppsTrack"
             );
 
-    }
+
+        const selectedAppName =
+            document.getElementById(
+                "selectedAppName"
+            );
 
 
-    selectedAppName.textContent =
-        appsData[
-            centerIndex
-        ].name;
+        const heroPrev =
+            document.getElementById(
+                "heroPrev"
+            );
 
 
-    heroPrev.disabled =
-        heroStartIndex === 0;
+        const heroNext =
+            document.getElementById(
+                "heroNext"
+            );
 
 
-    heroNext.disabled =
-        heroStartIndex >=
-        appsData.length -
-        HERO_VISIBLE;
+        /*
+        Five icons visible.
 
-}
+        Start:
+        1 2 3 4 5
+
+        Next:
+        2 3 4 5 6
+        */
+
+        const HERO_VISIBLE = 5;
+
+
+        let heroStartIndex = 0;
 
 
 
-/* =========================
-   LEFT ARROW
-========================= */
+        /* =========================
+           BUILD ICONS ONCE
+        ========================= */
 
-heroPrev.addEventListener(
-    "click",
-    function() {
 
-        if (heroStartIndex > 0) {
+        function buildHeroSlider() {
 
-            heroStartIndex -= 1;
+
+            heroAppsTrack.innerHTML = "";
+
+
+            appsData.forEach(
+                function(app) {
+
+
+                    /*
+                    Every app icon is a link.
+                    */
+
+
+                    const mini =
+                        document.createElement(
+                            "a"
+                        );
+
+
+                    mini.className =
+                        "mini-app";
+
+
+                    mini.href =
+                        app.link;
+
+
+                    mini.title =
+                        app.name;
+
+
+                    mini.setAttribute(
+                        "aria-label",
+                        "View " + app.name
+                    );
+
+
+
+                    /*
+                    Real app icon
+                    */
+
+
+                    if (app.icon) {
+
+
+                        const img =
+                            document.createElement(
+                                "img"
+                            );
+
+
+                        img.src =
+                            app.icon;
+
+
+                        img.alt =
+                            app.name;
+
+
+                        mini.appendChild(
+                            img
+                        );
+
+
+                    }
+
+
+                    /*
+                    Switch Smart has no icon yet.
+                    Show SS.
+                    */
+
+
+                    else {
+
+
+                        mini.textContent =
+                            app.shortName ||
+                            "APP";
+
+
+                    }
+
+
+
+                    heroAppsTrack.appendChild(
+                        mini
+                    );
+
+
+                }
+            );
+
 
             updateHeroSlider();
 
-        }
-
-    }
-);
-
-
-
-/* =========================
-   RIGHT ARROW
-========================= */
-
-heroNext.addEventListener(
-    "click",
-    function() {
-
-        if (
-            heroStartIndex <
-            appsData.length -
-            HERO_VISIBLE
-        ) {
-
-            heroStartIndex += 1;
-
-            updateHeroSlider();
 
         }
 
-    }
-);
+
+
+        /* =========================
+           UPDATE / MOVE SLIDER
+        ========================= */
+
+
+        function updateHeroSlider() {
+
+
+            const items =
+                heroAppsTrack
+                    .querySelectorAll(
+                        ".mini-app"
+                    );
+
+
+            if (!items.length) {
+                return;
+            }
 
 
 
-/* Responsive recalculation */
-
-window.addEventListener(
-    "resize",
-    updateHeroSlider
-);
-
+            /*
+            Read actual icon width.
+            Transform scale does not affect
+            calculated CSS width.
+            */
 
 
-buildHeroSlider();
+            const itemStyle =
+                window.getComputedStyle(
+                    items[0]
+                );
+
+
+            const iconWidth =
+                parseFloat(
+                    itemStyle.width
+                ) || 38;
+
+
+
+            const trackStyle =
+                window.getComputedStyle(
+                    heroAppsTrack
+                );
+
+
+            const gap =
+                parseFloat(
+                    trackStyle.columnGap ||
+                    trackStyle.gap
+                ) || 0;
+
+
+
+            /*
+            One arrow click =
+            exactly ONE icon distance.
+            */
+
+
+            const oneStep =
+                iconWidth +
+                gap;
+
+
+
+            heroAppsTrack.style.transform =
+                "translateX(-" +
+                (
+                    heroStartIndex *
+                    oneStep
+                ) +
+                "px)";
+
+
+
+            /*
+            Remove old center highlight.
+            */
+
+
+            items.forEach(
+                function(item) {
+
+
+                    item.classList.remove(
+                        "center-app"
+                    );
+
+
+                }
+            );
+
+
+
+            /*
+            Highlight third visible icon.
+            */
+
+
+            const centerIndex =
+                Math.min(
+
+                    heroStartIndex + 2,
+
+                    appsData.length - 1
+
+                );
+
+
+
+            if (
+                items[
+                    centerIndex
+                ]
+            ) {
+
+
+                items[
+                    centerIndex
+                ].classList.add(
+                    "center-app"
+                );
+
+
+            }
+
+
+
+            /*
+            Show center app name below.
+            */
+
+
+            selectedAppName.textContent =
+                appsData[
+                    centerIndex
+                ].name;
+
+
+
+            /*
+            Left disabled on first view.
+            */
+
+
+            heroPrev.disabled =
+                heroStartIndex === 0;
+
+
+
+            /*
+            Right disabled after
+            Switch Smart becomes visible.
+            */
+
+
+            heroNext.disabled =
+                heroStartIndex >=
+                appsData.length -
+                HERO_VISIBLE;
+
+
+        }
+
+
+
+        /* =========================
+           LEFT ARROW
+        ========================= */
+
+
+        heroPrev.addEventListener(
+            "click",
+            function() {
+
+
+                if (
+                    heroStartIndex > 0
+                ) {
+
+
+                    /*
+                    Move ONE icon left.
+                    */
+
+
+                    heroStartIndex -= 1;
+
+
+                    updateHeroSlider();
+
+
+                }
+
+
+            }
+        );
+
+
+
+        /* =========================
+           RIGHT ARROW
+        ========================= */
+
+
+        heroNext.addEventListener(
+            "click",
+            function() {
+
+
+                if (
+                    heroStartIndex <
+                    appsData.length -
+                    HERO_VISIBLE
+                ) {
+
+
+                    /*
+                    Move ONE icon right.
+                    */
+
+
+                    heroStartIndex += 1;
+
+
+                    updateHeroSlider();
+
+
+                }
+
+
+            }
+        );
+
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+
+        window.addEventListener(
+            "resize",
+            function() {
+
+
+                updateHeroSlider();
+
+
+            }
+        );
+
+
+
+        /* =========================
+           START HERO SLIDER
+        ========================= */
+
+
+        buildHeroSlider();
+
+
+
+        /* =========================
+           MAIN APPS SLIDER
+        ========================= */
+
+
+        function slideApps(direction) {
+
+
+            document
+                .getElementById(
+                    "appsTrack"
+                )
+                .scrollBy({
+
+
+                    left:
+                        direction * 320,
+
+
+                    behavior:
+                        "smooth"
+
+
+                });
+
+
+        }
+
+
+    </script>
+
 
 </body>
 
