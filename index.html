@@ -2633,466 +2633,245 @@
      SCRIPT
 ========================= -->
 
-<script>
+const HERO_VISIBLE = 5;
 
+let heroStartIndex = 0;
 
-    /*
-    =========================================
-    APP ORDER
 
-    1 Cloud Backup
-    2 Document Reader
-    3 Status Downloader
-    4 All Video Downloader
-    5 Age Calculator
-    6 Switch Smart
-    =========================================
-    */
+/* =========================
+   CREATE ALL ICONS
+========================= */
 
+function buildHeroSlider() {
 
-    const appsData = [
+    heroAppsTrack.innerHTML = "";
 
 
-        {
-            name: "Cloud Backup: Photo Storage",
+    appsData.forEach(
+        function(app) {
 
-            shortName: "CB",
+            const mini =
+                document.createElement("a");
 
-            icon:
-                "assets/icons/cloud-backup-photo-storage.png",
 
-            link:
-                "apps/cloud-backup-photo-storage/"
-        },
+            mini.className =
+                "mini-app";
 
 
-        {
-            name: "Document Reader: Read All PDF",
+            mini.href =
+                app.link;
 
-            shortName: "DR",
 
-            icon:
-                "assets/icons/document-reader-read-all-pdf.png",
+            mini.title =
+                app.name;
 
-            link:
-                "apps/document-reader-read-all-pdf/"
-        },
 
-
-        {
-            name: "Status Downloader: Video Saver",
-
-            shortName: "SD",
-
-            icon:
-                "assets/icons/status-downloader-video-saver.png",
-
-            link:
-                "apps/status-downloader-video-saver/"
-        },
-
-
-        {
-            name: "All Video Downloader & Saver",
-
-            shortName: "VD",
-
-            icon:
-                "assets/icons/all-video-downloader-saver.png",
-
-            link:
-                "apps/all-video-downloader-saver/"
-        },
-
-
-        {
-            name: "Age Calculator: Date of Birth",
-
-            shortName: "AC",
-
-            icon:
-                "assets/icons/age-calculator-date-of-birth.webp",
-
-            link:
-                "apps/age-calculator-date-of-birth/"
-        },
-
-
-        /* 6TH / LAST APP */
-
-        {
-            name: "Switch Smart",
-
-            shortName: "SS",
-
-            link:
-                "apps/switch-smart/"
-        }
-
-
-    ];
-
-
-
-    /* =========================
-       APP COUNT
-    ========================= */
-
-
-    document
-        .getElementById("heroAppCount")
-        .textContent =
-        String(
-            appsData.length
-        ).padStart(
-            2,
-            "0"
-        );
-
-
-
-    /* =========================
-       HERO SLIDER
-    ========================= */
-
-
-    const heroAppsTrack =
-        document.getElementById(
-            "heroAppsTrack"
-        );
-
-
-    const selectedAppName =
-        document.getElementById(
-            "selectedAppName"
-        );
-
-
-    const heroPrev =
-        document.getElementById(
-            "heroPrev"
-        );
-
-
-    const heroNext =
-        document.getElementById(
-            "heroNext"
-        );
-
-
-    /*
-    Only 5 apps visible at one time.
-    */
-
-    const HERO_VISIBLE = 5;
-
-
-    /*
-    Initial slider position = app 1.
-    This means first view is apps 1-5.
-    Switch Smart does NOT appear initially.
-    */
-
-    let heroStartIndex = 0;
-
-
-
-    function renderHeroSlider() {
-
-
-        heroAppsTrack.innerHTML = "";
-
-
-        /*
-        Initial:
-        1,2,3,4,5
-
-        Right arrow:
-        2,3,4,5,6
-        */
-
-
-        const visibleApps =
-            appsData.slice(
-
-                heroStartIndex,
-
-                heroStartIndex +
-                HERO_VISIBLE
-
+            mini.setAttribute(
+                "aria-label",
+                "View " + app.name
             );
 
 
+            if (app.icon) {
 
-        visibleApps.forEach(
-            function(app, visibleIndex) {
-
-
-                /*
-                IMPORTANT:
-                Every icon is an <a> link.
-                Clicking icon opens that app page.
-                */
+                const img =
+                    document.createElement("img");
 
 
-                const mini =
-                    document.createElement(
-                        "a"
-                    );
+                img.src =
+                    app.icon;
 
 
-                mini.className =
-                    "mini-app";
-
-
-                mini.href =
-                    app.link;
-
-
-                mini.title =
+                img.alt =
                     app.name;
 
 
-                mini.setAttribute(
-                    "aria-label",
-                    "View " + app.name
-                );
-
-
-
-                /*
-                Third visible app is
-                highlighted in center.
-                */
-
-
-                if (
-                    visibleIndex === 2
-                ) {
-
-                    mini.classList.add(
-                        "center-app"
-                    );
-
-                }
-
-
-
-                /*
-                Real icon available
-                */
-
-
-                if (app.icon) {
-
-
-                    const img =
-                        document.createElement(
-                            "img"
-                        );
-
-
-                    img.src =
-                        app.icon;
-
-
-                    img.alt =
-                        app.name;
-
-
-                    mini.appendChild(
-                        img
-                    );
-
-
-                }
-
-
-                /*
-                No icon yet.
-                Switch Smart shows SS.
-                */
-
-
-                else {
-
-
-                    mini.textContent =
-                        app.shortName ||
-                        "APP";
-
-
-                }
-
-
-
-                heroAppsTrack.appendChild(
-                    mini
-                );
-
+                mini.appendChild(img);
 
             }
+
+            else {
+
+                mini.textContent =
+                    app.shortName || "APP";
+
+            }
+
+
+            heroAppsTrack.appendChild(mini);
+
+        }
+    );
+
+
+    updateHeroSlider();
+
+}
+
+
+
+/* =========================
+   MOVE ONLY ONE ICON
+========================= */
+
+function updateHeroSlider() {
+
+    const items =
+        heroAppsTrack.querySelectorAll(
+            ".mini-app"
         );
 
 
-
-        /*
-        Name shown below slider
-        corresponds to highlighted
-        center app.
-        */
-
-
-        if (
-            visibleApps.length > 0
-        ) {
-
-
-            const centerPosition =
-                Math.min(
-                    2,
-                    visibleApps.length - 1
-                );
-
-
-            selectedAppName.textContent =
-                visibleApps[
-                    centerPosition
-                ].name;
-
-
-        }
-
-
-
-        /*
-        Disable left arrow
-        on first view.
-        */
-
-
-        heroPrev.disabled =
-            heroStartIndex === 0;
-
-
-
-        /*
-        Disable right arrow
-        once app 6 is visible
-        at the end.
-        */
-
-
-        heroNext.disabled =
-            heroStartIndex >=
-            appsData.length -
-            HERO_VISIBLE;
-
-
+    if (!items.length) {
+        return;
     }
 
 
-
-    /* =========================
-       PREVIOUS BUTTON
-    ========================= */
-
-
-    heroPrev.addEventListener(
-        "click",
-        function() {
+    const trackStyle =
+        window.getComputedStyle(
+            heroAppsTrack
+        );
 
 
-            if (
-                heroStartIndex > 0
-            ) {
+    const gap =
+        parseFloat(
+            trackStyle.gap
+        ) || 0;
 
 
-                heroStartIndex--;
+    const iconWidth =
+        items[0]
+            .getBoundingClientRect()
+            .width;
 
 
-                renderHeroSlider();
+    const moveDistance =
+        iconWidth + gap;
 
 
-            }
-
-
-        }
-    );
-
-
-
-    /* =========================
-       NEXT BUTTON
-    ========================= */
-
-
-    heroNext.addEventListener(
-        "click",
-        function() {
-
-
-            if (
-                heroStartIndex <
-                appsData.length -
-                HERO_VISIBLE
-            ) {
-
-
-                heroStartIndex++;
-
-
-                renderHeroSlider();
-
-
-            }
-
-
-        }
-    );
-
+    heroAppsTrack.style.transform =
+        "translateX(-" +
+        (
+            heroStartIndex *
+            moveDistance
+        ) +
+        "px)";
 
 
     /*
-    Initial render
+    Remove previous highlight
     */
 
+    items.forEach(
+        function(item) {
 
-    renderHeroSlider();
+            item.classList.remove(
+                "center-app"
+            );
 
-
-
-    /* =========================
-       MAIN APPS SLIDER
-    ========================= */
-
-
-    function slideApps(direction) {
+        }
+    );
 
 
-        document
-            .getElementById(
-                "appsTrack"
-            )
-            .scrollBy({
+    /*
+    Highlight center visible app
+    */
+
+    const centerIndex =
+        Math.min(
+
+            heroStartIndex + 2,
+
+            appsData.length - 1
+
+        );
 
 
-                left:
-                    direction * 320,
+    if (items[centerIndex]) {
 
-
-                behavior:
-                    "smooth"
-
-
-            });
-
+        items[centerIndex]
+            .classList.add(
+                "center-app"
+            );
 
     }
 
 
-</script>
+    selectedAppName.textContent =
+        appsData[
+            centerIndex
+        ].name;
 
+
+    heroPrev.disabled =
+        heroStartIndex === 0;
+
+
+    heroNext.disabled =
+        heroStartIndex >=
+        appsData.length -
+        HERO_VISIBLE;
+
+}
+
+
+
+/* =========================
+   LEFT ARROW
+========================= */
+
+heroPrev.addEventListener(
+    "click",
+    function() {
+
+        if (heroStartIndex > 0) {
+
+            heroStartIndex -= 1;
+
+            updateHeroSlider();
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   RIGHT ARROW
+========================= */
+
+heroNext.addEventListener(
+    "click",
+    function() {
+
+        if (
+            heroStartIndex <
+            appsData.length -
+            HERO_VISIBLE
+        ) {
+
+            heroStartIndex += 1;
+
+            updateHeroSlider();
+
+        }
+
+    }
+);
+
+
+
+/* Responsive recalculation */
+
+window.addEventListener(
+    "resize",
+    updateHeroSlider
+);
+
+
+
+buildHeroSlider();
 
 </body>
 
