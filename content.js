@@ -100,6 +100,15 @@ const siteContent = {
     googlePlayLink:
         "https://play.google.com/store/apps/details?id=com.dobcalc.birthdaycalculator.dob"
 
+          {
+    name: "Switch Smart",
+    shortName: "SS",
+    description:
+        "Transfer supported contacts, photos, videos, music, documents, files, and apps directly between Android devices.",
+    link: "/apps/switch-smart/",
+    googlePlayLink: ""
+}
+
         }
 
     ]
