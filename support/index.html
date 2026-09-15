@@ -30,7 +30,6 @@
         rel="stylesheet"
     >
 
-
     <style>
 
         :root {
@@ -45,18 +44,15 @@
             --dark: #171916;
         }
 
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: "DM Sans", sans-serif;
@@ -65,17 +61,14 @@
             line-height: 1.6;
         }
 
-
         a {
             color: inherit;
             text-decoration: none;
         }
 
-
         button {
             font: inherit;
         }
-
 
         .container {
             width: min(1160px, 90%);
@@ -84,7 +77,7 @@
 
 
         /* =========================
-           NAVBAR
+           HEADER
         ========================= */
 
         .navbar {
@@ -100,7 +93,6 @@
             border-bottom: 1px solid var(--line);
         }
 
-
         .nav-inner {
             min-height: 78px;
 
@@ -108,7 +100,6 @@
             align-items: center;
             justify-content: space-between;
         }
-
 
         .brand {
             display: flex;
@@ -119,7 +110,6 @@
             font-size: 20px;
             font-weight: 700;
         }
-
 
         .brand-mark {
             width: 38px;
@@ -136,7 +126,6 @@
             font-size: 11px;
         }
 
-
         .nav-links {
             display: flex;
             align-items: center;
@@ -145,16 +134,13 @@
             list-style: none;
         }
 
-
         .nav-links a {
             color: var(--muted);
-
             font-size: 14px;
             font-weight: 600;
 
             transition: 0.2s ease;
         }
-
 
         .nav-links a:hover {
             color: var(--text);
@@ -170,7 +156,6 @@
             overflow: hidden;
         }
 
-
         .hero-grid {
             display: grid;
 
@@ -181,11 +166,9 @@
             gap: 70px;
         }
 
-
         .eyebrow {
             display: inline-flex;
             align-items: center;
-
             gap: 8px;
 
             padding: 7px 12px;
@@ -193,7 +176,7 @@
             border: 1px solid var(--line);
             border-radius: 999px;
 
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255,255,255,.65);
 
             color: var(--accent);
 
@@ -201,11 +184,10 @@
             font-weight: 700;
 
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: .5px;
 
             margin-bottom: 24px;
         }
-
 
         .eyebrow-dot {
             width: 7px;
@@ -215,7 +197,6 @@
 
             background: var(--accent);
         }
-
 
         .hero h1 {
             max-width: 760px;
@@ -231,11 +212,9 @@
             margin-bottom: 26px;
         }
 
-
         .hero h1 span {
             color: var(--accent);
         }
-
 
         .hero-description {
             max-width: 650px;
@@ -248,14 +227,11 @@
             margin-bottom: 34px;
         }
 
-
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-
             gap: 12px;
         }
-
 
         .button {
             min-height: 48px;
@@ -271,28 +247,23 @@
             font-size: 14px;
             font-weight: 700;
 
-            transition: 0.2s ease;
+            transition: .2s ease;
         }
-
 
         .button-primary {
             background: var(--dark);
             color: white;
         }
 
-
         .button-primary:hover {
             background: var(--accent-dark);
             transform: translateY(-2px);
         }
 
-
         .button-secondary {
             background: white;
-
             border: 1px solid var(--line);
         }
-
 
         .button-secondary:hover {
             transform: translateY(-2px);
@@ -300,7 +271,7 @@
 
 
         /* =========================
-           HERO APP CARD
+           HERO VISUAL
         ========================= */
 
         .hero-visual {
@@ -313,7 +284,6 @@
             justify-content: center;
         }
 
-
         .visual-orbit {
             position: absolute;
 
@@ -323,7 +293,6 @@
             border: 1px solid #dfe4dc;
             border-radius: 50%;
         }
-
 
         .visual-orbit::before {
             content: "";
@@ -335,26 +304,24 @@
             border-radius: 50%;
         }
 
-
         .visual-card {
             position: relative;
             z-index: 2;
 
-            width: 315px;
+            width: 330px;
 
             padding: 28px;
 
-            border: 1px solid rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255,255,255,.95);
             border-radius: 28px;
 
-            background: rgba(255, 255, 255, 0.88);
+            background: rgba(255,255,255,.88);
 
             box-shadow:
-                0 25px 70px rgba(35, 45, 35, 0.12);
+                0 25px 70px rgba(35,45,35,.12);
 
             backdrop-filter: blur(18px);
         }
-
 
         .visual-top {
             display: flex;
@@ -364,7 +331,6 @@
             margin-bottom: 35px;
         }
 
-
         .visual-label {
             color: var(--muted);
 
@@ -372,9 +338,8 @@
             font-weight: 700;
 
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: .8px;
         }
-
 
         .visual-number {
             width: 38px;
@@ -392,7 +357,6 @@
             font-weight: 700;
         }
 
-
         .visual-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -402,20 +366,20 @@
             margin-bottom: 12px;
         }
 
-
         .visual-card > p {
             color: var(--muted);
-
             font-size: 14px;
         }
 
 
-        /* HERO MINI SLIDER */
+        /* =========================
+           HERO MINI APP SLIDER
+        ========================= */
 
         .hero-app-slider {
             display: grid;
 
-            grid-template-columns: 26px 1fr 26px;
+            grid-template-columns: 27px minmax(0,1fr) 27px;
 
             align-items: center;
 
@@ -424,21 +388,16 @@
             margin-top: 25px;
         }
 
-
         .hero-app-window {
-            width: 100%;
             overflow: hidden;
+            min-width: 0;
         }
-
 
         .hero-app-track {
             display: flex;
 
-            justify-content: flex-start;
-
             gap: 7px;
         }
-
 
         .mini-app {
             width: 40px;
@@ -462,23 +421,23 @@
             font-weight: 700;
         }
 
-
         .mini-app img {
             width: 100%;
             height: 100%;
 
-            display: block;
-
             object-fit: cover;
+
+            display: block;
         }
 
-
         .hero-slider-button {
-            width: 26px;
+            width: 27px;
             height: 34px;
 
             display: grid;
             place-items: center;
+
+            padding: 0;
 
             border: 1px solid var(--line);
             border-radius: 9px;
@@ -489,19 +448,18 @@
             cursor: pointer;
 
             font-size: 19px;
+            line-height: 1;
 
-            transition: 0.2s ease;
+            transition: .2s ease;
         }
-
 
         .hero-slider-button:hover:not(:disabled) {
             background: var(--soft);
             color: var(--accent);
         }
 
-
         .hero-slider-button:disabled {
-            opacity: 0.28;
+            opacity: .25;
             cursor: default;
         }
 
@@ -514,11 +472,10 @@
             padding: 40px 0 105px;
         }
 
-
         .intro-box {
             display: grid;
 
-            grid-template-columns: 0.7fr 1.3fr;
+            grid-template-columns: .7fr 1.3fr;
 
             gap: 60px;
 
@@ -529,7 +486,6 @@
 
             border-radius: 30px;
         }
-
 
         .section-kicker {
             color: #aebcaf;
@@ -543,14 +499,12 @@
             margin-bottom: 14px;
         }
 
-
         .intro-box h2 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 40px;
             line-height: 1.1;
         }
-
 
         .intro-box p {
             color: #b8beb8;
@@ -568,18 +522,16 @@
             padding: 105px 0;
         }
 
-
         .section-heading {
             max-width: 720px;
 
             margin-bottom: 45px;
         }
 
-
         .section-heading h2 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(36px, 5vw, 52px);
+            font-size: clamp(36px,5vw,52px);
 
             line-height: 1.1;
 
@@ -588,18 +540,11 @@
             margin-bottom: 15px;
         }
 
-
         .section-heading p {
             color: var(--muted);
 
             font-size: 17px;
         }
-
-
-        .apps-slider-wrap {
-            position: relative;
-        }
-
 
         .apps-track {
             width: 100%;
@@ -610,7 +555,7 @@
 
             overflow-x: auto;
 
-            padding: 5px 3px 24px;
+            padding: 5px 3px 25px;
 
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
@@ -618,53 +563,49 @@
             scrollbar-width: none;
         }
 
-
         .apps-track::-webkit-scrollbar {
             display: none;
         }
 
-
         .app-card {
             flex: 0 0 280px;
 
-            min-height: 330px;
+            min-height: 340px;
 
             display: flex;
             flex-direction: column;
 
-            padding: 27px;
+            padding: 28px;
 
-            background: var(--surface);
+            background: white;
 
             border: 1px solid var(--line);
             border-radius: 22px;
 
             scroll-snap-align: start;
 
-            transition: 0.24s ease;
+            transition: .24s ease;
         }
-
 
         .app-card:hover {
             transform: translateY(-5px);
 
             box-shadow:
-                0 20px 45px rgba(30, 40, 30, 0.08);
+                0 20px 45px rgba(30,40,30,.08);
         }
 
-
         .app-icon {
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 62px;
 
-            flex: 0 0 60px;
+            flex: 0 0 62px;
 
             display: grid;
             place-items: center;
 
-            margin-bottom: 26px;
+            margin-bottom: 25px;
 
-            border-radius: 17px;
+            border-radius: 18px;
 
             overflow: hidden;
 
@@ -677,16 +618,35 @@
             font-weight: 700;
         }
 
-
         .app-icon img {
             width: 100%;
             height: 100%;
 
-            display: block;
-
             object-fit: cover;
+
+            display: block;
         }
 
+        .app-status {
+            display: inline-flex;
+
+            width: fit-content;
+
+            margin-bottom: 12px;
+
+            padding: 5px 9px;
+
+            border-radius: 999px;
+
+            background: var(--soft);
+            color: var(--accent-dark);
+
+            font-size: 10px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
 
         .app-card h3 {
             font-family: "Space Grotesk", sans-serif;
@@ -697,7 +657,6 @@
             margin-bottom: 11px;
         }
 
-
         .app-card p {
             color: var(--muted);
 
@@ -706,7 +665,6 @@
 
             margin-bottom: 24px;
         }
-
 
         .app-link {
             display: inline-flex;
@@ -719,24 +677,24 @@
             font-weight: 700;
         }
 
-
         .app-link:hover {
             color: var(--accent-dark);
         }
-
 
         .slider-controls {
             display: flex;
 
             gap: 9px;
 
-            margin-top: 6px;
+            margin-top: 7px;
         }
-
 
         .slider-button {
             width: 44px;
             height: 44px;
+
+            display: grid;
+            place-items: center;
 
             border: 1px solid var(--line);
             border-radius: 50%;
@@ -746,21 +704,17 @@
 
             cursor: pointer;
 
-            font-size: 17px;
-
-            transition: 0.2s ease;
+            transition: .2s ease;
         }
 
-
         .slider-button:hover {
-            transform: translateY(-2px);
-
             background: var(--soft);
+            transform: translateY(-2px);
         }
 
 
         /* =========================
-           WHY CELL CAVE
+           WHY
         ========================= */
 
         .why-section {
@@ -769,15 +723,13 @@
             background: white;
         }
 
-
         .why-grid {
             display: grid;
 
-            grid-template-columns: 0.8fr 1.2fr;
+            grid-template-columns: .8fr 1.2fr;
 
             gap: 80px;
         }
-
 
         .why-intro h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -790,22 +742,19 @@
             margin-bottom: 20px;
         }
 
-
         .why-intro p {
             max-width: 430px;
 
             color: var(--muted);
         }
 
-
         .why-items {
             display: grid;
 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2,1fr);
 
             gap: 18px;
         }
-
 
         .why-item {
             padding: 27px;
@@ -816,7 +765,6 @@
             background: #fafbf9;
         }
 
-
         .why-item-number {
             color: #a0a79d;
 
@@ -826,7 +774,6 @@
             margin-bottom: 30px;
         }
 
-
         .why-item h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -834,7 +781,6 @@
 
             margin-bottom: 8px;
         }
-
 
         .why-item p {
             color: var(--muted);
@@ -851,11 +797,10 @@
             padding: 105px 0;
         }
 
-
         .featured-card {
             display: grid;
 
-            grid-template-columns: 0.8fr 1.2fr;
+            grid-template-columns: .8fr 1.2fr;
 
             align-items: center;
 
@@ -867,7 +812,6 @@
 
             border-radius: 30px;
         }
-
 
         .featured-icon {
             width: 180px;
@@ -883,17 +827,17 @@
             background: white;
 
             box-shadow:
-                0 20px 45px rgba(30, 40, 30, 0.08);
+                0 20px 45px rgba(30,40,30,.08);
         }
-
 
         .featured-icon img {
             width: 100%;
             height: 100%;
 
             object-fit: cover;
-        }
 
+            display: block;
+        }
 
         .featured-card h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -903,7 +847,6 @@
 
             margin-bottom: 15px;
         }
-
 
         .featured-card p {
             max-width: 620px;
@@ -922,13 +865,10 @@
             padding: 105px 0;
         }
 
-
         .platform-grid {
             display: flex;
-
             gap: 18px;
         }
-
 
         .platform-card {
             flex: 1;
@@ -945,14 +885,12 @@
             border: 1px solid var(--line);
             border-radius: 22px;
 
-            transition: 0.2s ease;
+            transition: .2s ease;
         }
-
 
         .platform-card:hover {
             transform: translateY(-4px);
         }
-
 
         .platform-icon {
             width: 62px;
@@ -971,11 +909,9 @@
             font-size: 24px;
         }
 
-
         .platform-content {
             flex: 1;
         }
-
 
         .platform-content span {
             display: block;
@@ -990,7 +926,6 @@
             margin-bottom: 5px;
         }
 
-
         .platform-content h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -999,17 +934,14 @@
             margin-bottom: 4px;
         }
 
-
         .platform-content p {
             color: var(--muted);
 
             font-size: 13px;
         }
 
-
         .platform-arrow {
             color: var(--muted);
-
             font-size: 22px;
         }
 
@@ -1022,8 +954,7 @@
             padding: 40px 0 105px;
         }
 
-
-        .support-card {
+        .support-box {
             padding: 65px;
 
             text-align: center;
@@ -1034,8 +965,7 @@
             border-radius: 30px;
         }
 
-
-        .support-card h2 {
+        .support-box h2 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 42px;
@@ -1043,8 +973,7 @@
             margin-bottom: 12px;
         }
 
-
-        .support-card p {
+        .support-box p {
             max-width: 600px;
 
             margin: 0 auto 25px;
@@ -1061,7 +990,6 @@
             padding: 0 0 105px;
         }
 
-
         .final-card {
             padding: 80px 40px;
 
@@ -1073,17 +1001,15 @@
             border-radius: 30px;
         }
 
-
         .final-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(35px, 5vw, 52px);
+            font-size: clamp(35px,5vw,52px);
 
             line-height: 1.1;
 
             margin-bottom: 15px;
         }
-
 
         .final-card p {
             max-width: 600px;
@@ -1093,10 +1019,8 @@
             color: #d8e1d9;
         }
 
-
         .final-card .button {
             background: white;
-
             color: var(--accent-dark);
         }
 
@@ -1112,17 +1036,15 @@
             color: #aeb3ac;
         }
 
-
         .footer-main {
             display: grid;
 
-            grid-template-columns: 0.9fr 1.1fr;
+            grid-template-columns: .9fr 1.1fr;
 
             gap: 70px;
 
             padding-bottom: 45px;
         }
-
 
         .footer-brand h3 {
             color: white;
@@ -1134,18 +1056,13 @@
             margin-bottom: 8px;
         }
 
-
         .footer-brand p {
-            color: #aeb3ac;
-
             font-size: 14px;
         }
-
 
         .footer-social {
             margin-top: 25px;
         }
-
 
         .social-label {
             display: block;
@@ -1160,13 +1077,12 @@
             text-transform: uppercase;
         }
 
-
         .social-icons {
             display: flex;
+            flex-wrap: wrap;
 
             gap: 9px;
         }
-
 
         .social-icon {
             width: 39px;
@@ -1183,14 +1099,12 @@
             color: #b9beb7;
         }
 
-
         .social-icon svg {
             width: 17px;
             height: 17px;
 
             fill: currentColor;
         }
-
 
         .social-icon.instagram svg {
             fill: none;
@@ -1200,25 +1114,22 @@
             stroke-width: 1.9;
         }
 
-
         .social-x {
-            font-family: Arial, sans-serif;
+            font-family: Arial,sans-serif;
             font-weight: 700;
         }
-
 
         .footer-links {
             display: grid;
 
-            grid-template-columns: repeat(2, minmax(130px, 1fr));
+            grid-template-columns: repeat(2,minmax(130px,1fr));
 
             gap: 13px 35px;
 
             justify-self: end;
 
-            width: min(430px, 100%);
+            width: min(430px,100%);
         }
-
 
         .footer-links a {
             color: #aeb3ac;
@@ -1226,11 +1137,9 @@
             font-size: 13px;
         }
 
-
         .footer-links a:hover {
             color: white;
         }
-
 
         .footer-bottom {
             padding-top: 23px;
@@ -1247,7 +1156,7 @@
            RESPONSIVE
         ========================= */
 
-        @media (max-width: 900px) {
+        @media (max-width:900px) {
 
             .hero-grid,
             .why-grid,
@@ -1255,33 +1164,26 @@
                 grid-template-columns: 1fr;
             }
 
-
             .hero-visual {
-                min-height: 380px;
+                min-height: 390px;
             }
-
 
             .intro-box {
                 grid-template-columns: 1fr;
-
                 gap: 25px;
             }
-
 
             .why-grid {
                 gap: 45px;
             }
 
-
             .featured-icon {
                 margin: auto;
             }
 
-
             .footer-main {
                 grid-template-columns: 1fr;
             }
-
 
             .footer-links {
                 justify-self: start;
@@ -1290,7 +1192,7 @@
         }
 
 
-        @media (max-width: 650px) {
+        @media (max-width:650px) {
 
             .nav-inner {
                 padding: 15px 0;
@@ -1300,7 +1202,6 @@
                 gap: 14px;
             }
 
-
             .nav-links {
                 gap: 17px;
 
@@ -1308,39 +1209,32 @@
                 justify-content: center;
             }
 
-
             .hero {
                 padding: 75px 0 70px;
             }
-
 
             .hero h1 {
                 letter-spacing: -2px;
             }
 
-
             .hero-description {
                 font-size: 16px;
             }
 
-
             .hero-visual {
                 min-height: 350px;
             }
-
 
             .visual-orbit {
                 width: 290px;
                 height: 290px;
             }
 
-
             .visual-card {
-                width: 285px;
+                width: 290px;
 
-                padding: 25px 22px;
+                padding: 25px 21px;
             }
-
 
             .mini-app {
                 width: 37px;
@@ -1349,45 +1243,39 @@
                 flex-basis: 37px;
             }
 
-
             .intro-box,
             .featured-card,
-            .support-card {
+            .support-box {
                 padding: 38px 26px;
             }
-
 
             .intro-box h2,
             .why-intro h2,
             .featured-card h2,
-            .support-card h2 {
+            .support-box h2 {
                 font-size: 34px;
             }
-
 
             .why-items {
                 grid-template-columns: 1fr;
             }
 
-
             .platform-grid {
                 flex-direction: column;
             }
-
 
             .app-card {
                 flex-basis: 82vw;
             }
 
-
             .footer-links {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2,1fr);
             }
 
         }
 
 
-        @media (max-width: 420px) {
+        @media (max-width:420px) {
 
             .footer-links {
                 grid-template-columns: 1fr;
@@ -1423,27 +1311,19 @@
         <ul class="nav-links">
 
             <li>
-                <a href="./">
-                    Home
-                </a>
+                <a href="./">Home</a>
             </li>
 
             <li>
-                <a href="apps/">
-                    Apps
-                </a>
+                <a href="apps/">Apps</a>
             </li>
 
             <li>
-                <a href="support/">
-                    Support
-                </a>
+                <a href="support/">Support</a>
             </li>
 
             <li>
-                <a href="about/">
-                    About
-                </a>
+                <a href="about/">About</a>
             </li>
 
         </ul>
@@ -1451,7 +1331,6 @@
     </div>
 
 </header>
-
 
 
 <main>
@@ -1489,9 +1368,9 @@
                 <p class="hero-description">
 
                     From managing files and saving status content
-                    to calculating age and backing up important data,
-                    Cell Cave builds simple utility apps focused on
-                    practical everyday needs.
+                    to transferring data and backing up important files,
+                    Cell Cave builds practical utility apps focused on
+                    everyday digital needs.
 
                 </p>
 
@@ -1518,7 +1397,6 @@
             </div>
 
 
-
             <div class="hero-visual">
 
                 <div class="visual-orbit"></div>
@@ -1526,11 +1404,13 @@
 
                 <div class="visual-card">
 
+
                     <div class="visual-top">
 
                         <span class="visual-label">
                             Cell Cave
                         </span>
+
 
                         <span
                             class="visual-number"
@@ -1572,8 +1452,7 @@
                             <div
                                 class="hero-app-track"
                                 id="heroAppsTrack"
-                            >
-                            </div>
+                            ></div>
 
                         </div>
 
@@ -1590,14 +1469,15 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
+
         </div>
 
     </section>
-
 
 
     <!-- ABOUT -->
@@ -1626,11 +1506,9 @@
 
 
                 <p>
-
                     Cell Cave focuses on practical utility applications
                     designed to make everyday digital tasks simpler,
                     more convenient, and easier to manage.
-
                 </p>
 
 
@@ -1641,8 +1519,7 @@
     </section>
 
 
-
-    <!-- OUR APPS -->
+    <!-- APPS -->
 
     <section class="apps-section">
 
@@ -1673,18 +1550,14 @@
             </div>
 
 
-            <div class="apps-slider-wrap">
-
-                <div
-                    class="apps-track"
-                    id="appsTrack"
-                >
-                </div>
-
-            </div>
+            <div
+                class="apps-track"
+                id="appsTrack"
+            ></div>
 
 
             <div class="slider-controls">
+
 
                 <button
                     class="slider-button"
@@ -1705,13 +1578,13 @@
                     →
                 </button>
 
+
             </div>
 
 
         </div>
 
     </section>
-
 
 
     <!-- WHY -->
@@ -1737,12 +1610,11 @@
 
 
                 <p>
-                    We aim to keep our apps useful without making
-                    them unnecessarily complicated.
+                    We aim to keep our apps useful without
+                    making them unnecessarily complicated.
                 </p>
 
             </div>
-
 
 
             <div class="why-items">
@@ -1750,13 +1622,9 @@
 
                 <article class="why-item">
 
-                    <div class="why-item-number">
-                        01
-                    </div>
+                    <div class="why-item-number">01</div>
 
-                    <h3>
-                        Simple
-                    </h3>
+                    <h3>Simple</h3>
 
                     <p>
                         Straightforward experiences that are
@@ -1768,13 +1636,9 @@
 
                 <article class="why-item">
 
-                    <div class="why-item-number">
-                        02
-                    </div>
+                    <div class="why-item-number">02</div>
 
-                    <h3>
-                        Practical
-                    </h3>
+                    <h3>Practical</h3>
 
                     <p>
                         Apps focused on real everyday utility
@@ -1786,13 +1650,9 @@
 
                 <article class="why-item">
 
-                    <div class="why-item-number">
-                        03
-                    </div>
+                    <div class="why-item-number">03</div>
 
-                    <h3>
-                        User Focused
-                    </h3>
+                    <h3>User Focused</h3>
 
                     <p>
                         Clean interfaces designed around a
@@ -1804,13 +1664,9 @@
 
                 <article class="why-item">
 
-                    <div class="why-item-number">
-                        04
-                    </div>
+                    <div class="why-item-number">04</div>
 
-                    <h3>
-                        Always Improving
-                    </h3>
+                    <h3>Always Improving</h3>
 
                     <p>
                         We continue refining our apps based
@@ -1825,7 +1681,6 @@
         </div>
 
     </section>
-
 
 
     <!-- FEATURED -->
@@ -1890,7 +1745,6 @@
     </section>
 
 
-
     <!-- PLATFORMS -->
 
     <section class="platform-section">
@@ -1919,7 +1773,6 @@
                 </p>
 
             </div>
-
 
 
             <div class="platform-grid">
@@ -1961,7 +1814,6 @@
                 </a>
 
 
-
                 <a
                     href="app-store/"
                     class="platform-card"
@@ -1999,10 +1851,10 @@
 
             </div>
 
+
         </div>
 
     </section>
-
 
 
     <!-- SUPPORT -->
@@ -2011,7 +1863,8 @@
 
         <div class="container">
 
-            <div class="support-card">
+            <div class="support-box">
+
 
                 <div
                     class="section-kicker"
@@ -2040,6 +1893,7 @@
                     Get Support
                 </a>
 
+
             </div>
 
         </div>
@@ -2047,14 +1901,14 @@
     </section>
 
 
-
-    <!-- FINAL CTA -->
+    <!-- CTA -->
 
     <section class="final-section">
 
         <div class="container">
 
             <div class="final-card">
+
 
                 <h2>
                     Explore the Cell Cave App Collection
@@ -2074,6 +1928,7 @@
                     Explore All Apps
                 </a>
 
+
             </div>
 
         </div>
@@ -2082,7 +1937,6 @@
 
 
 </main>
-
 
 
 <!-- FOOTER -->
@@ -2121,11 +1975,13 @@
                             class="social-icon"
                             title="Facebook"
                         >
+
                             <svg viewBox="0 0 24 24">
 
                                 <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
 
                             </svg>
+
                         </span>
 
 
@@ -2195,35 +2051,42 @@
 
                 </div>
 
+
             </div>
 
 
-
             <nav class="footer-links">
+
 
                 <a href="./">
                     Home
                 </a>
 
+
                 <a href="apps/">
                     Apps
                 </a>
+
 
                 <a href="support/">
                     Support
                 </a>
 
+
                 <a href="about/">
                     About
                 </a>
+
 
                 <a href="privacy/">
                     Privacy Policy
                 </a>
 
+
                 <a href="terms/">
                     Terms of Use
                 </a>
+
 
                 <a href="app-store/">
                     App Store
@@ -2238,6 +2101,7 @@
                     Google Play
                 </a>
 
+
             </nav>
 
 
@@ -2245,9 +2109,7 @@
 
 
         <div class="footer-bottom">
-
             © 2026 Cell Cave. All rights reserved.
-
         </div>
 
 
@@ -2256,289 +2118,318 @@
 </footer>
 
 
-
-<!-- =========================
-     CONTENT DATA
-========================= -->
-
-<script src="content.js"></script>
-
-
-
-<!-- =========================
-     HOMEPAGE SCRIPT
-========================= -->
-
 <script>
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+    /* ========================================
+       ALL HOMEPAGE APP DATA
+
+       Future app add karne ke liye
+       sirf yahan ek naya object add karein.
+    ======================================== */
+
+    const appsData = [
+
+        {
+            name: "Cloud Backup: Photo Storage",
+            shortName: "CB",
+            icon: "assets/icons/cloud-backup-photo-storage.png",
+
+            description:
+                "A practical mobile app focused on cloud backup and photo storage needs.",
+
+            link:
+                "apps/cloud-backup-photo-storage/"
+        },
 
 
-        /* =========================
-           FALLBACK APPS
-        ========================= */
+        {
+            name: "Switch Smart",
+            shortName: "SS",
 
-        const fallbackApps = [
+            description:
+                "Transfer supported contacts, photos, videos, music, documents, files, and apps directly between Android devices.",
 
-            {
-                name: "Cloud Backup: Photo Storage",
-                shortName: "CB",
-                icon: "assets/icons/cloud-backup-photo-storage.png",
-                description:
-                    "A practical mobile app focused on cloud backup and photo storage needs.",
-                link: "apps/cloud-backup-photo-storage/"
-            },
+            link:
+                "apps/switch-smart/",
 
-            {
-                name: "Switch Smart",
-                shortName: "SS",
-                description:
-                    "Transfer supported contacts, photos, videos, music, documents, files, and apps directly between Android devices.",
-                link: "apps/switch-smart/"
-            },
-
-            {
-                name: "Document Reader: Read All PDF",
-                shortName: "DR",
-                icon: "assets/icons/document-reader-read-all-pdf.png",
-                description:
-                    "A practical document reader designed to help users open and read supported document formats.",
-                link: "apps/document-reader-read-all-pdf/"
-            },
-
-            {
-                name: "Status Downloader: Video Saver",
-                shortName: "SS",
-                icon: "assets/icons/status-downloader-video-saver.png",
-                description:
-                    "A practical mobile app for saving and managing supported status content.",
-                link: "apps/status-downloader-video-saver/"
-            },
-
-            {
-                name: "All Video Downloader & Saver",
-                shortName: "VD",
-                icon: "assets/icons/all-video-downloader-saver.png",
-                description:
-                    "A mobile utility designed to help manage and download videos from supported sources.",
-                link: "apps/all-video-downloader-saver/"
-            },
-
-            {
-                name: "Age Calculator: Date of Birth",
-                shortName: "AC",
-                icon: "assets/icons/age-calculator-date-of-birth.webp",
-                description:
-                    "Calculate age and useful date information through a simple and convenient mobile experience.",
-                link: "apps/age-calculator-date-of-birth/"
-            }
-
-        ];
+            status:
+                "Coming Soon"
+        },
 
 
+        {
+            name: "Document Reader: Read All PDF",
+            shortName: "DR",
+            icon: "assets/icons/document-reader-read-all-pdf.png",
 
-        /* =========================
-           GET APPS
-        ========================= */
+            description:
+                "A practical document reader designed to help users open and read supported document formats.",
 
-        let apps = fallbackApps;
+            link:
+                "apps/document-reader-read-all-pdf/"
+        },
 
 
-        try {
+        {
+            name: "Status Downloader: Video Saver",
+            shortName: "SS",
+            icon: "assets/icons/status-downloader-video-saver.png",
 
-            if (
-                typeof siteContent !== "undefined" &&
-                siteContent &&
-                siteContent.apps &&
-                Array.isArray(siteContent.apps.items) &&
-                siteContent.apps.items.length > 0
-            ) {
+            description:
+                "A practical mobile app for saving and managing supported status content.",
 
-                apps = siteContent.apps.items;
+            link:
+                "apps/status-downloader-video-saver/"
+        },
 
-            }
 
-        } catch (error) {
+        {
+            name: "All Video Downloader & Saver",
+            shortName: "VD",
+            icon: "assets/icons/all-video-downloader-saver.png",
 
-            console.warn(
-                "Using fallback app data.",
-                error
-            );
+            description:
+                "A mobile utility designed to help manage and download videos from supported sources.",
+
+            link:
+                "apps/all-video-downloader-saver/"
+        },
+
+
+        {
+            name: "Age Calculator: Date of Birth",
+            shortName: "AC",
+            icon: "assets/icons/age-calculator-date-of-birth.webp",
+
+            description:
+                "Calculate age and useful date information through a simple and convenient mobile experience.",
+
+            link:
+                "apps/age-calculator-date-of-birth/"
+        }
+
+    ];
+
+
+    /* =========================
+       APP COUNT
+    ========================= */
+
+    document
+        .getElementById("heroAppCount")
+        .textContent =
+        String(appsData.length).padStart(2,"0");
+
+
+    /* =========================
+       EXPLORE OUR APPS CARDS
+    ========================= */
+
+    const appsTrack =
+        document.getElementById("appsTrack");
+
+
+    function createAppIcon(app) {
+
+        const icon =
+            document.createElement("div");
+
+        icon.className =
+            "app-icon";
+
+
+        if (app.icon) {
+
+            const img =
+                document.createElement("img");
+
+            img.src =
+                app.icon;
+
+            img.alt =
+                app.name;
+
+            icon.appendChild(img);
+
+        }
+
+        else {
+
+            icon.textContent =
+                app.shortName || "APP";
 
         }
 
 
+        return icon;
 
-        /* =========================
-           APP COUNT
-        ========================= */
-
-        const heroAppCount =
-            document.getElementById("heroAppCount");
+    }
 
 
-        heroAppCount.textContent =
-            String(apps.length).padStart(2, "0");
-
-
-
-        /* =========================
-           MAIN APP CARDS
-        ========================= */
-
-        const appsTrack =
-            document.getElementById("appsTrack");
-
+    function renderAppCards() {
 
         appsTrack.innerHTML = "";
 
 
-        apps.forEach(function (app) {
+        appsData.forEach(function(app) {
 
 
             const card =
                 document.createElement("article");
 
-
             card.className =
                 "app-card";
 
 
-            const iconHTML =
-                app.icon
-                    ? `
-                        <img
-                            src="${app.icon}"
-                            alt="${app.name}"
-                        >
-                    `
-                    : `
-                        <span>
-                            ${app.shortName || "APP"}
-                        </span>
-                    `;
+            card.appendChild(
+                createAppIcon(app)
+            );
 
 
-            card.innerHTML = `
+            if (app.status) {
 
-                <div class="app-icon">
+                const status =
+                    document.createElement("div");
 
-                    ${iconHTML}
+                status.className =
+                    "app-status";
 
-                </div>
+                status.textContent =
+                    app.status;
 
+                card.appendChild(status);
 
-                <h3>
-                    ${app.name}
-                </h3>
-
-
-                <p>
-                    ${app.description || ""}
-                </p>
+            }
 
 
-                <a
-                    href="${app.link || "#"}"
-                    class="app-link"
-                >
-                    View Details →
-                </a>
+            const title =
+                document.createElement("h3");
 
-            `;
+            title.textContent =
+                app.name;
+
+            card.appendChild(title);
+
+
+            const description =
+                document.createElement("p");
+
+            description.textContent =
+                app.description;
+
+            card.appendChild(description);
+
+
+            const link =
+                document.createElement("a");
+
+            link.href =
+                app.link;
+
+            link.className =
+                "app-link";
+
+            link.textContent =
+                "View Details →";
+
+            card.appendChild(link);
 
 
             appsTrack.appendChild(card);
 
         });
 
+    }
 
 
-        /* =========================
-           MAIN APP SLIDER
-        ========================= */
-
-        const appsPrev =
-            document.getElementById("appsPrev");
+    renderAppCards();
 
 
-        const appsNext =
-            document.getElementById("appsNext");
+    /* =========================
+       MAIN APP SLIDER
+    ========================= */
 
-
-        appsPrev.addEventListener(
+    document
+        .getElementById("appsPrev")
+        .addEventListener(
             "click",
-            function () {
+            function() {
 
                 appsTrack.scrollBy({
-                    left: -300,
+
+                    left: -310,
+
                     behavior: "smooth"
+
                 });
 
             }
         );
 
 
-        appsNext.addEventListener(
+    document
+        .getElementById("appsNext")
+        .addEventListener(
             "click",
-            function () {
+            function() {
 
                 appsTrack.scrollBy({
-                    left: 300,
+
+                    left: 310,
+
                     behavior: "smooth"
+
                 });
 
             }
         );
 
 
+    /* =========================
+       HERO MAX 5 APP SLIDER
+    ========================= */
 
-        /* =========================
-           HERO MINI APPS
-        ========================= */
-
-        const heroAppsTrack =
-            document.getElementById("heroAppsTrack");
-
-
-        const heroPrev =
-            document.getElementById("heroPrev");
+    const heroAppsTrack =
+        document.getElementById(
+            "heroAppsTrack"
+        );
 
 
-        const heroNext =
-            document.getElementById("heroNext");
+    const heroPrev =
+        document.getElementById(
+            "heroPrev"
+        );
 
 
-        const visibleHeroApps = 5;
+    const heroNext =
+        document.getElementById(
+            "heroNext"
+        );
 
 
-        let heroStartIndex = 0;
+    const HERO_VISIBLE =
+        5;
 
 
-
-        function renderHeroApps() {
-
-
-            heroAppsTrack.innerHTML = "";
+    let heroIndex =
+        0;
 
 
-            const endIndex =
-                Math.min(
-                    heroStartIndex + visibleHeroApps,
-                    apps.length
-                );
+    function renderHeroApps() {
+
+        heroAppsTrack.innerHTML =
+            "";
 
 
-            for (
-                let i = heroStartIndex;
-                i < endIndex;
-                i++
-            ) {
+        const visibleApps =
+            appsData.slice(
+                heroIndex,
+                heroIndex + HERO_VISIBLE
+            );
 
 
-                const app = apps[i];
+        visibleApps.forEach(
+            function(app) {
 
 
                 const mini =
@@ -2555,21 +2446,25 @@ document.addEventListener(
 
                 if (app.icon) {
 
-                    const image =
+                    const img =
                         document.createElement("img");
 
 
-                    image.src =
+                    img.src =
                         app.icon;
 
 
-                    image.alt =
+                    img.alt =
                         app.name;
 
 
-                    mini.appendChild(image);
+                    mini.appendChild(
+                        img
+                    );
 
-                } else {
+                }
+
+                else {
 
                     mini.textContent =
                         app.shortName || "APP";
@@ -2577,64 +2472,66 @@ document.addEventListener(
                 }
 
 
-                heroAppsTrack.appendChild(mini);
+                heroAppsTrack.appendChild(
+                    mini
+                );
 
-            }
-
-
-            heroPrev.disabled =
-                heroStartIndex <= 0;
-
-
-            heroNext.disabled =
-                heroStartIndex + visibleHeroApps >= apps.length;
-
-        }
-
-
-
-        heroPrev.addEventListener(
-            "click",
-            function () {
-
-                if (heroStartIndex > 0) {
-
-                    heroStartIndex--;
-
-                    renderHeroApps();
-
-                }
 
             }
         );
 
 
-
-        heroNext.addEventListener(
-            "click",
-            function () {
-
-                if (
-                    heroStartIndex + visibleHeroApps
-                    < apps.length
-                ) {
-
-                    heroStartIndex++;
-
-                    renderHeroApps();
-
-                }
-
-            }
-        );
+        heroPrev.disabled =
+            heroIndex === 0;
 
 
-
-        renderHeroApps();
-
+        heroNext.disabled =
+            heroIndex + HERO_VISIBLE
+            >= appsData.length;
 
     }
-);
+
+
+    heroPrev.addEventListener(
+        "click",
+        function() {
+
+
+            if (heroIndex > 0) {
+
+                heroIndex--;
+
+                renderHeroApps();
+
+            }
+
+
+        }
+    );
+
+
+    heroNext.addEventListener(
+        "click",
+        function() {
+
+
+            if (
+                heroIndex + HERO_VISIBLE
+                < appsData.length
+            ) {
+
+                heroIndex++;
+
+                renderHeroApps();
+
+            }
+
+
+        }
+    );
+
+
+    renderHeroApps();
 
 </script>
 
