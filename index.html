@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -29,6 +30,7 @@
         rel="stylesheet"
     >
 
+
     <style>
 
         :root {
@@ -43,15 +45,18 @@
             --dark: #171916;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", sans-serif;
@@ -60,14 +65,17 @@
             line-height: 1.6;
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         button {
             font-family: inherit;
         }
+
 
         .container {
             width: min(1160px, 90%);
@@ -75,9 +83,11 @@
         }
 
 
+
         /* =========================
            NAVBAR
         ========================= */
+
 
         .navbar {
             position: sticky;
@@ -92,6 +102,7 @@
             border-bottom: 1px solid var(--line);
         }
 
+
         .nav-inner {
             min-height: 78px;
 
@@ -99,6 +110,7 @@
             align-items: center;
             justify-content: space-between;
         }
+
 
         .brand {
             display: flex;
@@ -110,6 +122,7 @@
             font-size: 20px;
             font-weight: 700;
         }
+
 
         .brand-mark {
             width: 38px;
@@ -126,6 +139,7 @@
             font-size: 11px;
         }
 
+
         .nav-links {
             display: flex;
             align-items: center;
@@ -134,6 +148,7 @@
 
             list-style: none;
         }
+
 
         .nav-links a {
             color: var(--muted);
@@ -144,19 +159,24 @@
             transition: 0.2s ease;
         }
 
+
         .nav-links a:hover {
             color: var(--text);
         }
+
 
 
         /* =========================
            HERO
         ========================= */
 
+
         .hero {
             padding: 110px 0 100px;
+
             overflow: hidden;
         }
+
 
         .hero-grid {
             display: grid;
@@ -166,6 +186,7 @@
 
             gap: 70px;
         }
+
 
         .eyebrow {
             display: inline-flex;
@@ -178,7 +199,7 @@
             border: 1px solid var(--line);
             border-radius: 999px;
 
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255,255,255,0.65);
 
             color: var(--accent);
 
@@ -191,6 +212,7 @@
             margin-bottom: 24px;
         }
 
+
         .eyebrow-dot {
             width: 7px;
             height: 7px;
@@ -200,21 +222,26 @@
             background: var(--accent);
         }
 
+
         .hero h1 {
             max-width: 760px;
 
             font-family: "Space Grotesk", sans-serif;
 
             font-size: clamp(48px, 6vw, 76px);
+
             line-height: 1.02;
+
             letter-spacing: -3px;
 
             margin-bottom: 26px;
         }
 
+
         .hero h1 span {
             color: var(--accent);
         }
+
 
         .hero-description {
             max-width: 650px;
@@ -227,12 +254,14 @@
             margin-bottom: 34px;
         }
 
+
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
 
             gap: 12px;
         }
+
 
         .button {
             min-height: 48px;
@@ -251,30 +280,39 @@
             transition: 0.25s ease;
         }
 
+
         .button-primary {
             background: var(--dark);
             color: white;
         }
 
+
         .button-primary:hover {
             transform: translateY(-2px);
+
             background: var(--accent-dark);
         }
 
+
         .button-secondary {
             background: white;
+
             border: 1px solid var(--line);
         }
 
+
         .button-secondary:hover {
             transform: translateY(-2px);
+
             border-color: #c7cdc3;
         }
+
 
 
         /* =========================
            HERO VISUAL
         ========================= */
+
 
         .hero-visual {
             position: relative;
@@ -286,6 +324,7 @@
             justify-content: center;
         }
 
+
         .visual-orbit {
             position: absolute;
 
@@ -296,18 +335,22 @@
             border-radius: 50%;
         }
 
+
         .visual-orbit::before {
             content: "";
 
             position: absolute;
+
             inset: 48px;
 
             border: 1px dashed #dfe4dc;
             border-radius: 50%;
         }
 
+
         .visual-card {
             position: relative;
+
             z-index: 2;
 
             width: 350px;
@@ -330,6 +373,7 @@
             backdrop-filter: blur(18px);
         }
 
+
         .visual-top {
             display: flex;
             align-items: center;
@@ -337,6 +381,7 @@
 
             margin-bottom: 34px;
         }
+
 
         .visual-label {
             color: var(--muted);
@@ -347,6 +392,7 @@
             text-transform: uppercase;
             letter-spacing: 0.8px;
         }
+
 
         .visual-number {
             width: 42px;
@@ -364,24 +410,30 @@
             font-weight: 700;
         }
 
+
         .visual-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 30px;
+
             line-height: 1.1;
 
             margin-bottom: 12px;
         }
 
+
         .visual-description {
             color: var(--muted);
+
             font-size: 14px;
         }
 
 
+
         /* =========================
-           PREMIUM HERO SLIDER
+           PREMIUM APP SLIDER
         ========================= */
+
 
         .hero-slider-box {
             margin-top: 28px;
@@ -403,6 +455,7 @@
                 0 12px 35px rgba(49,82,59,0.07);
         }
 
+
         .hero-app-slider {
             display: grid;
             grid-template-columns: 36px minmax(0,1fr) 36px;
@@ -412,12 +465,15 @@
             gap: 8px;
         }
 
+
         .hero-app-window {
             min-width: 0;
+
             overflow: hidden;
 
             padding: 8px 2px;
         }
+
 
         .hero-app-track {
             display: flex;
@@ -428,6 +484,7 @@
 
             min-height: 66px;
         }
+
 
         .mini-app {
             position: relative;
@@ -443,6 +500,7 @@
             overflow: hidden;
 
             border: 2px solid rgba(255,255,255,0.95);
+
             border-radius: 14px;
 
             background: var(--dark);
@@ -465,6 +523,19 @@
                 box-shadow 0.28s ease;
         }
 
+
+        .mini-app:hover {
+            opacity: 1;
+
+            transform:
+                translateY(-3px)
+                scale(0.96);
+
+            box-shadow:
+                0 10px 24px rgba(49,82,59,0.20);
+        }
+
+
         .mini-app img {
             width: 100%;
             height: 100%;
@@ -475,6 +546,7 @@
 
             border-radius: 12px;
         }
+
 
         .mini-app.center-app {
             width: 54px;
@@ -494,6 +566,14 @@
 
             z-index: 4;
         }
+
+
+        .mini-app.center-app:hover {
+            transform:
+                translateY(-3px)
+                scale(1.03);
+        }
+
 
         .hero-slider-button {
             width: 36px;
@@ -523,7 +603,8 @@
                 box-shadow 0.2s ease;
         }
 
-        .hero-slider-button:hover {
+
+        .hero-slider-button:hover:not(:disabled) {
             transform: translateY(-2px);
 
             background: var(--accent-dark);
@@ -532,9 +613,22 @@
                 0 10px 23px rgba(49,82,59,0.30);
         }
 
-        .hero-slider-button:active {
+
+        .hero-slider-button:active:not(:disabled) {
             transform: scale(0.94);
         }
+
+
+        .hero-slider-button:disabled {
+            background: #edf0eb;
+
+            color: #b7beb4;
+
+            box-shadow: none;
+
+            cursor: default;
+        }
+
 
         .selected-app-info {
             display: flex;
@@ -555,9 +649,12 @@
             text-align: center;
         }
 
+
         .selected-app-dot {
             width: 6px;
             height: 6px;
+
+            flex: 0 0 6px;
 
             border-radius: 50%;
 
@@ -568,13 +665,16 @@
         }
 
 
+
         /* =========================
            INTRO
         ========================= */
 
+
         .intro {
             padding: 40px 0 105px;
         }
+
 
         .intro-box {
             display: grid;
@@ -590,6 +690,7 @@
             border-radius: 30px;
         }
 
+
         .section-kicker {
             color: #aebcaf;
 
@@ -602,12 +703,14 @@
             margin-bottom: 14px;
         }
 
+
         .intro-box h2 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 40px;
             line-height: 1.1;
         }
+
 
         .intro-box p {
             color: #b8beb8;
@@ -617,13 +720,16 @@
         }
 
 
+
         /* =========================
            APPS
         ========================= */
 
+
         .apps-section {
             padding: 105px 0;
         }
+
 
         .section-heading {
             max-width: 700px;
@@ -631,20 +737,26 @@
             margin-bottom: 45px;
         }
 
+
         .section-heading h2 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: clamp(36px,5vw,52px);
+
             line-height: 1.1;
+
             letter-spacing: -1.5px;
 
             margin-bottom: 15px;
         }
 
+
         .section-heading p {
             color: var(--muted);
+
             font-size: 17px;
         }
+
 
         .apps-track {
             display: flex;
@@ -661,9 +773,11 @@
             scrollbar-width: none;
         }
 
+
         .apps-track::-webkit-scrollbar {
             display: none;
         }
+
 
         .app-card {
             flex: 0 0 285px;
@@ -685,12 +799,14 @@
             transition: 0.25s ease;
         }
 
+
         .app-card:hover {
             transform: translateY(-5px);
 
             box-shadow:
                 0 20px 45px rgba(30,40,30,0.09);
         }
+
 
         .app-icon {
             width: 60px;
@@ -715,6 +831,7 @@
             margin-bottom: 27px;
         }
 
+
         .app-icon img {
             width: 100%;
             height: 100%;
@@ -723,6 +840,7 @@
 
             object-fit: cover;
         }
+
 
         .app-status {
             display: inline-flex;
@@ -745,6 +863,7 @@
             letter-spacing: 0.5px;
         }
 
+
         .app-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -753,6 +872,7 @@
 
             margin-bottom: 10px;
         }
+
 
         .app-card p {
             color: var(--muted);
@@ -763,6 +883,7 @@
             margin-bottom: 20px;
         }
 
+
         .app-link {
             margin-top: auto;
 
@@ -772,12 +893,15 @@
             font-weight: 700;
         }
 
+
         .slider-controls {
             display: flex;
+
             gap: 9px;
 
             margin-top: 5px;
         }
+
 
         .slider-button {
             width: 44px;
@@ -798,6 +922,7 @@
             transition: 0.2s ease;
         }
 
+
         .slider-button:hover {
             transform: translateY(-2px);
 
@@ -807,9 +932,11 @@
         }
 
 
+
         /* =========================
            WHY
         ========================= */
+
 
         .why-section {
             padding: 105px 0;
@@ -817,12 +944,14 @@
             background: white;
         }
 
+
         .why-grid {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
 
             gap: 80px;
         }
+
 
         .why-intro h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -835,11 +964,13 @@
             margin-bottom: 20px;
         }
 
+
         .why-intro p {
             max-width: 430px;
 
             color: var(--muted);
         }
+
 
         .why-items {
             display: grid;
@@ -847,6 +978,7 @@
 
             gap: 18px;
         }
+
 
         .why-item {
             padding: 27px;
@@ -857,6 +989,7 @@
             background: #fafbf9;
         }
 
+
         .why-item-number {
             color: #a0a79d;
 
@@ -866,6 +999,7 @@
             margin-bottom: 30px;
         }
 
+
         .why-item h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -874,6 +1008,7 @@
             margin-bottom: 8px;
         }
 
+
         .why-item p {
             color: var(--muted);
 
@@ -881,13 +1016,16 @@
         }
 
 
+
         /* =========================
            FEATURED
         ========================= */
 
+
         .featured-section {
             padding: 105px 0;
         }
+
 
         .featured-card {
             display: grid;
@@ -904,6 +1042,7 @@
             border-radius: 30px;
         }
 
+
         .featured-icon {
             width: 180px;
             height: 180px;
@@ -918,6 +1057,7 @@
                 0 20px 45px rgba(30,40,30,0.08);
         }
 
+
         .featured-icon img {
             width: 100%;
             height: 100%;
@@ -926,6 +1066,7 @@
 
             object-fit: cover;
         }
+
 
         .featured-card h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -936,6 +1077,7 @@
             margin-bottom: 15px;
         }
 
+
         .featured-card p {
             max-width: 620px;
 
@@ -945,19 +1087,23 @@
         }
 
 
+
         /* =========================
            PLATFORM
         ========================= */
 
+
         .platform-section {
             padding: 105px 0;
         }
+
 
         .platform-grid {
             display: flex;
 
             gap: 18px;
         }
+
 
         .platform-card {
             flex: 1;
@@ -977,12 +1123,14 @@
             transition: 0.25s ease;
         }
 
+
         .platform-card:hover {
             transform: translateY(-4px);
 
             box-shadow:
                 0 18px 45px rgba(30,40,30,0.08);
         }
+
 
         .platform-icon {
             width: 62px;
@@ -1001,9 +1149,11 @@
             font-size: 24px;
         }
 
+
         .platform-content {
             flex: 1;
         }
+
 
         .platform-content span {
             display: block;
@@ -1018,17 +1168,20 @@
             text-transform: uppercase;
         }
 
+
         .platform-content h3 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 20px;
         }
 
+
         .platform-content p {
             color: var(--muted);
 
             font-size: 13px;
         }
+
 
         .platform-arrow {
             color: var(--muted);
@@ -1037,13 +1190,16 @@
         }
 
 
+
         /* =========================
            SUPPORT
         ========================= */
 
+
         .support-section {
             padding: 40px 0 105px;
         }
+
 
         .support-card {
             padding: 65px;
@@ -1056,6 +1212,7 @@
             border-radius: 30px;
         }
 
+
         .support-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -1063,6 +1220,7 @@
 
             margin-bottom: 12px;
         }
+
 
         .support-card p {
             max-width: 600px;
@@ -1073,13 +1231,16 @@
         }
 
 
+
         /* =========================
            FINAL
         ========================= */
 
+
         .final-section {
             padding: 0 0 105px;
         }
+
 
         .final-card {
             padding: 80px 40px;
@@ -1092,14 +1253,17 @@
             border-radius: 30px;
         }
 
+
         .final-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: clamp(35px,5vw,52px);
+
             line-height: 1.1;
 
             margin-bottom: 15px;
         }
+
 
         .final-card p {
             max-width: 600px;
@@ -1109,15 +1273,19 @@
             color: #d8e1d9;
         }
 
+
         .final-card .button {
             background: white;
+
             color: var(--accent-dark);
         }
+
 
 
         /* =========================
            FOOTER
         ========================= */
+
 
         footer {
             padding: 65px 0 28px;
@@ -1125,6 +1293,7 @@
             background: var(--dark);
             color: #aeb3ac;
         }
+
 
         .footer-main {
             display: grid;
@@ -1134,6 +1303,7 @@
 
             padding-bottom: 45px;
         }
+
 
         .footer-brand h3 {
             color: white;
@@ -1145,9 +1315,11 @@
             margin-bottom: 8px;
         }
 
+
         .footer-brand p {
             font-size: 14px;
         }
+
 
         .footer-links {
             display: grid;
@@ -1160,6 +1332,7 @@
             width: min(430px,100%);
         }
 
+
         .footer-links a {
             color: #aeb3ac;
 
@@ -1168,9 +1341,11 @@
             transition: 0.2s ease;
         }
 
+
         .footer-links a:hover {
             color: white;
         }
+
 
         .footer-bottom {
             padding-top: 23px;
@@ -1183,9 +1358,11 @@
         }
 
 
+
         /* =========================
            RESPONSIVE
         ========================= */
+
 
         @media(max-width:900px) {
 
@@ -1195,23 +1372,30 @@
                 grid-template-columns: 1fr;
             }
 
+
             .intro-box {
                 grid-template-columns: 1fr;
+
                 gap: 25px;
             }
+
 
             .hero-visual {
                 min-height: 420px;
             }
 
+
             .footer-main {
                 grid-template-columns: 1fr;
+
                 gap: 40px;
             }
+
 
             .footer-links {
                 justify-self: start;
             }
+
         }
 
 
@@ -1221,6 +1405,7 @@
                 width: min(92%,1160px);
             }
 
+
             .nav-inner {
                 padding: 15px 0;
 
@@ -1229,6 +1414,7 @@
                 gap: 14px;
             }
 
+
             .nav-links {
                 gap: 17px;
 
@@ -1236,22 +1422,27 @@
                 justify-content: center;
             }
 
+
             .hero {
                 padding: 75px 0 70px;
             }
+
 
             .hero-description {
                 font-size: 16px;
             }
 
+
             .hero-visual {
                 min-height: 380px;
             }
+
 
             .visual-orbit {
                 width: 300px;
                 height: 300px;
             }
+
 
             .visual-card {
                 width: 300px;
@@ -1259,13 +1450,16 @@
                 padding: 25px 20px;
             }
 
+
             .visual-card h3 {
                 font-size: 27px;
             }
 
+
             .hero-app-track {
                 gap: 4px;
             }
+
 
             .mini-app {
                 width: 35px;
@@ -1274,6 +1468,7 @@
                 flex-basis: 35px;
             }
 
+
             .mini-app.center-app {
                 width: 47px;
                 height: 47px;
@@ -1281,27 +1476,33 @@
                 flex-basis: 47px;
             }
 
+
             .intro-box,
             .featured-card,
             .support-card {
                 padding: 38px 26px;
             }
 
+
             .why-items {
                 grid-template-columns: 1fr;
             }
+
 
             .platform-grid {
                 flex-direction: column;
             }
 
+
             .app-card {
                 flex-basis: 82vw;
             }
 
+
             .footer-links {
                 grid-template-columns: repeat(2,1fr);
             }
+
         }
 
 
@@ -1310,7 +1511,9 @@
             .footer-links {
                 grid-template-columns: 1fr;
             }
+
         }
+
 
     </style>
 
@@ -1324,10 +1527,7 @@
 
     <div class="container nav-inner">
 
-        <a
-            href="./"
-            class="brand"
-        >
+        <a href="./" class="brand">
 
             <span class="brand-mark">
                 CC
@@ -1342,35 +1542,20 @@
 
         <ul class="nav-links">
 
-            <li>
-                <a href="./">
-                    Home
-                </a>
-            </li>
+            <li><a href="./">Home</a></li>
 
-            <li>
-                <a href="apps/">
-                    Apps
-                </a>
-            </li>
+            <li><a href="apps/">Apps</a></li>
 
-            <li>
-                <a href="support/">
-                    Support
-                </a>
-            </li>
+            <li><a href="support/">Support</a></li>
 
-            <li>
-                <a href="about/">
-                    About
-                </a>
-            </li>
+            <li><a href="about/">About</a></li>
 
         </ul>
 
     </div>
 
 </header>
+
 
 
 <main>
@@ -1438,6 +1623,8 @@
 
 
 
+            <!-- HERO CARD -->
+
             <div class="hero-visual">
 
                 <div class="visual-orbit"></div>
@@ -1488,10 +1675,11 @@
                                 class="hero-slider-button"
                                 id="heroPrev"
                                 type="button"
-                                aria-label="Previous app"
+                                aria-label="Previous apps"
                             >
                                 ‹
                             </button>
+
 
 
                             <div class="hero-app-window">
@@ -1504,11 +1692,12 @@
                             </div>
 
 
+
                             <button
                                 class="hero-slider-button"
                                 id="heroNext"
                                 type="button"
-                                aria-label="Next app"
+                                aria-label="Next apps"
                             >
                                 ›
                             </button>
@@ -1517,12 +1706,13 @@
                         </div>
 
 
+
                         <div class="selected-app-info">
 
                             <span class="selected-app-dot"></span>
 
                             <span id="selectedAppName">
-                                Cloud Backup: Photo Storage
+                                Status Downloader: Video Saver
                             </span>
 
                         </div>
@@ -1553,7 +1743,6 @@
 
             <div class="intro-box">
 
-
                 <div>
 
                     <div class="section-kicker">
@@ -1574,7 +1763,6 @@
                     more convenient, and easier to manage.
 
                 </p>
-
 
             </div>
 
@@ -1817,7 +2005,7 @@
 
 
 
-                <!-- 6 SWITCH SMART - LAST -->
+                <!-- 6 SWITCH SMART -->
 
                 <article class="app-card">
 
@@ -1861,7 +2049,6 @@
 
             <div class="slider-controls">
 
-
                 <button
                     class="slider-button"
                     type="button"
@@ -1880,7 +2067,6 @@
                 >
                     →
                 </button>
-
 
             </div>
 
@@ -2120,7 +2306,6 @@
                     rel="noopener noreferrer"
                 >
 
-
                     <div class="platform-icon">
                         ▶
                     </div>
@@ -2147,7 +2332,6 @@
                         ↗
                     </div>
 
-
                 </a>
 
 
@@ -2156,7 +2340,6 @@
                     href="app-store/"
                     class="platform-card"
                 >
-
 
                     <div class="platform-icon">
                         
@@ -2184,7 +2367,6 @@
                     <div class="platform-arrow">
                         →
                     </div>
-
 
                 </a>
 
@@ -2371,109 +2553,171 @@
 
 
 
-<!-- SCRIPT -->
+<!-- =========================
+     SCRIPT
+========================= -->
 
 <script>
 
 
+    /*
+    =========================================
+    APP ORDER
+
+    1 Cloud Backup
+    2 Document Reader
+    3 Status Downloader
+    4 All Video Downloader
+    5 Age Calculator
+    6 Switch Smart
+    =========================================
+    */
+
+
     const appsData = [
 
-        /* 1 */
 
         {
             name: "Cloud Backup: Photo Storage",
+
             shortName: "CB",
-            icon: "assets/icons/cloud-backup-photo-storage.png"
+
+            icon:
+                "assets/icons/cloud-backup-photo-storage.png",
+
+            link:
+                "apps/cloud-backup-photo-storage/"
         },
 
-
-        /* 2 */
 
         {
             name: "Document Reader: Read All PDF",
+
             shortName: "DR",
-            icon: "assets/icons/document-reader-read-all-pdf.png"
+
+            icon:
+                "assets/icons/document-reader-read-all-pdf.png",
+
+            link:
+                "apps/document-reader-read-all-pdf/"
         },
 
-
-        /* 3 */
 
         {
             name: "Status Downloader: Video Saver",
+
             shortName: "SD",
-            icon: "assets/icons/status-downloader-video-saver.png"
+
+            icon:
+                "assets/icons/status-downloader-video-saver.png",
+
+            link:
+                "apps/status-downloader-video-saver/"
         },
 
-
-        /* 4 */
 
         {
             name: "All Video Downloader & Saver",
+
             shortName: "VD",
-            icon: "assets/icons/all-video-downloader-saver.png"
+
+            icon:
+                "assets/icons/all-video-downloader-saver.png",
+
+            link:
+                "apps/all-video-downloader-saver/"
         },
 
-
-        /* 5 */
 
         {
             name: "Age Calculator: Date of Birth",
+
             shortName: "AC",
-            icon: "assets/icons/age-calculator-date-of-birth.webp"
+
+            icon:
+                "assets/icons/age-calculator-date-of-birth.webp",
+
+            link:
+                "apps/age-calculator-date-of-birth/"
         },
 
 
-        /* 6 - NEW APP ALWAYS LAST */
+        /* 6TH / LAST APP */
 
         {
             name: "Switch Smart",
-            shortName: "SS"
+
+            shortName: "SS",
+
+            link:
+                "apps/switch-smart/"
         }
+
 
     ];
 
 
 
-    /* APP COUNT */
+    /* =========================
+       APP COUNT
+    ========================= */
+
 
     document
         .getElementById("heroAppCount")
         .textContent =
-        String(appsData.length).padStart(2, "0");
+        String(
+            appsData.length
+        ).padStart(
+            2,
+            "0"
+        );
 
 
 
-    /* HERO SLIDER */
+    /* =========================
+       HERO SLIDER
+    ========================= */
+
 
     const heroAppsTrack =
-        document.getElementById("heroAppsTrack");
+        document.getElementById(
+            "heroAppsTrack"
+        );
 
 
     const selectedAppName =
-        document.getElementById("selectedAppName");
+        document.getElementById(
+            "selectedAppName"
+        );
 
 
     const heroPrev =
-        document.getElementById("heroPrev");
+        document.getElementById(
+            "heroPrev"
+        );
 
 
     const heroNext =
-        document.getElementById("heroNext");
+        document.getElementById(
+            "heroNext"
+        );
 
 
+    /*
+    Only 5 apps visible at one time.
+    */
 
-    let selectedIndex = 0;
+    const HERO_VISIBLE = 5;
 
 
+    /*
+    Initial slider position = app 1.
+    This means first view is apps 1-5.
+    Switch Smart does NOT appear initially.
+    */
 
-    function getWrappedIndex(index) {
-
-        return (
-            index +
-            appsData.length
-        ) % appsData.length;
-
-    }
+    let heroStartIndex = 0;
 
 
 
@@ -2483,39 +2727,72 @@
         heroAppsTrack.innerHTML = "";
 
 
-        const positions = [
+        /*
+        Initial:
+        1,2,3,4,5
 
-            selectedIndex - 2,
-            selectedIndex - 1,
-            selectedIndex,
-            selectedIndex + 1,
-            selectedIndex + 2
-
-        ];
+        Right arrow:
+        2,3,4,5,6
+        */
 
 
+        const visibleApps =
+            appsData.slice(
 
-        positions.forEach(
-            function(position, visibleIndex) {
+                heroStartIndex,
+
+                heroStartIndex +
+                HERO_VISIBLE
+
+            );
 
 
-                const appIndex =
-                    getWrappedIndex(position);
+
+        visibleApps.forEach(
+            function(app, visibleIndex) {
 
 
-                const app =
-                    appsData[appIndex];
+                /*
+                IMPORTANT:
+                Every icon is an <a> link.
+                Clicking icon opens that app page.
+                */
 
 
                 const mini =
-                    document.createElement("div");
+                    document.createElement(
+                        "a"
+                    );
 
 
                 mini.className =
                     "mini-app";
 
 
-                if (visibleIndex === 2) {
+                mini.href =
+                    app.link;
+
+
+                mini.title =
+                    app.name;
+
+
+                mini.setAttribute(
+                    "aria-label",
+                    "View " + app.name
+                );
+
+
+
+                /*
+                Third visible app is
+                highlighted in center.
+                */
+
+
+                if (
+                    visibleIndex === 2
+                ) {
 
                     mini.classList.add(
                         "center-app"
@@ -2524,16 +2801,19 @@
                 }
 
 
-                mini.title =
-                    app.name;
 
+                /*
+                Real icon available
+                */
 
 
                 if (app.icon) {
 
 
                     const img =
-                        document.createElement("img");
+                        document.createElement(
+                            "img"
+                        );
 
 
                     img.src =
@@ -2544,21 +2824,35 @@
                         app.name;
 
 
-                    mini.appendChild(img);
+                    mini.appendChild(
+                        img
+                    );
 
 
-                } else {
+                }
+
+
+                /*
+                No icon yet.
+                Switch Smart shows SS.
+                */
+
+
+                else {
 
 
                     mini.textContent =
-                        app.shortName || "APP";
+                        app.shortName ||
+                        "APP";
 
 
                 }
 
 
 
-                heroAppsTrack.appendChild(mini);
+                heroAppsTrack.appendChild(
+                    mini
+                );
 
 
             }
@@ -2566,12 +2860,66 @@
 
 
 
-        selectedAppName.textContent =
-            appsData[selectedIndex].name;
+        /*
+        Name shown below slider
+        corresponds to highlighted
+        center app.
+        */
+
+
+        if (
+            visibleApps.length > 0
+        ) {
+
+
+            const centerPosition =
+                Math.min(
+                    2,
+                    visibleApps.length - 1
+                );
+
+
+            selectedAppName.textContent =
+                visibleApps[
+                    centerPosition
+                ].name;
+
+
+        }
+
+
+
+        /*
+        Disable left arrow
+        on first view.
+        */
+
+
+        heroPrev.disabled =
+            heroStartIndex === 0;
+
+
+
+        /*
+        Disable right arrow
+        once app 6 is visible
+        at the end.
+        */
+
+
+        heroNext.disabled =
+            heroStartIndex >=
+            appsData.length -
+            HERO_VISIBLE;
 
 
     }
 
+
+
+    /* =========================
+       PREVIOUS BUTTON
+    ========================= */
 
 
     heroPrev.addEventListener(
@@ -2579,18 +2927,28 @@
         function() {
 
 
-            selectedIndex =
-                getWrappedIndex(
-                    selectedIndex - 1
-                );
+            if (
+                heroStartIndex > 0
+            ) {
 
 
-            renderHeroSlider();
+                heroStartIndex--;
+
+
+                renderHeroSlider();
+
+
+            }
 
 
         }
     );
 
+
+
+    /* =========================
+       NEXT BUTTON
+    ========================= */
 
 
     heroNext.addEventListener(
@@ -2598,13 +2956,20 @@
         function() {
 
 
-            selectedIndex =
-                getWrappedIndex(
-                    selectedIndex + 1
-                );
+            if (
+                heroStartIndex <
+                appsData.length -
+                HERO_VISIBLE
+            ) {
 
 
-            renderHeroSlider();
+                heroStartIndex++;
+
+
+                renderHeroSlider();
+
+
+            }
 
 
         }
@@ -2612,24 +2977,37 @@
 
 
 
+    /*
+    Initial render
+    */
+
+
     renderHeroSlider();
 
 
 
-    /* MAIN APPS SLIDER */
+    /* =========================
+       MAIN APPS SLIDER
+    ========================= */
+
 
     function slideApps(direction) {
 
 
         document
-            .getElementById("appsTrack")
+            .getElementById(
+                "appsTrack"
+            )
             .scrollBy({
+
 
                 left:
                     direction * 320,
 
+
                 behavior:
                     "smooth"
+
 
             });
 
