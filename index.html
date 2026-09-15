@@ -2148,9 +2148,13 @@
 
             card.innerHTML = `
 
-                <div class="app-icon">
-    <img src="${app.icon}" alt="${app.name}">
-                </div>
+               <div class="app-icon">
+    ${
+        app.icon
+            ? `<img src="${app.icon}" alt="${app.name}">`
+            : `<span>${app.shortName}</span>`
+    }
+</div>
 
                 <h3>
                     ${app.name}
