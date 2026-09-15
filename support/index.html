@@ -10,11 +10,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Support | Cell Cave</title>
+    <title>Cell Cave | Utility Apps</title>
 
     <meta
         name="description"
-        content="Get support and find information for Cell Cave mobile apps."
+        content="Cell Cave creates practical utility apps designed for everyday digital needs."
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,7 @@
         rel="stylesheet"
     >
 
+
     <style>
 
         :root {
@@ -44,15 +45,18 @@
             --dark: #171916;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", sans-serif;
@@ -61,10 +65,17 @@
             line-height: 1.6;
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
+
+
+        button {
+            font: inherit;
+        }
+
 
         .container {
             width: min(1160px, 90%);
@@ -73,7 +84,7 @@
 
 
         /* =========================
-           HEADER
+           NAVBAR
         ========================= */
 
         .navbar {
@@ -86,8 +97,9 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
 
-            border-bottom: 1px solid rgba(227, 230, 223, 0.8);
+            border-bottom: 1px solid var(--line);
         }
+
 
         .nav-inner {
             min-height: 78px;
@@ -96,6 +108,7 @@
             align-items: center;
             justify-content: space-between;
         }
+
 
         .brand {
             display: flex;
@@ -106,6 +119,7 @@
             font-size: 20px;
             font-weight: 700;
         }
+
 
         .brand-mark {
             width: 38px;
@@ -122,6 +136,7 @@
             font-size: 11px;
         }
 
+
         .nav-links {
             display: flex;
             align-items: center;
@@ -130,16 +145,18 @@
             list-style: none;
         }
 
+
         .nav-links a {
             color: var(--muted);
+
             font-size: 14px;
             font-weight: 600;
 
             transition: 0.2s ease;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
+
+        .nav-links a:hover {
             color: var(--text);
         }
 
@@ -148,18 +165,35 @@
            HERO
         ========================= */
 
-        .support-hero {
-            padding: 90px 0 80px;
-
-            border-bottom: 1px solid var(--line);
+        .hero {
+            padding: 110px 0 100px;
+            overflow: hidden;
         }
+
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns: 1.15fr 0.85fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
 
         .eyebrow {
             display: inline-flex;
             align-items: center;
-            gap: 9px;
 
-            margin-bottom: 17px;
+            gap: 8px;
+
+            padding: 7px 12px;
+
+            border: 1px solid var(--line);
+            border-radius: 999px;
+
+            background: rgba(255, 255, 255, 0.65);
 
             color: var(--accent);
 
@@ -167,8 +201,11 @@
             font-weight: 700;
 
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
+
+            margin-bottom: 24px;
         }
+
 
         .eyebrow-dot {
             width: 7px;
@@ -179,113 +216,467 @@
             background: var(--accent);
         }
 
-        .support-hero h1 {
-            max-width: 800px;
+
+        .hero h1 {
+            max-width: 760px;
 
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(46px, 7vw, 76px);
+            font-size: clamp(48px, 6vw, 76px);
 
             line-height: 1.02;
 
             letter-spacing: -3px;
 
-            margin-bottom: 22px;
+            margin-bottom: 26px;
         }
 
-        .support-hero p {
-            max-width: 720px;
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+
+        .hero-description {
+            max-width: 650px;
 
             color: var(--muted);
 
-            font-size: 17px;
+            font-size: 18px;
+            line-height: 1.8;
 
+            margin-bottom: 34px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .button {
+            min-height: 48px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0 20px;
+
+            border-radius: 12px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.2s ease;
+        }
+
+
+        .button-primary {
+            background: var(--dark);
+            color: white;
+        }
+
+
+        .button-primary:hover {
+            background: var(--accent-dark);
+            transform: translateY(-2px);
+        }
+
+
+        .button-secondary {
+            background: white;
+
+            border: 1px solid var(--line);
+        }
+
+
+        .button-secondary:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO APP CARD
+        ========================= */
+
+        .hero-visual {
+            position: relative;
+
+            min-height: 430px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .visual-orbit {
+            position: absolute;
+
+            width: 390px;
+            height: 390px;
+
+            border: 1px solid #dfe4dc;
+            border-radius: 50%;
+        }
+
+
+        .visual-orbit::before {
+            content: "";
+
+            position: absolute;
+            inset: 45px;
+
+            border: 1px dashed #dfe4dc;
+            border-radius: 50%;
+        }
+
+
+        .visual-card {
+            position: relative;
+            z-index: 2;
+
+            width: 315px;
+
+            padding: 28px;
+
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 28px;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            box-shadow:
+                0 25px 70px rgba(35, 45, 35, 0.12);
+
+            backdrop-filter: blur(18px);
+        }
+
+
+        .visual-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 35px;
+        }
+
+
+        .visual-label {
+            color: var(--muted);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+
+        .visual-number {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            background: var(--soft);
+            color: var(--accent);
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        .visual-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 29px;
+            line-height: 1.1;
+
+            margin-bottom: 12px;
+        }
+
+
+        .visual-card > p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* HERO MINI SLIDER */
+
+        .hero-app-slider {
+            display: grid;
+
+            grid-template-columns: 26px 1fr 26px;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 25px;
+        }
+
+
+        .hero-app-window {
+            width: 100%;
+            overflow: hidden;
+        }
+
+
+        .hero-app-track {
+            display: flex;
+
+            justify-content: flex-start;
+
+            gap: 7px;
+        }
+
+
+        .mini-app {
+            width: 40px;
+            height: 40px;
+
+            flex: 0 0 40px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background: var(--dark);
+            color: white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        .mini-app img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        .hero-slider-button {
+            width: 26px;
+            height: 34px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--line);
+            border-radius: 9px;
+
+            background: white;
+            color: var(--text);
+
+            cursor: pointer;
+
+            font-size: 19px;
+
+            transition: 0.2s ease;
+        }
+
+
+        .hero-slider-button:hover:not(:disabled) {
+            background: var(--soft);
+            color: var(--accent);
+        }
+
+
+        .hero-slider-button:disabled {
+            opacity: 0.28;
+            cursor: default;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .intro {
+            padding: 40px 0 105px;
+        }
+
+
+        .intro-box {
+            display: grid;
+
+            grid-template-columns: 0.7fr 1.3fr;
+
+            gap: 60px;
+
+            padding: 65px;
+
+            background: var(--dark);
+            color: white;
+
+            border-radius: 30px;
+        }
+
+
+        .section-kicker {
+            color: #aebcaf;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin-bottom: 14px;
+        }
+
+
+        .intro-box h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 40px;
+            line-height: 1.1;
+        }
+
+
+        .intro-box p {
+            color: #b8beb8;
+
+            font-size: 17px;
             line-height: 1.8;
         }
 
 
         /* =========================
-           SECTION HEADING
+           OUR APPS
         ========================= */
 
-        .section-heading {
-            max-width: 680px;
-
-            margin-bottom: 40px;
+        .apps-section {
+            padding: 105px 0;
         }
+
+
+        .section-heading {
+            max-width: 720px;
+
+            margin-bottom: 45px;
+        }
+
 
         .section-heading h2 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(34px, 5vw, 48px);
+            font-size: clamp(36px, 5vw, 52px);
 
-            line-height: 1.08;
+            line-height: 1.1;
 
             letter-spacing: -1.5px;
 
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
+
 
         .section-heading p {
             color: var(--muted);
+
+            font-size: 17px;
         }
 
 
-        /* =========================
-           APP SUPPORT
-        ========================= */
-
-        .apps-support-section {
-            padding: 90px 0 105px;
+        .apps-slider-wrap {
+            position: relative;
         }
 
-        .support-grid {
-            display: grid;
 
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+        .apps-track {
+            width: 100%;
+
+            display: flex;
 
             gap: 18px;
 
-            align-items: stretch;
+            overflow-x: auto;
+
+            padding: 5px 3px 24px;
+
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+
+            scrollbar-width: none;
         }
 
-        .support-card {
-            min-width: 0;
 
-            padding: 30px;
+        .apps-track::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .app-card {
+            flex: 0 0 280px;
+
+            min-height: 330px;
 
             display: flex;
             flex-direction: column;
 
+            padding: 27px;
+
             background: var(--surface);
 
             border: 1px solid var(--line);
-
             border-radius: 22px;
 
-            transition: 0.22s ease;
+            scroll-snap-align: start;
+
+            transition: 0.24s ease;
         }
 
-        .support-card:hover {
-            transform: translateY(-4px);
 
-            border-color: #cbd0c8;
+        .app-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 20px 45px rgba(30, 40, 30, 0.08);
         }
+
 
         .app-icon {
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
 
-            flex: 0 0 64px;
+            flex: 0 0 60px;
+
+            display: grid;
+            place-items: center;
 
             margin-bottom: 26px;
 
-            border-radius: 18px;
+            border-radius: 17px;
 
             overflow: hidden;
 
             background: var(--soft);
+            color: var(--accent);
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 16px;
+            font-weight: 700;
         }
+
 
         .app-icon img {
             width: 100%;
@@ -296,39 +687,28 @@
             object-fit: cover;
         }
 
-        .app-icon.placeholder {
-            display: grid;
-            place-items: center;
 
-            background: var(--soft);
-            color: var(--accent);
-
-            font-family: "Space Grotesk", sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .support-card h3 {
+        .app-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 21px;
-
             line-height: 1.25;
 
-            margin-bottom: 12px;
+            margin-bottom: 11px;
         }
 
-        .support-card p {
+
+        .app-card p {
             color: var(--muted);
 
             font-size: 14px;
-
             line-height: 1.75;
 
             margin-bottom: 24px;
         }
 
-        .support-card a {
+
+        .app-link {
             display: inline-flex;
 
             margin-top: auto;
@@ -339,194 +719,385 @@
             font-weight: 700;
         }
 
-        .support-card a:hover {
+
+        .app-link:hover {
             color: var(--accent-dark);
         }
 
 
+        .slider-controls {
+            display: flex;
+
+            gap: 9px;
+
+            margin-top: 6px;
+        }
+
+
+        .slider-button {
+            width: 44px;
+            height: 44px;
+
+            border: 1px solid var(--line);
+            border-radius: 50%;
+
+            background: white;
+            color: var(--text);
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+            transition: 0.2s ease;
+        }
+
+
+        .slider-button:hover {
+            transform: translateY(-2px);
+
+            background: var(--soft);
+        }
+
+
         /* =========================
-           COMMON HELP
+           WHY CELL CAVE
         ========================= */
 
-        .help-section {
+        .why-section {
             padding: 105px 0;
 
             background: white;
         }
 
-        .help-grid {
+
+        .why-grid {
             display: grid;
 
-            grid-template-columns: 0.85fr 1.15fr;
+            grid-template-columns: 0.8fr 1.2fr;
 
-            gap: 75px;
-
-            align-items: start;
+            gap: 80px;
         }
 
-        .help-intro h2 {
+
+        .why-intro h2 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(36px, 5vw, 50px);
-
+            font-size: 50px;
             line-height: 1.05;
 
             letter-spacing: -2px;
 
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
-        .help-intro p {
+
+        .why-intro p {
             max-width: 430px;
 
             color: var(--muted);
-
-            line-height: 1.8;
         }
 
-        .faq-list {
+
+        .why-items {
             display: grid;
 
-            gap: 12px;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
         }
 
-        .faq-item {
-            overflow: hidden;
 
-            background: var(--bg);
+        .why-item {
+            padding: 27px;
 
             border: 1px solid var(--line);
+            border-radius: 19px;
 
-            border-radius: 18px;
+            background: #fafbf9;
         }
 
-        .faq-item summary {
-            padding: 21px 24px;
 
-            cursor: pointer;
+        .why-item-number {
+            color: #a0a79d;
 
-            list-style: none;
+            font-size: 12px;
+            font-weight: 700;
 
+            margin-bottom: 30px;
+        }
+
+
+        .why-item h3 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: 17px;
-            font-weight: 600;
+            font-size: 20px;
+
+            margin-bottom: 8px;
         }
 
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
 
-        .faq-item summary::after {
-            content: "+";
-
-            float: right;
-
-            color: var(--accent);
-
-            font-size: 22px;
-            font-weight: 500;
-        }
-
-        .faq-item[open] summary::after {
-            content: "−";
-        }
-
-        .faq-item p {
-            padding: 0 24px 22px;
-
+        .why-item p {
             color: var(--muted);
 
             font-size: 14px;
-
-            line-height: 1.8;
-        }
-
-        .faq-item p a {
-            color: var(--accent);
-            font-weight: 600;
         }
 
 
         /* =========================
-           CONTACT
+           FEATURED
         ========================= */
 
-        .contact-section {
+        .featured-section {
             padding: 105px 0;
         }
 
-        .contact-card {
-            padding: 65px;
 
+        .featured-card {
             display: grid;
 
-            grid-template-columns: 1fr auto;
-
-            gap: 45px;
+            grid-template-columns: 0.8fr 1.2fr;
 
             align-items: center;
 
+            gap: 70px;
+
+            padding: 65px;
+
+            background: var(--soft);
+
+            border-radius: 30px;
+        }
+
+
+        .featured-icon {
+            width: 180px;
+            height: 180px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 45px;
+
+            overflow: hidden;
+
+            background: white;
+
+            box-shadow:
+                0 20px 45px rgba(30, 40, 30, 0.08);
+        }
+
+
+        .featured-icon img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .featured-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 43px;
+            line-height: 1.1;
+
+            margin-bottom: 15px;
+        }
+
+
+        .featured-card p {
+            max-width: 620px;
+
+            color: var(--muted);
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           PLATFORMS
+        ========================= */
+
+        .platform-section {
+            padding: 105px 0;
+        }
+
+
+        .platform-grid {
+            display: flex;
+
+            gap: 18px;
+        }
+
+
+        .platform-card {
+            flex: 1;
+
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+
+            padding: 25px;
+
+            background: white;
+
+            border: 1px solid var(--line);
+            border-radius: 22px;
+
+            transition: 0.2s ease;
+        }
+
+
+        .platform-card:hover {
+            transform: translateY(-4px);
+        }
+
+
+        .platform-icon {
+            width: 62px;
+            height: 62px;
+
+            flex-shrink: 0;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 17px;
+
             background: var(--dark);
+            color: white;
+
+            font-size: 24px;
+        }
+
+
+        .platform-content {
+            flex: 1;
+        }
+
+
+        .platform-content span {
+            display: block;
+
+            color: var(--accent);
+
+            font-size: 11px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+
+            margin-bottom: 5px;
+        }
+
+
+        .platform-content h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 4px;
+        }
+
+
+        .platform-content p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        .platform-arrow {
+            color: var(--muted);
+
+            font-size: 22px;
+        }
+
+
+        /* =========================
+           SUPPORT
+        ========================= */
+
+        .support-section {
+            padding: 40px 0 105px;
+        }
+
+
+        .support-card {
+            padding: 65px;
+
+            text-align: center;
+
+            background: white;
+
+            border: 1px solid var(--line);
+            border-radius: 30px;
+        }
+
+
+        .support-card h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .support-card p {
+            max-width: 600px;
+
+            margin: 0 auto 25px;
+
+            color: var(--muted);
+        }
+
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .final-section {
+            padding: 0 0 105px;
+        }
+
+
+        .final-card {
+            padding: 80px 40px;
+
+            text-align: center;
+
+            background: var(--accent);
             color: white;
 
             border-radius: 30px;
         }
 
-        .contact-label {
-            color: #9ca39a;
 
-            font-size: 12px;
-            font-weight: 700;
-
-            text-transform: uppercase;
-            letter-spacing: 1px;
-
-            margin-bottom: 13px;
-        }
-
-        .contact-card h2 {
+        .final-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
-            font-size: clamp(32px, 5vw, 46px);
+            font-size: clamp(35px, 5vw, 52px);
 
-            line-height: 1.08;
+            line-height: 1.1;
 
-            margin-bottom: 13px;
+            margin-bottom: 15px;
         }
 
-        .contact-card p {
-            max-width: 610px;
 
-            color: #afb5ad;
+        .final-card p {
+            max-width: 600px;
 
-            line-height: 1.8;
+            margin: 0 auto 28px;
+
+            color: #d8e1d9;
         }
 
-        .email-button {
-            min-height: 52px;
 
-            padding: 0 22px;
-
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            white-space: nowrap;
-
-            border-radius: 13px;
-
+        .final-card .button {
             background: white;
-            color: var(--dark);
 
-            font-size: 14px;
-            font-weight: 700;
-
-            transition: 0.2s ease;
-        }
-
-        .email-button:hover {
-            transform: translateY(-2px);
+            color: var(--accent-dark);
         }
 
 
@@ -538,21 +1109,20 @@
             padding: 65px 0 28px;
 
             background: var(--dark);
-
             color: #aeb3ac;
         }
+
 
         .footer-main {
             display: grid;
 
             grid-template-columns: 0.9fr 1.1fr;
 
-            align-items: start;
-
             gap: 70px;
 
             padding-bottom: 45px;
         }
+
 
         .footer-brand h3 {
             color: white;
@@ -564,17 +1134,18 @@
             margin-bottom: 8px;
         }
 
-        .footer-brand > p {
-            max-width: 360px;
 
+        .footer-brand p {
             color: #aeb3ac;
 
             font-size: 14px;
         }
 
+
         .footer-social {
             margin-top: 25px;
         }
+
 
         .social-label {
             display: block;
@@ -587,35 +1158,31 @@
             font-weight: 700;
 
             text-transform: uppercase;
-
-            letter-spacing: 0.8px;
         }
+
 
         .social-icons {
             display: flex;
 
-            flex-wrap: wrap;
-
             gap: 9px;
         }
+
 
         .social-icon {
             width: 39px;
             height: 39px;
 
             display: inline-flex;
-
             align-items: center;
             justify-content: center;
 
             border: 1px solid #343832;
-
             border-radius: 11px;
 
             background: #1d201c;
-
             color: #b9beb7;
         }
+
 
         .social-icon svg {
             width: 17px;
@@ -623,6 +1190,7 @@
 
             fill: currentColor;
         }
+
 
         .social-icon.instagram svg {
             fill: none;
@@ -632,12 +1200,12 @@
             stroke-width: 1.9;
         }
 
+
         .social-x {
             font-family: Arial, sans-serif;
-
-            font-size: 15px;
             font-weight: 700;
         }
+
 
         .footer-links {
             display: grid;
@@ -651,17 +1219,18 @@
             width: min(430px, 100%);
         }
 
+
         .footer-links a {
             color: #aeb3ac;
 
             font-size: 13px;
-
-            transition: 0.2s ease;
         }
+
 
         .footer-links a:hover {
             color: white;
         }
+
 
         .footer-bottom {
             padding-top: 23px;
@@ -680,39 +1249,50 @@
 
         @media (max-width: 900px) {
 
-            .support-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+            .hero-grid,
+            .why-grid,
+            .featured-card {
+                grid-template-columns: 1fr;
             }
 
-            .help-grid {
+
+            .hero-visual {
+                min-height: 380px;
+            }
+
+
+            .intro-box {
                 grid-template-columns: 1fr;
 
+                gap: 25px;
+            }
+
+
+            .why-grid {
                 gap: 45px;
             }
 
-            .contact-card {
-                grid-template-columns: 1fr;
+
+            .featured-icon {
+                margin: auto;
             }
+
 
             .footer-main {
                 grid-template-columns: 1fr;
-
-                gap: 40px;
             }
+
 
             .footer-links {
                 justify-self: start;
-
-                width: 100%;
             }
 
         }
 
+
         @media (max-width: 650px) {
 
             .nav-inner {
-                min-height: auto;
-
                 padding: 15px 0;
 
                 flex-direction: column;
@@ -720,49 +1300,92 @@
                 gap: 14px;
             }
 
+
             .nav-links {
                 gap: 17px;
 
                 flex-wrap: wrap;
-
                 justify-content: center;
             }
 
-            .support-hero {
-                padding: 65px 0 60px;
+
+            .hero {
+                padding: 75px 0 70px;
             }
 
-            .support-hero h1 {
+
+            .hero h1 {
                 letter-spacing: -2px;
             }
 
-            .apps-support-section,
-            .help-section,
-            .contact-section {
-                padding: 70px 0;
+
+            .hero-description {
+                font-size: 16px;
             }
 
-            .support-grid {
+
+            .hero-visual {
+                min-height: 350px;
+            }
+
+
+            .visual-orbit {
+                width: 290px;
+                height: 290px;
+            }
+
+
+            .visual-card {
+                width: 285px;
+
+                padding: 25px 22px;
+            }
+
+
+            .mini-app {
+                width: 37px;
+                height: 37px;
+
+                flex-basis: 37px;
+            }
+
+
+            .intro-box,
+            .featured-card,
+            .support-card {
+                padding: 38px 26px;
+            }
+
+
+            .intro-box h2,
+            .why-intro h2,
+            .featured-card h2,
+            .support-card h2 {
+                font-size: 34px;
+            }
+
+
+            .why-items {
                 grid-template-columns: 1fr;
             }
 
-            .support-card {
-                padding: 26px;
+
+            .platform-grid {
+                flex-direction: column;
             }
 
-            .contact-card {
-                padding: 38px 27px;
+
+            .app-card {
+                flex-basis: 82vw;
             }
 
-            .email-button {
-                width: 100%;
-            }
 
             .footer-links {
                 grid-template-columns: repeat(2, 1fr);
             }
 
         }
+
 
         @media (max-width: 420px) {
 
@@ -780,15 +1403,11 @@
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header class="navbar">
 
     <div class="container nav-inner">
 
-        <a href="../" class="brand">
+        <a href="./" class="brand">
 
             <span class="brand-mark">
                 CC
@@ -804,25 +1423,25 @@
         <ul class="nav-links">
 
             <li>
-                <a href="../">
+                <a href="./">
                     Home
                 </a>
             </li>
 
             <li>
-                <a href="../apps/">
+                <a href="apps/">
                     Apps
                 </a>
             </li>
 
             <li>
-                <a href="./" class="active">
+                <a href="support/">
                     Support
                 </a>
             </li>
 
             <li>
-                <a href="../about/">
+                <a href="about/">
                     About
                 </a>
             </li>
@@ -834,231 +1453,434 @@
 </header>
 
 
+
 <main>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
 
-    <section class="support-hero">
+    <section class="hero">
 
-        <div class="container">
+        <div class="container hero-grid">
 
-            <div class="eyebrow">
 
-                <span class="eyebrow-dot"></span>
+            <div>
 
-                Cell Cave Support
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    Utility Apps by Cell Cave
+
+                </div>
+
+
+                <h1>
+
+                    Useful Apps for
+
+                    <span>
+                        Everyday Digital Needs
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    From managing files and saving status content
+                    to calculating age and backing up important data,
+                    Cell Cave builds simple utility apps focused on
+                    practical everyday needs.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="apps/"
+                        class="button button-primary"
+                    >
+                        Explore Our Apps
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        class="button button-secondary"
+                    >
+                        Learn More
+                    </a>
+
+                </div>
 
             </div>
 
-            <h1>
-                How can we help?
-            </h1>
 
-            <p>
-                Find information for Cell Cave apps, explore
-                common help topics, or contact us if you need
-                additional support.
-            </p>
+
+            <div class="hero-visual">
+
+                <div class="visual-orbit"></div>
+
+
+                <div class="visual-card">
+
+                    <div class="visual-top">
+
+                        <span class="visual-label">
+                            Cell Cave
+                        </span>
+
+                        <span
+                            class="visual-number"
+                            id="heroAppCount"
+                        >
+                            00
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Everyday tools,
+                        thoughtfully made.
+                    </h3>
+
+
+                    <p>
+                        A growing collection of practical
+                        mobile utilities.
+                    </p>
+
+
+                    <div class="hero-app-slider">
+
+
+                        <button
+                            class="hero-slider-button"
+                            id="heroPrev"
+                            type="button"
+                            aria-label="Previous apps"
+                        >
+                            ‹
+                        </button>
+
+
+                        <div class="hero-app-window">
+
+                            <div
+                                class="hero-app-track"
+                                id="heroAppsTrack"
+                            >
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="hero-slider-button"
+                            id="heroNext"
+                            type="button"
+                            aria-label="Next apps"
+                        >
+                            ›
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         APP SUPPORT
-    ========================= -->
 
-    <section class="apps-support-section">
+    <!-- ABOUT -->
+
+    <section
+        class="intro"
+        id="about"
+    >
 
         <div class="container">
 
-            <div class="section-heading">
+            <div class="intro-box">
 
-                <h2>
-                    App Support
-                </h2>
+
+                <div>
+
+                    <div class="section-kicker">
+                        What We Do
+                    </div>
+
+                    <h2>
+                        Built around everyday utility.
+                    </h2>
+
+                </div>
+
 
                 <p>
-                    Choose an app to visit its information page.
+
+                    Cell Cave focuses on practical utility applications
+                    designed to make everyday digital tasks simpler,
+                    more convenient, and easier to manage.
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- OUR APPS -->
+
+    <section class="apps-section">
+
+        <div class="container">
+
+
+            <div class="section-heading">
+
+                <div
+                    class="section-kicker"
+                    style="color:#426b4d;"
+                >
+                    Our Collection
+                </div>
+
+
+                <h2>
+                    Explore Our Apps
+                </h2>
+
+
+                <p>
+                    Discover our growing collection of utility
+                    applications built to help with everyday
+                    digital tasks.
                 </p>
 
             </div>
 
 
-            <div class="support-grid">
+            <div class="apps-slider-wrap">
+
+                <div
+                    class="apps-track"
+                    id="appsTrack"
+                >
+                </div>
+
+            </div>
 
 
-                <!-- 1. CLOUD BACKUP -->
+            <div class="slider-controls">
 
-                <article class="support-card">
+                <button
+                    class="slider-button"
+                    id="appsPrev"
+                    type="button"
+                    aria-label="Previous apps"
+                >
+                    ←
+                </button>
 
-                    <div class="app-icon">
+
+                <button
+                    class="slider-button"
+                    id="appsNext"
+                    type="button"
+                    aria-label="Next apps"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WHY -->
+
+    <section class="why-section">
+
+        <div class="container why-grid">
+
+
+            <div class="why-intro">
+
+                <div
+                    class="section-kicker"
+                    style="color:#426b4d;"
+                >
+                    Our Approach
+                </div>
+
+
+                <h2>
+                    Why Cell Cave?
+                </h2>
+
+
+                <p>
+                    We aim to keep our apps useful without making
+                    them unnecessarily complicated.
+                </p>
+
+            </div>
+
+
+
+            <div class="why-items">
+
+
+                <article class="why-item">
+
+                    <div class="why-item-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Simple
+                    </h3>
+
+                    <p>
+                        Straightforward experiences that are
+                        easy to understand.
+                    </p>
+
+                </article>
+
+
+                <article class="why-item">
+
+                    <div class="why-item-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Practical
+                    </h3>
+
+                    <p>
+                        Apps focused on real everyday utility
+                        and common digital needs.
+                    </p>
+
+                </article>
+
+
+                <article class="why-item">
+
+                    <div class="why-item-number">
+                        03
+                    </div>
+
+                    <h3>
+                        User Focused
+                    </h3>
+
+                    <p>
+                        Clean interfaces designed around a
+                        smooth user experience.
+                    </p>
+
+                </article>
+
+
+                <article class="why-item">
+
+                    <div class="why-item-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Always Improving
+                    </h3>
+
+                    <p>
+                        We continue refining our apps based
+                        on usability and product needs.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURED -->
+
+    <section class="featured-section">
+
+        <div class="container">
+
+            <div class="featured-card">
+
+
+                <div>
+
+                    <div class="featured-icon">
 
                         <img
-                            src="../assets/icons/cloud-backup-photo-storage.png"
+                            src="assets/icons/cloud-backup-photo-storage.png"
                             alt="Cloud Backup: Photo Storage"
                         >
 
                     </div>
 
-                    <h3>
+                </div>
+
+
+                <div>
+
+                    <div
+                        class="section-kicker"
+                        style="color:#426b4d;"
+                    >
+                        Featured App
+                    </div>
+
+
+                    <h2>
                         Cloud Backup: Photo Storage
-                    </h3>
+                    </h2>
+
 
                     <p>
-                        Find information and support resources related
-                        to Cloud Backup: Photo Storage.
+                        Cloud Backup: Photo Storage provides a practical
+                        way to back up and manage your important photos
+                        and files.
                     </p>
 
-                    <a href="../apps/cloud-backup-photo-storage/">
-                        View App →
+
+                    <a
+                        href="apps/cloud-backup-photo-storage/"
+                        class="button button-primary"
+                    >
+                        View App
                     </a>
 
-                </article>
-
-
-                <!-- 2. SWITCH SMART -->
-
-                <article class="support-card">
-
-                    <div class="app-icon placeholder">
-                        SS
-                    </div>
-
-                    <h3>
-                        Switch Smart
-                    </h3>
-
-                    <p>
-                        Find information, privacy details, and support
-                        resources related to Switch Smart.
-                    </p>
-
-                    <a href="../apps/switch-smart/">
-                        View App →
-                    </a>
-
-                </article>
-
-
-                <!-- 3. DOCUMENT READER -->
-
-                <article class="support-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="../assets/icons/document-reader-read-all-pdf.png"
-                            alt="Document Reader: Read All PDF"
-                        >
-
-                    </div>
-
-                    <h3>
-                        Document Reader: Read All PDF
-                    </h3>
-
-                    <p>
-                        Find information and support resources related
-                        to Document Reader: Read All PDF.
-                    </p>
-
-                    <a href="../apps/document-reader-read-all-pdf/">
-                        View App →
-                    </a>
-
-                </article>
-
-
-                <!-- 4. STATUS DOWNLOADER -->
-
-                <article class="support-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="../assets/icons/status-downloader-video-saver.png"
-                            alt="Status Downloader: Video Saver"
-                        >
-
-                    </div>
-
-                    <h3>
-                        Status Downloader: Video Saver
-                    </h3>
-
-                    <p>
-                        Find information and support resources related
-                        to Status Downloader: Video Saver.
-                    </p>
-
-                    <a href="../apps/status-downloader-video-saver/">
-                        View App →
-                    </a>
-
-                </article>
-
-
-                <!-- 5. VIDEO DOWNLOADER -->
-
-                <article class="support-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="../assets/icons/all-video-downloader-saver.png"
-                            alt="All Video Downloader & Saver"
-                        >
-
-                    </div>
-
-                    <h3>
-                        All Video Downloader & Saver
-                    </h3>
-
-                    <p>
-                        Find information and support resources related
-                        to All Video Downloader & Saver.
-                    </p>
-
-                    <a href="../apps/all-video-downloader-saver/">
-                        View App →
-                    </a>
-
-                </article>
-
-
-                <!-- 6. AGE CALCULATOR -->
-
-                <article class="support-card">
-
-                    <div class="app-icon">
-
-                        <img
-                            src="../assets/icons/age-calculator-date-of-birth.webp"
-                            alt="Age Calculator: Date of Birth"
-                        >
-
-                    </div>
-
-                    <h3>
-                        Age Calculator: Date of Birth
-                    </h3>
-
-                    <p>
-                        Find information and support resources related
-                        to Age Calculator: Date of Birth.
-                    </p>
-
-                    <a href="../apps/age-calculator-date-of-birth/">
-                        View App →
-                    </a>
-
-                </article>
+                </div>
 
 
             </div>
@@ -1068,93 +1890,111 @@
     </section>
 
 
-    <!-- =========================
-         COMMON HELP
-    ========================= -->
 
-    <section class="help-section">
+    <!-- PLATFORMS -->
 
-        <div class="container help-grid">
+    <section class="platform-section">
+
+        <div class="container">
 
 
-            <div class="help-intro">
+            <div class="section-heading">
+
+                <div
+                    class="section-kicker"
+                    style="color:#426b4d;"
+                >
+                    Our Platforms
+                </div>
+
 
                 <h2>
-                    Common Help
+                    Find Cell Cave on your platform
                 </h2>
 
+
                 <p>
-                    These links can help you find app information,
-                    privacy details, downloads, and other Cell Cave
-                    resources.
+                    Our apps are currently available on Google Play,
+                    with App Store availability coming soon.
                 </p>
 
             </div>
 
 
-            <div class="faq-list">
+
+            <div class="platform-grid">
 
 
-                <details class="faq-item">
+                <a
+                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
+                    class="platform-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                    <summary>
-                        Where can I download Cell Cave apps?
-                    </summary>
-
-                    <p>
-                        Visit the
-                        <a href="../apps/">Apps page</a>
-                        to choose an app and access its available
-                        download information.
-                    </p>
-
-                </details>
+                    <div class="platform-icon">
+                        ▶
+                    </div>
 
 
-                <details class="faq-item">
+                    <div class="platform-content">
 
-                    <summary>
-                        Where can I find an app's Privacy Policy?
-                    </summary>
+                        <span>
+                            Available now
+                        </span>
 
-                    <p>
-                        Open the individual app page and select its
-                        Privacy Policy button. You can also view the
-                        <a href="../privacy/">Cell Cave company Privacy Policy</a>.
-                    </p>
+                        <h3>
+                            Google Play
+                        </h3>
 
-                </details>
+                        <p>
+                            Get Cell Cave apps on Android.
+                        </p>
 
-
-                <details class="faq-item">
-
-                    <summary>
-                        Are Cell Cave apps available on iOS?
-                    </summary>
-
-                    <p>
-                        App Store availability information is available
-                        on the
-                        <a href="../app-store/">Cell Cave App Store page</a>.
-                    </p>
-
-                </details>
+                    </div>
 
 
-                <details class="faq-item">
+                    <div class="platform-arrow">
+                        ↗
+                    </div>
 
-                    <summary>
-                        How can I contact Cell Cave?
-                    </summary>
+                </a>
 
-                    <p>
-                        You can contact us by email at
-                        <a href="mailto:cellcave70@gmail.com">
-                            cellcave70@gmail.com
-                        </a>.
-                    </p>
 
-                </details>
+
+                <a
+                    href="app-store/"
+                    class="platform-card"
+                >
+
+                    <div class="platform-icon">
+                        
+                    </div>
+
+
+                    <div class="platform-content">
+
+                        <span>
+                            Coming soon
+                        </span>
+
+                        <h3>
+                            App Store
+                        </h3>
+
+                        <p>
+                            Cell Cave apps are coming soon
+                            to iPhone and iPad.
+                        </p>
+
+                    </div>
+
+
+                    <div class="platform-arrow">
+                        →
+                    </div>
+
+                </a>
 
 
             </div>
@@ -1164,39 +2004,74 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
 
-    <section class="contact-section">
+    <!-- SUPPORT -->
+
+    <section class="support-section">
 
         <div class="container">
 
-            <div class="contact-card">
+            <div class="support-card">
 
-                <div>
-
-                    <div class="contact-label">
-                        General Support
-                    </div>
-
-                    <h2>
-                        Still need help?
-                    </h2>
-
-                    <p>
-                        If you have a question about a Cell Cave app
-                        that is not covered above, contact us by email.
-                    </p>
-
+                <div
+                    class="section-kicker"
+                    style="color:#426b4d;"
+                >
+                    Support
                 </div>
 
 
+                <h2>
+                    Need Help?
+                </h2>
+
+
+                <p>
+                    Have a question about one of our apps?
+                    Visit our support page to find help and
+                    contact information.
+                </p>
+
+
                 <a
-                    href="mailto:cellcave70@gmail.com"
-                    class="email-button"
+                    href="support/"
+                    class="button button-secondary"
                 >
-                    cellcave70@gmail.com
+                    Get Support
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-section">
+
+        <div class="container">
+
+            <div class="final-card">
+
+                <h2>
+                    Explore the Cell Cave App Collection
+                </h2>
+
+
+                <p>
+                    Discover simple utility apps designed to
+                    make everyday digital tasks easier.
+                </p>
+
+
+                <a
+                    href="apps/"
+                    class="button"
+                >
+                    Explore All Apps
                 </a>
 
             </div>
@@ -1209,9 +2084,8 @@
 </main>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -1226,6 +2100,7 @@
                 <h3>
                     Cell Cave
                 </h3>
+
 
                 <p>
                     Simple Utilities. Smarter Everyday.
@@ -1247,7 +2122,9 @@
                             title="Facebook"
                         >
                             <svg viewBox="0 0 24 24">
+
                                 <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
+
                             </svg>
                         </span>
 
@@ -1256,6 +2133,7 @@
                             class="social-icon instagram"
                             title="Instagram"
                         >
+
                             <svg viewBox="0 0 24 24">
 
                                 <rect
@@ -1272,15 +2150,8 @@
                                     r="4"
                                 ></circle>
 
-                                <circle
-                                    cx="17.5"
-                                    cy="6.5"
-                                    r="0.8"
-                                    fill="currentColor"
-                                    stroke="none"
-                                ></circle>
-
                             </svg>
+
                         </span>
 
 
@@ -1288,9 +2159,13 @@
                             class="social-icon"
                             title="LinkedIn"
                         >
+
                             <svg viewBox="0 0 24 24">
+
                                 <path d="M5.2 8.2H2.4V21h2.8V8.2zM3.8 2.5A1.7 1.7 0 1 0 3.8 5.9a1.7 1.7 0 0 0 0-3.4zM21.6 13.7c0-3.9-2.1-5.7-4.9-5.7-2.3 0-3.3 1.2-3.8 2.1V8.2h-2.8V21h2.8v-6.4c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.8l.1-7.3z"/>
+
                             </svg>
+
                         </span>
 
 
@@ -1298,10 +2173,13 @@
                             class="social-icon"
                             title="YouTube"
                         >
+
                             <svg viewBox="0 0 24 24">
+
                                 <path d="M21.4 7.1c-.2-1.3-1.1-2.2-2.4-2.4C17.3 4.4 14.7 4.3 12 4.3s-5.3.1-7 .4c-1.3.2-2.2 1.1-2.4 2.4-.2 1.4-.3 3.1-.3 4.9s.1 3.5.3 4.9c.2 1.3 1.1 2.2 2.4 2.4 1.7.3 4.3.4 7 .4s5.3-.1 7-.4c1.3-.2 2.2-1.1 2.4-2.4.2-1.4.3-3.1.3-4.9s-.1-3.5-.3-4.9z"/>
-                                <path d="M10 8.7l6 3.3-6 3.3V8.7z" fill="#171916"/>
+
                             </svg>
+
                         </span>
 
 
@@ -1320,35 +2198,37 @@
             </div>
 
 
+
             <nav class="footer-links">
 
-                <a href="../">
+                <a href="./">
                     Home
                 </a>
 
-                <a href="../apps/">
+                <a href="apps/">
                     Apps
                 </a>
 
-                <a href="./">
+                <a href="support/">
                     Support
                 </a>
 
-                <a href="../about/">
+                <a href="about/">
                     About
                 </a>
 
-                <a href="../privacy/">
+                <a href="privacy/">
                     Privacy Policy
                 </a>
 
-                <a href="../terms/">
+                <a href="terms/">
                     Terms of Use
                 </a>
 
-                <a href="../app-store/">
+                <a href="app-store/">
                     App Store
                 </a>
+
 
                 <a
                     href="https://play.google.com/store/apps/developer?id=Cell+Cave"
@@ -1365,13 +2245,398 @@
 
 
         <div class="footer-bottom">
+
             © 2026 Cell Cave. All rights reserved.
+
         </div>
 
 
     </div>
 
 </footer>
+
+
+
+<!-- =========================
+     CONTENT DATA
+========================= -->
+
+<script src="content.js"></script>
+
+
+
+<!-- =========================
+     HOMEPAGE SCRIPT
+========================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =========================
+           FALLBACK APPS
+        ========================= */
+
+        const fallbackApps = [
+
+            {
+                name: "Cloud Backup: Photo Storage",
+                shortName: "CB",
+                icon: "assets/icons/cloud-backup-photo-storage.png",
+                description:
+                    "A practical mobile app focused on cloud backup and photo storage needs.",
+                link: "apps/cloud-backup-photo-storage/"
+            },
+
+            {
+                name: "Switch Smart",
+                shortName: "SS",
+                description:
+                    "Transfer supported contacts, photos, videos, music, documents, files, and apps directly between Android devices.",
+                link: "apps/switch-smart/"
+            },
+
+            {
+                name: "Document Reader: Read All PDF",
+                shortName: "DR",
+                icon: "assets/icons/document-reader-read-all-pdf.png",
+                description:
+                    "A practical document reader designed to help users open and read supported document formats.",
+                link: "apps/document-reader-read-all-pdf/"
+            },
+
+            {
+                name: "Status Downloader: Video Saver",
+                shortName: "SS",
+                icon: "assets/icons/status-downloader-video-saver.png",
+                description:
+                    "A practical mobile app for saving and managing supported status content.",
+                link: "apps/status-downloader-video-saver/"
+            },
+
+            {
+                name: "All Video Downloader & Saver",
+                shortName: "VD",
+                icon: "assets/icons/all-video-downloader-saver.png",
+                description:
+                    "A mobile utility designed to help manage and download videos from supported sources.",
+                link: "apps/all-video-downloader-saver/"
+            },
+
+            {
+                name: "Age Calculator: Date of Birth",
+                shortName: "AC",
+                icon: "assets/icons/age-calculator-date-of-birth.webp",
+                description:
+                    "Calculate age and useful date information through a simple and convenient mobile experience.",
+                link: "apps/age-calculator-date-of-birth/"
+            }
+
+        ];
+
+
+
+        /* =========================
+           GET APPS
+        ========================= */
+
+        let apps = fallbackApps;
+
+
+        try {
+
+            if (
+                typeof siteContent !== "undefined" &&
+                siteContent &&
+                siteContent.apps &&
+                Array.isArray(siteContent.apps.items) &&
+                siteContent.apps.items.length > 0
+            ) {
+
+                apps = siteContent.apps.items;
+
+            }
+
+        } catch (error) {
+
+            console.warn(
+                "Using fallback app data.",
+                error
+            );
+
+        }
+
+
+
+        /* =========================
+           APP COUNT
+        ========================= */
+
+        const heroAppCount =
+            document.getElementById("heroAppCount");
+
+
+        heroAppCount.textContent =
+            String(apps.length).padStart(2, "0");
+
+
+
+        /* =========================
+           MAIN APP CARDS
+        ========================= */
+
+        const appsTrack =
+            document.getElementById("appsTrack");
+
+
+        appsTrack.innerHTML = "";
+
+
+        apps.forEach(function (app) {
+
+
+            const card =
+                document.createElement("article");
+
+
+            card.className =
+                "app-card";
+
+
+            const iconHTML =
+                app.icon
+                    ? `
+                        <img
+                            src="${app.icon}"
+                            alt="${app.name}"
+                        >
+                    `
+                    : `
+                        <span>
+                            ${app.shortName || "APP"}
+                        </span>
+                    `;
+
+
+            card.innerHTML = `
+
+                <div class="app-icon">
+
+                    ${iconHTML}
+
+                </div>
+
+
+                <h3>
+                    ${app.name}
+                </h3>
+
+
+                <p>
+                    ${app.description || ""}
+                </p>
+
+
+                <a
+                    href="${app.link || "#"}"
+                    class="app-link"
+                >
+                    View Details →
+                </a>
+
+            `;
+
+
+            appsTrack.appendChild(card);
+
+        });
+
+
+
+        /* =========================
+           MAIN APP SLIDER
+        ========================= */
+
+        const appsPrev =
+            document.getElementById("appsPrev");
+
+
+        const appsNext =
+            document.getElementById("appsNext");
+
+
+        appsPrev.addEventListener(
+            "click",
+            function () {
+
+                appsTrack.scrollBy({
+                    left: -300,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+        appsNext.addEventListener(
+            "click",
+            function () {
+
+                appsTrack.scrollBy({
+                    left: 300,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+
+
+        /* =========================
+           HERO MINI APPS
+        ========================= */
+
+        const heroAppsTrack =
+            document.getElementById("heroAppsTrack");
+
+
+        const heroPrev =
+            document.getElementById("heroPrev");
+
+
+        const heroNext =
+            document.getElementById("heroNext");
+
+
+        const visibleHeroApps = 5;
+
+
+        let heroStartIndex = 0;
+
+
+
+        function renderHeroApps() {
+
+
+            heroAppsTrack.innerHTML = "";
+
+
+            const endIndex =
+                Math.min(
+                    heroStartIndex + visibleHeroApps,
+                    apps.length
+                );
+
+
+            for (
+                let i = heroStartIndex;
+                i < endIndex;
+                i++
+            ) {
+
+
+                const app = apps[i];
+
+
+                const mini =
+                    document.createElement("div");
+
+
+                mini.className =
+                    "mini-app";
+
+
+                mini.title =
+                    app.name;
+
+
+                if (app.icon) {
+
+                    const image =
+                        document.createElement("img");
+
+
+                    image.src =
+                        app.icon;
+
+
+                    image.alt =
+                        app.name;
+
+
+                    mini.appendChild(image);
+
+                } else {
+
+                    mini.textContent =
+                        app.shortName || "APP";
+
+                }
+
+
+                heroAppsTrack.appendChild(mini);
+
+            }
+
+
+            heroPrev.disabled =
+                heroStartIndex <= 0;
+
+
+            heroNext.disabled =
+                heroStartIndex + visibleHeroApps >= apps.length;
+
+        }
+
+
+
+        heroPrev.addEventListener(
+            "click",
+            function () {
+
+                if (heroStartIndex > 0) {
+
+                    heroStartIndex--;
+
+                    renderHeroApps();
+
+                }
+
+            }
+        );
+
+
+
+        heroNext.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    heroStartIndex + visibleHeroApps
+                    < apps.length
+                ) {
+
+                    heroStartIndex++;
+
+                    renderHeroApps();
+
+                }
+
+            }
+        );
+
+
+
+        renderHeroApps();
+
+
+    }
+);
+
+</script>
 
 
 </body>
