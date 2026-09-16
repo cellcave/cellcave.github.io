@@ -89,26 +89,9 @@
             </header>`;
     }
 
-    function socialIcon(name) {
-        const icons = {
-            facebook: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.4v3h2.8v8h3.4Z"/></svg>`,
-            instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>`,
-            linkedin: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.4 7.3A2.2 2.2 0 1 1 5.4 3a2.2 2.2 0 0 1 0 4.3ZM3.5 9h3.8v12H3.5V9Zm6.1 0h3.6v1.7h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.8 2.6 4.8 6.1V21h-3.8v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9.6V9Z"/></svg>`,
-            youtube: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2c-.2-1.4-1.1-2.5-2.4-2.7C17.4 4.2 14.7 4 12 4s-5.4.2-7.2.5C3.5 4.7 2.6 5.8 2.4 7.2 2.1 8.6 2 10.3 2 12s.1 3.4.4 4.8c.2 1.4 1.1 2.5 2.4 2.7 1.8.3 4.5.5 7.2.5s5.4-.2 7.2-.5c1.3-.2 2.2-1.3 2.4-2.7.3-1.4.4-3.1.4-4.8s-.1-3.4-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>`,
-            x: `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h4.5l4.4 5.9L18.1 3H21l-6.8 7.8L21.5 21H17l-4.9-6.6L6.3 21H3.4l7.3-8.5L4 3Zm3.2 2 10.8 14h1L8.2 5h-1Z"/></svg>`
-        };
-        return icons[name] || `<span>${escapeHtml(name.slice(0, 1).toUpperCase())}</span>`;
-    }
-
     function buildFooter() {
         const nav = (config.navigation || []).map(item => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`).join("");
-        const social = Object.entries(config.socialLinks || {}).map(([name, url]) => {
-            const label = name === "x" ? "X" : name.charAt(0).toUpperCase() + name.slice(1);
-            const content = `${socialIcon(name)}<span class="sr-only">${escapeHtml(label)}</span>`;
-            return url
-                ? `<a class="social-button" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(label)}">${content}</a>`
-                : `<span class="social-button is-disabled" aria-label="${escapeHtml(label)} link coming soon" title="${escapeHtml(label)} link coming soon">${content}</span>`;
-        }).join("");
+        const social = Object.entries(config.socialLinks || {}).filter(([, url]) => Boolean(url)).map(([name, url]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(name)}</a>`).join("");
         return `
             <footer class="site-footer">
                 <div class="container">
@@ -125,7 +108,7 @@
                                 ${config.phone ? `<span>${escapeHtml(config.phone)}</span>` : ""}
                                 ${config.address ? `<span>${escapeHtml(config.address)}</span>` : ""}
                             </div>
-                            ${social ? `<div class="footer-social-wrap"><div class="footer-social-label">Follow CELL CAVE</div><div class="footer-social">${social}</div></div>` : ""}
+                            ${social ? `<div class="footer-social">${social}</div>` : ""}
                         </div>
                         <nav class="footer-links" aria-label="Footer navigation">
                             ${nav}

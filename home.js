@@ -6,70 +6,7 @@
     const config = api.config;
 
     const appGrid = document.getElementById("homeAppsGrid");
-    const homeAppsViewport = document.getElementById("homeAppsViewport");
-    const homeAppsPrev = document.getElementById("homeAppsPrev");
-    const homeAppsNext = document.getElementById("homeAppsNext");
-    const homeAppsSliderCount = document.getElementById("homeAppsSliderCount");
-
     if (appGrid) appGrid.innerHTML = apps.map(api.appCardMarkup).join("");
-
-    function initHomeAppsSlider() {
-        if (!appGrid || !homeAppsViewport || !homeAppsPrev || !homeAppsNext || !apps.length) return;
-
-        function getCards() {
-            return Array.from(appGrid.querySelectorAll(".app-card"));
-        }
-
-        function getStep() {
-            const cards = getCards();
-            if (!cards.length) return 0;
-            const styles = window.getComputedStyle(appGrid);
-            const gap = parseFloat(styles.columnGap || styles.gap) || 0;
-            return cards[0].getBoundingClientRect().width + gap;
-        }
-
-        function currentIndex() {
-            const step = getStep();
-            if (!step) return 0;
-            return Math.max(0, Math.min(apps.length - 1, Math.round(homeAppsViewport.scrollLeft / step)));
-        }
-
-        function updateControls() {
-            const index = currentIndex();
-            const maxScroll = Math.max(0, homeAppsViewport.scrollWidth - homeAppsViewport.clientWidth - 2);
-            homeAppsPrev.disabled = homeAppsViewport.scrollLeft <= 2;
-            homeAppsNext.disabled = homeAppsViewport.scrollLeft >= maxScroll;
-            if (homeAppsSliderCount) homeAppsSliderCount.textContent = `${index + 1} / ${apps.length}`;
-        }
-
-        function move(direction) {
-            const step = getStep();
-            if (!step) return;
-            homeAppsViewport.scrollBy({ left: direction * step, behavior: "smooth" });
-        }
-
-        homeAppsPrev.addEventListener("click", function () { move(-1); });
-        homeAppsNext.addEventListener("click", function () { move(1); });
-
-        homeAppsViewport.addEventListener("scroll", function () {
-            window.requestAnimationFrame(updateControls);
-        }, { passive: true });
-
-        homeAppsViewport.addEventListener("keydown", function (event) {
-            if (event.key === "ArrowLeft") {
-                event.preventDefault();
-                move(-1);
-            } else if (event.key === "ArrowRight") {
-                event.preventDefault();
-                move(1);
-            }
-        });
-
-        window.addEventListener("resize", updateControls);
-        updateControls();
-    }
-
-    initHomeAppsSlider();
 
     const featured = document.getElementById("featuredApp");
     if (featured) featured.innerHTML = api.featuredMarkup();
