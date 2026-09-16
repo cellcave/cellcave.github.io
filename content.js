@@ -1,5 +1,5 @@
 /*
- * CELL CAVE ( SMC-PRIVATE ) LIMITED website content and shared functionality.
+ * CELL CAVE (SMC-PRIVATE) LIMITED website content and shared functionality.
  * Main editable data lives at the top of this file:
  * - CELL_CAVE_CONFIG: company/global settings
  * - CELL_CAVE_APPS: all app/product data
@@ -10,8 +10,8 @@
 
 /* ===== config.js ===== */
 window.CELL_CAVE_CONFIG = Object.freeze({
-    brandName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
-    legalName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
+    brandName: "CELL CAVE (SMC-PRIVATE) LIMITED",
+    legalName: "CELL CAVE (SMC-PRIVATE) LIMITED",
     siteUrl: "https://cellcave.github.io/",
     homeUrl: "/",
     logo: "/assets/brand/cell-cave-logo.png",
@@ -366,6 +366,28 @@ window.CELL_CAVE_APPS = Object.freeze([
         document.querySelectorAll("[data-site-app-store-link]").forEach(el => { el.setAttribute("href", config.appStoreLandingUrl || "#"); });
     }
 
+
+    function enhanceLegalTables() {
+        document.querySelectorAll(".legal-page table").forEach(table => {
+            const headerCells = Array.from(table.querySelectorAll("thead th"));
+            if (!headerCells.length) return;
+
+            const labels = headerCells.map(cell =>
+                String(cell.textContent || "").replace(/\s+/g, " ").trim()
+            );
+
+            table.classList.add("responsive-legal-table");
+
+            table.querySelectorAll("tbody tr").forEach(row => {
+                Array.from(row.children).forEach((cell, index) => {
+                    if (cell.tagName !== "TD") return;
+                    const label = labels[index] || `Column ${index + 1}`;
+                    cell.setAttribute("data-label", label);
+                });
+            });
+        });
+    }
+
     function addHeadDefaults() {
         if (config.favicon && !document.querySelector('link[rel="icon"]')) {
             const icon = document.createElement("link");
@@ -374,7 +396,7 @@ window.CELL_CAVE_APPS = Object.freeze([
             document.head.appendChild(icon);
         }
         const desc = document.querySelector('meta[name="description"]');
-        const description = desc ? desc.content : "CELL CAVE ( SMC-PRIVATE ) LIMITED creates apps and digital products designed to make everyday life easier.";
+        const description = desc ? desc.content : "CELL CAVE (SMC-PRIVATE) LIMITED creates apps and digital products designed to make everyday life easier.";
         const baseUrl = String(config.siteUrl || "").replace(/\/$/, "");
         const canonicalUrl = baseUrl ? `${baseUrl}${window.location.pathname || "/"}` : "";
         if (canonicalUrl && !document.head.querySelector('link[rel="canonical"]')) {
@@ -422,6 +444,7 @@ window.CELL_CAVE_APPS = Object.freeze([
     }
 
     hydrateContactData();
+    enhanceLegalTables();
     addHeadDefaults();
 
     window.CellCave = Object.freeze({
@@ -642,8 +665,8 @@ window.CELL_CAVE_APPS = Object.freeze([
             <div class="container">
                 <div class="coming-soon-panel">
                     <span class="badge coming-soon">Coming Soon</span>
-                    <h2>We’re building the next CELL CAVE ( SMC-PRIVATE ) LIMITED experience.</h2>
-                    <p>${api.escapeHtml(app.name)} isn’t live yet. We’re working on it. In the meantime, explore the CELL CAVE ( SMC-PRIVATE ) LIMITED apps and digital products that are already available.</p>
+                    <h2>We’re building the next CELL CAVE (SMC-PRIVATE) LIMITED experience.</h2>
+                    <p>${api.escapeHtml(app.name)} isn’t live yet. We’re working on it. In the meantime, explore the CELL CAVE (SMC-PRIVATE) LIMITED apps and digital products that are already available.</p>
                     <div class="coming-soon-actions">
                         <a class="btn btn-primary" href="/apps/">Explore Available Apps</a>
                         <a class="btn btn-secondary" href="${api.escapeHtml(api.config.developerGooglePlayUrl)}" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
@@ -684,7 +707,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         <section class="section">
             <div class="container cta-panel">
                 <h2>Need help with ${api.escapeHtml(app.shortName || app.name)}?</h2>
-                <p>Visit CELL CAVE ( SMC-PRIVATE ) LIMITED Support for app-related questions, privacy information, and contact details.</p>
+                <p>Visit CELL CAVE (SMC-PRIVATE) LIMITED Support for app-related questions, privacy information, and contact details.</p>
                 <a class="btn" href="/support/">Visit Support</a>
             </div>
         </section>`;
