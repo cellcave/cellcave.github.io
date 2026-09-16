@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps | CELL CAVE</title>
+    <meta name="description" content="Explore CELL CAVE apps and digital products, including available Android apps and upcoming products.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/assets/js/config.js" defer></script>
+    <script src="/assets/js/apps-data.js" defer></script>
+    <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/apps-page.js" defer></script>
+</head>
+<body data-page="apps">
+    <div id="siteHeader"></div>
+    <main class="site-main">
+
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">App Ecosystem</span>
+                <h1>Apps designed to make everyday digital life easier.</h1>
+                <p>Browse current CELL CAVE apps and products in development. Each app has its own dedicated page, privacy information, and store availability.</p>
+            </div>
+        </section>
+        <section class="section section-white">
+            <div class="container">
+                <div class="filter-row" aria-label="Filter apps by availability">
+                    <button type="button" class="filter-btn active" data-app-filter="all">All Apps</button>
+                    <button type="button" class="filter-btn" data-app-filter="live">Available</button>
+                    <button type="button" class="filter-btn" data-app-filter="coming-soon">Coming Soon</button>
+                </div>
+                <div class="apps-grid" id="appsGrid"></div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container" id="appsFeaturedApp"></div>
+        </section>
+
+    </main>
+    <div id="siteFooter"></div>
+</body>
+</html>

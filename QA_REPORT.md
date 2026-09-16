@@ -84,3 +84,17 @@ Detailed maintenance instructions are in `README.md`.
 ## Store-link note
 
 The website preserves the app names supplied in the original project. The Cloud Backup package URL is valid, but its current Google Play listing title may differ from the name used in the supplied website source. This was intentionally not renamed automatically because the supplied privacy/account-deletion content uses the existing website product name.
+
+
+## Footer social links
+- Footer now always shows Facebook, Instagram, LinkedIn, YouTube and X icons.
+- URLs remain centralized in `assets/js/config.js`. Empty URLs render as disabled placeholders so no fake links are introduced.
+- Add a real URL once in `socialLinks` and the icon becomes clickable everywhere automatically.
+
+## Homepage Explore Our Apps slider update
+- Homepage `Explore our apps` collection is now a responsive horizontal slider instead of a fixed grid.
+- Desktop shows up to 3 app cards at a time, tablet 2, and mobile 1.
+- Previous/next controls move one app card per click.
+- Touch/trackpad horizontal swiping and keyboard left/right navigation are supported.
+- Slider cards still render from the centralized `assets/js/apps-data.js` catalog.
+- JavaScript syntax validation passed after the slider update.
