@@ -30,6 +30,7 @@
         rel="stylesheet"
     >
 
+
     <style>
 
         :root {
@@ -44,15 +45,18 @@
             --dark: #171916;
         }
 
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: "DM Sans", sans-serif;
@@ -61,19 +65,23 @@
             line-height: 1.6;
         }
 
+
         a {
             color: inherit;
             text-decoration: none;
         }
 
+
         button {
             font-family: inherit;
         }
+
 
         .container {
             width: min(1160px, 90%);
             margin: auto;
         }
+
 
 
         /* =========================
@@ -93,6 +101,7 @@
             border-bottom: 1px solid var(--line);
         }
 
+
         .nav-inner {
             min-height: 78px;
 
@@ -101,6 +110,7 @@
             justify-content: space-between;
         }
 
+
         .brand {
             display: flex;
             align-items: center;
@@ -108,9 +118,11 @@
             gap: 11px;
 
             font-family: "Space Grotesk", sans-serif;
+
             font-size: 20px;
             font-weight: 700;
         }
+
 
         .brand-mark {
             width: 38px;
@@ -127,6 +139,7 @@
             font-size: 11px;
         }
 
+
         .nav-links {
             display: flex;
             align-items: center;
@@ -135,6 +148,7 @@
 
             list-style: none;
         }
+
 
         .nav-links a {
             color: var(--muted);
@@ -145,9 +159,11 @@
             transition: 0.2s ease;
         }
 
+
         .nav-links a:hover {
             color: var(--text);
         }
+
 
 
         /* =========================
@@ -156,8 +172,10 @@
 
         .hero {
             padding: 110px 0 100px;
+
             overflow: hidden;
         }
+
 
         .hero-grid {
             display: grid;
@@ -167,6 +185,7 @@
 
             gap: 70px;
         }
+
 
         .eyebrow {
             display: inline-flex;
@@ -192,6 +211,7 @@
             margin-bottom: 24px;
         }
 
+
         .eyebrow-dot {
             width: 7px;
             height: 7px;
@@ -201,6 +221,7 @@
             background: var(--accent);
         }
 
+
         .hero h1 {
             max-width: 760px;
 
@@ -209,14 +230,17 @@
             font-size: clamp(48px, 6vw, 76px);
 
             line-height: 1.02;
+
             letter-spacing: -3px;
 
             margin-bottom: 26px;
         }
 
+
         .hero h1 span {
             color: var(--accent);
         }
+
 
         .hero-description {
             max-width: 650px;
@@ -229,12 +253,14 @@
             margin-bottom: 34px;
         }
 
+
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
 
             gap: 12px;
         }
+
 
         .button {
             min-height: 48px;
@@ -253,29 +279,37 @@
             transition: 0.25s ease;
         }
 
+
         .button-primary {
             background: var(--dark);
             color: white;
         }
 
+
         .button-primary:hover {
             transform: translateY(-2px);
+
             background: var(--accent-dark);
         }
 
+
         .button-secondary {
             background: white;
+
             border: 1px solid var(--line);
         }
 
+
         .button-secondary:hover {
             transform: translateY(-2px);
+
             border-color: #c7cdc3;
         }
 
 
+
         /* =========================
-           HERO CARD
+           HERO VISUAL
         ========================= */
 
         .hero-visual {
@@ -288,6 +322,7 @@
             justify-content: center;
         }
 
+
         .visual-orbit {
             position: absolute;
 
@@ -298,21 +333,25 @@
             border-radius: 50%;
         }
 
+
         .visual-orbit::before {
             content: "";
 
             position: absolute;
+
             inset: 48px;
 
             border: 1px dashed #dfe4dc;
             border-radius: 50%;
         }
 
+
         .visual-card {
             position: relative;
+
             z-index: 2;
 
-            width: 410px;
+            width: 370px;
 
             padding: 30px;
 
@@ -322,21 +361,23 @@
             background:
                 linear-gradient(
                     145deg,
-                    rgba(255,255,255,0.97),
-                    rgba(250,252,249,0.9)
+                    rgba(255,255,255,0.98),
+                    rgba(250,252,249,0.91)
                 );
 
             box-shadow:
                 0 30px 80px rgba(35,45,35,0.13);
         }
 
+
         .visual-top {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            margin-bottom: 34px;
+            margin-bottom: 30px;
         }
+
 
         .visual-label {
             color: var(--muted);
@@ -347,6 +388,7 @@
             text-transform: uppercase;
             letter-spacing: 0.8px;
         }
+
 
         .visual-number {
             width: 42px;
@@ -364,6 +406,7 @@
             font-weight: 700;
         }
 
+
         .visual-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -373,6 +416,7 @@
             margin-bottom: 12px;
         }
 
+
         .visual-description {
             color: var(--muted);
 
@@ -380,223 +424,51 @@
         }
 
 
+
         /* =========================
-           HERO APP SLIDER
+           SINGLE APP SHOWCASE
         ========================= */
 
-        .hero-slider-box {
+        .single-slider {
             margin-top: 28px;
 
-            padding: 16px 12px 13px;
+            padding: 22px 16px 17px;
 
             border: 1px solid var(--line);
-            border-radius: 22px;
+            border-radius: 24px;
 
             background:
                 linear-gradient(
-                    135deg,
-                    rgba(233,238,231,0.82),
+                    145deg,
+                    rgba(233,238,231,0.72),
                     rgba(255,255,255,0.97)
                 );
 
             box-shadow:
-                inset 0 1px 0 rgba(255,255,255,0.95),
-                0 12px 35px rgba(49,82,59,0.07);
+                inset 0 1px 0 white,
+                0 14px 34px rgba(49,82,59,0.07);
         }
 
-        .hero-app-slider {
+
+        .single-slider-main {
             display: grid;
-            grid-template-columns: 38px minmax(0, 1fr) 38px;
+            grid-template-columns: 42px minmax(0,1fr) 42px;
 
             align-items: center;
 
-            gap: 8px;
-        }
-
-        .hero-app-window {
-            min-width: 0;
-
-            overflow: visible;
-
-            padding: 12px 4px;
-        }
-
-        .hero-app-track {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            gap: 8px;
-
-            min-height: 66px;
+            gap: 14px;
         }
 
 
-        /* Slider animation */
-
-        .hero-app-track.slide-next {
-            animation: slideNext 0.35s ease;
-        }
-
-        .hero-app-track.slide-prev {
-            animation: slidePrev 0.35s ease;
-        }
-
-        @keyframes slideNext {
-
-            from {
-                opacity: 0.35;
-                transform: translateX(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-        }
-
-        @keyframes slidePrev {
-
-            from {
-                opacity: 0.35;
-                transform: translateX(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-        }
-
-
-        /* =========================
-           APP ICON
-        ========================= */
-
-        .mini-app {
-            position: relative;
-
+        .single-arrow {
             width: 42px;
-            height: 42px;
-
-            flex: 0 0 42px;
+            height: 48px;
 
             display: grid;
             place-items: center;
-
-            overflow: hidden;
-
-            border: 2px solid white;
-            border-radius: 14px;
-
-            background: var(--dark);
-            color: white;
-
-            box-shadow:
-                0 5px 15px rgba(24,32,24,0.13);
-
-            font-family: "Space Grotesk", sans-serif;
-
-            font-size: 10px;
-            font-weight: 700;
-
-            opacity: 0.72;
-
-            transform: scale(0.90);
-
-            transition:
-                transform 0.28s ease,
-                opacity 0.28s ease,
-                box-shadow 0.28s ease,
-                filter 0.28s ease;
-        }
-
-        .mini-app img {
-            width: 100%;
-            height: 100%;
-
-            display: block;
-
-            object-fit: cover;
-
-            border-radius: 12px;
-        }
-
-
-        /* =========================
-           DEFAULT CENTER POPUP
-        ========================= */
-
-        .mini-app.center-app {
-            opacity: 1;
-
-            transform: scale(1.18);
-
-            border: 2px solid white;
-
-            box-shadow:
-                0 10px 28px rgba(49,82,59,0.28),
-                0 0 0 5px rgba(66,107,77,0.11);
-
-            z-index: 5;
-        }
-
-
-        /* =========================
-           EVERY ICON HOVER POPUP
-        ========================= */
-
-        .mini-app:hover {
-            opacity: 1;
-
-            transform:
-                translateY(-6px)
-                scale(1.20);
-
-            z-index: 20;
-
-            border: 2px solid white;
-
-            filter: saturate(1.06);
-
-            box-shadow:
-                0 14px 30px rgba(49,82,59,0.30),
-                0 0 0 5px rgba(66,107,77,0.12);
-        }
-
-
-        /* Center icon hover is slightly stronger */
-
-        .mini-app.center-app:hover {
-            transform:
-                translateY(-6px)
-                scale(1.24);
-
-            z-index: 25;
-
-            box-shadow:
-                0 16px 34px rgba(49,82,59,0.34),
-                0 0 0 6px rgba(66,107,77,0.14);
-        }
-
-
-        /* =========================
-           SLIDER ARROWS
-        ========================= */
-
-        .hero-slider-button {
-            width: 38px;
-            height: 44px;
-
-            display: grid;
-            place-items: center;
-
-            padding: 0;
 
             border: none;
-            border-radius: 13px;
+            border-radius: 14px;
 
             background: var(--accent);
             color: white;
@@ -606,7 +478,7 @@
 
             cursor: pointer;
 
-            font-size: 23px;
+            font-size: 25px;
             line-height: 1;
 
             transition:
@@ -615,22 +487,25 @@
                 box-shadow 0.2s ease;
         }
 
-        .hero-slider-button:hover:not(:disabled) {
+
+        .single-arrow:hover:not(:disabled) {
             transform: translateY(-2px);
 
             background: var(--accent-dark);
 
             box-shadow:
-                0 10px 23px rgba(49,82,59,0.30);
+                0 10px 24px rgba(49,82,59,0.28);
         }
 
-        .hero-slider-button:active:not(:disabled) {
+
+        .single-arrow:active:not(:disabled) {
             transform: scale(0.94);
         }
 
-        .hero-slider-button:disabled {
-            background: #edf0eb;
-            color: #b7beb4;
+
+        .single-arrow:disabled {
+            background: #e7ebe5;
+            color: #b5bcb2;
 
             box-shadow: none;
 
@@ -638,30 +513,144 @@
         }
 
 
-        .selected-app-info {
+        .single-app-stage {
+            min-width: 0;
+
+            min-height: 116px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+        }
 
-            gap: 7px;
 
-            min-height: 24px;
+        .single-app-link {
+            width: 96px;
+            height: 96px;
 
-            margin-top: 8px;
+            display: grid;
+            place-items: center;
 
-            color: var(--accent-dark);
+            overflow: hidden;
 
-            font-size: 12px;
+            border-radius: 26px;
+
+            background: var(--dark);
+            color: white;
+
+            border: 4px solid white;
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 22px;
+            font-weight: 700;
+
+            box-shadow:
+                0 16px 35px rgba(49,82,59,0.24),
+                0 0 0 7px rgba(66,107,77,0.09);
+
+            transition:
+                transform 0.28s ease,
+                box-shadow 0.28s ease;
+        }
+
+
+        .single-app-link:hover {
+            transform:
+                translateY(-6px)
+                scale(1.07);
+
+            box-shadow:
+                0 22px 42px rgba(49,82,59,0.30),
+                0 0 0 8px rgba(66,107,77,0.12);
+        }
+
+
+        .single-app-link img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            border-radius: 22px;
+        }
+
+
+        .single-app-stage.slide-next {
+            animation: singleNext 0.34s ease;
+        }
+
+
+        .single-app-stage.slide-prev {
+            animation: singlePrev 0.34s ease;
+        }
+
+
+        @keyframes singleNext {
+
+            from {
+                opacity: 0.25;
+                transform: translateX(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+
+        @keyframes singlePrev {
+
+            from {
+                opacity: 0.25;
+                transform: translateX(-24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+
+
+        .single-app-name {
+            margin-top: 15px;
+
+            color: var(--text);
+
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 14px;
             font-weight: 700;
 
             text-align: center;
         }
 
-        .selected-app-dot {
-            width: 6px;
-            height: 6px;
 
-            flex: 0 0 6px;
+        .single-app-meta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            margin-top: 7px;
+
+            color: var(--muted);
+
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+
+        .single-app-dot {
+            width: 5px;
+            height: 5px;
 
             border-radius: 50%;
 
@@ -672,6 +661,34 @@
         }
 
 
+        .single-coming-soon {
+            display: none;
+
+            width: fit-content;
+
+            margin: 10px auto 0;
+
+            padding: 4px 8px;
+
+            border-radius: 999px;
+
+            background: var(--soft);
+            color: var(--accent-dark);
+
+            font-size: 9px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+
+        .single-coming-soon.show {
+            display: block;
+        }
+
+
+
         /* =========================
            INTRO
         ========================= */
@@ -679,6 +696,7 @@
         .intro {
             padding: 40px 0 105px;
         }
+
 
         .intro-box {
             display: grid;
@@ -694,6 +712,7 @@
             border-radius: 30px;
         }
 
+
         .section-kicker {
             color: #aebcaf;
 
@@ -706,6 +725,7 @@
             margin-bottom: 14px;
         }
 
+
         .intro-box h2 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -713,12 +733,14 @@
             line-height: 1.1;
         }
 
+
         .intro-box p {
             color: #b8beb8;
 
             font-size: 17px;
             line-height: 1.8;
         }
+
 
 
         /* =========================
@@ -729,11 +751,13 @@
             padding: 105px 0;
         }
 
+
         .section-heading {
             max-width: 700px;
 
             margin-bottom: 45px;
         }
+
 
         .section-heading h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -741,16 +765,19 @@
             font-size: clamp(36px,5vw,52px);
 
             line-height: 1.1;
+
             letter-spacing: -1.5px;
 
             margin-bottom: 15px;
         }
+
 
         .section-heading p {
             color: var(--muted);
 
             font-size: 17px;
         }
+
 
         .apps-track {
             display: flex;
@@ -767,9 +794,11 @@
             scrollbar-width: none;
         }
 
+
         .apps-track::-webkit-scrollbar {
             display: none;
         }
+
 
         .app-card {
             flex: 0 0 285px;
@@ -791,12 +820,14 @@
             transition: 0.25s ease;
         }
 
+
         .app-card:hover {
             transform: translateY(-5px);
 
             box-shadow:
                 0 20px 45px rgba(30,40,30,0.09);
         }
+
 
         .app-icon {
             width: 60px;
@@ -822,6 +853,7 @@
             margin-bottom: 27px;
         }
 
+
         .app-icon img {
             width: 100%;
             height: 100%;
@@ -830,6 +862,7 @@
 
             object-fit: cover;
         }
+
 
         .app-status {
             display: inline-flex;
@@ -852,6 +885,7 @@
             letter-spacing: 0.5px;
         }
 
+
         .app-card h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -860,6 +894,7 @@
 
             margin-bottom: 10px;
         }
+
 
         .app-card p {
             color: var(--muted);
@@ -870,6 +905,7 @@
             margin-bottom: 20px;
         }
 
+
         .app-link {
             margin-top: auto;
 
@@ -879,6 +915,7 @@
             font-weight: 700;
         }
 
+
         .slider-controls {
             display: flex;
 
@@ -886,6 +923,7 @@
 
             margin-top: 5px;
         }
+
 
         .slider-button {
             width: 44px;
@@ -903,11 +941,13 @@
             transition: 0.2s ease;
         }
 
-        .slider-button:hover {
-            background: var(--soft);
 
+        .slider-button:hover {
             transform: translateY(-2px);
+
+            background: var(--soft);
         }
+
 
 
         /* =========================
@@ -920,12 +960,14 @@
             background: white;
         }
 
+
         .why-grid {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
 
             gap: 80px;
         }
+
 
         .why-intro h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -938,11 +980,13 @@
             margin-bottom: 20px;
         }
 
+
         .why-intro p {
             max-width: 430px;
 
             color: var(--muted);
         }
+
 
         .why-items {
             display: grid;
@@ -950,6 +994,7 @@
 
             gap: 18px;
         }
+
 
         .why-item {
             padding: 27px;
@@ -960,6 +1005,7 @@
             background: #fafbf9;
         }
 
+
         .why-item-number {
             color: #a0a79d;
 
@@ -969,6 +1015,7 @@
             margin-bottom: 30px;
         }
 
+
         .why-item h3 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -977,11 +1024,13 @@
             margin-bottom: 8px;
         }
 
+
         .why-item p {
             color: var(--muted);
 
             font-size: 14px;
         }
+
 
 
         /* =========================
@@ -991,6 +1040,7 @@
         .featured-section {
             padding: 105px 0;
         }
+
 
         .featured-card {
             display: grid;
@@ -1007,6 +1057,7 @@
             border-radius: 30px;
         }
 
+
         .featured-icon {
             width: 180px;
             height: 180px;
@@ -1021,6 +1072,7 @@
                 0 20px 45px rgba(30,40,30,0.08);
         }
 
+
         .featured-icon img {
             width: 100%;
             height: 100%;
@@ -1029,6 +1081,7 @@
 
             object-fit: cover;
         }
+
 
         .featured-card h2 {
             font-family: "Space Grotesk", sans-serif;
@@ -1039,11 +1092,13 @@
             margin-bottom: 15px;
         }
 
+
         .featured-card p {
             color: var(--muted);
 
             margin-bottom: 25px;
         }
+
 
 
         /* =========================
@@ -1054,11 +1109,13 @@
             padding: 105px 0;
         }
 
+
         .platform-grid {
             display: flex;
 
             gap: 18px;
         }
+
 
         .platform-card {
             flex: 1;
@@ -1078,12 +1135,14 @@
             transition: 0.25s ease;
         }
 
+
         .platform-card:hover {
             transform: translateY(-4px);
 
             box-shadow:
                 0 18px 45px rgba(30,40,30,0.08);
         }
+
 
         .platform-icon {
             width: 62px;
@@ -1102,9 +1161,11 @@
             font-size: 24px;
         }
 
+
         .platform-content {
             flex: 1;
         }
+
 
         .platform-content span {
             display: block;
@@ -1119,11 +1180,13 @@
             margin-bottom: 5px;
         }
 
+
         .platform-content h3 {
             font-family: "Space Grotesk", sans-serif;
 
             font-size: 20px;
         }
+
 
         .platform-content p {
             color: var(--muted);
@@ -1131,11 +1194,13 @@
             font-size: 13px;
         }
 
+
         .platform-arrow {
             color: var(--muted);
 
             font-size: 22px;
         }
+
 
 
         /* =========================
@@ -1145,6 +1210,7 @@
         .support-section {
             padding: 40px 0 105px;
         }
+
 
         .support-card {
             padding: 65px;
@@ -1157,6 +1223,7 @@
             border-radius: 30px;
         }
 
+
         .support-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -1164,6 +1231,7 @@
 
             margin-bottom: 12px;
         }
+
 
         .support-card p {
             max-width: 600px;
@@ -1174,6 +1242,7 @@
         }
 
 
+
         /* =========================
            FINAL CTA
         ========================= */
@@ -1181,6 +1250,7 @@
         .final-section {
             padding: 0 0 105px;
         }
+
 
         .final-card {
             padding: 80px 40px;
@@ -1193,6 +1263,7 @@
             border-radius: 30px;
         }
 
+
         .final-card h2 {
             font-family: "Space Grotesk", sans-serif;
 
@@ -1203,6 +1274,7 @@
             margin-bottom: 15px;
         }
 
+
         .final-card p {
             max-width: 600px;
 
@@ -1211,10 +1283,13 @@
             color: #d8e1d9;
         }
 
+
         .final-card .button {
             background: white;
+
             color: var(--accent-dark);
         }
+
 
 
         /* =========================
@@ -1228,6 +1303,7 @@
             color: #aeb3ac;
         }
 
+
         .footer-main {
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
@@ -1236,6 +1312,7 @@
 
             padding-bottom: 45px;
         }
+
 
         .footer-brand h3 {
             color: white;
@@ -1247,9 +1324,11 @@
             margin-bottom: 8px;
         }
 
+
         .footer-brand p {
             font-size: 14px;
         }
+
 
         .footer-links {
             display: grid;
@@ -1262,15 +1341,18 @@
             width: min(430px,100%);
         }
 
+
         .footer-links a {
             color: #aeb3ac;
 
             font-size: 13px;
         }
 
+
         .footer-links a:hover {
             color: white;
         }
+
 
         .footer-bottom {
             padding-top: 23px;
@@ -1281,6 +1363,7 @@
 
             font-size: 12px;
         }
+
 
 
         /* =========================
@@ -1346,7 +1429,7 @@
             }
 
             .hero-visual {
-                min-height: 410px;
+                min-height: 430px;
             }
 
             .visual-orbit {
@@ -1355,7 +1438,7 @@
             }
 
             .visual-card {
-                width: min(360px,94vw);
+                width: min(350px,94vw);
 
                 padding: 25px 20px;
             }
@@ -1364,42 +1447,22 @@
                 font-size: 27px;
             }
 
-            .hero-app-slider {
-                grid-template-columns: 32px minmax(0,1fr) 32px;
+            .single-slider-main {
+                grid-template-columns: 38px minmax(0,1fr) 38px;
 
-                gap: 5px;
+                gap: 10px;
             }
 
-            .hero-slider-button {
-                width: 32px;
-                height: 40px;
+            .single-arrow {
+                width: 38px;
+                height: 44px;
             }
 
-            .hero-app-track {
-                gap: 5px;
-            }
+            .single-app-link {
+                width: 88px;
+                height: 88px;
 
-            .mini-app {
-                width: 35px;
-                height: 35px;
-
-                flex-basis: 35px;
-            }
-
-            .mini-app:hover {
-                transform:
-                    translateY(-5px)
-                    scale(1.16);
-            }
-
-            .mini-app.center-app {
-                transform: scale(1.15);
-            }
-
-            .mini-app.center-app:hover {
-                transform:
-                    translateY(-5px)
-                    scale(1.20);
+                border-radius: 24px;
             }
 
             .intro-box,
@@ -1564,7 +1627,7 @@
 
 
 
-                <!-- HERO APP CARD -->
+                <!-- SINGLE APP SHOWCASE -->
 
                 <div class="hero-visual">
 
@@ -1599,46 +1662,66 @@
 
                         <p class="visual-description">
 
-                            A growing collection of practical
-                            mobile utilities.
+                            Explore our growing collection
+                            one app at a time.
 
                         </p>
 
 
 
-                        <div class="hero-slider-box">
+                        <div class="single-slider">
 
 
-                            <div class="hero-app-slider">
+                            <div class="single-slider-main">
 
 
                                 <button
-                                    class="hero-slider-button"
+                                    class="single-arrow"
                                     id="heroPrev"
                                     type="button"
-                                    aria-label="Previous apps"
+                                    aria-label="Previous app"
                                 >
                                     ‹
                                 </button>
 
 
 
-                                <div class="hero-app-window">
+                                <div
+                                    class="single-app-stage"
+                                    id="singleAppStage"
+                                >
 
-                                    <div
-                                        class="hero-app-track"
-                                        id="heroAppsTrack"
-                                    ></div>
+                                    <a
+                                        class="single-app-link"
+                                        id="singleAppLink"
+                                        href="apps/cloud-backup-photo-storage/"
+                                        aria-label="View Cloud Backup: Photo Storage"
+                                    >
+
+                                        <img
+                                            id="singleAppImage"
+                                            src="assets/icons/cloud-backup-photo-storage.png"
+                                            alt="Cloud Backup: Photo Storage"
+                                        >
+
+                                        <span
+                                            id="singleAppInitials"
+                                            style="display:none;"
+                                        >
+                                            CB
+                                        </span>
+
+                                    </a>
 
                                 </div>
 
 
 
                                 <button
-                                    class="hero-slider-button"
+                                    class="single-arrow"
                                     id="heroNext"
                                     type="button"
-                                    aria-label="Next apps"
+                                    aria-label="Next app"
                                 >
                                     ›
                                 </button>
@@ -1648,14 +1731,32 @@
 
 
 
-                            <div class="selected-app-info">
+                            <div
+                                class="single-app-name"
+                                id="singleAppName"
+                            >
+                                Cloud Backup: Photo Storage
+                            </div>
 
-                                <span class="selected-app-dot"></span>
 
-                                <span id="selectedAppName">
-                                    Status Downloader: Video Saver
+
+                            <div class="single-app-meta">
+
+                                <span class="single-app-dot"></span>
+
+                                <span id="singleAppPosition">
+                                    1 / 6
                                 </span>
 
+                            </div>
+
+
+
+                            <div
+                                class="single-coming-soon"
+                                id="singleComingSoon"
+                            >
+                                Coming Soon
                             </div>
 
 
@@ -2407,9 +2508,7 @@
 
 
             <div class="footer-bottom">
-
                 © 2026 Cell Cave. All rights reserved.
-
             </div>
 
 
@@ -2419,9 +2518,23 @@
 
 
 
-    <!-- JAVASCRIPT -->
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
+
+
+        /*
+        APP ORDER
+
+        1 Cloud Backup
+        2 Document Reader
+        3 Status Downloader
+        4 All Video Downloader
+        5 Age Calculator
+        6 Switch Smart
+        */
 
 
         const appsData = [
@@ -2436,7 +2549,10 @@
                     "assets/icons/cloud-backup-photo-storage.png",
 
                 link:
-                    "apps/cloud-backup-photo-storage/"
+                    "apps/cloud-backup-photo-storage/",
+
+                comingSoon:
+                    false
             },
 
 
@@ -2449,7 +2565,10 @@
                     "assets/icons/document-reader-read-all-pdf.png",
 
                 link:
-                    "apps/document-reader-read-all-pdf/"
+                    "apps/document-reader-read-all-pdf/",
+
+                comingSoon:
+                    false
             },
 
 
@@ -2462,7 +2581,10 @@
                     "assets/icons/status-downloader-video-saver.png",
 
                 link:
-                    "apps/status-downloader-video-saver/"
+                    "apps/status-downloader-video-saver/",
+
+                comingSoon:
+                    false
             },
 
 
@@ -2475,7 +2597,10 @@
                     "assets/icons/all-video-downloader-saver.png",
 
                 link:
-                    "apps/all-video-downloader-saver/"
+                    "apps/all-video-downloader-saver/",
+
+                comingSoon:
+                    false
             },
 
 
@@ -2488,7 +2613,10 @@
                     "assets/icons/age-calculator-date-of-birth.webp",
 
                 link:
-                    "apps/age-calculator-date-of-birth/"
+                    "apps/age-calculator-date-of-birth/",
+
+                comingSoon:
+                    false
             },
 
 
@@ -2499,8 +2627,14 @@
 
                 shortName: "SS",
 
+                icon:
+                    "",
+
                 link:
-                    "apps/switch-smart/"
+                    "apps/switch-smart/",
+
+                comingSoon:
+                    true
             }
 
 
@@ -2508,19 +2642,9 @@
 
 
 
-        const HERO_VISIBLE =
-            5;
-
-
-        let heroStartIndex =
+        let currentAppIndex =
             0;
 
-
-
-        const heroAppsTrack =
-            document.getElementById(
-                "heroAppsTrack"
-            );
 
 
         const heroPrev =
@@ -2535,12 +2659,52 @@
             );
 
 
-        const selectedAppName =
+        const singleAppStage =
             document.getElementById(
-                "selectedAppName"
+                "singleAppStage"
             );
 
 
+        const singleAppLink =
+            document.getElementById(
+                "singleAppLink"
+            );
+
+
+        const singleAppImage =
+            document.getElementById(
+                "singleAppImage"
+            );
+
+
+        const singleAppInitials =
+            document.getElementById(
+                "singleAppInitials"
+            );
+
+
+        const singleAppName =
+            document.getElementById(
+                "singleAppName"
+            );
+
+
+        const singleAppPosition =
+            document.getElementById(
+                "singleAppPosition"
+            );
+
+
+        const singleComingSoon =
+            document.getElementById(
+                "singleComingSoon"
+            );
+
+
+
+        /*
+        Automatic app count
+        */
 
         document
             .getElementById(
@@ -2556,134 +2720,152 @@
 
 
 
-        function renderHeroSlider(
+        function renderCurrentApp(
             direction
         ) {
 
 
-            const visibleApps =
-                appsData.slice(
-
-                    heroStartIndex,
-
-                    heroStartIndex +
-                    HERO_VISIBLE
-
-                );
+            const app =
+                appsData[
+                    currentAppIndex
+                ];
 
 
 
-            heroAppsTrack.innerHTML =
-                "";
+            /*
+            Update link
+            */
+
+            singleAppLink.href =
+                app.link;
 
 
-
-            visibleApps.forEach(
-                function(
-                    app,
-                    visibleIndex
-                ) {
-
-
-                    const appIcon =
-                        document.createElement(
-                            "a"
-                        );
-
-
-                    appIcon.className =
-                        "mini-app";
-
-
-                    appIcon.href =
-                        app.link;
-
-
-                    appIcon.title =
-                        app.name;
-
-
-                    appIcon.setAttribute(
-                        "aria-label",
-                        "View " +
-                        app.name
-                    );
-
-
-
-                    /*
-                    Third visible icon
-                    default center popup.
-                    */
-
-                    if (
-                        visibleIndex === 2
-                    ) {
-
-
-                        appIcon.classList.add(
-                            "center-app"
-                        );
-
-
-                    }
-
-
-
-                    if (
-                        app.icon
-                    ) {
-
-
-                        const image =
-                            document.createElement(
-                                "img"
-                            );
-
-
-                        image.src =
-                            app.icon;
-
-
-                        image.alt =
-                            app.name;
-
-
-                        appIcon.appendChild(
-                            image
-                        );
-
-
-                    }
-
-
-                    else {
-
-
-                        appIcon.textContent =
-                            app.shortName ||
-                            "APP";
-
-
-                    }
-
-
-
-                    heroAppsTrack.appendChild(
-                        appIcon
-                    );
-
-
-                }
+            singleAppLink.setAttribute(
+                "aria-label",
+                "View " +
+                app.name
             );
 
 
 
             /*
-            Slider animation
+            Real icon OR initials
             */
 
-            heroAppsTrack
+            if (
+                app.icon
+            ) {
+
+
+                singleAppImage.src =
+                    app.icon;
+
+
+                singleAppImage.alt =
+                    app.name;
+
+
+                singleAppImage.style.display =
+                    "block";
+
+
+                singleAppInitials.style.display =
+                    "none";
+
+
+            }
+
+
+            else {
+
+
+                singleAppImage.style.display =
+                    "none";
+
+
+                singleAppInitials.style.display =
+                    "block";
+
+
+                singleAppInitials.textContent =
+                    app.shortName;
+
+
+            }
+
+
+
+            /*
+            Name
+            */
+
+            singleAppName.textContent =
+                app.name;
+
+
+
+            /*
+            Position
+            */
+
+            singleAppPosition.textContent =
+                (
+                    currentAppIndex +
+                    1
+                ) +
+                " / " +
+                appsData.length;
+
+
+
+            /*
+            Coming Soon badge
+            */
+
+            if (
+                app.comingSoon
+            ) {
+
+
+                singleComingSoon.classList.add(
+                    "show"
+                );
+
+
+            }
+
+
+            else {
+
+
+                singleComingSoon.classList.remove(
+                    "show"
+                );
+
+
+            }
+
+
+
+            /*
+            Arrow states
+            */
+
+            heroPrev.disabled =
+                currentAppIndex === 0;
+
+
+            heroNext.disabled =
+                currentAppIndex ===
+                appsData.length - 1;
+
+
+
+            /*
+            Animation
+            */
+
+            singleAppStage
                 .classList
                 .remove(
                     "slide-next",
@@ -2696,10 +2878,10 @@
             ) {
 
 
-                void heroAppsTrack.offsetWidth;
+                void singleAppStage.offsetWidth;
 
 
-                heroAppsTrack
+                singleAppStage
                     .classList
                     .add(
 
@@ -2713,40 +2895,6 @@
 
 
             }
-
-
-
-            /*
-            Center app name
-            */
-
-            const centerIndex =
-                Math.min(
-
-                    heroStartIndex + 2,
-
-                    appsData.length - 1
-
-                );
-
-
-            selectedAppName.textContent =
-                appsData[
-                    centerIndex
-                ].name;
-
-
-
-            heroPrev.disabled =
-                heroStartIndex === 0;
-
-
-
-            heroNext.disabled =
-                heroStartIndex >=
-
-                appsData.length -
-                HERO_VISIBLE;
 
 
         }
@@ -2763,14 +2911,14 @@
 
 
                 if (
-                    heroStartIndex > 0
+                    currentAppIndex > 0
                 ) {
 
 
-                    heroStartIndex--;
+                    currentAppIndex--;
 
 
-                    renderHeroSlider(
+                    renderCurrentApp(
                         "prev"
                     );
 
@@ -2793,16 +2941,15 @@
 
 
                 if (
-                    heroStartIndex <
-                    appsData.length -
-                    HERO_VISIBLE
+                    currentAppIndex <
+                    appsData.length - 1
                 ) {
 
 
-                    heroStartIndex++;
+                    currentAppIndex++;
 
 
-                    renderHeroSlider(
+                    renderCurrentApp(
                         "next"
                     );
 
@@ -2816,15 +2963,15 @@
 
 
         /*
-        Initial slider
+        Initial app
         */
 
-        renderHeroSlider();
+        renderCurrentApp();
 
 
 
         /*
-        Main Explore Apps slider
+        Explore Our Apps slider
         */
 
         function slideApps(
