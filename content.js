@@ -1,5 +1,5 @@
 /*
- * CELL CAVE website content and shared functionality.
+ * CELL CAVE ( SMC-PRIVATE ) LIMITED website content and shared functionality.
  * Main editable data lives at the top of this file:
  * - CELL_CAVE_CONFIG: company/global settings
  * - CELL_CAVE_APPS: all app/product data
@@ -10,8 +10,8 @@
 
 /* ===== config.js ===== */
 window.CELL_CAVE_CONFIG = Object.freeze({
-    brandName: "CELL CAVE",
-    legalName: "CELL CAVE (SMC-PRIVATE) LIMITED",
+    brandName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
+    legalName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
     siteUrl: "https://cellcave.github.io/",
     logo: "/assets/brand/cell-cave-logo.png",
     favicon: "/assets/brand/cell-cave-logo.png",
@@ -265,6 +265,9 @@ window.CELL_CAVE_APPS = Object.freeze([
                     <div class="featured-actions">
                         <a class="btn btn-primary" href="${escapeHtml(featured.route)}">Explore Featured App</a>
                         ${featured.googlePlayUrl ? `<a class="btn btn-secondary" href="${escapeHtml(featured.googlePlayUrl)}" target="_blank" rel="noopener noreferrer">Google Play ↗</a>` : ""}
+                        ${featured.appleAppStoreUrl
+                            ? `<a class="btn btn-secondary" href="${escapeHtml(featured.appleAppStoreUrl)}" target="_blank" rel="noopener noreferrer">App Store ↗</a>`
+                            : `<a class="btn btn-secondary" href="${escapeHtml(config.appStoreLandingUrl)}">App Store Availability</a>`}
                     </div>
                 </div>
             </div>`;
@@ -321,25 +324,28 @@ window.CELL_CAVE_APPS = Object.freeze([
                                 <span class="brand-logo-frame"><img src="${escapeHtml(config.logo)}" alt="${escapeHtml(config.brandName)} logo"></span>
                                 <span>${escapeHtml(config.brandName)}</span>
                             </a>
-                            <div class="footer-legal-name">${escapeHtml(config.legalName)}</div>
                             <p class="footer-copy">We build apps and digital products designed to make everyday life simpler, smarter, and more convenient.</p>
                             <div class="footer-contact">
                                 ${config.email ? `<a data-site-email-link href="mailto:${escapeHtml(config.email)}"><span data-site-email>${escapeHtml(config.email)}</span></a>` : ""}
                                 ${config.phone ? `<span>${escapeHtml(config.phone)}</span>` : ""}
                                 ${config.address ? `<span>${escapeHtml(config.address)}</span>` : ""}
                             </div>
+                        </div>
+
+                        <div class="footer-right">
+                            <nav class="footer-links" aria-label="Footer navigation">
+                                ${nav}
+                                <a href="/privacy/">Privacy Policy</a>
+                                <a href="/terms/">Terms of Use</a>
+                                <a href="${escapeHtml(config.appStoreLandingUrl)}">Apple App Store</a>
+                                <a href="${escapeHtml(config.developerGooglePlayUrl)}" target="_blank" rel="noopener noreferrer">Google Play</a>
+                            </nav>
+
                             <div class="footer-social-wrap">
-                                <div class="footer-social-label">Follow CELL CAVE</div>
+                                <div class="footer-social-label">Follow Us</div>
                                 <div class="footer-social">${social}</div>
                             </div>
                         </div>
-                        <nav class="footer-links" aria-label="Footer navigation">
-                            ${nav}
-                            <a href="/privacy/">Privacy Policy</a>
-                            <a href="/terms/">Terms of Use</a>
-                            <a href="${escapeHtml(config.appStoreLandingUrl)}">App Store</a>
-                            <a href="${escapeHtml(config.developerGooglePlayUrl)}" target="_blank" rel="noopener noreferrer">Google Play</a>
-                        </nav>
                     </div>
                     <div class="footer-bottom">
                         <span>© ${new Date().getFullYear()} ${escapeHtml(config.legalName)}. All rights reserved.</span>
@@ -367,7 +373,7 @@ window.CELL_CAVE_APPS = Object.freeze([
             document.head.appendChild(icon);
         }
         const desc = document.querySelector('meta[name="description"]');
-        const description = desc ? desc.content : "CELL CAVE creates apps and digital products designed to make everyday life easier.";
+        const description = desc ? desc.content : "CELL CAVE ( SMC-PRIVATE ) LIMITED creates apps and digital products designed to make everyday life easier.";
         const baseUrl = String(config.siteUrl || "").replace(/\/$/, "");
         const canonicalUrl = baseUrl ? `${baseUrl}${window.location.pathname || "/"}` : "";
         if (canonicalUrl && !document.head.querySelector('link[rel="canonical"]')) {
@@ -606,7 +612,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         return;
     }
 
-    document.title = `${app.name} | CELL CAVE`;
+    document.title = `${app.name} | ${api.config.legalName}`;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.content = app.shortDescription;
 
@@ -632,11 +638,12 @@ window.CELL_CAVE_APPS = Object.freeze([
             <div class="container">
                 <div class="coming-soon-panel">
                     <span class="badge coming-soon">Coming Soon</span>
-                    <h2>We’re building the next CELL CAVE experience.</h2>
-                    <p>${api.escapeHtml(app.name)} isn’t live yet. We’re working on it. In the meantime, explore the CELL CAVE apps and digital products that are already available.</p>
+                    <h2>We’re building the next CELL CAVE ( SMC-PRIVATE ) LIMITED experience.</h2>
+                    <p>${api.escapeHtml(app.name)} isn’t live yet. We’re working on it. In the meantime, explore the CELL CAVE ( SMC-PRIVATE ) LIMITED apps and digital products that are already available.</p>
                     <div class="coming-soon-actions">
                         <a class="btn btn-primary" href="/apps/">Explore Available Apps</a>
-                        <a class="btn btn-secondary" href="${api.escapeHtml(api.config.developerGooglePlayUrl)}" target="_blank" rel="noopener noreferrer">CELL CAVE on Google Play ↗</a>
+                        <a class="btn btn-secondary" href="${api.escapeHtml(api.config.developerGooglePlayUrl)}" target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+                        <a class="btn btn-secondary" href="${api.escapeHtml(api.config.appStoreLandingUrl)}">Apple App Store</a>
                     </div>
                 </div>
             </div>
@@ -673,7 +680,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         <section class="section">
             <div class="container cta-panel">
                 <h2>Need help with ${api.escapeHtml(app.shortName || app.name)}?</h2>
-                <p>Visit CELL CAVE Support for app-related questions, privacy information, and contact details.</p>
+                <p>Visit CELL CAVE ( SMC-PRIVATE ) LIMITED Support for app-related questions, privacy information, and contact details.</p>
                 <a class="btn" href="/support/">Visit Support</a>
             </div>
         </section>`;
@@ -682,14 +689,43 @@ window.CELL_CAVE_APPS = Object.freeze([
 /* ===== support.js ===== */
 (function () {
     "use strict";
+
     const api = window.CellCave;
     if (!api) return;
-    const list = document.getElementById("supportAppList");
-    if (!list) return;
-    list.innerHTML = api.apps.map(app => {
-        const icon = app.icon
-            ? `<img src="${api.escapeHtml(app.icon)}" alt="${api.escapeHtml(app.name)} icon">`
-            : `<span class="support-app-fallback">${api.escapeHtml(app.fallbackInitials || "APP")}</span>`;
-        return `<a class="support-app-link" href="${api.escapeHtml(app.route)}">${icon}<span><strong>${api.escapeHtml(app.name)}</strong><span>${app.status === "coming-soon" ? "Coming Soon" : "App support & details"}</span></span></a>`;
-    }).join("");
+
+    const select = document.getElementById("supportAppSelect");
+    const openButton = document.getElementById("supportAppOpen");
+    const hint = document.getElementById("supportAppHint");
+
+    if (!select || !openButton) return;
+
+    api.apps.forEach(app => {
+        const option = document.createElement("option");
+        option.value = app.route;
+        option.textContent = `${app.name}${app.status === "coming-soon" ? " — Coming Soon" : ""}`;
+        select.appendChild(option);
+    });
+
+    function updateSelection() {
+        const selected = select.options[select.selectedIndex];
+        const hasSelection = Boolean(select.value);
+
+        openButton.disabled = !hasSelection;
+
+        if (hint) {
+            hint.textContent = hasSelection
+                ? `Open ${selected.textContent.replace(" — Coming Soon", "")} for app details, privacy information, and availability.`
+                : "App details, privacy information, availability, and related support are available from each app page.";
+        }
+    }
+
+    select.addEventListener("change", updateSelection);
+
+    openButton.addEventListener("click", function () {
+        if (select.value) {
+            window.location.href = select.value;
+        }
+    });
+
+    updateSelection();
 })();

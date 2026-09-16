@@ -1,25 +1,42 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Status Downloader: Video Saver | CELL CAVE</title>
-<meta content="Save and manage supported status content through a straightforward mobile experience." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/assets/css/site.css" rel="stylesheet"/>
-<script defer="" src="/assets/js/config.js"></script>
-<script defer="" src="/assets/js/apps-data.js"></script>
-<script defer="" src="/assets/js/site.js"></script>
-<script defer="" src="/assets/js/app-detail.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps | CELL CAVE ( SMC-PRIVATE ) LIMITED</title>
+    <meta name="description" content="Explore CELL CAVE ( SMC-PRIVATE ) LIMITED apps and digital products, including current and upcoming releases for Google Play and the Apple App Store.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <script src="/content.js" defer></script>
 </head>
-<body data-page="app-detail">
-<div id="siteHeader"></div>
-<main class="site-main">
-<div data-app-id="status-downloader-video-saver" id="appPage"></div>
-</main>
-<div id="siteFooter"></div>
+<body data-page="apps">
+    <div id="siteHeader"></div>
+    <main class="site-main">
+
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">App Ecosystem</span>
+                <h1>Apps designed to make everyday digital life easier.</h1>
+                <p>Browse current CELL CAVE ( SMC-PRIVATE ) LIMITED apps and products in development. Each app has its own dedicated page, privacy information, and store availability.</p>
+            </div>
+        </section>
+        <section class="section section-white">
+            <div class="container">
+                <div class="filter-row" aria-label="Filter apps by availability">
+                    <button type="button" class="filter-btn active" data-app-filter="all">All Apps</button>
+                    <button type="button" class="filter-btn" data-app-filter="live">Available</button>
+                    <button type="button" class="filter-btn" data-app-filter="coming-soon">Coming Soon</button>
+                </div>
+                <div class="apps-grid" id="appsGrid"></div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container" id="appsFeaturedApp"></div>
+        </section>
+
+    </main>
+    <div id="siteFooter"></div>
 </body>
 </html>
