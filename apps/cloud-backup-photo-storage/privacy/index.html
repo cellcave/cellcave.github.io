@@ -1,2789 +1,1420 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>
-    Privacy Policy - Cloud Backup: Photo Storage | Cell Cave
-</title>
-
-<meta
-    name="description"
-    content="Privacy Policy for Cloud Backup: Photo Storage by Cell Cave."
->
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
->
-
-<link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet"
->
-
-<style>
-
-:root {
-    --bg: #f6f7f4;
-    --surface: #ffffff;
-    --text: #171916;
-    --muted: #6c7169;
-    --line: #e3e6df;
-    --accent: #426b4d;
-    --accent-dark: #31523b;
-    --soft: #e9eee7;
-    --dark: #171916;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "DM Sans", sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(1420px, 90%);
-    margin: auto;
-}
-
-
-/* HEADER */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    background: rgba(246, 247, 244, 0.92);
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-
-    border-bottom: 1px solid var(--line);
-}
-
-.nav-inner {
-    min-height: 78px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-
-    gap: 11px;
-
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-}
-
-.brand-mark {
-    width: 38px;
-    height: 38px;
-
-    display: grid;
-    place-items: center;
-
-    background: var(--dark);
-    color: white;
-
-    border-radius: 12px;
-
-    font-size: 11px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-
-    gap: 30px;
-
-    list-style: none;
-}
-
-.nav-links a {
-    color: var(--muted);
-
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: var(--text);
-}
-
-
-/* HERO */
-
-.privacy-hero {
-    padding: 72px 0;
-
-    border-bottom: 1px solid var(--line);
-}
-
-.back-link {
-    display: inline-flex;
-
-    margin-bottom: 28px;
-
-    color: var(--accent);
-
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.eyebrow {
-    margin-bottom: 12px;
-
-    color: var(--accent);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.privacy-hero h1 {
-    max-width: 1000px;
-
-    margin-bottom: 22px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: clamp(44px, 6vw, 70px);
-
-    line-height: 1.04;
-
-    letter-spacing: -2.5px;
-}
-
-.privacy-hero p {
-    max-width: 980px;
-
-    margin-bottom: 14px;
-
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.9;
-}
-
-.updated {
-    display: inline-block;
-
-    margin-top: 18px;
-
-    padding: 13px 16px;
-
-    background: var(--soft);
-
-    border-radius: 12px;
-
-    color: var(--accent-dark);
-
-    font-size: 13px;
-    font-weight: 700;
-}
-
-
-/* POLICY */
-
-.policy-section {
-    padding: 74px 0 110px;
-}
-
-.policy-layout {
-    display: grid;
-
-    grid-template-columns: 290px minmax(0, 1fr);
-
-    gap: 42px;
-
-    align-items: start;
-}
-
-
-/* CONTENTS */
-
-.contents-card {
-    position: sticky;
-    top: 105px;
-
-    padding: 30px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--line);
-
-    border-radius: 22px;
-
-    max-height: calc(100vh - 130px);
-
-    overflow-y: auto;
-}
-
-.contents-card h2 {
-    margin-bottom: 20px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 20px;
-}
-
-.contents-list {
-    list-style: none;
-}
-
-.contents-list li {
-    margin-bottom: 12px;
-}
-
-.contents-list a {
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.45;
-}
-
-.contents-list a:hover {
-    color: var(--accent);
-}
-
-
-/* POLICY CARDS */
-
-.policy-content {
-    display: grid;
-
-    gap: 20px;
-}
-
-.policy-card {
-    padding: 42px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--line);
-
-    border-radius: 24px;
-
-    scroll-margin-top: 105px;
-}
-
-.policy-card h2 {
-    margin-bottom: 25px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 28px;
-
-    line-height: 1.25;
-}
-
-.policy-card h3 {
-    margin: 25px 0 10px;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 18px;
-}
-
-.policy-card p {
-    margin-bottom: 16px;
-
-    color: var(--muted);
-
-    font-size: 15px;
-
-    line-height: 1.9;
-}
-
-.policy-card ul {
-    padding-left: 23px;
-
-    margin: 14px 0 18px;
-
-    color: var(--muted);
-}
-
-.policy-card li {
-    margin-bottom: 8px;
-
-    line-height: 1.75;
-}
-
-.policy-card a {
-    color: var(--accent);
-
-    font-weight: 600;
-}
-
-.policy-card a:hover {
-    text-decoration: underline;
-}
-
-
-/* SPECIAL BOX */
-
-.info-box {
-    margin: 20px 0;
-
-    padding: 24px;
-
-    background: var(--soft);
-
-    border-radius: 16px;
-}
-
-
-/* DELETION BUTTON */
-
-.deletion-button {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    margin-top: 8px;
-
-    padding: 0 22px;
-
-    background: var(--accent);
-    color: white !important;
-
-    border-radius: 13px;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    text-decoration: none !important;
-
-    transition: 0.2s ease;
-}
-
-.deletion-button:hover {
-    background: var(--accent-dark);
-
-    transform: translateY(-2px);
-}
-
-
-/* FOOTER */
-
-footer {
-    padding: 65px 0 28px;
-
-    background: var(--dark);
-
-    color: #aeb3ac;
-}
-
-.footer-main {
-    display: grid;
-
-    grid-template-columns: 0.9fr 1.1fr;
-
-    gap: 70px;
-
-    padding-bottom: 45px;
-}
-
-.footer-brand h3 {
-    margin-bottom: 8px;
-
-    color: white;
-
-    font-family: "Space Grotesk", sans-serif;
-
-    font-size: 23px;
-}
-
-.footer-brand p {
-    max-width: 360px;
-
-    font-size: 14px;
-}
-
-.footer-links {
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(130px, 1fr));
-
-    gap: 13px 35px;
-
-    justify-self: end;
-
-    width: min(430px, 100%);
-}
-
-.footer-links a {
-    color: #aeb3ac;
-
-    font-size: 13px;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.footer-bottom {
-    padding-top: 23px;
-
-    border-top: 1px solid #343832;
-
-    color: #858b83;
-
-    font-size: 12px;
-}
-
-
-/* SOCIAL */
-
-.footer-social {
-    margin-top: 25px;
-}
-
-.social-label {
-    display: block;
-
-    margin-bottom: 11px;
-
-    color: #8f958d;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.8px;
-}
-
-.social-icons {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 9px;
-}
-
-.social-icon {
-    width: 39px;
-    height: 39px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #343832;
-
-    border-radius: 11px;
-
-    background: #1d201c;
-
-    color: #b9beb7;
-}
-
-.social-icon svg {
-    width: 17px;
-    height: 17px;
-
-    fill: currentColor;
-}
-
-.social-icon.instagram svg {
-    fill: none;
-
-    stroke: currentColor;
-
-    stroke-width: 1.9;
-}
-
-.social-x {
-    font-family: Arial, sans-serif;
-
-    font-size: 15px;
-    font-weight: 700;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 950px) {
-
-    .policy-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .contents-card {
-        position: static;
-
-        max-height: none;
-    }
-
-    .contents-list {
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 8px 20px;
-    }
-
-    .contents-list li {
-        margin: 0;
-    }
-
-    .footer-main {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .footer-links {
-        justify-self: start;
-
-        width: 100%;
-    }
-}
-
-@media (max-width: 650px) {
-
-    .nav-inner {
-        min-height: auto;
-
-        padding: 15px 0;
-
-        flex-direction: column;
-
-        gap: 14px;
-    }
-
-    .nav-links {
-        gap: 17px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    .privacy-hero {
-        padding: 58px 0;
-    }
-
-    .policy-section {
-        padding-top: 45px;
-    }
-
-    .policy-card {
-        padding: 27px;
-    }
-
-    .policy-card h2 {
-        font-size: 23px;
-    }
-
-    .contents-card {
-        padding: 26px;
-    }
-
-    .contents-list {
-        grid-template-columns: 1fr;
-    }
-
-    .deletion-button {
-        width: 100%;
-    }
-
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 420px) {
-
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-}
-
-</style>
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy | Cloud Backup: Photo Storage | CELL CAVE</title>
+<meta content="Privacy information for Cloud Backup: Photo Storage, a CELL CAVE app." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="/assets/css/site.css" rel="stylesheet"/>
+<script defer="" src="/assets/js/config.js"></script>
+<script defer="" src="/assets/js/apps-data.js"></script>
+<script defer="" src="/assets/js/site.js"></script>
 </head>
-
-
-<body>
-
-
-<!-- HEADER -->
-
-<header class="navbar">
-
-    <div class="container nav-inner">
-
-        <a
-            href="/"
-            class="brand"
-        >
-
-            <span class="brand-mark">
-                CC
-            </span>
-
-            <span>
-                Cell Cave
-            </span>
-
-        </a>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="/">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="/apps/">
-                    Apps
-                </a>
-            </li>
-
-            <li>
-                <a href="/support/">
-                    Support
-                </a>
-            </li>
-
-            <li>
-                <a href="/about/">
-                    About
-                </a>
-            </li>
-
-        </ul>
-
-    </div>
-
-</header>
-
-
-<main>
-
-
+<body class="legal-page" data-page="app-detail">
+<div id="siteHeader"></div>
+<main class="site-main">
 <!-- HERO -->
-
 <section class="privacy-hero">
-
-    <div class="container">
-
-        <a
-            href="/apps/cloud-backup-photo-storage/"
-            class="back-link"
-        >
+<div class="container">
+<a class="back-link" href="/apps/cloud-backup-photo-storage/">
             ← Back to Cloud Backup
         </a>
-
-        <div class="eyebrow">
+<div class="eyebrow">
             Cloud Backup: Photo Storage
         </div>
-
-        <h1>
+<h1>
             Privacy Policy
         </h1>
-
-        <p>
-            <strong>Cell Cave</strong> ("we", "us", or "our") operates
+<p>
+<strong>CELL CAVE</strong> ("we", "us", or "our") operates
             <strong>Cloud Backup: Photo Storage</strong> (the "App").
         </p>
-
-        <p>
+<p>
             This Privacy Policy explains what information the App may
             access, collect, use, process, store, transmit, and share;
             why that information is handled; how long it may be retained;
             how it is protected; and the privacy choices available to users.
         </p>
-
-        <p>
+<p>
             By using Cloud Backup: Photo Storage, you acknowledge
             the practices described in this Privacy Policy.
         </p>
-
-        <span class="updated">
+<span class="updated">
             Last Updated: September 9, 2026
         </span>
-
-    </div>
-
+</div>
 </section>
-
-
 <!-- POLICY -->
-
 <section class="policy-section">
-
-    <div class="container policy-layout">
-
-
-        <!-- CONTENTS -->
-
-        <aside class="contents-card">
-
-            <h2>
+<div class="container policy-layout">
+<!-- CONTENTS -->
+<aside class="contents-card">
+<h2>
                 Contents
             </h2>
-
-            <ul class="contents-list">
-
-                <li><a href="#information">1. Information We Handle</a></li>
-
-                <li><a href="#backup">2. Backup Content and Cloud Storage</a></li>
-
-                <li><a href="#automatic-backup">3. Automatic Backup</a></li>
-
-                <li><a href="#vault">4. Private Vault</a></li>
-
-                <li><a href="#shared-folders">5. Shared Folders and User-Initiated Sharing</a></li>
-
-                <li><a href="#permissions">6. Device Permissions</a></li>
-
-                <li><a href="#assistant">7. In-App Assistant</a></li>
-
-                <li><a href="#analytics">8. Analytics, Diagnostics and Crash Reporting</a></li>
-
-                <li><a href="#advertising">9. Advertising and Advertising Choices</a></li>
-
-                <li><a href="#billing">10. Paid Plans and Google Play Billing</a></li>
-
-                <li><a href="#providers">11. Third-Party Service Providers</a></li>
-
-                <li><a href="#use">12. How We Use Information</a></li>
-
-                <li><a href="#sharing">13. Sharing and Disclosure of Information</a></li>
-
-                <li><a href="#retention">14. Data Storage and Retention</a></li>
-
-                <li><a href="#deletion">15. Account and Data Deletion</a></li>
-
-                <li><a href="#choices">16. Your Privacy Rights and Choices</a></li>
-
-                <li><a href="#security">17. Security</a></li>
-
-                <li><a href="#international">18. International Data Processing</a></li>
-
-                <li><a href="#children">19. Children's Privacy</a></li>
-
-                <li><a href="#changes">20. Changes to This Privacy Policy</a></li>
-
-                <li><a href="#contact">21. Contact Us</a></li>
-
-            </ul>
-
-        </aside>
-
-
-        <div class="policy-content">
-
-
-            <!-- 1 -->
-
-            <article class="policy-card" id="information">
-
-                <h2>
+<ul class="contents-list">
+<li><a href="#information">1. Information We Handle</a></li>
+<li><a href="#backup">2. Backup Content and Cloud Storage</a></li>
+<li><a href="#automatic-backup">3. Automatic Backup</a></li>
+<li><a href="#vault">4. Private Vault</a></li>
+<li><a href="#shared-folders">5. Shared Folders and User-Initiated Sharing</a></li>
+<li><a href="#permissions">6. Device Permissions</a></li>
+<li><a href="#assistant">7. In-App Assistant</a></li>
+<li><a href="#analytics">8. Analytics, Diagnostics and Crash Reporting</a></li>
+<li><a href="#advertising">9. Advertising and Advertising Choices</a></li>
+<li><a href="#billing">10. Paid Plans and Google Play Billing</a></li>
+<li><a href="#providers">11. Third-Party Service Providers</a></li>
+<li><a href="#use">12. How We Use Information</a></li>
+<li><a href="#sharing">13. Sharing and Disclosure of Information</a></li>
+<li><a href="#retention">14. Data Storage and Retention</a></li>
+<li><a href="#deletion">15. Account and Data Deletion</a></li>
+<li><a href="#choices">16. Your Privacy Rights and Choices</a></li>
+<li><a href="#security">17. Security</a></li>
+<li><a href="#international">18. International Data Processing</a></li>
+<li><a href="#children">19. Children's Privacy</a></li>
+<li><a href="#changes">20. Changes to This Privacy Policy</a></li>
+<li><a href="#contact">21. Contact Us</a></li>
+</ul>
+</aside>
+<div class="policy-content">
+<!-- 1 -->
+<article class="policy-card" id="information">
+<h2>
                     1. Information We Handle
                 </h2>
-
-                <p>
+<p>
                     Depending on the features you use, permissions you grant,
                     your device, your region, and the services enabled in the
                     App, the App and its service providers may handle the
                     following categories of information.
                 </p>
-
-
-                <h3>
+<h3>
                     Account and Authentication Information
                 </h3>
-
-                <p>
+<p>
                     To create, access, and maintain an account, the App may process:
                 </p>
-
-                <ul>
-                    <li>Email address</li>
-                    <li>Account identifier</li>
-                    <li>Authentication and verification information</li>
-                    <li>One-time password (OTP) information</li>
-                    <li>Sign-in events</li>
-                    <li>Account security information</li>
-                    <li>Related technical information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Email address</li>
+<li>Account identifier</li>
+<li>Authentication and verification information</li>
+<li>One-time password (OTP) information</li>
+<li>Sign-in events</li>
+<li>Account security information</li>
+<li>Related technical information</li>
+</ul>
+<p>
                     Your email address may be used for:
                 </p>
-
-                <ul>
-                    <li>Account registration</li>
-                    <li>Sign-in</li>
-                    <li>Account verification</li>
-                    <li>Account security</li>
-                    <li>Account recovery where supported</li>
-                    <li>Account-related communications</li>
-                    <li>Sharing invitations where you use a supported sharing feature</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Account registration</li>
+<li>Sign-in</li>
+<li>Account verification</li>
+<li>Account security</li>
+<li>Account recovery where supported</li>
+<li>Account-related communications</li>
+<li>Sharing invitations where you use a supported sharing feature</li>
+</ul>
+<p>
                     OTP codes may be sent to your email address to verify
                     account access.
                 </p>
-
-                <p>
+<p>
                     Where password-based authentication is supported,
                     authentication credentials may be processed through the
-                    applicable authentication infrastructure. Cell Cave does
+                    applicable authentication infrastructure. CELL CAVE does
                     not intend to store passwords as readable plain-text
                     passwords.
                 </p>
-
-                <p>
+<p>
                     Account and authentication functionality may use
                     Amazon Web Services (AWS) infrastructure.
                 </p>
-
-
-                <h3>
+<h3>
                     Technical and Device Information
                 </h3>
-
-                <p>
+<p>
                     Depending on the active services and features,
                     technical information processed may include:
                 </p>
-
-                <ul>
-                    <li>Device model</li>
-                    <li>Operating system and version</li>
-                    <li>App version</li>
-                    <li>Device and app identifiers</li>
-                    <li>Advertising identifiers</li>
-                    <li>Language and device settings</li>
-                    <li>IP address</li>
-                    <li>Network information</li>
-                    <li>Crash logs</li>
-                    <li>Diagnostic information</li>
-                    <li>Performance information</li>
-                    <li>App usage information</li>
-                    <li>App interaction events</li>
-                    <li>Advertising interaction information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Device model</li>
+<li>Operating system and version</li>
+<li>App version</li>
+<li>Device and app identifiers</li>
+<li>Advertising identifiers</li>
+<li>Language and device settings</li>
+<li>IP address</li>
+<li>Network information</li>
+<li>Crash logs</li>
+<li>Diagnostic information</li>
+<li>Performance information</li>
+<li>App usage information</li>
+<li>App interaction events</li>
+<li>Advertising interaction information</li>
+</ul>
+<p>
                     This information may be used to operate, secure,
                     troubleshoot, analyze, monetize, maintain, and improve
                     the App.
                 </p>
-
-            </article>
-
-
-            <!-- 2 -->
-
-            <article class="policy-card" id="backup">
-
-                <h2>
+</article>
+<!-- 2 -->
+<article class="policy-card" id="backup">
+<h2>
                     2. Backup Content and Cloud Storage
                 </h2>
-
-                <p>
+<p>
                     Cloud Backup: Photo Storage allows users to back up
                     supported content to cloud storage.
                 </p>
-
-                <p>
+<p>
                     Depending on the features selected, permissions granted,
                     device capabilities, and current App configuration,
                     supported backup content may include:
                 </p>
-
-                <ul>
-                    <li>Photos</li>
-                    <li>Videos</li>
-                    <li>Contacts</li>
-                    <li>Documents</li>
-                    <li>Files</li>
-                    <li>Audio files</li>
-                    <li>Music</li>
-                    <li>Voice recordings</li>
-                    <li>
+<ul>
+<li>Photos</li>
+<li>Videos</li>
+<li>Contacts</li>
+<li>Documents</li>
+<li>Files</li>
+<li>Audio files</li>
+<li>Music</li>
+<li>Voice recordings</li>
+<li>
                         Supported files stored on external or removable
                         storage, including an SD card where supported
                     </li>
-                </ul>
-
-                <p>
+</ul>
+<p>
                     Users choose which supported content or categories
                     they want to back up.
                 </p>
-
-
-                <h3>
+<h3>
                     Encryption of Backup Content
                 </h3>
-
-                <p>
+<p>
                     Supported backup files are encrypted on the user's
                     device before they are uploaded to cloud storage.
                 </p>
-
-                <p>
+<p>
                     Encrypted backup files are transmitted using encrypted
                     network connections designed to protect the data while
                     it is in transit.
                 </p>
-
-                <p>
+<p>
                     After backup data reaches the cloud infrastructure,
                     it remains encrypted while stored at rest using Amazon
                     Web Services (AWS) infrastructure.
                 </p>
-
-                <p>
+<p>
                     Supported backup content is therefore protected through
                     the following stages:
                 </p>
-
-                <ul>
-                    <li>Encryption on the user's device before upload</li>
-                    <li>Encrypted transmission between the user's device and cloud infrastructure</li>
-                    <li>Encryption while stored at rest in cloud infrastructure</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Encryption on the user's device before upload</li>
+<li>Encrypted transmission between the user's device and cloud infrastructure</li>
+<li>Encryption while stored at rest in cloud infrastructure</li>
+</ul>
+<h3>
                     Backup and Restore
                 </h3>
-
-                <p>
+<p>
                     When a user chooses to restore supported content,
                     the App retrieves the applicable backup data and
                     provides it to the authenticated user's device through
                     the restore process.
                 </p>
-
-                <p>
+<p>
                     An internet connection is required when content is
                     uploaded to or retrieved from cloud storage.
                 </p>
-
-            </article>
-
-
-            <!-- 3 -->
-
-            <article class="policy-card" id="automatic-backup">
-
-                <h2>
+</article>
+<!-- 3 -->
+<article class="policy-card" id="automatic-backup">
+<h2>
                     3. Automatic Backup
                 </h2>
-
-                <p>
+<p>
                     The App may provide automatic backup for supported
                     photos, videos, or other eligible content.
                 </p>
-
-                <p>
+<p>
                     When a user enables automatic backup, the App may
                     periodically identify newly available eligible content
                     and upload it to cloud storage according to the user's
                     backup settings, permissions, network availability,
                     and applicable device restrictions.
                 </p>
-
-                <p>
+<p>
                     Automatic backup may operate when the user is not
                     actively interacting with the App where Android permits
                     background processing.
                 </p>
-
-                <p>
+<p>
                     Users can control automatic backup through the available
                     App settings and Android permission controls.
                 </p>
-
-                <p>
+<p>
                     Disabling automatic backup prevents future automatic
                     uploads but does not automatically delete content that
                     has already been backed up. Users may separately delete
                     backed-up content where that functionality is available.
                 </p>
-
-            </article>
-
-
-            <!-- 4 -->
-
-            <article class="policy-card" id="vault">
-
-                <h2>
+</article>
+<!-- 4 -->
+<article class="policy-card" id="vault">
+<h2>
                     4. Private Vault
                 </h2>
-
-                <p>
+<p>
                     The App provides or may provide a
                     <strong>Private Vault</strong> feature for restricting
                     access to selected photos, videos, documents, or other
                     supported content.
                 </p>
-
-                <p>
+<p>
                     Depending on the current App version and device
                     capabilities, the Private Vault may use:
                 </p>
-
-                <ul>
-                    <li>A user-created PIN</li>
-                    <li>Device authentication</li>
-                    <li>Biometric authentication where supported</li>
-                    <li>Other App-level access restrictions</li>
-                </ul>
-
-                <p>
+<ul>
+<li>A user-created PIN</li>
+<li>Device authentication</li>
+<li>Biometric authentication where supported</li>
+<li>Other App-level access restrictions</li>
+</ul>
+<p>
                     The Private Vault is intended to help prevent
                     unauthorized or casual access to selected content
                     through the App.
                 </p>
-
-                <p>
+<p>
                     The storage location and backup status of Vault content
                     depend on the feature configuration and actions selected
                     by the user.
                 </p>
-
-                <p>
+<p>
                     If Vault content is included in cloud backup, the
                     cloud-backup protections described in this Privacy
                     Policy apply to that backed-up content.
                 </p>
-
-                <p>
+<p>
                     Users are responsible for protecting:
                 </p>
-
-                <ul>
-                    <li>Their Vault PIN</li>
-                    <li>Device authentication credentials</li>
-                    <li>Device access</li>
-                    <li>Other security credentials</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Their Vault PIN</li>
+<li>Device authentication credentials</li>
+<li>Device access</li>
+<li>Other security credentials</li>
+</ul>
+<p>
                     Users should not provide their Vault PIN through:
                 </p>
-
-                <ul>
-                    <li>Advertising</li>
-                    <li>Analytics</li>
-                    <li>The optional assistant</li>
-                    <li>Unsolicited messages</li>
-                    <li>Ordinary customer-support requests</li>
-                </ul>
-
-            </article>
-
-
-            <!-- 5 -->
-
-            <article class="policy-card" id="shared-folders">
-
-                <h2>
+<ul>
+<li>Advertising</li>
+<li>Analytics</li>
+<li>The optional assistant</li>
+<li>Unsolicited messages</li>
+<li>Ordinary customer-support requests</li>
+</ul>
+</article>
+<!-- 5 -->
+<article class="policy-card" id="shared-folders">
+<h2>
                     5. Shared Folders and User-Initiated Sharing
                 </h2>
-
-                <p>
+<p>
                     The App may allow users to intentionally share
                     supported files or folders with other people.
                 </p>
-
-                <p>
+<p>
                     Depending on the available sharing functionality,
                     users may be able to:
                 </p>
-
-                <ul>
-                    <li>Create shared folders</li>
-                    <li>Select content to share</li>
-                    <li>Invite another person using an email address</li>
-                    <li>Grant supported view or edit permissions</li>
-                    <li>Change or revoke sharing permissions where supported</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Create shared folders</li>
+<li>Select content to share</li>
+<li>Invite another person using an email address</li>
+<li>Grant supported view or edit permissions</li>
+<li>Change or revoke sharing permissions where supported</li>
+</ul>
+<p>
                     When a user invites another person, information
                     necessary to provide and manage the sharing feature
                     may be processed, including:
                 </p>
-
-                <ul>
-                    <li>Recipient email address</li>
-                    <li>Invitation information</li>
-                    <li>Account information</li>
-                    <li>Sharing permissions</li>
-                    <li>Information necessary to operate the shared folder</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Recipient email address</li>
+<li>Invitation information</li>
+<li>Account information</li>
+<li>Sharing permissions</li>
+<li>Information necessary to operate the shared folder</li>
+</ul>
+<p>
                     Content intentionally shared by a user may become
                     accessible to authorized recipients.
                 </p>
-
-                <p>
+<p>
                     Users should only share files and folders with people
                     they trust.
                 </p>
-
-                <p>
+<p>
                     User-initiated sharing is separate from technical
                     processing performed by cloud, analytics, advertising,
                     billing, or other service providers.
                 </p>
-
-            </article>
-
-
-            <!-- 6 -->
-
-            <article class="policy-card" id="permissions">
-
-                <h2>
+</article>
+<!-- 6 -->
+<article class="policy-card" id="permissions">
+<h2>
                     6. Device Permissions
                 </h2>
-
-                <p>
+<p>
                     The App requests Android permissions when they are
                     required to provide available user-facing functionality.
                 </p>
-
-                <p>
+<p>
                     Users may grant, deny, or revoke applicable permissions
                     through Android device settings.
                 </p>
-
-                <p>
+<p>
                     If a required permission is denied or revoked, the
                     related feature may not work or may have limited
                     functionality.
                 </p>
-
-
-                <h3>
+<h3>
                     Photos, Videos and Media
                 </h3>
-
-                <p>
+<p>
                     The App may request access to photos, videos, audio,
                     and other supported media in order to:
                 </p>
-
-                <ul>
-                    <li>Select content for backup</li>
-                    <li>Perform supported automatic backup</li>
-                    <li>Restore content</li>
-                    <li>Organize supported content</li>
-                    <li>Preview supported content</li>
-                    <li>Provide other user-requested media functionality</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Select content for backup</li>
+<li>Perform supported automatic backup</li>
+<li>Restore content</li>
+<li>Organize supported content</li>
+<li>Preview supported content</li>
+<li>Provide other user-requested media functionality</li>
+</ul>
+<p>
                     Where Android provides these options, users may be
                     able to provide:
                 </p>
-
-                <ul>
-                    <li>Full access</li>
-                    <li>Limited access</li>
-                    <li>No access</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Full access</li>
+<li>Limited access</li>
+<li>No access</li>
+</ul>
+<p>
                     The App uses the level of access granted through
                     Android's permission controls.
                 </p>
-
-
-                <h3>
+<h3>
                     Contacts
                 </h3>
-
-                <p>
+<p>
                     The App may request Contacts access when a user
                     chooses to use contact backup or restore functionality.
                 </p>
-
-                <p>
+<p>
                     Contacts access is used for supported contact backup
                     and restore features.
                 </p>
-
-
-                <h3>
+<h3>
                     Files, Documents and External Storage
                 </h3>
-
-                <p>
+<p>
                     The App may allow users to select documents and other
                     supported files for backup and restore.
                 </p>
-
-                <p>
+<p>
                     Where supported by Android and the user's device,
                     users may also select supported content stored on
                     external or removable storage, including an SD card.
                 </p>
-
-                <p>
+<p>
                     Access to files or external storage is used for the
                     functionality requested by the user.
                 </p>
-
-
-                <h3>
+<h3>
                     Permission Control
                 </h3>
-
-                <p>
+<p>
                     The App is intended to request and use only permissions
                     necessary for current App functionality.
                 </p>
-
-                <p>
+<p>
                     If a future version materially changes the permissions
                     requested or the way personal or sensitive user data is
                     handled, this Privacy Policy may be updated accordingly.
                 </p>
-
-            </article>
-
-
-            <!-- 7 -->
-
-            <article class="policy-card" id="assistant">
-
-                <h2>
+</article>
+<!-- 7 -->
+<article class="policy-card" id="assistant">
+<h2>
                     7. In-App Assistant
                 </h2>
-
-                <p>
+<p>
                     The App may provide an optional assistant that allows
                     users to submit text questions and receive generated
                     responses.
                 </p>
-
-                <p>
+<p>
                     When a user chooses to use the assistant, the text
                     submitted by the user must be transmitted to and
                     processed by infrastructure or processing services
                     supporting the assistant in order to provide a response.
                 </p>
-
-                <p>
+<p>
                     Assistant-related functionality may use Amazon Web
                     Services (AWS) and other processing infrastructure
                     configured for this functionality.
                 </p>
-
-                <p>
+<p>
                     The assistant is optional and is not required for
                     ordinary cloud backup and restore functionality.
                 </p>
-
-
-                <h3>
+<h3>
                     Sensitive Information
                 </h3>
-
-                <p>
+<p>
                     Users should not enter highly sensitive information
                     into the assistant, including:
                 </p>
-
-                <ul>
-                    <li>Passwords</li>
-                    <li>Payment card numbers</li>
-                    <li>OTP codes</li>
-                    <li>Authentication credentials</li>
-                    <li>Encryption keys</li>
-                    <li>Private Vault PINs</li>
-                    <li>Private security information</li>
-                    <li>Other highly sensitive personal information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Passwords</li>
+<li>Payment card numbers</li>
+<li>OTP codes</li>
+<li>Authentication credentials</li>
+<li>Encryption keys</li>
+<li>Private Vault PINs</li>
+<li>Private security information</li>
+<li>Other highly sensitive personal information</li>
+</ul>
+<p>
                     Assistant requests may be processed according to the
                     configuration and retention practices of the services
                     used to provide the assistant.
                 </p>
-
-                <p>
+<p>
                     If a material change to assistant processing or service
                     providers occurs, this Privacy Policy may be updated
                     accordingly.
                 </p>
-
-            </article>
-
-
-            <!-- 8 -->
-
-            <article class="policy-card" id="analytics">
-
-                <h2>
+</article>
+<!-- 8 -->
+<article class="policy-card" id="analytics">
+<h2>
                     8. Analytics, Diagnostics and Crash Reporting
                 </h2>
-
-                <p>
+<p>
                     The App may use Google Play services and Firebase
                     services enabled in the current App configuration for
                     analytics, diagnostics, crash reporting, performance
                     monitoring, technical troubleshooting, reliability,
                     and related functionality.
                 </p>
-
-                <p>
+<p>
                     Services may include Google Analytics for Firebase,
                     Firebase Crashlytics, or other Firebase functionality
                     where enabled in the current App version.
                 </p>
-
-                <p>
+<p>
                     Depending on the services used, information processed
                     may include:
                 </p>
-
-                <ul>
-                    <li>Device model</li>
-                    <li>Operating system</li>
-                    <li>App version</li>
-                    <li>Language</li>
-                    <li>App usage events</li>
-                    <li>App interaction events</li>
-                    <li>App or device identifiers</li>
-                    <li>Crash logs</li>
-                    <li>Diagnostic information</li>
-                    <li>Performance information</li>
-                    <li>IP address</li>
-                    <li>Network information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Device model</li>
+<li>Operating system</li>
+<li>App version</li>
+<li>Language</li>
+<li>App usage events</li>
+<li>App interaction events</li>
+<li>App or device identifiers</li>
+<li>Crash logs</li>
+<li>Diagnostic information</li>
+<li>Performance information</li>
+<li>IP address</li>
+<li>Network information</li>
+</ul>
+<p>
                     This information may be used to:
                 </p>
-
-                <ul>
-                    <li>Understand App usage</li>
-                    <li>Identify and fix crashes</li>
-                    <li>Diagnose technical problems</li>
-                    <li>Improve reliability</li>
-                    <li>Improve performance</li>
-                    <li>Improve features and user experience</li>
-                    <li>Protect the App from abuse or technical misuse</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Understand App usage</li>
+<li>Identify and fix crashes</li>
+<li>Diagnose technical problems</li>
+<li>Improve reliability</li>
+<li>Improve performance</li>
+<li>Improve features and user experience</li>
+<li>Protect the App from abuse or technical misuse</li>
+</ul>
+<p>
                     Google and Firebase process information according to
                     their applicable terms and privacy practices.
                 </p>
-
-            </article>
-
-
-            <!-- 9 -->
-
-            <article class="policy-card" id="advertising">
-
-                <h2>
+</article>
+<!-- 9 -->
+<article class="policy-card" id="advertising">
+<h2>
                     9. Advertising and Advertising Choices
                 </h2>
-
-                <p>
+<p>
                     The App may display advertisements through
                     <strong>Google AdMob</strong> and third-party
                     advertising networks available through
                     <strong>AdMob Mediation</strong>.
                 </p>
-
-                <p>
+<p>
                     Depending on the active mediation configuration, user
                     region, consent choices, device settings, and applicable
                     law, advertising providers may include:
                 </p>
-
-                <ul>
-                    <li>Google AdMob</li>
-                    <li>Meta Audience Network</li>
-                    <li>Mintegral</li>
-                    <li>Pangle</li>
-                    <li>Liftoff Monetize</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Google AdMob</li>
+<li>Meta Audience Network</li>
+<li>Mintegral</li>
+<li>Pangle</li>
+<li>Liftoff Monetize</li>
+</ul>
+<p>
                     Advertising providers may process information such as:
                 </p>
-
-                <ul>
-                    <li>Advertising identifiers</li>
-                    <li>Device information</li>
-                    <li>Device model</li>
-                    <li>Operating system</li>
-                    <li>IP address</li>
-                    <li>Network information</li>
-                    <li>App interactions</li>
-                    <li>Advertising interactions</li>
-                    <li>Approximate or coarse location where permitted</li>
-                    <li>Diagnostic or technical information</li>
-                    <li>Fraud-prevention information</li>
-                    <li>
+<ul>
+<li>Advertising identifiers</li>
+<li>Device information</li>
+<li>Device model</li>
+<li>Operating system</li>
+<li>IP address</li>
+<li>Network information</li>
+<li>App interactions</li>
+<li>Advertising interactions</li>
+<li>Approximate or coarse location where permitted</li>
+<li>Diagnostic or technical information</li>
+<li>Fraud-prevention information</li>
+<li>
                         Other information necessary to deliver, measure,
                         secure, or optimize advertisements
                     </li>
-                </ul>
-
-                <p>
+</ul>
+<p>
                     Advertising providers may use information to:
                 </p>
-
-                <ul>
-                    <li>Serve advertisements</li>
-                    <li>Measure advertisement performance</li>
-                    <li>Limit repeated advertising</li>
-                    <li>Detect fraud or invalid advertising traffic</li>
-                    <li>Provide personalized advertising where permitted and consented to</li>
-                    <li>Provide non-personalized advertising</li>
-                    <li>Improve advertising services</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Serve advertisements</li>
+<li>Measure advertisement performance</li>
+<li>Limit repeated advertising</li>
+<li>Detect fraud or invalid advertising traffic</li>
+<li>Provide personalized advertising where permitted and consented to</li>
+<li>Provide non-personalized advertising</li>
+<li>Improve advertising services</li>
+</ul>
+<h3>
                     AdMob Mediation
                 </h3>
-
-                <p>
+<p>
                     Google AdMob may act as the mediation platform through
                     which third-party advertising networks participate in
                     serving advertisements.
                 </p>
-
-                <p>
+<p>
                     When a third-party advertising provider is enabled
                     through AdMob Mediation, that provider may independently
                     process certain information through its SDKs, bidding
                     systems, advertising technologies, or related services.
                 </p>
-
-                <p>
+<p>
                     Such processing is subject to applicable consent
                     requirements, privacy settings, provider policies,
                     and laws.
                 </p>
-
-
-                <h3>
+<h3>
                     Advertising Choices
                 </h3>
-
-                <p>
+<p>
                     Where required by applicable law or Google Play
                     requirements, users may be presented with consent or
                     privacy controls related to advertising.
                 </p>
-
-                <p>
+<p>
                     Depending on the user's location and available controls,
                     users may be able to:
                 </p>
-
-                <ul>
-                    <li>Accept or decline certain personalized advertising processing</li>
-                    <li>Change applicable advertising privacy choices</li>
-                    <li>Receive non-personalized advertising where supported</li>
-                    <li>Manage advertising-related settings through their device or Google account</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Accept or decline certain personalized advertising processing</li>
+<li>Change applicable advertising privacy choices</li>
+<li>Receive non-personalized advertising where supported</li>
+<li>Manage advertising-related settings through their device or Google account</li>
+</ul>
+<p>
                     Changing advertising preferences does not necessarily
                     disable advertisements. It may instead affect whether
                     advertisements are personalized.
                 </p>
-
-            </article>
-
-
-            <!-- 10 -->
-
-            <article class="policy-card" id="billing">
-
-                <h2>
+</article>
+<!-- 10 -->
+<article class="policy-card" id="billing">
+<h2>
                     10. Paid Plans and Google Play Billing
                 </h2>
-
-                <p>
+<p>
                     The App may offer paid storage plans, subscriptions,
                     or in-app purchases.
                 </p>
-
-                <p>
+<p>
                     Purchases and subscriptions made through Google Play
                     are processed using <strong>Google Play Billing</strong>.
                 </p>
-
-                <p>
-                    Cell Cave does not directly receive or process a user's
+<p>
+                    CELL CAVE does not directly receive or process a user's
                     complete credit or debit card number for transactions
                     processed by Google Play.
                 </p>
-
-                <p>
+<p>
                     Google may process information such as:
                 </p>
-
-                <ul>
-                    <li>Payment information</li>
-                    <li>Billing information</li>
-                    <li>Transaction information</li>
-                    <li>Subscription information</li>
-                    <li>Google account information</li>
-                    <li>Related purchase information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Payment information</li>
+<li>Billing information</li>
+<li>Transaction information</li>
+<li>Subscription information</li>
+<li>Google account information</li>
+<li>Related purchase information</li>
+</ul>
+<p>
                     according to Google's applicable privacy policies
                     and terms.
                 </p>
-
-                <p>
+<p>
                     Users can manage subscriptions, renewals, cancellations,
                     and available payment methods through their Google Play
                     account.
                 </p>
-
-            </article>
-
-
-            <!-- 11 -->
-
-            <article class="policy-card" id="providers">
-
-                <h2>
+</article>
+<!-- 11 -->
+<article class="policy-card" id="providers">
+<h2>
                     11. Third-Party Service Providers
                 </h2>
-
-                <p>
+<p>
                     We use third-party service providers and technology
                     partners to operate, maintain, secure, analyze,
                     monetize, and improve the App.
                 </p>
-
-                <p>
+<p>
                     These providers may process information on our behalf
                     or provide services directly in connection with App
                     functionality.
                 </p>
-
-
-                <h3>
+<h3>
                     Amazon Web Services (AWS)
                 </h3>
-
-                <p>
+<p>
                     AWS may provide:
                 </p>
-
-                <ul>
-                    <li>Encrypted cloud backup storage</li>
-                    <li>Cloud infrastructure</li>
-                    <li>Account and sign-in infrastructure</li>
-                    <li>Authentication-related infrastructure</li>
-                    <li>Assistant-related infrastructure</li>
-                    <li>Security and operational services</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Encrypted cloud backup storage</li>
+<li>Cloud infrastructure</li>
+<li>Account and sign-in infrastructure</li>
+<li>Authentication-related infrastructure</li>
+<li>Assistant-related infrastructure</li>
+<li>Security and operational services</li>
+</ul>
+<h3>
                     Google Play Services / Firebase
                 </h3>
-
-                <p>
+<p>
                     Google and Firebase services may provide:
                 </p>
-
-                <ul>
-                    <li>Analytics</li>
-                    <li>Crash reporting</li>
-                    <li>Diagnostics</li>
-                    <li>Performance monitoring</li>
-                    <li>Technical services</li>
-                    <li>Related App functionality</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Analytics</li>
+<li>Crash reporting</li>
+<li>Diagnostics</li>
+<li>Performance monitoring</li>
+<li>Technical services</li>
+<li>Related App functionality</li>
+</ul>
+<h3>
                     Google AdMob
                 </h3>
-
-                <p>
+<p>
                     Google AdMob may provide:
                 </p>
-
-                <ul>
-                    <li>Advertising</li>
-                    <li>Ad serving</li>
-                    <li>Advertising measurement</li>
-                    <li>Ad mediation</li>
-                    <li>Fraud prevention</li>
-                    <li>Related advertising services</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Advertising</li>
+<li>Ad serving</li>
+<li>Advertising measurement</li>
+<li>Ad mediation</li>
+<li>Fraud prevention</li>
+<li>Related advertising services</li>
+</ul>
+<h3>
                     Meta Audience Network
                 </h3>
-
-                <p>
+<p>
                     Meta Audience Network may provide third-party
                     advertising demand through AdMob Mediation when enabled.
                 </p>
-
-
-                <h3>
+<h3>
                     Mintegral
                 </h3>
-
-                <p>
+<p>
                     Mintegral may provide third-party advertising demand
                     through AdMob Mediation when enabled.
                 </p>
-
-
-                <h3>
+<h3>
                     Pangle
                 </h3>
-
-                <p>
+<p>
                     Pangle may provide third-party advertising demand
                     through AdMob Mediation when enabled.
                 </p>
-
-
-                <h3>
+<h3>
                     Liftoff Monetize
                 </h3>
-
-                <p>
+<p>
                     Liftoff Monetize may provide third-party advertising
                     demand through AdMob Mediation when enabled.
                 </p>
-
-
-                <h3>
+<h3>
                     Google Play Billing
                 </h3>
-
-                <p>
+<p>
                     Google Play Billing is used for supported subscription
                     and in-app purchase processing.
                 </p>
-
-
-                <h3>
+<h3>
                     Third-Party Privacy Information
                 </h3>
-
-                <p>
+<p>
                     For additional information about the privacy practices
                     of applicable providers, please review:
                 </p>
-
-                <ul>
-
-                    <li>
-                        <a
-                            href="https://aws.amazon.com/privacy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>AWS Privacy Notice</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://firebase.google.com/support/privacy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Firebase Privacy and Security</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://policies.google.com/privacy"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Google Privacy Policy</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://support.google.com/admob/answer/6128543"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Google AdMob Privacy Information</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://www.facebook.com/privacy/policy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Meta Privacy Policy</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://www.mintegral.com/en/privacy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Mintegral Privacy Policy</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://www.pangleglobal.com/privacy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Pangle Privacy Policy</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://www.pangleglobal.com/privacy/enduser"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Pangle End-User Privacy Information</strong>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a
-                            href="https://liftoff.io/privacy-policy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <strong>Liftoff Privacy Policy</strong>
-                        </a>
-                    </li>
-
-                </ul>
-
-                <p>
+<ul>
+<li>
+<a href="https://aws.amazon.com/privacy/" rel="noopener noreferrer" target="_blank">
+<strong>AWS Privacy Notice</strong>
+</a>
+</li>
+<li>
+<a href="https://firebase.google.com/support/privacy/" rel="noopener noreferrer" target="_blank">
+<strong>Firebase Privacy and Security</strong>
+</a>
+</li>
+<li>
+<a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">
+<strong>Google Privacy Policy</strong>
+</a>
+</li>
+<li>
+<a href="https://support.google.com/admob/answer/6128543" rel="noopener noreferrer" target="_blank">
+<strong>Google AdMob Privacy Information</strong>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/privacy/policy/" rel="noopener noreferrer" target="_blank">
+<strong>Meta Privacy Policy</strong>
+</a>
+</li>
+<li>
+<a href="https://www.mintegral.com/en/privacy/" rel="noopener noreferrer" target="_blank">
+<strong>Mintegral Privacy Policy</strong>
+</a>
+</li>
+<li>
+<a href="https://www.pangleglobal.com/privacy/" rel="noopener noreferrer" target="_blank">
+<strong>Pangle Privacy Policy</strong>
+</a>
+</li>
+<li>
+<a href="https://www.pangleglobal.com/privacy/enduser" rel="noopener noreferrer" target="_blank">
+<strong>Pangle End-User Privacy Information</strong>
+</a>
+</li>
+<li>
+<a href="https://liftoff.io/privacy-policy/" rel="noopener noreferrer" target="_blank">
+<strong>Liftoff Privacy Policy</strong>
+</a>
+</li>
+</ul>
+<p>
                     Third-party providers may process information according
                     to their own privacy policies, terms, contractual
                     obligations, technical requirements, and applicable laws.
                 </p>
-
-                <p>
-                    Cell Cave does not control the independent privacy
+<p>
+                    CELL CAVE does not control the independent privacy
                     practices of third-party service providers.
                 </p>
-
-                <p>
+<p>
                     The third-party services enabled in the App may change
                     over time. If a material change affects how user
                     information is handled, this Privacy Policy may be
                     updated accordingly.
                 </p>
-
-            </article>
-
-
-            <!-- 12 -->
-
-            <article class="policy-card" id="use">
-
-                <h2>
+</article>
+<!-- 12 -->
+<article class="policy-card" id="use">
+<h2>
                     12. How We Use Information
                 </h2>
-
-                <p>
+<p>
                     Information handled through the App may be used to:
                 </p>
-
-                <ul>
-                    <li>Create and maintain accounts</li>
-                    <li>Authenticate users</li>
-                    <li>Verify account access</li>
-                    <li>Send account verification codes</li>
-                    <li>Provide photo backup</li>
-                    <li>Provide video backup</li>
-                    <li>Provide contact backup</li>
-                    <li>Provide document and file backup</li>
-                    <li>Provide supported audio backup</li>
-                    <li>Provide supported SD-card or external-storage backup</li>
-                    <li>Provide automatic backup</li>
-                    <li>Encrypt supported backup content before upload</li>
-                    <li>Securely transmit encrypted backup content</li>
-                    <li>Store encrypted backup content using cloud infrastructure</li>
-                    <li>Restore supported backup content</li>
-                    <li>Provide Private Vault functionality</li>
-                    <li>Provide shared-folder functionality</li>
-                    <li>Send and manage sharing invitations</li>
-                    <li>Organize, search, sort, preview, or manage supported content</li>
-                    <li>Provide the optional assistant</li>
-                    <li>Provide customer support</li>
-                    <li>Identify and fix crashes</li>
-                    <li>Diagnose technical problems</li>
-                    <li>Improve App performance</li>
-                    <li>Improve App functionality</li>
-                    <li>Provide and measure advertising</li>
-                    <li>Support advertising mediation</li>
-                    <li>Prevent advertising fraud and invalid traffic</li>
-                    <li>Process subscriptions and purchases</li>
-                    <li>Detect fraud, abuse, unauthorized access, and misuse</li>
-                    <li>Protect accounts, users, infrastructure, and services</li>
-                    <li>Comply with applicable legal obligations</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Create and maintain accounts</li>
+<li>Authenticate users</li>
+<li>Verify account access</li>
+<li>Send account verification codes</li>
+<li>Provide photo backup</li>
+<li>Provide video backup</li>
+<li>Provide contact backup</li>
+<li>Provide document and file backup</li>
+<li>Provide supported audio backup</li>
+<li>Provide supported SD-card or external-storage backup</li>
+<li>Provide automatic backup</li>
+<li>Encrypt supported backup content before upload</li>
+<li>Securely transmit encrypted backup content</li>
+<li>Store encrypted backup content using cloud infrastructure</li>
+<li>Restore supported backup content</li>
+<li>Provide Private Vault functionality</li>
+<li>Provide shared-folder functionality</li>
+<li>Send and manage sharing invitations</li>
+<li>Organize, search, sort, preview, or manage supported content</li>
+<li>Provide the optional assistant</li>
+<li>Provide customer support</li>
+<li>Identify and fix crashes</li>
+<li>Diagnose technical problems</li>
+<li>Improve App performance</li>
+<li>Improve App functionality</li>
+<li>Provide and measure advertising</li>
+<li>Support advertising mediation</li>
+<li>Prevent advertising fraud and invalid traffic</li>
+<li>Process subscriptions and purchases</li>
+<li>Detect fraud, abuse, unauthorized access, and misuse</li>
+<li>Protect accounts, users, infrastructure, and services</li>
+<li>Comply with applicable legal obligations</li>
+</ul>
+<p>
                     We do not intentionally use personal or sensitive user
                     data for purposes incompatible with the disclosures in
                     this Privacy Policy.
                 </p>
-
-            </article>
-
-
-            <!-- 13 -->
-
-            <article class="policy-card" id="sharing">
-
-                <h2>
+</article>
+<!-- 13 -->
+<article class="policy-card" id="sharing">
+<h2>
                     13. Sharing and Disclosure of Information
                 </h2>
-
-                <p>
+<p>
                     Information may be transmitted, shared, or made
                     available to service providers where necessary to
                     provide the App and its functionality.
                 </p>
-
-                <p>
+<p>
                     Relevant purposes may include:
                 </p>
-
-                <ul>
-                    <li>Cloud storage</li>
-                    <li>Authentication</li>
-                    <li>Account management</li>
-                    <li>Analytics</li>
-                    <li>Crash reporting</li>
-                    <li>Diagnostics</li>
-                    <li>Advertising</li>
-                    <li>Advertising mediation</li>
-                    <li>Advertising measurement</li>
-                    <li>Billing</li>
-                    <li>Assistant processing</li>
-                    <li>Security</li>
-                    <li>Fraud prevention</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Cloud storage</li>
+<li>Authentication</li>
+<li>Account management</li>
+<li>Analytics</li>
+<li>Crash reporting</li>
+<li>Diagnostics</li>
+<li>Advertising</li>
+<li>Advertising mediation</li>
+<li>Advertising measurement</li>
+<li>Billing</li>
+<li>Assistant processing</li>
+<li>Security</li>
+<li>Fraud prevention</li>
+</ul>
+<p>
                     Third-party advertising providers may receive or
                     collect certain information directly through their
                     technologies when their services are active in the App.
                 </p>
-
-
-                <h3>
+<h3>
                     User-Initiated Sharing
                 </h3>
-
-                <p>
+<p>
                     When a user intentionally shares a file, folder,
                     or other supported content with another person,
                     information required to provide that sharing
                     functionality may be disclosed to the selected recipient.
                 </p>
-
-                <p>
+<p>
                     This may include:
                 </p>
-
-                <ul>
-                    <li>Shared content</li>
-                    <li>Sharing permissions</li>
-                    <li>Invitation information</li>
-                    <li>Recipient email address</li>
-                    <li>Information necessary to operate the shared folder</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Shared content</li>
+<li>Sharing permissions</li>
+<li>Invitation information</li>
+<li>Recipient email address</li>
+<li>Information necessary to operate the shared folder</li>
+</ul>
+<p>
                     Such disclosure occurs because the user has chosen
                     to use the sharing feature.
                 </p>
-
-
-                <h3>
+<h3>
                     Legal and Safety Disclosures
                 </h3>
-
-                <p>
+<p>
                     Information may also be disclosed when reasonably
                     necessary to:
                 </p>
-
-                <ul>
-                    <li>Comply with applicable law</li>
-                    <li>Respond to lawful legal process</li>
-                    <li>Respond to a valid government request</li>
-                    <li>Protect users or Cell Cave</li>
-                    <li>Protect security or property</li>
-                    <li>Prevent fraud or abuse</li>
-                    <li>Investigate security incidents</li>
-                    <li>Prevent unlawful activity</li>
-                    <li>Enforce applicable terms</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>Comply with applicable law</li>
+<li>Respond to lawful legal process</li>
+<li>Respond to a valid government request</li>
+<li>Protect users or CELL CAVE</li>
+<li>Protect security or property</li>
+<li>Prevent fraud or abuse</li>
+<li>Investigate security incidents</li>
+<li>Prevent unlawful activity</li>
+<li>Enforce applicable terms</li>
+</ul>
+<h3>
                     Sale of Personal Data
                 </h3>
-
-                <p>
-                    Cell Cave does not sell personal information for direct
+<p>
+                    CELL CAVE does not sell personal information for direct
                     monetary consideration.
                 </p>
-
-                <p>
+<p>
                     Advertising providers may nevertheless receive or
                     process certain advertising-related information as
                     described in this Privacy Policy, subject to applicable
                     laws, consent requirements, user choices, provider terms,
                     and the App's active advertising configuration.
                 </p>
-
-            </article>
-
-
-            <!-- 14 -->
-
-            <article class="policy-card" id="retention">
-
-                <h2>
+</article>
+<!-- 14 -->
+<article class="policy-card" id="retention">
+<h2>
                     14. Data Storage and Retention
                 </h2>
-
-                <p>
+<p>
                     Different categories of information may be retained
                     for different periods depending on:
                 </p>
-
-                <ul>
-                    <li>The purpose of processing</li>
-                    <li>Whether an account remains active</li>
-                    <li>User choices</li>
-                    <li>Operational requirements</li>
-                    <li>Security requirements</li>
-                    <li>Fraud-prevention requirements</li>
-                    <li>Legal obligations</li>
-                    <li>Third-party provider retention practices</li>
-                </ul>
-
-
-                <h3>
+<ul>
+<li>The purpose of processing</li>
+<li>Whether an account remains active</li>
+<li>User choices</li>
+<li>Operational requirements</li>
+<li>Security requirements</li>
+<li>Fraud-prevention requirements</li>
+<li>Legal obligations</li>
+<li>Third-party provider retention practices</li>
+</ul>
+<h3>
                     Encrypted Backup Data
                 </h3>
-
-                <p>
+<p>
                     Supported backup files are encrypted on the user's
                     device before upload.
                 </p>
-
-                <p>
+<p>
                     Encrypted backup files are transmitted through encrypted
                     network connections and remain encrypted while stored
                     at rest using AWS infrastructure.
                 </p>
-
-                <p>
+<p>
                     Backed-up content may remain stored while associated
                     with an active account or while necessary to provide
                     the requested backup service.
                 </p>
-
-
-                <h3>
+<h3>
                     Account Information
                 </h3>
-
-                <p>
+<p>
                     Account information such as:
                 </p>
-
-                <ul>
-                    <li>Email address</li>
-                    <li>Account identifier</li>
-                    <li>Authentication information</li>
-                    <li>Verification information</li>
-                    <li>Security-related account records</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Email address</li>
+<li>Account identifier</li>
+<li>Authentication information</li>
+<li>Verification information</li>
+<li>Security-related account records</li>
+</ul>
+<p>
                     may be retained while necessary to maintain the account
                     and provide backup, restore, authentication, and
                     security functionality.
                 </p>
-
-
-                <h3>
+<h3>
                     Analytics and Diagnostics
                 </h3>
-
-                <p>
+<p>
                     Information processed through Google, Firebase, or
                     other technical services may be retained according to
                     the applicable provider's retention settings and policies.
                 </p>
-
-
-                <h3>
+<h3>
                     Advertising Information
                 </h3>
-
-                <p>
+<p>
                     Advertising providers may retain advertising-related
                     information according to their own policies, settings,
                     legal obligations, and applicable configurations.
                 </p>
-
-
-                <h3>
+<h3>
                     Billing Information
                 </h3>
-
-                <p>
+<p>
                     Google Play may retain billing, transaction, and
                     subscription information according to Google's
                     policies and legal obligations.
                 </p>
-
-
-                <h3>
+<h3>
                     Assistant Information
                 </h3>
-
-                <p>
+<p>
                     Information submitted through the optional assistant
                     may be processed or retained according to the
                     configuration and retention practices of the
                     infrastructure or services used to provide the assistant.
                 </p>
-
-                <p>
+<p>
                     Users should not submit highly sensitive information
                     to the assistant.
                 </p>
-
-
-                <h3>
+<h3>
                     Shared Folder Information
                 </h3>
-
-                <p>
+<p>
                     Information associated with shared folders or invitations
                     may be retained while necessary to provide and manage
                     sharing functionality.
                 </p>
-
-
-                <h3>
+<h3>
                     Support Communications
                 </h3>
-
-                <p>
-                    If users contact Cell Cave for support or privacy
+<p>
+                    If users contact CELL CAVE for support or privacy
                     assistance, communications may be retained for as long
                     as reasonably necessary to:
                 </p>
-
-                <ul>
-                    <li>Respond to the request</li>
-                    <li>Maintain appropriate support records</li>
-                    <li>Resolve disputes</li>
-                    <li>Prevent abuse</li>
-                    <li>Comply with applicable legal obligations</li>
-                </ul>
-
-            </article>
-
-
-            <!-- 15 -->
-
-            <article class="policy-card" id="deletion">
-
-                <h2>
+<ul>
+<li>Respond to the request</li>
+<li>Maintain appropriate support records</li>
+<li>Resolve disputes</li>
+<li>Prevent abuse</li>
+<li>Comply with applicable legal obligations</li>
+</ul>
+</article>
+<!-- 15 -->
+<article class="policy-card" id="deletion">
+<h2>
                     15. Account and Data Deletion
                 </h2>
-
-                <p>
+<p>
                     Users can delete their Cloud Backup: Photo Storage
                     account and associated active backup data.
                 </p>
-
-                <p>
+<p>
                     Account deletion may be initiated from inside the App.
                 </p>
-
-                <p>
+<p>
                     If a user cannot access the App, an alternative
                     deletion method is available through the App's dedicated
-                    Account & Data Deletion page.
+                    Account &amp; Data Deletion page.
                 </p>
-
-                <p>
+<p>
                     The account-deletion process explains:
                 </p>
-
-                <ul>
-                    <li>How to initiate deletion</li>
-                    <li>What account data is deleted</li>
-                    <li>What active backup data is deleted</li>
-                    <li>What limited information may need to be retained</li>
-                    <li>The consequences of permanent account deletion</li>
-                </ul>
-
-                <p>
+<ul>
+<li>How to initiate deletion</li>
+<li>What account data is deleted</li>
+<li>What active backup data is deleted</li>
+<li>What limited information may need to be retained</li>
+<li>The consequences of permanent account deletion</li>
+</ul>
+<p>
                     When an account is deleted, associated content is no
                     longer retained as active user-accessible backup data.
                 </p>
-
-                <p>
+<p>
                     Short-lived residual copies may remain temporarily in
                     infrastructure-provider backups, disaster-recovery
                     systems, security systems, or other technically necessary
                     backup systems.
                 </p>
-
-                <p>
+<p>
                     Such residual copies are not retained as active
                     user-accessible backups and may remain only for legitimate
                     technical, security, disaster-recovery, fraud-prevention,
                     or legal purposes.
                 </p>
-
-                <p>
+<p>
                     Certain information may also be retained where required
                     by law or necessary for security, fraud prevention,
                     dispute resolution, or enforcement of applicable agreements.
                 </p>
-
-                <a
-                    href="/apps/cloud-backup-photo-storage/account-deletion/"
-                    class="deletion-button"
-                >
-                    View Account & Data Deletion Instructions →
+<a class="deletion-button" href="/apps/cloud-backup-photo-storage/account-deletion/">
+                    View Account &amp; Data Deletion Instructions →
                 </a>
-
-            </article>
-
-
-            <!-- 16 -->
-
-            <article class="policy-card" id="choices">
-
-                <h2>
+</article>
+<!-- 16 -->
+<article class="policy-card" id="choices">
+<h2>
                     16. Your Privacy Rights and Choices
                 </h2>
-
-                <p>
+<p>
                     Depending on applicable law, country, region, and the
                     type of information involved, users may have rights or
                     choices including:
                 </p>
-
-                <ul>
-                    <li>Requesting access to certain personal information</li>
-                    <li>Requesting correction of inaccurate information</li>
-                    <li>Requesting deletion of eligible information</li>
-                    <li>Deleting an account</li>
-                    <li>Choosing which supported content to back up</li>
-                    <li>Removing backed-up content where supported</li>
-                    <li>Enabling or disabling automatic backup</li>
-                    <li>Granting or denying Android permissions</li>
-                    <li>Revoking previously granted permissions</li>
-                    <li>Choosing Full, Limited, or No media access where Android supports those choices</li>
-                    <li>Choosing whether to use contact backup</li>
-                    <li>Choosing whether to use the Private Vault</li>
-                    <li>Choosing whether to use shared-folder functionality</li>
-                    <li>Choosing whether to use the optional assistant</li>
-                    <li>Managing applicable advertising consent choices</li>
-                    <li>Managing personalized or non-personalized advertising preferences where supported</li>
-                    <li>Managing subscriptions through Google Play</li>
-                    <li>Contacting Cell Cave regarding privacy concerns</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Requesting access to certain personal information</li>
+<li>Requesting correction of inaccurate information</li>
+<li>Requesting deletion of eligible information</li>
+<li>Deleting an account</li>
+<li>Choosing which supported content to back up</li>
+<li>Removing backed-up content where supported</li>
+<li>Enabling or disabling automatic backup</li>
+<li>Granting or denying Android permissions</li>
+<li>Revoking previously granted permissions</li>
+<li>Choosing Full, Limited, or No media access where Android supports those choices</li>
+<li>Choosing whether to use contact backup</li>
+<li>Choosing whether to use the Private Vault</li>
+<li>Choosing whether to use shared-folder functionality</li>
+<li>Choosing whether to use the optional assistant</li>
+<li>Managing applicable advertising consent choices</li>
+<li>Managing personalized or non-personalized advertising preferences where supported</li>
+<li>Managing subscriptions through Google Play</li>
+<li>Contacting CELL CAVE regarding privacy concerns</li>
+</ul>
+<p>
                     Where applicable, users may also have rights to object
                     to or restrict certain processing or withdraw consent
                     for processing based on consent.
                 </p>
-
-                <p>
+<p>
                     Privacy rights vary by jurisdiction and may be subject
                     to applicable legal exceptions.
                 </p>
-
-                <p>
+<p>
                     We may take reasonable steps to verify the identity of
                     a person making a privacy or account-related request
                     before acting on that request.
                 </p>
-
-            </article>
-
-
-            <!-- 17 -->
-
-            <article class="policy-card" id="security">
-
-                <h2>
+</article>
+<!-- 17 -->
+<article class="policy-card" id="security">
+<h2>
                     17. Security
                 </h2>
-
-                <p>
+<p>
                     We use technical and organizational measures designed
                     to protect information handled through Cloud Backup:
                     Photo Storage.
                 </p>
-
-                <p>
+<p>
                     For supported cloud backups:
                 </p>
-
-                <ul>
-                    <li>Backup content is encrypted on the user's device before upload</li>
-                    <li>Backup data is transmitted using encrypted network connections</li>
-                    <li>Backup data remains encrypted while stored at rest using AWS infrastructure</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Backup content is encrypted on the user's device before upload</li>
+<li>Backup data is transmitted using encrypted network connections</li>
+<li>Backup data remains encrypted while stored at rest using AWS infrastructure</li>
+</ul>
+<p>
                     These measures are intended to protect supported backup
                     content during device-side processing, transmission,
                     and cloud storage.
                 </p>
-
-                <p>
+<p>
                     Additional security measures may include:
                 </p>
-
-                <ul>
-                    <li>Account authentication</li>
-                    <li>Account verification</li>
-                    <li>OTP verification</li>
-                    <li>Access restrictions</li>
-                    <li>Fraud-prevention measures</li>
-                    <li>Infrastructure security</li>
-                    <li>Device authentication where supported</li>
-                    <li>Private Vault access controls</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Account authentication</li>
+<li>Account verification</li>
+<li>OTP verification</li>
+<li>Access restrictions</li>
+<li>Fraud-prevention measures</li>
+<li>Infrastructure security</li>
+<li>Device authentication where supported</li>
+<li>Private Vault access controls</li>
+</ul>
+<p>
                     Users are responsible for protecting:
                 </p>
-
-                <ul>
-                    <li>Their device</li>
-                    <li>Their email account</li>
-                    <li>OTP codes</li>
-                    <li>Private Vault PIN</li>
-                    <li>Device authentication</li>
-                    <li>Account credentials</li>
-                    <li>Other security information</li>
-                </ul>
-
-                <p>
-                    Cell Cave will not ask users to provide passwords,
+<ul>
+<li>Their device</li>
+<li>Their email account</li>
+<li>OTP codes</li>
+<li>Private Vault PIN</li>
+<li>Device authentication</li>
+<li>Account credentials</li>
+<li>Other security information</li>
+</ul>
+<p>
+                    CELL CAVE will not ask users to provide passwords,
                     OTP codes, encryption keys, or Private Vault PINs
                     through advertising, analytics, the optional assistant,
                     or ordinary unsolicited communications.
                 </p>
-
-                <p>
+<p>
                     No electronic transmission method, network, cloud
                     service, device, software, or security system can be
                     guaranteed to be completely secure in every circumstance.
                 </p>
-
-            </article>
-
-
-            <!-- 18 -->
-
-            <article class="policy-card" id="international">
-
-                <h2>
+</article>
+<!-- 18 -->
+<article class="policy-card" id="international">
+<h2>
                     18. International Data Processing
                 </h2>
-
-                <p>
+<p>
                     The App relies on infrastructure and service providers
                     that may operate in multiple countries.
                 </p>
-
-                <p>
+<p>
                     As a result, information such as:
                 </p>
-
-                <ul>
-                    <li>Account information</li>
-                    <li>Encrypted backup data</li>
-                    <li>Analytics information</li>
-                    <li>Diagnostic information</li>
-                    <li>Crash information</li>
-                    <li>Advertising-related information</li>
-                    <li>Billing or subscription information</li>
-                    <li>Assistant requests</li>
-                    <li>Sharing-related information</li>
-                </ul>
-
-                <p>
+<ul>
+<li>Account information</li>
+<li>Encrypted backup data</li>
+<li>Analytics information</li>
+<li>Diagnostic information</li>
+<li>Crash information</li>
+<li>Advertising-related information</li>
+<li>Billing or subscription information</li>
+<li>Assistant requests</li>
+<li>Sharing-related information</li>
+</ul>
+<p>
                     may be processed or stored in countries other than the
                     country where the user resides.
                 </p>
-
-                <p>
+<p>
                     Encrypted backup content remains subject to the security
                     protections described in this Privacy Policy while
                     transmitted and stored using applicable cloud
                     infrastructure.
                 </p>
-
-                <p>
+<p>
                     Third-party providers may process information in
                     locations where they or their service providers operate.
                 </p>
-
-                <p>
+<p>
                     Such processing is subject to applicable laws,
                     contractual requirements, and provider privacy practices.
                 </p>
-
-            </article>
-
-
-            <!-- 19 -->
-
-            <article class="policy-card" id="children">
-
-                <h2>
+</article>
+<!-- 19 -->
+<article class="policy-card" id="children">
+<h2>
                     19. Children's Privacy
                 </h2>
-
-                <p>
+<p>
                     Cloud Backup: Photo Storage is not directed specifically
                     to children under the age of 13.
                 </p>
-
-                <p>
-                    Cell Cave does not knowingly design or operate the App
+<p>
+                    CELL CAVE does not knowingly design or operate the App
                     specifically for children under 13.
                 </p>
-
-                <p>
+<p>
                     The App does not knowingly target personalized advertising
                     to children where prohibited by applicable laws or Google
                     Play requirements.
                 </p>
-
-                <p>
+<p>
                     If a parent or legal guardian believes a child has
                     provided personal information through the App in
                     circumstances requiring deletion or other action, the
-                    parent or guardian may contact Cell Cave.
+                    parent or guardian may contact CELL CAVE.
                 </p>
-
-                <p>
+<p>
                     We will review the request and take appropriate action
                     where required by applicable law.
                 </p>
-
-            </article>
-
-
-            <!-- 20 -->
-
-            <article class="policy-card" id="changes">
-
-                <h2>
+</article>
+<!-- 20 -->
+<article class="policy-card" id="changes">
+<h2>
                     20. Changes to This Privacy Policy
                 </h2>
-
-                <p>
+<p>
                     We may update this Privacy Policy when:
                 </p>
-
-                <ul>
-                    <li>App functionality changes</li>
-                    <li>Backup functionality changes</li>
-                    <li>Automatic backup functionality changes</li>
-                    <li>Private Vault functionality changes</li>
-                    <li>Sharing functionality changes</li>
-                    <li>Cloud infrastructure changes</li>
-                    <li>Authentication services change</li>
-                    <li>Analytics or diagnostic services change</li>
-                    <li>Advertising or mediation providers change</li>
-                    <li>Assistant services change</li>
-                    <li>Data practices change</li>
-                    <li>Applicable legal requirements change</li>
-                    <li>Google Play or other platform requirements change</li>
-                </ul>
-
-                <p>
+<ul>
+<li>App functionality changes</li>
+<li>Backup functionality changes</li>
+<li>Automatic backup functionality changes</li>
+<li>Private Vault functionality changes</li>
+<li>Sharing functionality changes</li>
+<li>Cloud infrastructure changes</li>
+<li>Authentication services change</li>
+<li>Analytics or diagnostic services change</li>
+<li>Advertising or mediation providers change</li>
+<li>Assistant services change</li>
+<li>Data practices change</li>
+<li>Applicable legal requirements change</li>
+<li>Google Play or other platform requirements change</li>
+</ul>
+<p>
                     When this Privacy Policy is updated, the
                     <strong>Last Updated</strong> date will be revised.
                 </p>
-
-                <p>
+<p>
                     Users are encouraged to review this Privacy Policy
                     periodically.
                 </p>
-
-                <p>
+<p>
                     Where appropriate, additional notice may be provided
                     when a material change significantly affects users'
                     privacy rights or the way personal or sensitive
                     information is handled.
                 </p>
-
-            </article>
-
-
-            <!-- 21 -->
-
-            <article class="policy-card" id="contact">
-
-                <h2>
+</article>
+<!-- 21 -->
+<article class="policy-card" id="contact">
+<h2>
                     21. Contact Us
                 </h2>
-
-                <p>
+<p>
                     If you have questions, privacy requests,
                     account-deletion questions, security concerns, or
                     questions about how Cloud Backup: Photo Storage
                     handles information, please contact:
                 </p>
-
-                <div class="info-box">
-
-                    <strong>
-                        Cell Cave
+<div class="info-box">
+<strong>
+                        CELL CAVE
                     </strong>
-
-                    <br>
-
-                    <strong>
+<br/>
+<strong>
                         Email:
                     </strong>
-
-                    <a href="mailto:cellcave70@gmail.com">
-                        cellcave70@gmail.com
-                    </a>
-
-                </div>
-
-                <p>
-                    <strong>App:</strong>
+<a data-site-email-link="" href="#"><span data-site-email="">Email</span></a>
+</div>
+<p>
+<strong>App:</strong>
                     Cloud Backup: Photo Storage
                 </p>
-
-                <p>
-                    <strong>Developer:</strong>
-                    Cell Cave
+<p>
+<strong>Developer:</strong>
+                    CELL CAVE
                 </p>
-
-                <p>
-                    <strong>Last Updated:</strong>
+<p>
+<strong>Last Updated:</strong>
                     September 9, 2026
                 </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
+</article>
+</div>
+</div>
 </section>
-
-
 </main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="container">
-
-        <div class="footer-main">
-
-
-            <div class="footer-brand">
-
-                <h3>
-                    Cell Cave
-                </h3>
-
-                <p>
-                    Simple Utilities. Smarter Everyday.
-                </p>
-
-
-                <div class="footer-social">
-
-                    <span class="social-label">
-                        Follow Cell Cave
-                    </span>
-
-
-                    <div class="social-icons">
-
-
-                        <!-- Facebook -->
-
-                        <span
-                            class="social-icon"
-                            title="Facebook"
-                            aria-label="Facebook"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-                                <path d="M13.7 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.7-1.6H17V3.8c-.3 0-1.4-.1-2.6-.1-2.6 0-4.4 1.6-4.4 4.5V10H7v3h3v9h3.7z"/>
-                            </svg>
-
-                        </span>
-
-
-                        <!-- Instagram -->
-
-                        <span
-                            class="social-icon instagram"
-                            title="Instagram"
-                            aria-label="Instagram"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <rect
-                                    x="3.5"
-                                    y="3.5"
-                                    width="17"
-                                    height="17"
-                                    rx="5"
-                                ></rect>
-
-                                <circle
-                                    cx="12"
-                                    cy="12"
-                                    r="4"
-                                ></circle>
-
-                                <circle
-                                    cx="17.5"
-                                    cy="6.5"
-                                    r="0.8"
-                                    fill="currentColor"
-                                    stroke="none"
-                                ></circle>
-
-                            </svg>
-
-                        </span>
-
-
-                        <!-- LinkedIn -->
-
-                        <span
-                            class="social-icon"
-                            title="LinkedIn"
-                            aria-label="LinkedIn"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path d="M5.2 8.2H2.4V21h2.8V8.2zM3.8 2.5A1.7 1.7 0 1 0 3.8 5.9a1.7 1.7 0 0 0 0-3.4zM21.6 13.7c0-3.9-2.1-5.7-4.9-5.7-2.3 0-3.3 1.2-3.8 2.1V8.2h-2.8V21h2.8v-6.4c0-1.7.3-3.4 2.5-3.4 2.1 0 2.1 2 2.1 3.5V21h2.8l.1-7.3z"/>
-
-                            </svg>
-
-                        </span>
-
-
-                        <!-- YouTube -->
-
-                        <span
-                            class="social-icon"
-                            title="YouTube"
-                            aria-label="YouTube"
-                        >
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path d="M21.4 7.1c-.2-1.3-1.1-2.2-2.4-2.4C17.3 4.4 14.7 4.3 12 4.3s-5.3.1-7 .4c-1.3.2-2.2 1.1-2.4 2.4-.2 1.4-.3 3.1-.3 4.9s.1 3.5.3 4.9c.2 1.3 1.1 2.2 2.4 2.4 1.7.3 4.3.4 7 .4s5.3-.1 7-.4c1.3-.2 2.2-1.1 2.4-2.4.2-1.4.3-3.1.3-4.9s-.1-3.5-.3-4.9z"/>
-
-                                <path
-                                    d="M10 8.7l6 3.3-6 3.3V8.7z"
-                                    fill="#171916"
-                                />
-
-                            </svg>
-
-                        </span>
-
-
-                        <!-- X -->
-
-                        <span
-                            class="social-icon social-x"
-                            title="X"
-                            aria-label="X"
-                        >
-                            X
-                        </span>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <nav
-                class="footer-links"
-                aria-label="Footer navigation"
-            >
-
-                <a href="/">
-                    Home
-                </a>
-
-                <a href="/apps/">
-                    Apps
-                </a>
-
-                <a href="/support/">
-                    Support
-                </a>
-
-                <a href="/about/">
-                    About
-                </a>
-
-                <a href="/privacy/">
-                    Privacy Policy
-                </a>
-
-                <a href="/terms/">
-                    Terms of Use
-                </a>
-
-                <a href="/app-store/">
-                    App Store
-                </a>
-
-                <a
-                    href="https://play.google.com/store/apps/developer?id=Cell+Cave"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Google Play
-                </a>
-
-            </nav>
-
-
-        </div>
-
-
-        <div class="footer-bottom">
-            © 2026 Cell Cave. All rights reserved.
-        </div>
-
-
-    </div>
-
-</footer>
-
-
+<div id="siteFooter"></div>
 </body>
-
 </html>
