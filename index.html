@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple App Store | CELL CAVE</title>
-    <meta name="description" content="Apple App Store availability for CELL CAVE apps is coming soon. Explore current CELL CAVE apps and Google Play availability.">
+    <title>CELL CAVE | Apps &amp; Digital Products</title>
+    <meta name="description" content="CELL CAVE creates thoughtfully designed apps and digital products that make everyday life simpler, smarter, and more convenient.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,34 +12,113 @@
     <script src="/assets/js/config.js" defer></script>
     <script src="/assets/js/apps-data.js" defer></script>
     <script src="/assets/js/site.js" defer></script>
+    <script src="/assets/js/home.js" defer></script>
 </head>
-<body data-page="">
+<body data-page="home">
     <div id="siteHeader"></div>
     <main class="site-main">
 
-        <section class="coming-hero">
-            <div class="container">
-                <div class="coming-shell">
-                    <div>
-                        <span class="eyebrow">Apple App Store</span>
-                        <h1>Coming to iPhone and iPad.</h1>
-                        <p>CELL CAVE apps are not currently listed on the Apple App Store from this website. We’re working on future availability. In the meantime, explore current CELL CAVE apps and services on Google Play.</p>
-                        <div class="hero-actions">
-                            <a class="btn btn-brand" href="/apps/">Explore CELL CAVE Apps</a>
-                            <a class="btn btn-secondary" href="#" data-site-google-play-link target="_blank" rel="noopener noreferrer">Google Play ↗</a>
+        <section class="home-hero">
+            <div class="container home-hero-grid">
+                <div class="home-hero-copy">
+                    <span class="eyebrow">Apps & Digital Products</span>
+                    <h1 class="display-title">Simple ideas. Smart apps. <span class="accent">Easier everyday life.</span></h1>
+                    <p class="lead">CELL CAVE creates thoughtfully designed apps and digital products that help people simplify everyday tasks, stay organized, and get things done more easily.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="/apps/">Explore Our Apps</a>
+                        <a class="btn btn-secondary" href="/about/">About CELL CAVE</a>
+                    </div>
+                    <p class="hero-note">A growing ecosystem built around useful, easy-to-use digital experiences.</p>
+                </div>
+
+                <div class="hero-visual-wrap" aria-label="CELL CAVE app explorer">
+                    <div class="hero-orbit" aria-hidden="true"></div>
+                    <div class="hero-product-card">
+                        <div class="hero-product-top">
+                            <div class="hero-brand-mini">
+                                <span class="mini-logo"><img data-site-logo alt=""></span>
+                                <span>CELL CAVE</span>
+                            </div>
+                            <span class="hero-app-count" id="heroAppCount">06</span>
+                        </div>
+                        <h2>Explore one app at a time.</h2>
+                        <p>Browse the CELL CAVE collection and open any app directly from its icon.</p>
+
+                        <div class="app-explorer">
+                            <div class="app-explorer-main">
+                                <button class="app-explorer-btn" id="appExplorerPrev" type="button" aria-label="Previous app">‹</button>
+                                <div class="app-explorer-stage" id="appExplorerStage">
+                                    <a class="app-explorer-icon" id="appExplorerIcon" href="/apps/" aria-label="Open app">APP</a>
+                                </div>
+                                <button class="app-explorer-btn" id="appExplorerNext" type="button" aria-label="Next app">›</button>
+                            </div>
+                            <div class="app-explorer-name" id="appExplorerName">CELL CAVE App</div>
+                            <div class="app-explorer-meta" id="appExplorerMeta">1 / 6</div>
                         </div>
                     </div>
-                    <div class="coming-visual" aria-hidden="true"><div class="coming-visual-icon"></div></div>
                 </div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container brand-story">
+                <div>
+                    <span class="eyebrow">What We Build</span>
+                    <h2>Digital experiences designed around everyday needs.</h2>
+                </div>
+                <p>CELL CAVE focuses on identifying everyday problems and turning them into simple, useful, and easy-to-use apps and digital products. The goal is straightforward: reduce friction and make daily digital tasks feel easier.</p>
+            </div>
+        </section>
+
         <section class="section section-white">
             <div class="container">
-                <div class="section-head"><span class="eyebrow">While You Wait</span><h2 class="section-title">Explore what’s available now.</h2><p class="section-copy">The CELL CAVE app collection continues to grow. Visit the Apps page for current availability and Coming Soon products.</p></div>
-                <div class="store-grid">
-                    <a class="store-card" href="/apps/"><span class="store-mark">CC</span><span><h3>Explore Apps</h3><p>See all CELL CAVE products and availability.</p></span></a>
-                    <a class="store-card" href="/support/"><span class="store-mark">?</span><span><h3>Support</h3><p>Find help, privacy information, and contact details.</p></span></a>
+                <div class="section-head">
+                    <span class="eyebrow">Our Approach</span>
+                    <h2 class="section-title">Useful products, thoughtfully designed.</h2>
+                    <p class="section-copy">We keep the experience clear, practical, and ready to grow with new ideas and new product categories.</p>
                 </div>
+                <div class="value-grid">
+                    <article class="value-card"><div class="value-index">01</div><h3>Simplify everyday tasks</h3><p>Turn common digital needs into focused experiences that are easier to understand and use.</p></article>
+                    <article class="value-card"><div class="value-index">02</div><h3>Design for real people</h3><p>Prioritize clear interfaces, sensible flows, and interactions that feel natural on mobile devices.</p></article>
+                    <article class="value-card"><div class="value-index">03</div><h3>Build for what comes next</h3><p>Grow a flexible ecosystem that can support different kinds of apps and digital products over time.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">CELL CAVE Collection</span>
+                    <h2 class="section-title">Explore our apps.</h2>
+                    <p class="section-copy">Available apps and products in development, all managed from one centralized app catalog.</p>
+                </div>
+                <div class="apps-grid" id="homeAppsGrid"></div>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <div class="container" id="featuredApp"></div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow">Platforms</span>
+                    <h2 class="section-title">Find CELL CAVE where you use apps.</h2>
+                    <p class="section-copy">Android apps are available through Google Play. Apple App Store availability is coming soon.</p>
+                </div>
+                <div class="store-grid">
+                    <a class="store-card" href="#" data-site-google-play-link target="_blank" rel="noopener noreferrer"><span class="store-mark">▶</span><span><h3>Google Play</h3><p>Explore current CELL CAVE Android apps.</p></span></a>
+                    <a class="store-card" href="#" data-site-app-store-link><span class="store-mark"></span><span><h3>Apple App Store</h3><p>Coming soon. See the latest availability information.</p></span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container cta-panel">
+                <h2>Explore the growing CELL CAVE ecosystem.</h2>
+                <p>Discover available apps, upcoming products, privacy information, and support in one place.</p>
+                <a class="btn" href="/apps/">Browse All Apps</a>
             </div>
         </section>
 
