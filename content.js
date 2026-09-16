@@ -29,7 +29,7 @@ window.CELL_CAVE_CONFIG = Object.freeze({
         x: ""
     },
     navigation: [
-        { label: "Home", href: "/", key: "home" },
+        { label: "Home", href: "https://cellcave.github.io/", key: "home" },
         { label: "Apps", href: "/apps/", key: "apps" },
         { label: "Support", href: "/support/", key: "support" },
         { label: "About", href: "/about/", key: "about" }
@@ -283,7 +283,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         return `
             <header class="site-header">
                 <div class="container header-inner">
-                    <a class="brand-link" href="/" aria-label="${escapeHtml(config.brandName)} home">
+                    <a class="brand-link" href="${escapeHtml(config.siteUrl || "/")}" aria-label="${escapeHtml(config.brandName)} home">
                         <span class="brand-logo-frame"><img src="${escapeHtml(config.logo)}" alt="${escapeHtml(config.brandName)} logo"></span>
                         <span class="brand-text">${escapeHtml(config.brandName)}</span>
                     </a>
@@ -320,7 +320,7 @@ window.CELL_CAVE_APPS = Object.freeze([
                 <div class="container">
                     <div class="footer-grid">
                         <div>
-                            <a class="footer-brand-row" href="/">
+                            <a class="footer-brand-row" href="${escapeHtml(config.siteUrl || "/")}">
                                 <span class="brand-logo-frame"><img src="${escapeHtml(config.logo)}" alt="${escapeHtml(config.brandName)} logo"></span>
                                 <span>${escapeHtml(config.brandName)}</span>
                             </a>
@@ -623,11 +623,13 @@ window.CELL_CAVE_APPS = Object.freeze([
     const storeButtons = [];
     if (app.googlePlayUrl) {
         storeButtons.push(`<a class="store-button" href="${api.escapeHtml(app.googlePlayUrl)}" target="_blank" rel="noopener noreferrer"><span class="store-icon">▶</span><span>Get it on Google Play</span></a>`);
+    } else {
+        storeButtons.push(`<span class="store-button secondary is-disabled" aria-label="Google Play coming soon"><span class="store-icon">▶</span><span>Google Play · Coming Soon</span></span>`);
     }
     if (app.appleAppStoreUrl) {
         storeButtons.push(`<a class="store-button" href="${api.escapeHtml(app.appleAppStoreUrl)}" target="_blank" rel="noopener noreferrer"><span class="store-icon"></span><span>Download on the App Store</span></a>`);
     } else {
-        storeButtons.push(`<a class="store-button secondary" href="${api.escapeHtml(api.config.appStoreLandingUrl)}"><span class="store-icon"></span><span>App Store · Coming Soon</span></a>`);
+        storeButtons.push(`<span class="store-button secondary is-disabled" aria-label="Apple App Store coming soon"><span class="store-icon"></span><span>App Store · Coming Soon</span></span>`);
     }
     storeButtons.push(`<a class="store-button secondary" href="${api.escapeHtml(app.privacyRoute)}"><span class="store-icon">◇</span><span>Privacy Policy</span></a>`);
 

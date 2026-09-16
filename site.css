@@ -498,6 +498,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .support-selector select:focus { border-color:#8fcdf5; }
 .support-selector .btn { justify-self:start; margin-top:2px; }
 .support-selector .btn:disabled { opacity:.45; cursor:not-allowed; transform:none; }
+.support-selector-actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:2px; }
+.support-selector-actions .btn { margin-top:0; }
 .support-selector-note { margin-top:14px; font-size:12px; line-height:1.65; }
 
 /* App Store coming soon */
@@ -773,4 +775,16 @@ a.social-button:hover { transform:translateY(-3px); background:#fff; color:#1719
 }
 .table-wrap {
     max-width: 100%;
+}
+
+/* Coming-soon store buttons: visible on unreleased apps without fake/broken links. */
+.store-button.is-disabled {
+    cursor: default;
+    opacity: .72;
+    pointer-events: none;
+}
+.store-button.is-disabled:hover {
+    transform: none;
+    background: #fff;
+    border-color: var(--line);
 }
