@@ -13,6 +13,7 @@ window.CELL_CAVE_CONFIG = Object.freeze({
     brandName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
     legalName: "CELL CAVE ( SMC-PRIVATE ) LIMITED",
     siteUrl: "https://cellcave.github.io/",
+    homeUrl: "/",
     logo: "/assets/brand/cell-cave-logo.png",
     favicon: "/assets/brand/cell-cave-logo.png",
     email: "cellcave70@gmail.com",
@@ -29,7 +30,7 @@ window.CELL_CAVE_CONFIG = Object.freeze({
         x: ""
     },
     navigation: [
-        { label: "Home", href: "https://cellcave.github.io/", key: "home" },
+        { label: "Home", href: "/", key: "home" },
         { label: "Apps", href: "/apps/", key: "apps" },
         { label: "Support", href: "/support/", key: "support" },
         { label: "About", href: "/about/", key: "about" }
@@ -283,7 +284,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         return `
             <header class="site-header">
                 <div class="container header-inner">
-                    <a class="brand-link" href="${escapeHtml(config.siteUrl || "/")}" aria-label="${escapeHtml(config.brandName)} home">
+                    <a class="brand-link" href="${escapeHtml(config.homeUrl || "/")}" aria-label="${escapeHtml(config.brandName)} home">
                         <span class="brand-logo-frame"><img src="${escapeHtml(config.logo)}" alt="${escapeHtml(config.brandName)} logo"></span>
                         <span class="brand-text">${escapeHtml(config.brandName)}</span>
                     </a>
@@ -320,7 +321,7 @@ window.CELL_CAVE_APPS = Object.freeze([
                 <div class="container">
                     <div class="footer-grid">
                         <div>
-                            <a class="footer-brand-row" href="${escapeHtml(config.siteUrl || "/")}">
+                            <a class="footer-brand-row" href="${escapeHtml(config.homeUrl || "/")}">
                                 <span class="brand-logo-frame"><img src="${escapeHtml(config.logo)}" alt="${escapeHtml(config.brandName)} logo"></span>
                                 <span>${escapeHtml(config.brandName)}</span>
                             </a>
@@ -602,6 +603,7 @@ window.CELL_CAVE_APPS = Object.freeze([
     "use strict";
     const api = window.CellCave;
     if (!api) return;
+    if ((document.body.dataset.page || "") !== "app-detail") return;
     const mount = document.getElementById("appPage");
     if (!mount) return;
 
@@ -694,6 +696,7 @@ window.CELL_CAVE_APPS = Object.freeze([
 
     const api = window.CellCave;
     if (!api) return;
+    if ((document.body.dataset.page || "") !== "support") return;
 
     const select = document.getElementById("supportAppSelect");
     const openButton = document.getElementById("supportAppOpen");
