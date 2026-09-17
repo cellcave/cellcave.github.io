@@ -83,8 +83,9 @@
 
                 <p>
                     This Privacy Policy explains how information is processed when
-                    you use the <strong>QR Code Scanner</strong> Android application
-                    and describes the privacy choices available to you.
+                    you use the <strong>QR Code Scanner</strong> Android application,
+                    why it is processed, who may receive it, and the privacy choices
+                    available to you.
                 </p>
 
 
@@ -120,7 +121,7 @@
 
 
 
-        <!-- POLICY CONTENT -->
+        <!-- POLICY -->
 
         <section class="policy-section">
 
@@ -131,9 +132,7 @@
 
                 <aside class="contents-card">
 
-                    <h2>
-                        Contents
-                    </h2>
+                    <h2>Contents</h2>
 
                     <ul class="contents-list">
 
@@ -151,7 +150,7 @@
 
                         <li><a href="#permissions">7. Permissions and Device Access</a></li>
 
-                        <li><a href="#advertising">8. Advertising and Ad Mediation</a></li>
+                        <li><a href="#advertising">8. Advertising</a></li>
 
                         <li><a href="#consent">9. Consent Management</a></li>
 
@@ -159,33 +158,37 @@
 
                         <li><a href="#crashlytics">11. Firebase Crashlytics</a></li>
 
-                        <li><a href="#billing">12. Purchases and Google Play Billing</a></li>
+                        <li><a href="#fcm">12. Firebase Cloud Messaging</a></li>
 
-                        <li><a href="#use">13. How We Use Information</a></li>
+                        <li><a href="#remote-config">13. Firebase Remote Config</a></li>
 
-                        <li><a href="#sharing">14. How Information Is Shared</a></li>
+                        <li><a href="#billing">14. Purchases and Google Play Billing</a></li>
 
-                        <li><a href="#retention">15. Data Retention and Deletion</a></li>
+                        <li><a href="#use">15. How We Use Information</a></li>
 
-                        <li><a href="#security">16. Data Security</a></li>
+                        <li><a href="#sharing">16. How Information Is Shared</a></li>
 
-                        <li><a href="#rights">17. Your Privacy Choices and Rights</a></li>
+                        <li><a href="#retention">17. Data Retention and Deletion</a></li>
 
-                        <li><a href="#eea">18. EEA, UK, and Swiss Users</a></li>
+                        <li><a href="#security">18. Data Security</a></li>
 
-                        <li><a href="#us-rights">19. California and Other US State Privacy Rights</a></li>
+                        <li><a href="#rights">19. Your Privacy Choices and Rights</a></li>
 
-                        <li><a href="#transfers">20. International Data Transfers</a></li>
+                        <li><a href="#eea">20. EEA, UK, and Swiss Users</a></li>
 
-                        <li><a href="#children">21. Children’s Privacy</a></li>
+                        <li><a href="#us-rights">21. California and Other US State Privacy Rights</a></li>
 
-                        <li><a href="#external">22. External Links and User-Requested Actions</a></li>
+                        <li><a href="#transfers">22. International Data Transfers</a></li>
 
-                        <li><a href="#changes">23. Changes to This Privacy Policy</a></li>
+                        <li><a href="#children">23. Children’s Privacy</a></li>
 
-                        <li><a href="#third-party">24. Third-Party Privacy Information</a></li>
+                        <li><a href="#external">24. External Links and User-Requested Actions</a></li>
 
-                        <li><a href="#contact">25. Contact Us</a></li>
+                        <li><a href="#changes">25. Changes to This Privacy Policy</a></li>
+
+                        <li><a href="#third-party">26. Third-Party Privacy Information</a></li>
+
+                        <li><a href="#contact">27. Contact Us</a></li>
 
                     </ul>
 
@@ -221,14 +224,9 @@
 
                     <!-- 1 -->
 
-                    <article
-                        class="policy-card"
-                        id="summary"
-                    >
+                    <article class="policy-card" id="summary">
 
-                        <h2>
-                            1. Summary
-                        </h2>
+                        <h2>1. Summary</h2>
 
                         <ul>
 
@@ -242,39 +240,42 @@
                             <li>
                                 Scan history, created codes, favorites, and App
                                 settings are stored locally on your device. Android
-                                backup or device-transfer services may copy this local
-                                data if backup is enabled.
+                                backup or device-transfer services may copy this
+                                local data if backup is enabled.
                             </li>
 
                             <li>
-                                The free version displays advertisements. Google
-                                AdMob is used as the mediation platform, together
-                                with Meta Audience Network, Mintegral, Pangle, and
-                                Liftoff Monetize.
-                            </li>
-
-                            <li>
-                                These providers may automatically collect device,
-                                identifier, approximate-location, and
-                                advertising-interaction data.
+                                The free version displays advertisements through
+                                Google AdMob. Google may automatically collect
+                                device, identifier, approximate-location, and
+                                advertising-interaction data as described in this Policy.
                             </li>
 
                             <li>
                                 Google Analytics for Firebase is used to understand
-                                App usage, and Firebase Crashlytics is used to
-                                diagnose crashes and technical problems.
+                                App usage, Firebase Crashlytics is used to diagnose
+                                crashes and technical problems, Firebase Cloud
+                                Messaging is used to deliver push notifications and
+                                messages, and Firebase Remote Config is used to
+                                manage certain App configuration values and features remotely.
                             </li>
 
                             <li>
-                                Google Play processes purchases. CELL CAVE
-                                (SMC-PRIVATE) LIMITED does not receive your complete
-                                payment-card or bank-account details.
+                                Google User Messaging Platform (UMP), also referred
+                                to as the Google Consent Form, is is used to request
+                                and manage applicable privacy and advertising consent
+                                where required.
+                            </li>
+
+                            <li>
+                                Google Play processes purchases. CELL CAVE does not
+                                receive your complete payment-card or bank-account details.
                             </li>
 
                             <li>
                                 You can manage permissions, advertising consent,
-                                and device advertising settings. You can also contact
-                                us regarding applicable privacy rights.
+                                notifications, and device advertising settings.
+                                You can also contact us regarding applicable privacy rights.
                             </li>
 
                         </ul>
@@ -285,18 +286,11 @@
 
                     <!-- 2 -->
 
-                    <article
-                        class="policy-card"
-                        id="about"
-                    >
+                    <article class="policy-card" id="about">
 
-                        <h2>
-                            2. About the App
-                        </h2>
+                        <h2>2. About the App</h2>
 
-                        <p>
-                            The App allows you to:
-                        </p>
+                        <p>The App allows you to:</p>
 
                         <ul>
 
@@ -316,8 +310,8 @@
                                 view scan results and take user-selected actions,
                                 such as opening a link, searching for a product,
                                 calling a number, preparing an email or message,
-                                adding a contact or calendar event, connecting to a
-                                Wi-Fi network, copying content, or sharing content;
+                                adding a contact or calendar event, connecting to
+                                a Wi-Fi network, copying content, or sharing content;
                             </li>
 
                             <li>
@@ -330,12 +324,16 @@
                             </li>
 
                             <li>
-                                configure sound, vibration, and clipboard preferences; and
+                                configure sound, vibration, and clipboard preferences;
                             </li>
 
                             <li>
-                                purchase an optional one-time ad-free upgrade through
-                                Google Play.
+                                receive push notifications and messages where enabled; and
+                            </li>
+
+                            <li>
+                                purchase an optional one-time ad-free upgrade
+                                through Google Play.
                             </li>
 
                         </ul>
@@ -350,19 +348,12 @@
 
                     <!-- 3 -->
 
-                    <article
-                        class="policy-card"
-                        id="provided"
-                    >
+                    <article class="policy-card" id="provided">
 
-                        <h2>
-                            3. Information You Provide or Select
-                        </h2>
+                        <h2>3. Information You Provide or Select</h2>
 
 
-                        <h3>
-                            Code content
-                        </h3>
+                        <h3>Code content</h3>
 
                         <p>
                             When you create a QR code or barcode, you may enter text,
@@ -373,14 +364,12 @@
 
                         <p>
                             The App processes this content locally to generate the
-                            code and may store it in local history.
-                            CELL CAVE (SMC-PRIVATE) LIMITED does not receive this content.
+                            code and may store it in local history. CELL CAVE does
+                            not receive this content.
                         </p>
 
 
-                        <h3>
-                            Selected images and contacts
-                        </h3>
+                        <h3>Selected images and contacts</h3>
 
                         <p>
                             When you choose an image for scanning, Android’s system
@@ -399,9 +388,7 @@
                         </p>
 
 
-                        <h3>
-                            Clipboard
-                        </h3>
+                        <h3>Clipboard</h3>
 
                         <p>
                             The App may place a scan result on the system clipboard
@@ -410,8 +397,7 @@
 
                         <p>
                             Information on the clipboard is managed by Android and
-                            may be accessible to other apps subject to Android’s
-                            restrictions.
+                            may be accessible to other apps subject to Android’s restrictions.
                         </p>
 
                         <p>
@@ -419,9 +405,7 @@
                         </p>
 
 
-                        <h3>
-                            Communications
-                        </h3>
+                        <h3>Communications</h3>
 
                         <p>
                             If you contact us by email, we receive your email address,
@@ -440,10 +424,7 @@
 
                     <!-- 4 -->
 
-                    <article
-                        class="policy-card"
-                        id="local"
-                    >
+                    <article class="policy-card" id="local">
 
                         <h2>
                             4. Information Processed and Stored Locally
@@ -474,62 +455,75 @@
                                         <td data-label="Local information">
                                             Scanned QR-code or barcode content
                                         </td>
+
                                         <td data-label="Purpose">
                                             Display results and maintain history
                                         </td>
                                     </tr>
 
+
                                     <tr>
                                         <td data-label="Local information">
                                             Content used to create codes
                                         </td>
+
                                         <td data-label="Purpose">
                                             Generate codes and maintain history
                                         </td>
                                     </tr>
 
+
                                     <tr>
                                         <td data-label="Local information">
                                             Date, code type, and scanned/created status
                                         </td>
+
                                         <td data-label="Purpose">
                                             Organize history
                                         </td>
                                     </tr>
 
+
                                     <tr>
                                         <td data-label="Local information">
                                             Favorite status
                                         </td>
+
                                         <td data-label="Purpose">
                                             Let you find saved entries
                                         </td>
                                     </tr>
+
 
                                     <tr>
                                         <td data-label="Local information">
                                             Sound, vibration, clipboard, onboarding,
                                             and other preferences
                                         </td>
+
                                         <td data-label="Purpose">
                                             Remember your settings
                                         </td>
                                     </tr>
 
+
                                     <tr>
                                         <td data-label="Local information">
                                             Ad-free purchase entitlement
                                         </td>
+
                                         <td data-label="Purpose">
                                             Remember premium status
                                         </td>
                                     </tr>
+
 
                                     <tr>
                                         <td data-label="Local information">
                                             Advertising-consent settings stored by
                                             applicable SDKs
                                         </td>
+
                                         <td data-label="Purpose">
                                             Remember and apply your privacy choices
                                         </td>
@@ -554,10 +548,9 @@
                         </p>
 
                         <p>
-                            Clearing the App’s storage or uninstalling the App
-                            removes the App’s local database and preferences, but
-                            it does not remove images that you separately saved to
-                            your gallery.
+                            Clearing the App’s storage or uninstalling the App removes
+                            the App’s local database and preferences, but it does not
+                            remove images that you separately saved to your gallery.
                         </p>
 
                         <p>
@@ -567,14 +560,13 @@
                         </p>
 
                         <p>
-                            CELL CAVE (SMC-PRIVATE) LIMITED does not control or have
-                            access to those backups.
+                            CELL CAVE does not control or have access to those backups.
                         </p>
 
                         <p>
                             Because scan history may contain sensitive information,
-                            including Wi-Fi credentials or contact details, you
-                            should consider your device backup and security settings.
+                            including Wi-Fi credentials or contact details, you should
+                            consider your device backup and security settings.
                         </p>
 
                     </article>
@@ -583,32 +575,28 @@
 
                     <!-- 5 -->
 
-                    <article
-                        class="policy-card"
-                        id="automatic"
-                    >
+                    <article class="policy-card" id="automatic">
 
                         <h2>
                             5. Information Collected Automatically by Third Parties
                         </h2>
 
                         <p>
-                            Third-party SDKs integrated into the App may
-                            automatically collect or receive:
+                            Third-party SDKs integrated into the App may automatically
+                            collect or receive:
                         </p>
 
                         <ul>
 
                             <li>
-                                device manufacturer and model, operating-system
-                                version, language, time zone, screen characteristics,
-                                network type, mobile carrier, App version, and
-                                package information;
+                                device manufacturer and model, operating-system version,
+                                language, time zone, screen characteristics, network
+                                type, mobile carrier, App version, and package information;
                             </li>
 
                             <li>
                                 IP address and approximate location inferred from it,
-                                such as country or city-level location;
+                                such as country- or city-level location;
                             </li>
 
                             <li>
@@ -644,16 +632,16 @@
                         </ul>
 
                         <p>
-                            The App does not request or use GPS or other
-                            device-based precise location for its normal operation.
-                            An IP address may nevertheless reveal approximate location.
+                            The App does not request or use GPS or other device-based
+                            precise location for its normal operation. An IP address
+                            may nevertheless reveal approximate location.
                         </p>
 
                         <p>
-                            The exact information processed by each provider depends
-                            on the provider’s SDK version, configuration, consent
-                            status, device settings, Android version, region, and
-                            whether personalized advertising is permitted.
+                            The exact information processed by each Google service
+                            depends on its SDK version, configuration, consent status,
+                            device settings, Android version, region, and whether
+                            personalized advertising is permitted.
                         </p>
 
                     </article>
@@ -662,10 +650,7 @@
 
                     <!-- 6 -->
 
-                    <article
-                        class="policy-card"
-                        id="camera"
-                    >
+                    <article class="policy-card" id="camera">
 
                         <h2>
                             6. Camera, Images, and Scan Content
@@ -684,7 +669,7 @@
                         <p>
                             The App does not record audio or video and does not send
                             camera frames, selected images, or decoded scan content
-                            to CELL CAVE (SMC-PRIVATE) LIMITED servers.
+                            to CELL CAVE servers.
                         </p>
 
                         <p>
@@ -694,8 +679,8 @@
                         </p>
 
                         <p>
-                            This does not mean that CELL CAVE (SMC-PRIVATE) LIMITED
-                            receives your camera images or decoded code content.
+                            This does not mean that CELL CAVE receives your camera
+                            images or decoded code content.
                         </p>
 
                         <p>
@@ -743,10 +728,7 @@
 
                     <!-- 7 -->
 
-                    <article
-                        class="policy-card"
-                        id="permissions"
-                    >
+                    <article class="policy-card" id="permissions">
 
                         <h2>
                             7. Permissions and Device Access
@@ -760,16 +742,29 @@
                                 <thead>
 
                                     <tr>
-                                        <th>Permission or capability</th>
-                                        <th>How it is used</th>
-                                        <th>Required or optional</th>
+
+                                        <th>
+                                            Permission or capability
+                                        </th>
+
+                                        <th>
+                                            How it is used
+                                        </th>
+
+                                        <th>
+                                            Required or optional
+                                        </th>
+
                                     </tr>
 
                                 </thead>
 
+
                                 <tbody>
 
+
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Camera</strong>
                                         </td>
@@ -784,10 +779,12 @@
                                             You can still create codes and may scan
                                             a selected image without it
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Selected image access</strong>
                                         </td>
@@ -798,13 +795,14 @@
                                         </td>
 
                                         <td data-label="Required or optional">
-                                            Optional; required only for scanning
-                                            from an image
+                                            Optional; required only for scanning from an image
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Storage on older Android versions</strong>
                                         </td>
@@ -817,10 +815,12 @@
                                         <td data-label="Required or optional">
                                             Optional and limited to older Android versions
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Vibration</strong>
                                         </td>
@@ -832,28 +832,52 @@
                                         <td data-label="Required or optional">
                                             Optional and controlled through App settings
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
+                                        <td data-label="Permission or capability">
+                                            <strong>Notifications</strong>
+                                        </td>
+
+                                        <td data-label="How it is used">
+                                            Allows Firebase Cloud Messaging to display
+                                            push notifications and messages
+                                        </td>
+
+                                        <td data-label="Required or optional">
+                                            Optional; you can deny or disable
+                                            notifications in Android settings
+                                        </td>
+
+                                    </tr>
+
+
+                                    <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Internet</strong>
                                         </td>
 
                                         <td data-label="How it is used">
-                                            Loads ads, sends analytics and crash
-                                            data, manages consent, and communicates
-                                            with Google Play services
+                                            Loads ads, sends analytics and crash data,
+                                            delivers messages, retrieves remote
+                                            configuration values, manages consent,
+                                            and communicates with Google Play services
                                         </td>
 
                                         <td data-label="Required or optional">
                                             Technical permission; offline scanning
                                             and creation may still work
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Network state</strong>
                                         </td>
@@ -865,14 +889,15 @@
                                         <td data-label="Required or optional">
                                             Technical permission
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>
-                                                Wi-Fi state/configuration on older
-                                                Android versions
+                                                Wi-Fi state/configuration on older Android versions
                                             </strong>
                                         </td>
 
@@ -885,28 +910,31 @@
                                             Optional and limited to supported versions
                                             and user actions
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Advertising ID</strong>
                                         </td>
 
                                         <td data-label="How it is used">
                                             Supports advertising, measurement,
-                                            attribution, frequency capping, and
-                                            fraud prevention
+                                            attribution, frequency capping, and fraud prevention
                                         </td>
 
                                         <td data-label="Required or optional">
                                             Used by advertising SDKs subject to
                                             consent, legal requirements, and device settings
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Android ad-services APIs</strong>
                                         </td>
@@ -919,10 +947,12 @@
                                         <td data-label="Required or optional">
                                             Depends on Android version and SDK configuration
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Google Play Billing</strong>
                                         </td>
@@ -935,10 +965,12 @@
                                         <td data-label="Required or optional">
                                             Required only if you make a purchase
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>Install Referrer</strong>
                                         </td>
@@ -951,10 +983,12 @@
                                         <td data-label="Required or optional">
                                             Technical capability
                                         </td>
+
                                     </tr>
 
 
                                     <tr>
+
                                         <td data-label="Permission or capability">
                                             <strong>
                                                 Background processing and wake lock
@@ -962,14 +996,16 @@
                                         </td>
 
                                         <td data-label="How it is used">
-                                            Allows SDKs to complete limited analytics,
-                                            advertising, billing, or diagnostic tasks
+                                            Allows SDKs to complete limited messaging,
+                                            analytics, advertising, billing, or diagnostic tasks
                                         </td>
 
                                         <td data-label="Required or optional">
                                             Technical capability
                                         </td>
+
                                     </tr>
+
 
                                 </tbody>
 
@@ -990,13 +1026,10 @@
 
                     <!-- 8 -->
 
-                    <article
-                        class="policy-card"
-                        id="advertising"
-                    >
+                    <article class="policy-card" id="advertising">
 
                         <h2>
-                            8. Advertising and Ad Mediation
+                            8. Advertising
                         </h2>
 
                         <p>
@@ -1005,37 +1038,12 @@
                         </p>
 
                         <p>
-                            We use <strong>Google AdMob</strong> as the primary
-                            advertising and mediation platform.
+                            We use <strong>Google AdMob</strong> to provide
+                            advertising within the App.
                         </p>
 
                         <p>
-                            AdMob may select an advertisement from Google or from
-                            the following mediation partners:
-                        </p>
-
-                        <ul>
-
-                            <li>
-                                Meta Audience Network;
-                            </li>
-
-                            <li>
-                                Mintegral;
-                            </li>
-
-                            <li>
-                                Pangle; and
-                            </li>
-
-                            <li>
-                                Liftoff Monetize, formerly Vungle.
-                            </li>
-
-                        </ul>
-
-                        <p>
-                            When an advertising SDK is active, the provider may
+                            When the Google Mobile Ads SDK is active, Google may
                             collect information directly from your device, including
                             the Advertising ID, IP address, approximate location
                             inferred from IP, device and App information, consent
@@ -1044,17 +1052,13 @@
                         </p>
 
                         <p>
-                            Providers may use this information to:
+                            Google may use this information to:
                         </p>
 
                         <ul>
 
                             <li>
                                 deliver and render ads;
-                            </li>
-
-                            <li>
-                                mediate or bid for advertising inventory;
                             </li>
 
                             <li>
@@ -1080,15 +1084,14 @@
                         </ul>
 
                         <p>
-                            We do not provide advertising partners with your scan
-                            history, camera images, selected images, or the content
-                            used to create codes.
+                            We do not provide Google AdMob with your scan history,
+                            camera images, selected images, or the content used to create codes.
                         </p>
 
                         <p>
                             Depending on your region, consent choices, and device
                             settings, the App may show personalized ads or
-                            non-personalized/limited ads.
+                            non-personalized or limited ads.
                         </p>
 
                         <p>
@@ -1104,8 +1107,8 @@
                         </p>
 
                         <p>
-                            Firebase Analytics and Crashlytics may continue to
-                            operate as described below.
+                            Firebase Analytics, Crashlytics, Cloud Messaging, and
+                            Remote Config may continue to operate as described in this Policy.
                         </p>
 
                     </article>
@@ -1114,26 +1117,25 @@
 
                     <!-- 9 -->
 
-                    <article
-                        class="policy-card"
-                        id="consent"
-                    >
+                    <article class="policy-card" id="consent">
 
                         <h2>
                             9. Consent Management
                         </h2>
 
                         <p>
-                            We use Google’s User Messaging Platform to request,
-                            store, and communicate advertising privacy choices where
-                            required.
+                            We use Google User Messaging Platform (UMP), also
+                            referred to as the <strong>Google Consent Form</strong>,
+                            to request, store, and communicate applicable privacy
+                            and advertising choices where required.
                         </p>
 
                         <p>
                             In the European Economic Area, United Kingdom, and
-                            Switzerland, advertising consent is presented through a
-                            Google-certified consent-management platform and, where
-                            applicable, the IAB Europe Transparency and Consent Framework.
+                            Switzerland, advertising consent is presented through
+                            a Google-certified consent-management platform and,
+                            where applicable, the IAB Europe Transparency and
+                            Consent Framework.
                         </p>
 
                         <p>
@@ -1159,10 +1161,7 @@
 
                     <!-- 10 -->
 
-                    <article
-                        class="policy-card"
-                        id="analytics"
-                    >
+                    <article class="policy-card" id="analytics">
 
                         <h2>
                             10. Firebase Analytics
@@ -1177,8 +1176,7 @@
                             Firebase Analytics may collect app-instance identifiers,
                             device and App information, approximate location inferred
                             from IP address, install source, sessions, screen views,
-                            engagement, purchases, advertising events, and feature
-                            interactions.
+                            engagement, purchases, advertising events, and feature interactions.
                         </p>
 
                         <p>
@@ -1189,8 +1187,8 @@
                         </p>
 
                         <p>
-                            We do not intentionally send scan content or
-                            created-code content to Firebase Analytics.
+                            We do not intentionally send scan content or created-code
+                            content to Firebase Analytics.
                         </p>
 
                     </article>
@@ -1199,18 +1197,16 @@
 
                     <!-- 11 -->
 
-                    <article
-                        class="policy-card"
-                        id="crashlytics"
-                    >
+                    <article class="policy-card" id="crashlytics">
 
                         <h2>
                             11. Firebase Crashlytics
                         </h2>
 
                         <p>
-                            Firebase Crashlytics is a separate diagnostic service
-                            used to identify and resolve crashes and stability problems.
+                            Firebase Crashlytics is a diagnostic service used to
+                            identify and resolve crashes, errors, stability problems,
+                            and performance-related technical issues.
                         </p>
 
                         <p>
@@ -1221,8 +1217,9 @@
                         </p>
 
                         <p>
-                            We use Crashlytics data only to diagnose, prioritize,
-                            and fix technical problems.
+                            We use Crashlytics data only for crash reporting, error
+                            diagnostics, improving App stability and performance,
+                            and identifying, prioritizing, and fixing technical problems.
                         </p>
 
                         <p>
@@ -1236,18 +1233,70 @@
 
                     <!-- 12 -->
 
-                    <article
-                        class="policy-card"
-                        id="billing"
-                    >
+                    <article class="policy-card" id="fcm">
 
                         <h2>
-                            12. Purchases and Google Play Billing
+                            12. Firebase Cloud Messaging
                         </h2>
 
                         <p>
-                            The App may offer a one-time purchase that removes
-                            advertisements.
+                            We use <strong>Firebase Cloud Messaging (FCM)</strong>
+                            to deliver push notifications and messages to users.
+                        </p>
+
+                        <p>
+                            Notification permission is optional where Android
+                            requires it, and you can deny or disable notifications
+                            at any time through your device settings.
+                        </p>
+
+                        <p>
+                            We do not use FCM to transmit your scan history, camera
+                            images, selected images, or created-code content.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 13 -->
+
+                    <article class="policy-card" id="remote-config">
+
+                        <h2>
+                            13. Firebase Remote Config
+                        </h2>
+
+                        <p>
+                            We use <strong>Firebase Remote Config</strong> to manage
+                            certain App configuration values, settings, or features
+                            remotely without requiring an App update.
+                        </p>
+
+                        <p>
+                            Remote Config may be used, for example, to adjust the
+                            availability or behavior of App features.
+                        </p>
+
+                        <p>
+                            We do not use Remote Config to transmit your scan history,
+                            camera images, selected images, or created-code content.
+                        </p>
+
+                    </article>
+
+
+
+                    <!-- 14 -->
+
+                    <article class="policy-card" id="billing">
+
+                        <h2>
+                            14. Purchases and Google Play Billing
+                        </h2>
+
+                        <p>
+                            The App may offer a one-time purchase that removes advertisements.
                         </p>
 
                         <p>
@@ -1262,9 +1311,8 @@
                         </p>
 
                         <p>
-                            CELL CAVE (SMC-PRIVATE) LIMITED does not receive your
-                            complete payment-card number, bank-account details, or
-                            full payment credentials.
+                            CELL CAVE does not receive your complete payment-card
+                            number, bank-account details, or full payment credentials.
                         </p>
 
                         <p>
@@ -1278,19 +1326,16 @@
 
 
 
-                    <!-- 13 -->
+                    <!-- 15 -->
 
-                    <article
-                        class="policy-card"
-                        id="use"
-                    >
+                    <article class="policy-card" id="use">
 
                         <h2>
-                            13. How We Use Information
+                            15. How We Use Information
                         </h2>
 
                         <p>
-                            We and our providers use information to:
+                            We and our service providers use information to:
                         </p>
 
                         <ul>
@@ -1317,7 +1362,18 @@
                             </li>
 
                             <li>
-                                detect, investigate, and resolve crashes;
+                                detect, investigate, and resolve crashes and improve
+                                App stability and performance;
+                            </li>
+
+                            <li>
+                                deliver push notifications and messages through
+                                Firebase Cloud Messaging;
+                            </li>
+
+                            <li>
+                                manage certain App configuration values, settings,
+                                and features through Firebase Remote Config;
                             </li>
 
                             <li>
@@ -1342,15 +1398,12 @@
 
 
 
-                    <!-- 14 -->
+                    <!-- 16 -->
 
-                    <article
-                        class="policy-card"
-                        id="sharing"
-                    >
+                    <article class="policy-card" id="sharing">
 
                         <h2>
-                            14. How Information Is Shared
+                            16. How Information Is Shared
                         </h2>
 
                         <p>
@@ -1360,19 +1413,12 @@
                         <ul>
 
                             <li>
-                                <strong>Google</strong>, for AdMob, consent management,
-                                Firebase Analytics, Firebase Crashlytics, Firebase
-                                installation services, ML Kit, Google Play Billing,
-                                and Install Referrer;
-                            </li>
-
-                            <li>
-                                <strong>
-                                    Meta Audience Network, Mintegral, Pangle, and
-                                    Liftoff Monetize
-                                </strong>,
-                                for advertising, mediation, measurement, attribution,
-                                reporting, and fraud prevention;
+                                <strong>Google</strong>, for AdMob, Google User
+                                Messaging Platform/Google Consent Form, Firebase
+                                Analytics, Firebase Crashlytics, Firebase Cloud
+                                Messaging, Firebase Remote Config, Firebase installation
+                                services, Google ML Kit, Google Play Billing, and
+                                Install Referrer;
                             </li>
 
                             <li>
@@ -1383,8 +1429,8 @@
 
                             <li>
                                 <strong>professional advisers and service providers</strong>,
-                                where reasonably necessary to operate the business or
-                                respond to requests;
+                                where reasonably necessary to operate the business
+                                or respond to requests;
                             </li>
 
                             <li>
@@ -1402,14 +1448,13 @@
                         </ul>
 
                         <p>
-                            Third-party providers may act as processors/service
-                            providers or as independent controllers/businesses,
-                            depending on the service and applicable law.
+                            Google may act as a processor or service provider on our
+                            behalf or as an independent controller or business for
+                            certain processing, depending on the service and applicable law.
                         </p>
 
                         <p>
-                            Their own policies govern processing they perform for
-                            their purposes.
+                            Google’s policies govern processing it performs for its own purposes.
                         </p>
 
                         <p>
@@ -1422,8 +1467,8 @@
 
                         <p>
                             However, under certain US state privacy laws, allowing
-                            advertising partners to process identifiers and App
-                            activity for personalized or cross-context behavioral
+                            Google’s advertising services to process identifiers and
+                            App activity for personalized or cross-context behavioral
                             advertising may be considered “selling,” “sharing,” or
                             targeted advertising even where no money is exchanged.
                         </p>
@@ -1436,15 +1481,12 @@
 
 
 
-                    <!-- 15 -->
+                    <!-- 17 -->
 
-                    <article
-                        class="policy-card"
-                        id="retention"
-                    >
+                    <article class="policy-card" id="retention">
 
                         <h2>
-                            15. Data Retention and Deletion
+                            17. Data Retention and Deletion
                         </h2>
 
                         <ul>
@@ -1462,10 +1504,10 @@
                             </li>
 
                             <li>
-                                Firebase Analytics data is retained according to our
-                                configured Google Analytics retention setting and
-                                Google’s applicable retention rules. Aggregated reports
-                                may be retained for longer.
+                                Firebase Analytics data is retained according to
+                                our configured Google Analytics retention setting
+                                and Google’s applicable retention rules. Aggregated
+                                reports may be retained for longer.
                             </li>
 
                             <li>
@@ -1476,18 +1518,15 @@
                             </li>
 
                             <li>
-                                Advertising providers retain information according
-                                to their own policies and configured retention periods.
+                                Google retains advertising-related information
+                                according to its policies and configured retention periods.
                             </li>
 
                             <li>
                                 Google retains purchase and payment records according
                                 to its policies and applicable legal obligations.
-                            </li>
-
-                            <li>
-                                We retain any reports available to us only as long as
-                                reasonably necessary for accounting, tax, refunds,
+                                We retain any reports available to us only as long
+                                as reasonably necessary for accounting, tax, refunds,
                                 fraud prevention, dispute resolution, and legal compliance.
                             </li>
 
@@ -1520,50 +1559,23 @@
 
 
 
-                    <!-- 16 -->
+                    <!-- 18 -->
 
-                    <article
-                        class="policy-card"
-                        id="security"
-                    >
+                    <article class="policy-card" id="security">
 
                         <h2>
-                            16. Data Security
+                            18. Data Security
                         </h2>
 
                         <p>
                             We use reasonable technical and organizational safeguards
-                            appropriate to the nature of the information, including:
+                            appropriate to the nature of the information, including
+                            encrypted network connections where supported, data
+                            minimization, permission minimization, access controls
+                            for developer consoles and support communications, SDK
+                            and dependency maintenance, and review of privacy and
+                            security configurations.
                         </p>
-
-                        <ul>
-
-                            <li>
-                                encrypted network connections where supported;
-                            </li>
-
-                            <li>
-                                data minimization;
-                            </li>
-
-                            <li>
-                                permission minimization;
-                            </li>
-
-                            <li>
-                                access controls for developer consoles and support
-                                communications;
-                            </li>
-
-                            <li>
-                                SDK and dependency maintenance; and
-                            </li>
-
-                            <li>
-                                review of privacy and security configurations.
-                            </li>
-
-                        </ul>
 
                         <p>
                             Local information is also protected by your device and
@@ -1584,23 +1596,20 @@
 
 
 
-                    <!-- 17 -->
+                    <!-- 19 -->
 
-                    <article
-                        class="policy-card"
-                        id="rights"
-                    >
+                    <article class="policy-card" id="rights">
 
                         <h2>
-                            17. Your Privacy Choices and Rights
+                            19. Your Privacy Choices and Rights
                         </h2>
 
                         <p>
                             Depending on your location and applicable law, you may
                             have the right to request access, correction, deletion,
                             restriction, objection, or portability; withdraw consent;
-                            opt out of targeted advertising or the sale/sharing of
-                            personal information; appeal a privacy decision; and
+                            opt out of targeted advertising or the sale or sharing
+                            of personal information; appeal a privacy decision; and
                             complain to a data-protection authority.
                         </p>
 
@@ -1632,6 +1641,10 @@
                             </li>
 
                             <li>
+                                disabling notifications through Android settings;
+                            </li>
+
+                            <li>
                                 changing Android Advertising ID and ad-privacy settings;
                             </li>
 
@@ -1649,21 +1662,21 @@
                                 <a href="mailto:cellcave70@gmail.com">
                                     cellcave70@gmail.com
                                 </a>
-                                with the subject <strong>Privacy Request</strong>.
+                                with the subject
+                                <strong>Privacy Request</strong>.
                             </li>
 
                         </ul>
 
                         <p>
-                            Local history and code content are not available to
-                            CELL CAVE (SMC-PRIVATE) LIMITED, so we cannot access,
-                            export, correct, or delete that information remotely.
+                            Local history and code content are not available to CELL
+                            CAVE, so we cannot access, export, correct, or delete that
+                            information remotely.
                         </p>
 
                         <p>
-                            For information held by a third-party provider, we may
-                            direct you to that provider’s privacy tools or assist
-                            where reasonably possible.
+                            For information held by Google, we may direct you to
+                            Google’s privacy tools or assist where reasonably possible.
                         </p>
 
                         <p>
@@ -1675,26 +1688,22 @@
 
 
 
-                    <!-- 18 -->
+                    <!-- 20 -->
 
-                    <article
-                        class="policy-card"
-                        id="eea"
-                    >
+                    <article class="policy-card" id="eea">
 
                         <h2>
-                            18. EEA, UK, and Swiss Users
+                            20. EEA, UK, and Swiss Users
                         </h2>
 
                         <p>
-                            For processing that CELL CAVE (SMC-PRIVATE) LIMITED
-                            determines, CELL CAVE (SMC-PRIVATE) LIMITED is the controller.
+                            For processing that CELL CAVE determines,
+                            CELL CAVE (SMC-PRIVATE) LIMITED is the controller.
                         </p>
 
                         <p>
-                            Depending on the service, Google and advertising partners
-                            may act as processors or independent controllers for their
-                            own processing.
+                            Depending on the service, Google may act as a processor
+                            or an independent controller for its own processing.
                         </p>
 
                         <p>
@@ -1718,10 +1727,10 @@
 
                             <li>
                                 <strong>legitimate interests</strong> in operating
-                                and improving the App, maintaining security and stability,
-                                preventing fraud, responding to users, and supporting
-                                the free version, except where those interests are
-                                overridden by your rights; and
+                                and improving the App, maintaining security and
+                                stability, preventing fraud, responding to users,
+                                and supporting the free version, except where those
+                                interests are overridden by your rights; and
                             </li>
 
                             <li>
@@ -1755,22 +1764,18 @@
 
 
 
-                    <!-- 19 -->
+                    <!-- 21 -->
 
-                    <article
-                        class="policy-card"
-                        id="us-rights"
-                    >
+                    <article class="policy-card" id="us-rights">
 
                         <h2>
-                            19. California and Other US State Privacy Rights
+                            21. California and Other US State Privacy Rights
                         </h2>
 
                         <p>
                             To the extent applicable state privacy laws apply to
-                            CELL CAVE (SMC-PRIVATE) LIMITED, the categories of
-                            personal information processed during the preceding
-                            12 months may include:
+                            CELL CAVE, the categories of personal information
+                            processed during the preceding 12 months may include:
                         </p>
 
 
@@ -1790,6 +1795,7 @@
 
                                 <tbody>
 
+
                                     <tr>
 
                                         <td data-label="Category">
@@ -1804,9 +1810,8 @@
 
                                         <td data-label="Purposes and recipients">
                                             Advertising, analytics, diagnostics,
-                                            security, attribution, and support;
-                                            disclosed to Google and advertising
-                                            partners as described above
+                                            messaging, security, attribution, and
+                                            support; disclosed to Google as described above
                                         </td>
 
                                     </tr>
@@ -1826,7 +1831,7 @@
                                             Purchase processing, restoration,
                                             accounting, refunds, and analytics;
                                             processed by Google and accessible to
-                                            CELL CAVE (SMC-PRIVATE) LIMITED where applicable
+                                            CELL CAVE where applicable
                                         </td>
 
                                     </tr>
@@ -1839,8 +1844,8 @@
                                         </td>
 
                                         <td data-label="Examples">
-                                            App usage, screen interactions, ad requests,
-                                            impressions, and clicks
+                                            App usage, screen interactions, ad
+                                            requests, impressions, and clicks
                                         </td>
 
                                         <td data-label="Purposes and recipients">
@@ -1858,7 +1863,7 @@
                                         </td>
 
                                         <td data-label="Examples">
-                                            Country or city-level location inferred
+                                            Country- or city-level location inferred
                                             from IP address
                                         </td>
 
@@ -1878,7 +1883,7 @@
 
                                         <td data-label="Examples">
                                             Advertising interests inferred by
-                                            advertising providers
+                                            Google’s advertising services
                                         </td>
 
                                         <td data-label="Purposes and recipients">
@@ -1904,6 +1909,7 @@
 
                                     </tr>
 
+
                                 </tbody>
 
                             </table>
@@ -1923,15 +1929,13 @@
 
                         <p>
                             The App’s scan content and selected images are processed
-                            locally and are not provided to CELL CAVE (SMC-PRIVATE)
-                            LIMITED or advertising partners.
+                            locally and are not provided to CELL CAVE or Google AdMob.
                         </p>
 
                         <p>
                             Depending on applicable law, you may request access,
                             correction, deletion, or portability and may opt out of
-                            targeted advertising or processing considered a sale
-                            or sharing.
+                            targeted advertising or processing considered a sale or sharing.
                         </p>
 
                         <p>
@@ -1957,22 +1961,19 @@
 
 
 
-                    <!-- 20 -->
+                    <!-- 22 -->
 
-                    <article
-                        class="policy-card"
-                        id="transfers"
-                    >
+                    <article class="policy-card" id="transfers">
 
                         <h2>
-                            20. International Data Transfers
+                            22. International Data Transfers
                         </h2>
 
                         <p>
-                            Google and advertising providers may process information
-                            in countries other than the country where you live,
-                            including the United States and other locations in which
-                            they or their service providers operate.
+                            Google may process information in countries other than
+                            the country where you live, including the United States
+                            and other locations in which Google or its service
+                            providers operate.
                         </p>
 
                         <p>
@@ -1997,15 +1998,12 @@
 
 
 
-                    <!-- 21 -->
+                    <!-- 23 -->
 
-                    <article
-                        class="policy-card"
-                        id="children"
-                    >
+                    <article class="policy-card" id="children">
 
                         <h2>
-                            21. Children’s Privacy
+                            23. Children’s Privacy
                         </h2>
 
                         <p>
@@ -2015,8 +2013,8 @@
 
                         <p>
                             We do not knowingly collect personal information directly
-                            from children under 13 or under a higher minimum age
-                            where local law requires it.
+                            from children under 13 or under a higher minimum age where
+                            local law requires it.
                         </p>
 
                         <p>
@@ -2040,29 +2038,27 @@
                         <p>
                             If the App’s intended audience changes to include
                             children, we will update our SDK configurations,
-                            disclosures, and practices to comply with applicable law
-                            and Google Play Families requirements before making that change.
+                            disclosures, and practices to comply with applicable
+                            law and Google Play Families requirements before making
+                            that change.
                         </p>
 
                     </article>
 
 
 
-                    <!-- 22 -->
+                    <!-- 24 -->
 
-                    <article
-                        class="policy-card"
-                        id="external"
-                    >
+                    <article class="policy-card" id="external">
 
                         <h2>
-                            22. External Links and User-Requested Actions
+                            24. External Links and User-Requested Actions
                         </h2>
 
                         <p>
                             QR codes and advertisements may link to websites, apps,
-                            payment pages, files, or services that
-                            CELL CAVE (SMC-PRIVATE) LIMITED does not control.
+                            payment pages, files, or services that CELL CAVE does
+                            not control.
                         </p>
 
                         <p>
@@ -2088,15 +2084,12 @@
 
 
 
-                    <!-- 23 -->
+                    <!-- 25 -->
 
-                    <article
-                        class="policy-card"
-                        id="changes"
-                    >
+                    <article class="policy-card" id="changes">
 
                         <h2>
-                            23. Changes to This Privacy Policy
+                            25. Changes to This Privacy Policy
                         </h2>
 
                         <p>
@@ -2120,15 +2113,12 @@
 
 
 
-                    <!-- 24 -->
+                    <!-- 26 -->
 
-                    <article
-                        class="policy-card"
-                        id="third-party"
-                    >
+                    <article class="policy-card" id="third-party">
 
                         <h2>
-                            24. Third-Party Privacy Information
+                            26. Third-Party Privacy Information
                         </h2>
 
                         <ul>
@@ -2165,7 +2155,7 @@
 
                             <li>
                                 <a
-                                    href="https://firebase.google.com/support/privacy"
+                                    href="https://firebase.google.com/support/privacy?utm_source=chatgpt.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -2180,6 +2170,26 @@
                                     rel="noopener noreferrer"
                                 >
                                     Google EU User Consent Policy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="https://firebase.google.com/docs/cloud-messaging"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Firebase Cloud Messaging
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="https://firebase.google.com/docs/remote-config"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Firebase Remote Config
                                 </a>
                             </li>
 
@@ -2203,61 +2213,18 @@
                                 </a>
                             </li>
 
-                            <li>
-                                <a
-                                    href="https://www.facebook.com/privacy/policy/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Meta Privacy Policy
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="https://www.mintegral.com/en/privacy/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Mintegral Privacy Policy
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="https://www.pangleglobal.com/privacy/enduser-en"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Pangle Privacy Policy
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="https://liftoff.ai/privacy-policy/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Liftoff Privacy Policy
-                                </a>
-                            </li>
-
                         </ul>
 
                     </article>
 
 
 
-                    <!-- 25 -->
+                    <!-- 27 -->
 
-                    <article
-                        class="policy-card"
-                        id="contact"
-                    >
+                    <article class="policy-card" id="contact">
 
                         <h2>
-                            25. Contact Us
+                            27. Contact Us
                         </h2>
 
                         <p>
@@ -2295,6 +2262,7 @@
             </div>
 
         </section>
+
 
     </main>
 
