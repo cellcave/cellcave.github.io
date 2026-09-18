@@ -866,4 +866,11 @@ a.social-button:hover { transform:translateY(-3px); background:#fff; color:#1719
         overflow-wrap: anywhere;
         word-break: break-word;
     }
+    #siteHeader img[src="/assets/brand/cell-cave-logo.png"] {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 8px !important;
+}
 }
