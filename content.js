@@ -22,7 +22,7 @@ window.CELL_CAVE_CONFIG = Object.freeze({
 
     homeUrl: "/",
 
-    logo: "/assets/brand/cell-cave-logo.png",
+    logo: "/assets/brand/cell-cave-logo.jpg",
 
     favicon: "/assets/brand/cell-cave-logo.png",
 
