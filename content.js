@@ -47,37 +47,6 @@ window.CELL_CAVE_CONFIG = Object.freeze({
 
 window.CELL_CAVE_APPS = Object.freeze([
     {
-        id: "all-document-reader",
-        slug: "all-document-reader",
-        name: "All Document Reader",
-        shortName: "All Document Reader",
-        category: "Documents",
-        status: "coming-soon",
-        icon: "",
-        fallbackInitials: "ADR",
-
-        route: "/apps/all-document-reader/",
-        privacyRoute: "/apps/all-document-reader/privacy/",
-
-        googlePlayUrl: "",
-        appleAppStoreUrl: "",
-
-        shortDescription:
-            "Open, read, and organize supported documents on your Android device.",
-
-        description:
-            "All Document Reader helps you locate, open, read, and organize supported documents stored on your device through a simple and convenient experience.",
-
-        features: [
-            "Read PDF and other supported documents",
-            "Find documents stored on your device",
-            "Simple document organization"
-        ],
-
-        extraLinks: []
-    },
-
-    {
         id: "cloud-backup-photo-storage",
         slug: "cloud-backup-photo-storage",
         name: "Cloud Backup: Photo Storage",
@@ -342,6 +311,37 @@ window.CELL_CAVE_APPS = Object.freeze([
             "Simple and easy-to-use interface",
             "Quick access to scanned information",
             "More features coming soon"
+        ],
+
+        extraLinks: []
+    },
+
+    {
+        id: "all-document-reader",
+        slug: "all-document-reader",
+        name: "All Document Reader",
+        shortName: "All Document Reader",
+        category: "Documents",
+        status: "coming-soon",
+        icon: "",
+        fallbackInitials: "ADR",
+
+        route: "/apps/all-document-reader/",
+        privacyRoute: "/apps/all-document-reader/privacy/",
+
+        googlePlayUrl: "",
+        appleAppStoreUrl: "",
+
+        shortDescription:
+            "Open, read, and organize supported documents on your Android device.",
+
+        description:
+            "All Document Reader helps you locate, open, read, and organize supported documents stored on your device through a simple and convenient experience.",
+
+        features: [
+            "Read PDF and other supported documents",
+            "Find documents stored on your device",
+            "Simple document organization"
         ],
 
         extraLinks: []
