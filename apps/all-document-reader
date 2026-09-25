@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Document Reader | CELL CAVE (SMC-PRIVATE) LIMITED</title>
+<meta content="Read and manage documents easily with All Document Reader." name="description"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+
+<link href="/assets/css/site.css" rel="stylesheet"/>
+
+<script src="/content.js?v=20260916-2" defer></script>
+</head>
+
+<body data-page="app-detail">
+
+<div id="siteHeader"></div>
+
+<main class="site-main">
+<div data-app-id="all-document-reader" id="appPage"></div>
+</main>
+
+<div id="siteFooter"></div>
+
+</body>
+</html>
