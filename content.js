@@ -345,6 +345,74 @@ window.CELL_CAVE_APPS = Object.freeze([
         ],
 
         extraLinks: []
+    },
+
+    {
+        id: "find-my-phone-by-clapping",
+        slug: "find-my-phone-by-clapping",
+        name: "Find My Phone By Clapping",
+        shortName: "Find My Phone By Clapping",
+        category: "Tools",
+        status: "coming-soon",
+        icon: "",
+        fallbackInitials: "FP",
+
+        route: "/apps/find-my-phone-by-clapping/",
+        privacyRoute: "/apps/find-my-phone-by-clapping/privacy/",
+
+        googlePlayUrl: "",
+        appleAppStoreUrl: "",
+
+        shortDescription:
+            "Find your phone with clap detection and sound, flashlight, or vibration alerts. Coming soon.",
+
+        description:
+            "Find My Phone By Clapping is a CELL CAVE (SMC-PRIVATE) LIMITED app being developed to help you locate your phone using clap detection and related phone-finding features.",
+
+        features: [
+            "Clap detection",
+            "Sound, flashlight, and vibration alerts",
+            "Voice or spoken-passcode detection",
+            "Motion, touch, and pocket detection",
+            "Charger-disconnection alerts",
+            "Custom alert sounds and settings"
+        ],
+
+        extraLinks: []
+    },
+
+    {
+        id: "pdf-scanner-app-doc-scanner",
+        slug: "pdf-scanner-app-doc-scanner",
+        name: "PDF Scanner App – Doc Scanner",
+        shortName: "PDF Scanner",
+        category: "Documents",
+        status: "coming-soon",
+        icon: "",
+        fallbackInitials: "PDF",
+
+        route: "/apps/pdf-scanner-app-doc-scanner/",
+        privacyRoute: "/apps/pdf-scanner-app-doc-scanner/privacy/",
+
+        googlePlayUrl: "",
+        appleAppStoreUrl: "",
+
+        shortDescription:
+            "Scan documents, create PDFs, and recognise text on your Android device. Coming soon.",
+
+        description:
+            "PDF Scanner App – Doc Scanner is a CELL CAVE (SMC-PRIVATE) LIMITED app being developed for document scanning, PDF creation, image processing, and on-device text recognition.",
+
+        features: [
+            "Document, book, ID-card, and business-card scanning",
+            "PDF creation and editing",
+            "Image import and document export",
+            "Text recognition with OCR",
+            "Signatures and annotations",
+            "QR-code and barcode scanning"
+        ],
+
+        extraLinks: []
     }
 ]);
 
@@ -388,16 +456,15 @@ window.CELL_CAVE_APPS = Object.freeze([
             `;
         }
 
-        const initials =
-            (app && (app.fallbackInitials || app.shortName || app.name)) ||
-            "APP";
-
-        const fallback = String(initials)
-            .split(/\s+/)
-            .map(part => part[0])
-            .join("")
-            .slice(0, 2)
-            .toUpperCase();
+        const fallback = app && app.fallbackInitials
+            ? String(app.fallbackInitials).toUpperCase()
+            : String((app && (app.shortName || app.name)) || "App")
+                .trim()
+                .split(/\s+/)
+                .map(part => part[0])
+                .join("")
+                .slice(0, 2)
+                .toUpperCase();
 
         return `
             <span class="${cls}">
@@ -723,7 +790,6 @@ window.CELL_CAVE_APPS = Object.freeze([
                         <div class="footer-right">
                             <nav class="footer-links" aria-label="Footer navigation">
                                 ${nav}
-
                                 <a href="/privacy/">Privacy Policy</a>
                                 <a href="/terms/">Terms of Use</a>
 
@@ -912,6 +978,7 @@ window.CELL_CAVE_APPS = Object.freeze([
             if (event.target.closest("a")) {
                 nav.classList.remove("open");
                 toggle.setAttribute("aria-expanded", "false");
+                toggle.setAttribute("aria-label", "Open navigation");
             }
         });
     }
@@ -1291,15 +1358,17 @@ window.CELL_CAVE_APPS = Object.freeze([
         `);
     }
 
-    storeButtons.push(`
-        <a
-            class="store-button secondary"
-            href="${api.escapeHtml(app.privacyRoute)}"
-        >
-            <span class="store-icon">◇</span>
-            <span>Privacy Policy</span>
-        </a>
-    `);
+    if (app.privacyRoute) {
+        storeButtons.push(`
+            <a
+                class="store-button secondary"
+                href="${api.escapeHtml(app.privacyRoute)}"
+            >
+                <span class="store-icon">◇</span>
+                <span>Privacy Policy</span>
+            </a>
+        `);
+    }
 
     const extraLinks = (app.extraLinks || [])
         .map(link => `
@@ -1432,6 +1501,76 @@ window.CELL_CAVE_APPS = Object.freeze([
             </div>
         </section>
     `;
+})();
+
+/* =========================
+   PRIVACY BUTTONS FOR
+   THE TWO NEW APP PAGES
+========================= */
+
+(function () {
+    "use strict";
+
+    const api = window.CellCave;
+
+    if (!api || document.body.classList.contains("legal-page")) {
+        return;
+    }
+
+    function normalisePath(path) {
+        return path.replace(/\/index\.html$/, "/").replace(/\/+$/, "");
+    }
+
+    const currentPath = normalisePath(window.location.pathname);
+
+    const newAppIds = [
+        "find-my-phone-by-clapping",
+        "pdf-scanner-app-doc-scanner"
+    ];
+
+    const app = api.apps.find(item =>
+        newAppIds.includes(item.id) &&
+        normalisePath(item.route) === currentPath
+    );
+
+    if (!app || !app.privacyRoute) {
+        return;
+    }
+
+    const actions = document.querySelector(
+        ".app-detail-hero .app-detail-actions"
+    );
+
+    if (!actions) {
+        return;
+    }
+
+    const alreadyExists = Array.from(
+        actions.querySelectorAll("a[href]")
+    ).some(link =>
+        normalisePath(new URL(link.href).pathname) ===
+        normalisePath(app.privacyRoute)
+    );
+
+    if (alreadyExists) {
+        return;
+    }
+
+    const link = document.createElement("a");
+    link.className = "store-button secondary";
+    link.href = app.privacyRoute;
+
+    const icon = document.createElement("span");
+    icon.className = "store-icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = "◇";
+
+    const label = document.createElement("span");
+    label.textContent = "Privacy Policy";
+
+    link.appendChild(icon);
+    link.appendChild(label);
+    actions.appendChild(link);
 })();
 
 /* =========================
