@@ -1,7 +1,6 @@
 /*
  * CELL CAVE (SMC-PRIVATE) LIMITED
- * Website content and shared functionality.
- * Keep this file in the repository root as content.js.
+ * Save this file as content.js in the repository root.
  */
 
 /* =========================
@@ -42,7 +41,7 @@ window.CELL_CAVE_CONFIG = Object.freeze({
 });
 
 /* =========================
-   ALL APPS
+   APPS — DISPLAY ORDER
 ========================= */
 
 window.CELL_CAVE_APPS = Object.freeze([
@@ -54,7 +53,6 @@ window.CELL_CAVE_APPS = Object.freeze([
         category: "Backup & Storage",
         status: "live",
         icon: "/assets/icons/cloud-backup-photo-storage.png",
-
         route: "/apps/cloud-backup-photo-storage/",
         privacyRoute: "/apps/cloud-backup-photo-storage/privacy/",
 
@@ -91,7 +89,6 @@ window.CELL_CAVE_APPS = Object.freeze([
         category: "Documents",
         status: "live",
         icon: "/assets/icons/document-reader-read-all-pdf.png",
-
         route: "/apps/document-reader-read-all-pdf/",
         privacyRoute: "/apps/document-reader-read-all-pdf/privacy/",
 
@@ -123,7 +120,6 @@ window.CELL_CAVE_APPS = Object.freeze([
         category: "Media",
         status: "live",
         icon: "/assets/icons/status-downloader-video-saver.png",
-
         route: "/apps/status-downloader-video-saver/",
         privacyRoute: "/apps/status-downloader-video-saver/privacy/",
 
@@ -155,7 +151,6 @@ window.CELL_CAVE_APPS = Object.freeze([
         category: "Media",
         status: "live",
         icon: "/assets/icons/all-video-downloader-saver.png",
-
         route: "/apps/all-video-downloader-saver/",
         privacyRoute: "/apps/all-video-downloader-saver/privacy/",
 
@@ -187,7 +182,6 @@ window.CELL_CAVE_APPS = Object.freeze([
         category: "Everyday Tools",
         status: "live",
         icon: "/assets/icons/age-calculator-date-of-birth.webp",
-
         route: "/apps/age-calculator-date-of-birth/",
         privacyRoute: "/apps/age-calculator-date-of-birth/privacy/",
 
@@ -212,40 +206,6 @@ window.CELL_CAVE_APPS = Object.freeze([
     },
 
     {
-        id: "switch-smart",
-        slug: "switch-smart",
-        name: "Switch Smart",
-        shortName: "Switch Smart",
-        category: "Device Transfer",
-        status: "coming-soon",
-        icon: "",
-        fallbackInitials: "SS",
-
-        route: "/apps/switch-smart/",
-        privacyRoute: "/apps/switch-smart/privacy/",
-
-        googlePlayUrl: "",
-        appleAppStoreUrl: "",
-
-        shortDescription:
-            "Transfer supported contacts, photos, videos, music, documents, files, and apps directly between Android devices.",
-
-        description:
-            "Switch Smart is a device-to-device transfer app designed to help users move supported content from one Android device to another through supported local connection methods.",
-
-        features: [
-            "Phone-to-phone transfer",
-            "Wi-Fi and hotspot-based local connections",
-            "Contacts, photos, videos, music, documents, files, and supported apps",
-            "Device discovery",
-            "QR-based connection where available",
-            "Direct device-to-device transfer"
-        ],
-
-        extraLinks: []
-    },
-
-    {
         id: "phone-cleaner",
         slug: "phone-cleaner",
         name: "Phone Cleaner",
@@ -254,10 +214,8 @@ window.CELL_CAVE_APPS = Object.freeze([
         status: "coming-soon",
         icon: "",
         fallbackInitials: "PC",
-
         route: "/apps/phone-cleaner/",
         privacyRoute: "/apps/phone-cleaner/privacy/",
-
         googlePlayUrl: "",
         appleAppStoreUrl: "",
 
@@ -285,103 +243,6 @@ window.CELL_CAVE_APPS = Object.freeze([
     },
 
     {
-        id: "qr-code-scaner",
-        slug: "qr-code-scaner",
-        name: "QR Code Scaner",
-        shortName: "QR Code Scaner",
-        category: "Tools",
-        status: "coming-soon",
-        icon: "",
-        fallbackInitials: "QR",
-
-        route: "/apps/qr-code-scaner/",
-        privacyRoute: "/apps/qr-code-scaner/privacy/",
-
-        googlePlayUrl: "",
-        appleAppStoreUrl: "",
-
-        shortDescription:
-            "Scan QR codes quickly with a simple and easy-to-use mobile experience.",
-
-        description:
-            "QR Code Scaner is designed to help users scan QR codes quickly and conveniently. More features and store availability will be announced soon.",
-
-        features: [
-            "Fast QR code scanning",
-            "Simple and easy-to-use interface",
-            "Quick access to scanned information",
-            "More features coming soon"
-        ],
-
-        extraLinks: []
-    },
-
-    {
-        id: "all-document-reader",
-        slug: "all-document-reader",
-        name: "All Document Reader",
-        shortName: "All Document Reader",
-        category: "Documents",
-        status: "coming-soon",
-        icon: "",
-        fallbackInitials: "ADR",
-
-        route: "/apps/all-document-reader/",
-        privacyRoute: "/apps/all-document-reader/privacy/",
-
-        googlePlayUrl: "",
-        appleAppStoreUrl: "",
-
-        shortDescription:
-            "Open, read, and organize supported documents on your Android device.",
-
-        description:
-            "All Document Reader helps you locate, open, read, and organize supported documents stored on your device through a simple and convenient experience.",
-
-        features: [
-            "Read PDF and other supported documents",
-            "Find documents stored on your device",
-            "Simple document organization"
-        ],
-
-        extraLinks: []
-    },
-
-    {
-        id: "find-my-phone-by-clapping",
-        slug: "find-my-phone-by-clapping",
-        name: "Find My Phone By Clapping",
-        shortName: "Find My Phone By Clapping",
-        category: "Tools",
-        status: "coming-soon",
-        icon: "",
-        fallbackInitials: "FP",
-
-        route: "/apps/find-my-phone-by-clapping/",
-        privacyRoute: "/apps/find-my-phone-by-clapping/privacy/",
-
-        googlePlayUrl: "",
-        appleAppStoreUrl: "",
-
-        shortDescription:
-            "Find your phone with clap detection and sound, flashlight, or vibration alerts. Coming soon.",
-
-        description:
-            "Find My Phone By Clapping is a CELL CAVE (SMC-PRIVATE) LIMITED app being developed to help you locate your phone using clap detection and related phone-finding features.",
-
-        features: [
-            "Clap detection",
-            "Sound, flashlight, and vibration alerts",
-            "Voice or spoken-passcode detection",
-            "Motion, touch, and pocket detection",
-            "Charger-disconnection alerts",
-            "Custom alert sounds and settings"
-        ],
-
-        extraLinks: []
-    },
-
-    {
         id: "pdf-scanner-app-doc-scanner",
         slug: "pdf-scanner-app-doc-scanner",
         name: "PDF Scanner App – Doc Scanner",
@@ -390,10 +251,8 @@ window.CELL_CAVE_APPS = Object.freeze([
         status: "coming-soon",
         icon: "",
         fallbackInitials: "PDF",
-
         route: "/apps/pdf-scanner-app-doc-scanner/",
         privacyRoute: "/apps/pdf-scanner-app-doc-scanner/privacy/",
-
         googlePlayUrl: "",
         appleAppStoreUrl: "",
 
@@ -413,11 +272,44 @@ window.CELL_CAVE_APPS = Object.freeze([
         ],
 
         extraLinks: []
+    },
+
+    {
+        id: "gps-navigator-route-finder",
+        slug: "gps-navigator-route-finder",
+        name: "GPS Navigator & Route Finder",
+        shortName: "GPS Navigator",
+        category: "Maps & Navigation",
+        status: "coming-soon",
+        icon: "",
+        fallbackInitials: "GPS",
+        route: "/apps/gps-navigator-route-finder/",
+        privacyRoute: "/apps/gps-navigator-route-finder/privacy/",
+        googlePlayUrl: "",
+        appleAppStoreUrl: "",
+
+        shortDescription:
+            "Explore maps, plan routes, and find nearby places with GPS navigation. Coming soon.",
+
+        description:
+            "GPS Navigator & Route Finder is a CELL CAVE (SMC-PRIVATE) LIMITED app being developed for GPS navigation, maps, route planning, nearby-place search, and related travel tools.",
+
+        features: [
+            "GPS navigation and turn-by-turn directions",
+            "Maps, route planning, and nearby-place search",
+            "Weather and location-based information",
+            "GPS Camera functionality",
+            "QR-code scanning and text recognition",
+            "Translation and voice features",
+            "Saved places, routes, and travel preferences"
+        ],
+
+        extraLinks: []
     }
 ]);
 
 /* =========================
-   SHARED SITE FUNCTIONS
+   SHARED FUNCTIONS
 ========================= */
 
 (function () {
@@ -519,12 +411,8 @@ window.CELL_CAVE_APPS = Object.freeze([
         }
 
         const icon = featured.icon
-            ? `
-                <img
-                    src="${escapeHtml(featured.icon)}"
-                    alt="${escapeHtml(featured.name)} icon"
-                >
-            `
+            ? `<img src="${escapeHtml(featured.icon)}"
+                    alt="${escapeHtml(featured.name)} icon">`
             : escapeHtml(featured.fallbackInitials || "APP");
 
         return `
@@ -597,23 +485,21 @@ window.CELL_CAVE_APPS = Object.freeze([
     function buildHeader() {
         const page = document.body.dataset.page || "";
 
-        const links = (config.navigation || [])
-            .map(item => {
-                const active =
-                    page === item.key ||
-                    (page === "app-detail" && item.key === "apps");
+        const links = (config.navigation || []).map(item => {
+            const active =
+                page === item.key ||
+                (page === "app-detail" && item.key === "apps");
 
-                return `
-                    <a
-                        href="${escapeHtml(item.href)}"
-                        class="${active ? "active" : ""}"
-                        ${active ? 'aria-current="page"' : ""}
-                    >
-                        ${escapeHtml(item.label)}
-                    </a>
-                `;
-            })
-            .join("");
+            return `
+                <a
+                    href="${escapeHtml(item.href)}"
+                    class="${active ? "active" : ""}"
+                    ${active ? 'aria-current="page"' : ""}
+                >
+                    ${escapeHtml(item.label)}
+                </a>
+            `;
+        }).join("");
 
         return `
             <header class="site-header">
@@ -660,45 +546,40 @@ window.CELL_CAVE_APPS = Object.freeze([
     }
 
     function socialIcon(name) {
-        const icons = {
-            facebook: `
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.4v3h2.8v8h3.4Z"/>
-                </svg>
-            `,
-            instagram: `
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
-                </svg>
-            `,
-            linkedin: `
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5.4 7.3A2.2 2.2 0 1 1 5.4 3a2.2 2.2 0 0 1 0 4.3ZM3.5 9h3.8v12H3.5V9Zm6.1 0h3.6v1.7h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.8 2.6 4.8 6.1V21h-3.8v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9.6V9Z"/>
-                </svg>
-            `,
-            youtube: `
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M21.6 7.2c-.2-1.4-1.1-2.5-2.4-2.7C17.4 4.2 14.7 4 12 4s-5.4.2-7.2.5C3.5 4.7 2.6 5.8 2.4 7.2 2.1 8.6 2 10.3 2 12s.1 3.4.4 4.8c.2 1.4 1.1 2.5 2.4 2.7 1.8.3 4.5.5 7.2.5s5.4-.2 7.2-.5c1.3-.2 2.2-1.3 2.4-2.7.3-1.4.4-3.1.4-4.8s-.1-3.4-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/>
-                </svg>
-            `,
-            x: `
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 3h4.5l4.4 5.9L18.1 3H21l-6.8 7.8L21.5 21H17l-4.9-6.6L6.3 21H3.4l7.3-8.5L4 3Zm3.2 2 10.8 14h1L8.2 5h-1Z"/>
-                </svg>
-            `
+        const paths = {
+            facebook:
+                "M13.6 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.4v3h2.8v8h3.4Z",
+
+            instagram:
+                "M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Zm9.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z",
+
+            linkedin:
+                "M5.4 7.3A2.2 2.2 0 1 1 5.4 3a2.2 2.2 0 0 1 0 4.3ZM3.5 9h3.8v12H3.5V9Zm6.1 0h3.6v1.7h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.8 2.6 4.8 6.1V21h-3.8v-5.6c0-1.3 0-3.1-1.9-3.1s-2.2 1.5-2.2 3V21H9.6V9Z",
+
+            youtube:
+                "M21.6 7.2c-.2-1.4-1.1-2.5-2.4-2.7C17.4 4.2 14.7 4 12 4s-5.4.2-7.2.5C3.5 4.7 2.6 5.8 2.4 7.2 2.1 8.6 2 10.3 2 12s.1 3.4.4 4.8c.2 1.4 1.1 2.5 2.4 2.7 1.8.3 4.5.5 7.2.5s5.4-.2 7.2-.5c1.3-.2 2.2-1.3 2.4-2.7.3-1.4.4-3.1.4-4.8s-.1-3.4-.4-4.8ZM10 15.5v-7l6 3.5-6 3.5Z",
+
+            x:
+                "M4 3h4.5l4.4 5.9L18.1 3H21l-6.8 7.8L21.5 21H17l-4.9-6.6L6.3 21H3.4l7.3-8.5L4 3Zm3.2 2 10.8 14h1L8.2 5h-1Z"
         };
 
-        return icons[name] || "";
+        if (!paths[name]) {
+            return "";
+        }
+
+        return `
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="${paths[name]}"></path>
+            </svg>
+        `;
     }
 
     function buildFooter() {
-        const nav = (config.navigation || [])
-            .map(item => `
-                <a href="${escapeHtml(item.href)}">
-                    ${escapeHtml(item.label)}
-                </a>
-            `)
-            .join("");
+        const nav = (config.navigation || []).map(item => `
+            <a href="${escapeHtml(item.href)}">
+                ${escapeHtml(item.label)}
+            </a>
+        `).join("");
 
         const social = Object.entries(config.socialLinks || {})
             .map(([name, url]) => {
@@ -730,8 +611,7 @@ window.CELL_CAVE_APPS = Object.freeze([
                         ${socialIcon(name)}
                     </span>
                 `;
-            })
-            .join("");
+            }).join("");
 
         return `
             <footer class="site-footer">
@@ -748,6 +628,7 @@ window.CELL_CAVE_APPS = Object.freeze([
                                         alt="${escapeHtml(config.brandName)} logo"
                                     >
                                 </span>
+
                                 <span>${escapeHtml(config.brandName)}</span>
                             </a>
 
@@ -788,7 +669,10 @@ window.CELL_CAVE_APPS = Object.freeze([
                         </div>
 
                         <div class="footer-right">
-                            <nav class="footer-links" aria-label="Footer navigation">
+                            <nav
+                                class="footer-links"
+                                aria-label="Footer navigation"
+                            >
                                 ${nav}
                                 <a href="/privacy/">Privacy Policy</a>
                                 <a href="/terms/">Terms of Use</a>
@@ -866,15 +750,13 @@ window.CELL_CAVE_APPS = Object.freeze([
 
     function enhanceLegalTables() {
         document.querySelectorAll(".legal-page table").forEach(table => {
-            const headerCells = Array.from(
-                table.querySelectorAll("thead th")
-            );
+            const headers = Array.from(table.querySelectorAll("thead th"));
 
-            if (!headerCells.length) {
+            if (!headers.length) {
                 return;
             }
 
-            const labels = headerCells.map(cell =>
+            const labels = headers.map(cell =>
                 String(cell.textContent || "").replace(/\s+/g, " ").trim()
             );
 
@@ -882,14 +764,12 @@ window.CELL_CAVE_APPS = Object.freeze([
 
             table.querySelectorAll("tbody tr").forEach(row => {
                 Array.from(row.children).forEach((cell, index) => {
-                    if (cell.tagName !== "TD") {
-                        return;
+                    if (cell.tagName === "TD") {
+                        cell.setAttribute(
+                            "data-label",
+                            labels[index] || `Column ${index + 1}`
+                        );
                     }
-
-                    cell.setAttribute(
-                        "data-label",
-                        labels[index] || `Column ${index + 1}`
-                    );
                 });
             });
         });
@@ -904,13 +784,11 @@ window.CELL_CAVE_APPS = Object.freeze([
         }
 
         const desc = document.querySelector('meta[name="description"]');
-
         const description = desc
             ? desc.content
             : "CELL CAVE (SMC-PRIVATE) LIMITED creates apps and digital products designed to make everyday life easier.";
 
         const baseUrl = String(config.siteUrl || "").replace(/\/$/, "");
-
         const canonicalUrl = baseUrl
             ? `${baseUrl}${window.location.pathname || "/"}`
             : "";
@@ -926,23 +804,23 @@ window.CELL_CAVE_APPS = Object.freeze([
         }
 
         const entries = [
-            ["meta", "property", "og:title", document.title],
-            ["meta", "property", "og:description", description],
-            ["meta", "property", "og:type", "website"],
-            ["meta", "property", "og:image", config.logo],
-            ["meta", "property", "og:url", canonicalUrl],
-            ["meta", "name", "twitter:card", "summary_large_image"]
+            ["property", "og:title", document.title],
+            ["property", "og:description", description],
+            ["property", "og:type", "website"],
+            ["property", "og:image", config.logo],
+            ["property", "og:url", canonicalUrl],
+            ["name", "twitter:card", "summary_large_image"]
         ];
 
-        entries.forEach(([tag, key, value, content]) => {
+        entries.forEach(([key, value, content]) => {
             if (
                 !content ||
-                document.head.querySelector(`${tag}[${key}="${value}"]`)
+                document.head.querySelector(`meta[${key}="${value}"]`)
             ) {
                 return;
             }
 
-            const el = document.createElement(tag);
+            const el = document.createElement("meta");
             el.setAttribute(key, value);
             el.setAttribute("content", content);
             document.head.appendChild(el);
@@ -966,7 +844,6 @@ window.CELL_CAVE_APPS = Object.freeze([
     if (toggle && nav) {
         toggle.addEventListener("click", function () {
             const open = nav.classList.toggle("open");
-
             toggle.setAttribute("aria-expanded", String(open));
             toggle.setAttribute(
                 "aria-label",
@@ -1007,10 +884,7 @@ window.CELL_CAVE_APPS = Object.freeze([
     "use strict";
 
     const api = window.CellCave;
-
-    if (!api) {
-        return;
-    }
+    if (!api) return;
 
     const apps = api.apps;
     const appTrack = document.getElementById("homeAppsGrid");
@@ -1021,38 +895,28 @@ window.CELL_CAVE_APPS = Object.freeze([
     let sliderIndex = 0;
 
     function visibleCards() {
-        if (window.matchMedia("(max-width: 760px)").matches) {
-            return 1;
-        }
-
-        if (window.matchMedia("(max-width: 980px)").matches) {
-            return 2;
-        }
-
+        if (window.matchMedia("(max-width: 760px)").matches) return 1;
+        if (window.matchMedia("(max-width: 980px)").matches) return 2;
         return 3;
     }
 
     function renderAppsSlider(direction) {
-        if (!appTrack || !apps.length) {
-            return;
-        }
+        if (!appTrack || !apps.length) return;
 
         const visible = visibleCards();
         const maxStart = Math.max(0, apps.length - visible);
 
         sliderIndex = Math.min(sliderIndex, maxStart);
 
-        const shownApps = apps.slice(
-            sliderIndex,
-            sliderIndex + visible
-        );
+        appTrack.innerHTML = apps
+            .slice(sliderIndex, sliderIndex + visible)
+            .map(api.appCardMarkup)
+            .join("");
 
-        appTrack.innerHTML = shownApps.map(api.appCardMarkup).join("");
         appTrack.classList.remove("slide-next", "slide-prev");
 
         if (direction) {
             void appTrack.offsetWidth;
-
             appTrack.classList.add(
                 direction === "next" ? "slide-next" : "slide-prev"
             );
@@ -1067,9 +931,8 @@ window.CELL_CAVE_APPS = Object.freeze([
         }
 
         if (sliderCount) {
-            const start = apps.length ? sliderIndex + 1 : 0;
+            const start = sliderIndex + 1;
             const end = Math.min(sliderIndex + visible, apps.length);
-
             sliderCount.textContent = `${start}–${end} of ${apps.length}`;
         }
     }
@@ -1098,10 +961,7 @@ window.CELL_CAVE_APPS = Object.freeze([
 
     window.addEventListener("resize", function () {
         clearTimeout(resizeTimer);
-
-        resizeTimer = setTimeout(function () {
-            renderAppsSlider();
-        }, 120);
+        resizeTimer = setTimeout(() => renderAppsSlider(), 120);
     });
 
     renderAppsSlider();
@@ -1126,13 +986,8 @@ window.CELL_CAVE_APPS = Object.freeze([
     const next = document.getElementById("appExplorerNext");
 
     if (
-        !stage ||
-        !iconLink ||
-        !name ||
-        !meta ||
-        !prev ||
-        !next ||
-        !apps.length
+        !stage || !iconLink || !name || !meta ||
+        !prev || !next || !apps.length
     ) {
         return;
     }
@@ -1146,12 +1001,8 @@ window.CELL_CAVE_APPS = Object.freeze([
         iconLink.setAttribute("aria-label", `Open ${app.name}`);
 
         iconLink.innerHTML = app.icon
-            ? `
-                <img
-                    src="${api.escapeHtml(app.icon)}"
-                    alt="${api.escapeHtml(app.name)} icon"
-                >
-            `
+            ? `<img src="${api.escapeHtml(app.icon)}"
+                    alt="${api.escapeHtml(app.name)} icon">`
             : api.escapeHtml(app.fallbackInitials || "APP");
 
         name.textContent = app.name;
@@ -1168,7 +1019,6 @@ window.CELL_CAVE_APPS = Object.freeze([
 
         if (direction) {
             void stage.offsetWidth;
-
             stage.classList.add(
                 direction === "next" ? "slide-next" : "slide-prev"
             );
@@ -1200,10 +1050,7 @@ window.CELL_CAVE_APPS = Object.freeze([
     "use strict";
 
     const api = window.CellCave;
-
-    if (!api) {
-        return;
-    }
+    if (!api) return;
 
     const grid = document.getElementById("appsGrid");
     const featured = document.getElementById("appsFeaturedApp");
@@ -1214,13 +1061,9 @@ window.CELL_CAVE_APPS = Object.freeze([
     }
 
     function render(filter) {
-        const list = api.apps.filter(app => {
-            if (filter === "all") {
-                return true;
-            }
-
-            return app.status === filter;
-        });
+        const list = api.apps.filter(app =>
+            filter === "all" || app.status === filter
+        );
 
         if (grid) {
             grid.innerHTML = list.map(api.appCardMarkup).join("");
@@ -1229,10 +1072,7 @@ window.CELL_CAVE_APPS = Object.freeze([
 
     filters.forEach(button => {
         button.addEventListener("click", function () {
-            filters.forEach(item => {
-                item.classList.remove("active");
-            });
-
+            filters.forEach(item => item.classList.remove("active"));
             button.classList.add("active");
             render(button.dataset.appFilter || "all");
         });
@@ -1249,23 +1089,16 @@ window.CELL_CAVE_APPS = Object.freeze([
     "use strict";
 
     const api = window.CellCave;
-
-    if (!api) {
-        return;
-    }
+    if (!api) return;
 
     if ((document.body.dataset.page || "") !== "app-detail") {
         return;
     }
 
     const mount = document.getElementById("appPage");
+    if (!mount) return;
 
-    if (!mount) {
-        return;
-    }
-
-    const id = mount.dataset.appId;
-    const app = api.getAppById(id);
+    const app = api.getAppById(mount.dataset.appId);
 
     if (!app) {
         mount.innerHTML = `
@@ -1273,13 +1106,10 @@ window.CELL_CAVE_APPS = Object.freeze([
                 <div class="container">
                     <div class="not-found-card">
                         <div class="not-found-code">404</div>
-
                         <h1>App not found</h1>
-
                         <p>
                             This app could not be found in the centralized app data.
                         </p>
-
                         <a class="btn btn-primary" href="/apps/">
                             Explore Apps
                         </a>
@@ -1287,25 +1117,17 @@ window.CELL_CAVE_APPS = Object.freeze([
                 </div>
             </section>
         `;
-
         return;
     }
 
     document.title = `${app.name} | ${api.config.legalName}`;
 
     const desc = document.querySelector('meta[name="description"]');
-
-    if (desc) {
-        desc.content = app.shortDescription;
-    }
+    if (desc) desc.content = app.shortDescription;
 
     const icon = app.icon
-        ? `
-            <img
-                src="${api.escapeHtml(app.icon)}"
-                alt="${api.escapeHtml(app.name)} icon"
-            >
-        `
+        ? `<img src="${api.escapeHtml(app.icon)}"
+                alt="${api.escapeHtml(app.name)} icon">`
         : api.escapeHtml(app.fallbackInitials || "APP");
 
     const storeButtons = [];
@@ -1370,16 +1192,14 @@ window.CELL_CAVE_APPS = Object.freeze([
         `);
     }
 
-    const extraLinks = (app.extraLinks || [])
-        .map(link => `
-            <a
-                class="btn btn-secondary"
-                href="${api.escapeHtml(link.href)}"
-            >
-                ${api.escapeHtml(link.label)}
-            </a>
-        `)
-        .join("");
+    const extraLinks = (app.extraLinks || []).map(link => `
+        <a
+            class="btn btn-secondary"
+            href="${api.escapeHtml(link.href)}"
+        >
+            ${api.escapeHtml(link.label)}
+        </a>
+    `).join("");
 
     const comingSoon = app.status === "coming-soon"
         ? `
@@ -1390,17 +1210,15 @@ window.CELL_CAVE_APPS = Object.freeze([
 
                         <h2>
                             We’re building the next
-                            CELL CAVE (SMC-PRIVATE) LIMITED
-                            experience.
+                            CELL CAVE (SMC-PRIVATE) LIMITED experience.
                         </h2>
 
                         <p>
                             ${api.escapeHtml(app.name)}
                             isn’t live yet. We’re working on it.
                             In the meantime, explore the
-                            CELL CAVE (SMC-PRIVATE) LIMITED
-                            apps and digital products that are
-                            already available.
+                            CELL CAVE (SMC-PRIVATE) LIMITED apps
+                            and digital products that are already available.
                         </p>
 
                         <div class="coming-soon-actions">
@@ -1437,7 +1255,6 @@ window.CELL_CAVE_APPS = Object.freeze([
 
                 <div class="app-detail-copy">
                     ${api.statusBadge(app)}
-
                     <h1>${api.escapeHtml(app.name)}</h1>
                     <p>${api.escapeHtml(app.shortDescription)}</p>
 
@@ -1454,25 +1271,18 @@ window.CELL_CAVE_APPS = Object.freeze([
             <div class="container detail-grid">
                 <article class="detail-card">
                     <span class="eyebrow">About the App</span>
-
                     <h2>Designed for a simpler digital experience.</h2>
-
                     <p>${api.escapeHtml(app.description)}</p>
 
                     ${
                         extraLinks
-                            ? `
-                                <div class="featured-actions">
-                                    ${extraLinks}
-                                </div>
-                            `
+                            ? `<div class="featured-actions">${extraLinks}</div>`
                             : ""
                     }
                 </article>
 
                 <article class="detail-card">
                     <span class="eyebrow">What It Helps With</span>
-
                     <h2>Focused, practical functionality.</h2>
 
                     <ul class="feature-list">
@@ -1504,8 +1314,7 @@ window.CELL_CAVE_APPS = Object.freeze([
 })();
 
 /* =========================
-   PRIVACY BUTTONS FOR
-   THE TWO NEW APP PAGES
+   STATIC APP PRIVACY BUTTONS
 ========================= */
 
 (function () {
@@ -1518,32 +1327,30 @@ window.CELL_CAVE_APPS = Object.freeze([
     }
 
     function normalisePath(path) {
-        return path.replace(/\/index\.html$/, "/").replace(/\/+$/, "");
+        return path
+            .replace(/\/index\.html$/, "/")
+            .replace(/\/+$/, "");
     }
 
     const currentPath = normalisePath(window.location.pathname);
 
-    const newAppIds = [
-        "find-my-phone-by-clapping",
-        "pdf-scanner-app-doc-scanner"
+    const staticAppIds = [
+        "pdf-scanner-app-doc-scanner",
+        "gps-navigator-route-finder"
     ];
 
     const app = api.apps.find(item =>
-        newAppIds.includes(item.id) &&
+        staticAppIds.includes(item.id) &&
         normalisePath(item.route) === currentPath
     );
 
-    if (!app || !app.privacyRoute) {
-        return;
-    }
+    if (!app || !app.privacyRoute) return;
 
     const actions = document.querySelector(
         ".app-detail-hero .app-detail-actions"
     );
 
-    if (!actions) {
-        return;
-    }
+    if (!actions) return;
 
     const alreadyExists = Array.from(
         actions.querySelectorAll("a[href]")
@@ -1552,9 +1359,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         normalisePath(app.privacyRoute)
     );
 
-    if (alreadyExists) {
-        return;
-    }
+    if (alreadyExists) return;
 
     const link = document.createElement("a");
     link.className = "store-button secondary";
@@ -1581,22 +1386,15 @@ window.CELL_CAVE_APPS = Object.freeze([
     "use strict";
 
     const api = window.CellCave;
+    if (!api) return;
 
-    if (!api) {
-        return;
-    }
-
-    if ((document.body.dataset.page || "") !== "support") {
-        return;
-    }
+    if ((document.body.dataset.page || "") !== "support") return;
 
     const select = document.getElementById("supportAppSelect");
     const openButton = document.getElementById("supportAppOpen");
     const hint = document.getElementById("supportAppHint");
 
-    if (!select || !openButton) {
-        return;
-    }
+    if (!select || !openButton) return;
 
     api.apps.forEach(app => {
         const option = document.createElement("option");
