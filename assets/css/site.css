@@ -1003,3 +1003,21 @@ body { background: var(--bg); }
     .footer-links { grid-template-columns: repeat(2,minmax(0,1fr)); }
     .footer-links a { min-height: 32px; display: flex; align-items: center; }
 }
+/* Home: What We Build — About: Our Focus */
+.brand-story {
+  color: #1e293b;
+}
+
+.brand-story h2 {
+  color: #1e293b;
+}
+
+.brand-story p {
+  color: #475569;
+}
+
+.brand-story .eyebrow {
+  color: #075985;
+  background: #e0f2fe;
+  border-color: #bae6fd;
+}
