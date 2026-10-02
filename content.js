@@ -241,6 +241,27 @@ window.CELL_CAVE_APPS = Object.freeze([
             "Saved places, routes, and travel preferences"
         ],
         "extraLinks": []
+    },
+    {
+        "id": "qr-scanner-fast-barcode-scan",
+        "slug": "qr-scanner-fast-barcode-scan",
+        "name": "QR Scanner: Fast Barcode Scan",
+        "shortName": "QR Scanner",
+        "category": "Everyday Tools",
+        "status": "coming-soon",
+        "icon": "",
+        "fallbackInitials": "QR",
+        "route": "/apps/qr-scanner-fast-barcode-scan/",
+        "privacyRoute": "",
+        "googlePlayUrl": "",
+        "appleAppStoreUrl": "",
+        "shortDescription": "A QR code and barcode scanning app from CELL CAVE (SMC-PRIVATE) LIMITED. Coming soon.",
+        "description": "QR Scanner: Fast Barcode Scan is a forthcoming app from CELL CAVE (SMC-PRIVATE) LIMITED. Feature details and download availability will be shared when ready.",
+        "features": [
+            "QR code scanning",
+            "Barcode scanning"
+        ],
+        "extraLinks": []
     }
 ]);
 
