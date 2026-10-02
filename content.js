@@ -252,7 +252,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         "icon": "",
         "fallbackInitials": "QR",
         "route": "/apps/qr-scanner-fast-barcode-scan/",
-        "privacyRoute": "",
+        "privacyRoute": "/apps/qr-scanner-fast-barcode-scan/privacy/",
         "googlePlayUrl": "",
         "appleAppStoreUrl": "",
         "shortDescription": "A QR code and barcode scanning app from CELL CAVE (SMC-PRIVATE) LIMITED. Coming soon.",
