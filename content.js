@@ -733,11 +733,31 @@ window.CELL_CAVE_APPS = Object.freeze([
     }
 
     function addHeadDefaults() {
-        if (config.favicon && !document.querySelector('link[rel="icon"]')) {
-            const icon = document.createElement("link");
-            icon.rel = "icon";
-            icon.href = config.favicon;
-            document.head.appendChild(icon);
+        const pagePath = window.location.pathname
+            .replace(/\/index\.html$/, "/")
+            .replace(/\/+$/, "") + "/";
+        const pageApp = apps.find(app => {
+            if (!app.route) return false;
+            const appPath = app.route.replace(/\/+$/, "") + "/";
+            return pagePath.startsWith(appPath);
+        });
+        const favicon = (pageApp && pageApp.icon) || config.favicon;
+
+        if (favicon) {
+            const existingIcons = Array.from(
+                document.querySelectorAll('link[rel~="icon"]')
+            );
+            const icons = existingIcons.length
+                ? existingIcons
+                : [document.createElement("link")];
+
+            icons.forEach(icon => {
+                icon.rel = "icon";
+                icon.removeAttribute("type");
+                icon.removeAttribute("sizes");
+                icon.href = favicon;
+                if (!icon.parentNode) document.head.appendChild(icon);
+            });
         }
 
         const desc = document.querySelector('meta[name="description"]');
