@@ -120,11 +120,11 @@ window.CELL_CAVE_APPS = Object.freeze([
     {
         "id": "phone-cleaner",
         "slug": "phone-cleaner",
-        "name": "Phone Cleaner",
-        "shortName": "Phone Cleaner",
+        "name": "Phone Cleaner: Free Up Space",
+        "shortName": "Phone Cleaner: Free Up Space",
         "category": "Device Care",
         "status": "coming-soon",
-        "icon": "",
+        "icon": "/assets/icons/phone-cleaner.png",
         "fallbackInitials": "PC",
         "route": "/apps/phone-cleaner/",
         "privacyRoute": "/apps/phone-cleaner/privacy/",
@@ -132,7 +132,7 @@ window.CELL_CAVE_APPS = Object.freeze([
         "appleAppStoreUrl": "",
         "packageName": "com.clearner.mobilecleaner.filemanager.cloud.savevideo.file.photo",
         "shortDescription": "Clean junk files, manage storage, find duplicate media, and use practical device-care tools in one Android app.",
-        "description": "Phone Cleaner brings together on-device cleaning, file management, duplicate and similar photo detection, image compression, app management, notification and clipboard cleaning, a Recycle Bin, Private Vault, device information tools, and scheduled cleaning features.",
+        "description": "Phone Cleaner: Free Up Space brings together on-device cleaning, file management, duplicate and similar photo detection, image compression, app management, notification and clipboard cleaning, a Recycle Bin, Private Vault, device information tools, and scheduled cleaning features.",
         "features": [
             "Quick Clean and Deep Clean",
             "Large-file, duplicate, similar-photo, and screenshot detection",
