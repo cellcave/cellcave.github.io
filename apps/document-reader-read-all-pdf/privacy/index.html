@@ -111,9 +111,8 @@
                 </div>
 
 
-                <span class="updated">
-                    Effective Date: November 2026
-                </span>
+                <span class="updated">Effective Date: 26 November 2026</span>
+                <span class="updated">Last Updated: 26 November 2026</span>
 
             </div>
 
@@ -440,7 +439,7 @@
 
                         <h3>Camera and document scanning</h3>
 
-                        <p>When you choose Scan PDF, the scanning interface may use your device camera to capture document pages. Captured images are used to preview and create the scan you choose to save. Any camera permission prompt depends on the scanning component and Android version. You can manage relevant camera permissions in Android Settings.</p>
+                        <p>When you choose <strong>Scan PDF</strong>, the document scanner uses your device camera to capture pages. If camera access has not already been granted for the scanner, the scanner asks for permission. The scanning interface is provided through Google Play services. All Document Reader: Sign PDF does not declare a separate Android <code>CAMERA</code> permission in its app manifest. Captured images are used to preview and create the scan you choose to save.</p>
 
                         <p>
                             Documents opened through the App's document-reading
@@ -590,10 +589,7 @@
                             and paid subscribers.
                         </p>
 
-                        <p>
-                            Analytics events are not designed to include document
-                            contents, filenames, or file paths.
-                        </p>
+                        <p>Firebase Analytics records events about how the App is used, such as opening screens, using features, and interacting with ads or subscription screens. Event parameters may describe the screen, feature, or action involved.</p>
 
 
                         <h3>
@@ -777,21 +773,13 @@
                             8. Google ML Kit
                         </h2>
 
-                        <p>
-                            The App uses <strong>Google ML Kit</strong> to support
-                            document-related machine-learning functionality,
-                            including text recognition where available in the App.
-                        </p>
+                        <p>The App uses <strong>Google ML Kit</strong> for document-related features, including text recognition and the PDF Translator. Text recognition can extract text from supported document images. The PDF Translator uses supported language models to translate text on your device.</p>
 
                         <p>
                             ML Kit processing depends on the specific API and implementation.
                         </p>
 
-                        <p>
-                            Certain processing may occur on the device, while
-                            technical network requests may be made to download or
-                            update machine-learning models and related components.
-                        </p>
+                        <p>Google ML Kit may download or update supported language models and related components from Google. This can require an internet connection and can use device storage. The language model download is separate from the document text processed on your device.</p>
 
                         <p>
                             CELL CAVE does not use ML Kit to upload document contents
@@ -1477,10 +1465,7 @@
                             that Firebase services encrypt data in transit using HTTPS.
                         </p>
 
-                        <p>
-                            Information processed by Google is also subject to
-                            Google's security practices.
-                        </p>
+                        <p>AppLovin, Liftoff Monetize, Meta Audience Network, Mintegral, and Pangle may receive advertising-related information as described in Section 11. Information sent to each provider is subject to that provider’s security practices and applicable policy, linked in Section 11.</p>
 
                         <p>
                             No device, method of transmission, or electronic-storage
@@ -1734,10 +1719,7 @@
                             requirements change.
                         </p>
 
-                        <p>
-                            When we update it, we will revise the
-                            <strong>"Last updated"</strong> date above.
-                        </p>
+                        <p>When we update this policy, we will revise the <strong>Last Updated</strong> date shown at the top of this page.</p>
 
                         <p>
                             Users are encouraged to review this Policy periodically.
@@ -1790,10 +1772,6 @@
                             +92 313 5129329
                         </p>
 
-                        <p>
-                            <strong>Last Updated:</strong>
-                            November 2026
-                        </p>
 
                     </article>
 
